@@ -13,6 +13,8 @@
 
     :root {
       --bg: #0a0a0f;
+      --card: #13131a;
+      --border: #1e1e2e;
       --accent: #7c6aff;
       --accent2: #ff6a9b;
       --text: #e8e8f0;
@@ -25,9 +27,7 @@
       color: var(--text);
       min-height: 100vh;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+      flex-direction: column;
     }
 
     body::before {
@@ -39,6 +39,7 @@
       height: 70vw;
       background: radial-gradient(circle, rgba(124,106,255,0.15) 0%, transparent 65%);
       pointer-events: none;
+      z-index: 0;
     }
     body::after {
       content: "";
@@ -49,13 +50,19 @@
       height: 60vw;
       background: radial-gradient(circle, rgba(255,106,155,0.12) 0%, transparent 65%);
       pointer-events: none;
+      z-index: 0;
     }
 
-    .center {
-      text-align: center;
+    main {
       position: relative;
       z-index: 1;
-      animation: fadeUp 0.8s ease both;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 24px;
+      text-align: center;
     }
 
     .logo {
@@ -67,62 +74,90 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 32px;
+      margin-bottom: 20px;
+      animation: fadeUp 0.6s ease both;
     }
 
     h1 {
-      font-size: clamp(32px, 8vw, 56px);
+      font-size: clamp(28px, 7vw, 48px);
       font-weight: 800;
       letter-spacing: -0.02em;
-      line-height: 1.15;
-      margin-bottom: 20px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      animation: fadeUp 0.6s 0.05s ease both;
     }
 
-    .gradient {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    p {
+    .desc {
       font-size: 15px;
       color: var(--muted);
-      letter-spacing: 0.04em;
+      line-height: 1.8;
+      max-width: 420px;
+      margin-bottom: 48px;
+      animation: fadeUp 0.6s 0.1s ease both;
     }
 
-    .dots {
+    /* App card */
+    .apps {
+      width: 100%;
+      max-width: 480px;
       display: flex;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 36px;
-    }
-    .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-      opacity: 0.4;
-      animation: pulse 1.4s ease-in-out infinite;
-    }
-    .dot:nth-child(2) { animation-delay: 0.2s; background: color-mix(in srgb, var(--accent) 50%, var(--accent2)); }
-    .dot:nth-child(3) { animation-delay: 0.4s; background: var(--accent2); }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 0.3; transform: scale(1); }
-      50%       { opacity: 1;   transform: scale(1.3); }
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 48px;
+      animation: fadeUp 0.6s 0.15s ease both;
     }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+    .app-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 20px;
+      text-decoration: none;
+      color: var(--text);
+      text-align: left;
+      transition: border-color 0.2s, transform 0.15s;
     }
 
+    .app-card:hover {
+      border-color: rgba(124,106,255,0.5);
+      transform: translateY(-2px);
+    }
+
+    .app-card img {
+      width: 56px;
+      height: 56px;
+      border-radius: 13px;
+      flex-shrink: 0;
+    }
+
+    .app-card-text h2 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .app-card-text p {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .app-card-arrow {
+      margin-left: auto;
+      color: var(--muted);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    /* Footer links */
     .links {
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin-top: 28px;
+      animation: fadeUp 0.6s 0.2s ease both;
     }
     .links a {
       font-size: 12px;
@@ -131,26 +166,35 @@
       letter-spacing: 0.05em;
       transition: color 0.2s;
     }
-    .links a:hover {
-      color: var(--accent);
+    .links a:hover { color: var(--accent); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <div class="center">
+  <main>
     <p class="logo">AsakusaSemao</p>
-    <h1>Coming<br><span class="gradient">Soon.</span></h1>
-    <p>サイト準備中です。しばらくお待ちください。</p>
-    <div class="dots">
-      <div class="dot"></div>
-      <div class="dot"></div>
-      <div class="dot"></div>
+    <h1>スマホアプリを<br>つくっています。</h1>
+    <p class="desc">個人でiOS・Androidアプリを開発しています。<br>現在リリース中のアプリはこちらです。</p>
+
+    <div class="apps">
+      <a class="app-card" href="/vollog-app.html">
+        <img src="/vollog-icon.png" alt="Vollogアイコン" />
+        <div class="app-card-text">
+          <h2>Vollog（バレログ）</h2>
+          <p>バレーボールの選手管理・試合記録・スタッツ集計アプリ</p>
+        </div>
+        <span class="app-card-arrow">›</span>
+      </a>
     </div>
+
     <div class="links">
-      <a href="/vollog-app.html">Vollog アプリ</a>
       <a href="/vollog-privacy.html">プライバシーポリシー</a>
       <a href="/vollog-terms.html">利用規約</a>
     </div>
-  </div>
+  </main>
 </body>
 </html>
