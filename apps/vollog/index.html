@@ -196,8 +196,24 @@
     }
 
     .feature-icon {
-      font-size: 24px;
-      margin-bottom: 12px;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(124,106,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+
+    .feature-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--accent);
+      stroke-width: 1.75;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .feature-card h3 {
@@ -376,22 +392,34 @@
       <h2>主な機能</h2>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-icon">👤</div>
+          <div class="feature-icon">
+            <!-- Lucide: users -->
+            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
           <h3>選手プロフィール管理</h3>
           <p>背番号・名前・ポジションを登録。複数チームへの所属や個人スタッツ履歴も管理できます。</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">📋</div>
+          <div class="feature-icon">
+            <!-- Lucide: clipboard-list -->
+            <svg viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+          </div>
           <h3>試合・セット記録</h3>
           <p>試合中のリアルタイム入力と試合後のまとめ入力の両方に対応。セットスコアや得点経過を記録します。</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">📊</div>
+          <div class="feature-icon">
+            <!-- Lucide: bar-chart-2 -->
+            <svg viewBox="0 0 24 24"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+          </div>
           <h3>スタッツ集計</h3>
           <p>選手別・チーム別の集計表示。今季・通算の推移グラフで成長を可視化できます。</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">📤</div>
+          <div class="feature-icon">
+            <!-- Lucide: share -->
+            <svg viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" x2="12" y1="2" y2="15"/></svg>
+          </div>
           <h3>エクスポート</h3>
           <p>成績画像・PDF出力は全プランで利用可能。CSVエクスポートはProプランで対応。</p>
         </div>
