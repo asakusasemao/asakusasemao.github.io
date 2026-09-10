@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vollog（バレログ）- バレーボール記録アプリ</title>
-  <meta name="description" content="バレーボールチームの選手管理・試合記録・成績データ集計アプリ。オフライン対応・無料で使える。" />
+  <meta name="description" content="バレーボールチームの選手管理・試合記録・成績データ集計アプリ。サーブ・アタック・ブロック・サーブレシーブを記録し、選手ごとの成績をグラフで確認できます。データは端末内に保存、アカウント登録不要・オフライン対応で無料から使えます。" />
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -335,6 +335,13 @@
       text-align: center;
     }
 
+    .section-note {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-top: 12px;
+    }
+
     /* Stats list */
     .stats-list {
       display: flex;
@@ -419,11 +426,13 @@
           <span>バレーボール記録アプリ</span>
           Vollog（バレログ）
         </h1>
-        <p>選手管理・試合記録・データ集計をまとめて管理。<br>オフラインでも使えます。</p>
+        <p>選手管理・試合記録・データ集計をまとめて管理。<br>データは端末内に保存され、オフラインでも使えます。</p>
         <div class="badge-row">
           <span class="badge accent">無料で使える</span>
           <span class="badge accent">オフライン対応</span>
-          <span class="badge">iOS / Android</span>
+          <span class="badge accent">アカウント登録不要</span>
+          <span class="badge">iOS 版公開中</span>
+          <span class="badge">11言語対応</span>
         </div>
       </div>
     </div>
@@ -492,6 +501,14 @@
           <h3>データ共有</h3>
           <p>チームと試合の記録をファイルで別のVollogユーザーに共有。送信はProプラン、受け取りは無料で利用できます。</p>
         </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: palette -->
+            <svg viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".5" fill="var(--accent)"/><circle cx="17.5" cy="10.5" r=".5" fill="var(--accent)"/><circle cx="8.5" cy="7.5" r=".5" fill="var(--accent)"/><circle cx="6.5" cy="12.5" r=".5" fill="var(--accent)"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          </div>
+          <h3>8種類のテーマ</h3>
+          <p>ブルー・グリーン・ダーク・スコアボードなど8種類から配色を選べます。</p>
+        </div>
       </div>
     </section>
 
@@ -502,7 +519,9 @@
         <div class="stat-chip">サーブ <span>打数 / 得点 / 失点</span></div>
         <div class="stat-chip">アタック <span>打数 / 得点 / 失点</span></div>
         <div class="stat-chip">ブロック <span>得点</span></div>
+        <div class="stat-chip">サーブレシーブ <span>受数 / 成功 / 失点 / 成功率</span></div>
       </div>
+      <p class="section-note">サーブレシーブを記録するかは試合ごとに選べます。使わないチームは項目を出さずに記録できます。</p>
     </section>
 
     <!-- Plans -->
