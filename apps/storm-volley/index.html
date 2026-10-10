@@ -406,6 +406,37 @@
       color: var(--muted);
     }
 
+    /* 言語の切り替え。<html lang> に合う側だけを見せる（スクリプトが動かなければ日本語） */
+    html:not([lang="en"]) .en { display: none; }
+    html[lang="en"] .ja { display: none; }
+
+    .lang-switcher {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+
+    .lang-btn {
+      font: inherit;
+      font-size: 12px;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .lang-btn:hover { color: var(--text); }
+
+    html:not([lang="en"]) .lang-btn[data-lang="ja"],
+    html[lang="en"] .lang-btn[data-lang="en"] {
+      border-color: rgba(124,106,255,0.4);
+      color: var(--accent);
+      background: rgba(124,106,255,0.08);
+    }
+
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -422,12 +453,19 @@
   <header>
     <a class="header-brand" href="/">AsakusaSemao</a>
     <nav class="header-links">
-      <a href="/apps/storm-volley/privacy.html">プライバシーポリシー</a>
-      <a href="/apps/tokushoho.html">特定商取引法</a>
+      <a class="ja" href="/apps/storm-volley/privacy.html">プライバシーポリシー</a>
+      <a class="ja" href="/apps/tokushoho.html">特定商取引法</a>
+      <a class="en" lang="en" href="/apps/storm-volley/privacy.html">Privacy Policy</a>
     </nav>
   </header>
 
-  <main>
+  <main class="ja">
+
+    <!-- 言語の切り替え。最初は、ブラウザの言語に合わせる（下のスクリプト） -->
+    <div class="lang-switcher">
+      <button class="lang-btn" type="button" data-lang="ja">日本語</button>
+      <button class="lang-btn" type="button" data-lang="en">English</button>
+    </div>
 
     <!-- Hero -->
     <div class="hero">
@@ -482,7 +520,7 @@
             <!-- Lucide: wind --><svg viewBox="0 0 24 24"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
           </div>
           <h3>風</h3>
-          <p>打球が風に流されます。風向きを読んで狙えば、コートに入ります。読みちがえると、流されてアウト。</p>
+          <p>打球が風に流されます。風向きを読んでねらえば、コートに入ります。読みちがえると、流されてアウト。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
@@ -517,12 +555,12 @@
 
     <section>
       <h2>広告とアプリ内課金</h2>
-      <p class="section-note">画面の上に広告が出ます。「広告を消す」を一度買うと、出なくなります。「開発者を応援」では、お礼に短いムービーをお見せします。価格は、各ストアの表示をご確認ください。</p>
+      <p class="section-note">画面の上に広告が出ます。「広告を消す」を一度買うと、出なくなります。「開発者を応援」では、お礼に短いムービーをお見せします。価格は、各ストアの表示をご確認ください。<br>応援は、ご要望への対応や機能の追加をお約束するものではありません。ご感想やご要望は、ストアのレビューでお聞かせいただけると励みになります。</p>
     </section>
 
     <section>
       <h2>ご注意</h2>
-      <p class="section-note">雷の場面で、画面が強く光ります。設定の「雷の演出」で弱くできます。<br>これはゲームです。実際に雷が鳴ったり、風が強いときは、建物の中へ。バレーは安全な場所で楽しみましょう。</p>
+      <p class="section-note">雷の場面で、画面が強く光ります。設定の「雷の演出」で弱くできます。<br>これはゲームです。実際に雷が鳴っているときや、風が強いときは、建物の中へ。バレーは安全な場所で楽しみましょう。</p>
     </section>
 
     <section>
@@ -532,14 +570,198 @@
 
   </main>
 
+  <!-- English（中身は日本語の側と同じ並び。片方を直したら、もう片方も直す） -->
+  <main class="en" lang="en">
+
+    <!-- 言語の切り替え。最初は、ブラウザの言語に合わせる（下のスクリプト） -->
+    <div class="lang-switcher">
+      <button class="lang-btn" type="button" data-lang="ja">日本語</button>
+      <button class="lang-btn" type="button" data-lang="en">English</button>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+      <img class="app-icon" src="/assets/images/storm-volley-icon.png" alt="Storm Volleyball icon" />
+      <div class="hero-text">
+        <h1>
+          <span>Storm or not, we play!</span>
+          Storm Volleyball
+        </h1>
+        <p>Gale-force winds, thick fog, a lightning strike or two… and we still want to play volleyball!<br>A one-on-one volleyball game in a storm, with simple one-finger controls.<br>Read the weather and land the ball on your opponent's side.</p>
+        <div class="badge-row">
+          <span class="badge accent">Free to play</span>
+          <span class="badge accent">No account needed</span>
+          <span class="badge accent">Portrait or landscape</span>
+          <span class="badge accent">日本語 / English</span>
+          <span class="badge">iOS / Android coming soon</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Store buttons（日本語の側と同じ。公開したら、リンクに替える） -->
+    <div class="store-buttons">
+      <span class="store-btn store-btn-soon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <span class="store-btn-label">
+          <small>Coming soon</small>
+          App Store
+        </span>
+      </span>
+      <span class="store-btn store-btn-soon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76a2 2 0 0 0 2.07-.22l11.4-6.58-2.53-2.53L3.18 23.76zM.5 1.26C.19 1.67 0 2.28 0 3.07v17.87c0 .79.19 1.4.51 1.8l.09.09 10.01-10.01v-.24L.59 1.17.5 1.26zM20.93 10.37l-2.9-1.67-2.83 2.83 2.83 2.83 2.91-1.68c.83-.48.83-1.26-.01-1.31zM5.25.46l11.4 6.58-2.53 2.53L3.18.22A2 2 0 0 1 5.25.46z"/></svg>
+        <span class="store-btn-label">
+          <small>Coming soon</small>
+          Google Play
+        </span>
+      </span>
+    </div>
+
+    <!-- Features -->
+    <section>
+      <h2>The game</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: pointer --><svg viewBox="0 0 24 24"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+          </div>
+          <h3>Just taps and swipes</h3>
+          <p>Your player runs on their own. When the ring at your feet lights up, tap. Swipe up for a lob, swipe down for a spike.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: wind --><svg viewBox="0 0 24 24"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
+          </div>
+          <h3>Wind</h3>
+          <p>The wind carries the ball. Read the wind and your shot lands in. Misread it and it drifts out.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: zap --><svg viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+          </div>
+          <h3>Lightning</h3>
+          <p>When the count hits 0, lightning strikes whichever court the ball is over, and the other side scores.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: cloud-fog --><svg viewBox="0 0 24 24"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M16 17H7"/><path d="M17 21H9"/></svg>
+          </div>
+          <h3>Fog</h3>
+          <p>When fog rolls in, your opponent's side gets hard to see.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: school --><svg viewBox="0 0 24 24"><path d="M14 22v-4a2 2 0 1 0-4 0v4"/><path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2"/><path d="M18 5v17"/><path d="m4 6 8-4 8 4"/><path d="M6 5v17"/><circle cx="12" cy="9" r="2"/></svg>
+          </div>
+          <h3>Two venues</h3>
+          <p>A gym whose roof and walls blow away mid-match, and a beach that's stormy from the first serve.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: shirt --><svg viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+          </div>
+          <h3>Outfits and records</h3>
+          <p>Spot the rare things that fly past during a match to unlock hats, balls, uniforms, and more. You can share your results as an image.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ads and in-app purchases</h2>
+      <p class="section-note">An ad appears at the top of the screen. Buy "Remove ads" once and it's gone for good. "Support the developer" gets you a short thank-you clip. Prices are shown in each store.<br>Supporting the developer doesn't come with a promise to act on requests or add features. If you have feedback or requests, a store review would mean a lot.</p>
+    </section>
+
+    <section>
+      <h2>Please note</h2>
+      <p class="section-note">The screen flashes brightly when lightning strikes. You can tone it down under "Lightning effects" in Settings.<br>This is just a game. If you hear real thunder or the wind picks up, head indoors. Play volleyball somewhere safe.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p class="section-note"><a href="mailto:asakusasemao@gmail.com" style="color: var(--accent);">asakusasemao@gmail.com</a></p>
+    </section>
+
+  </main>
+
+  <!--
+    このページの絵記号（「Lucide: ...」と書いてある SVG）は、Lucide（https://lucide.dev）のもの。
+    ライセンスは、著作権表示と許諾の文を写しに残すことを求めるので、ここに置く。絵記号を足しても、この文はそのままでよい。
+
+    ISC License
+
+    Copyright (c) 2026 Lucide Icons and Contributors
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+    ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+    Lucide の絵記号の一部は Feather（https://feathericons.com）がもとで、そちらは次のライセンス。
+
+    The MIT License (MIT) (for the icons derived from the Feather project)
+
+    Copyright (c) 2013-present Cole Bemis
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+  -->
+
   <footer>
     <div class="footer-links">
-      <a href="/">トップ</a>
-      <a href="/apps/storm-volley/privacy.html">プライバシーポリシー</a>
-      <a href="/apps/tokushoho.html">特定商取引法に基づく表記</a>
+      <a class="ja" href="/">トップ</a>
+      <a class="ja" href="/apps/storm-volley/privacy.html">プライバシーポリシー</a>
+      <a class="ja" href="/apps/tokushoho.html">特定商取引法に基づく表記</a>
+      <a class="en" lang="en" href="/">Home</a>
+      <a class="en" lang="en" href="/apps/storm-volley/privacy.html">Privacy Policy</a>
     </div>
     <p>© 2026 AsakusaSemao. All rights reserved.</p>
+    <p class="ja">アイコン: <a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a>（ISC License）</p>
+    <p class="en" lang="en">Icons: <a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a> (ISC License)</p>
   </footer>
+
+  <script>
+    // 最初は、ブラウザの言語に合わせる（日本語でなければ英語）。?lang=en / ?lang=ja で決められる
+    const TITLES = {
+      ja: document.title,
+      en: 'Storm Volleyball - One-on-one volleyball in a storm',
+    };
+
+    function switchLang(lang) {
+      document.documentElement.lang = lang;
+      document.title = TITLES[lang];
+    }
+
+    document.querySelectorAll('.lang-btn').forEach((button) => {
+      button.addEventListener('click', () => switchLang(button.dataset.lang));
+    });
+
+    const asked = new URLSearchParams(location.search).get('lang');
+    const browserLang = navigator.language || navigator.userLanguage || 'ja';
+    if (asked === 'en' || (asked !== 'ja' && !browserLang.startsWith('ja'))) {
+      switchLang('en');
+    }
+  </script>
 
 </body>
 </html>
