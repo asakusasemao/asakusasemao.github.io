@@ -4,48 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>プライバシーポリシー / Privacy Policy - 嵐のバドミントン（Storm Badminton）</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Sans", Arial, sans-serif;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
-      color: #1a1a1a;
-      line-height: 1.8;
-      background: #fff;
-    }
-    h1 { font-size: 24px; margin-bottom: 8px; }
-    h2 { font-size: 18px; margin-top: 40px; margin-bottom: 8px; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px; }
-    p  { margin: 8px 0; }
-    ul { padding-left: 24px; margin: 8px 0; }
-    li { margin: 4px 0; }
-    a  { color: #1d6fcc; }
-    .updated { font-size: 13px; color: #666; margin-bottom: 32px; }
-    .lang-switcher {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 32px;
-    }
-    .lang-btn {
-      padding: 6px 16px;
-      border: 1px solid #ccc;
-      border-radius: 20px;
-      background: #fff;
-      color: #555;
-      font-size: 13px;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .lang-btn.active {
-      background: #1d6fcc;
-      border-color: #1d6fcc;
-      color: #fff;
-    }
-    .lang-content { display: none; }
-    .lang-content.active { display: block; }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
 </head>
-<body>
+<body data-app="storm-badminton">
+
+<header class="site-header">
+  <a class="brand" href="/">AsakusaSemao</a>
+</header>
+
+<main class="legal">
+<article class="paper">
 
 <div class="lang-switcher">
   <button class="lang-btn active" onclick="switchLang('ja')">日本語</button>
@@ -272,6 +243,16 @@
   <p><a href="mailto:asakusasemao@gmail.com">asakusasemao@gmail.com</a></p>
 
 </div>
+
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="/">トップ / Home</a>
+  </div>
+  <p>© 2026 AsakusaSemao. All rights reserved.</p>
+</footer>
 
 <script>
   function switchLang(lang) {

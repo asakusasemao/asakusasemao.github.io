@@ -1,0 +1,819 @@
+/*
+  サイト全体の見た目。全ページがこの1枚を読む。
+  色や線の太さを変えるときは、まず下の :root を直す。
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  color-scheme: light;
+
+  --bg: #fff4d6;
+  --ink: #1d1a3a;
+  --card: #ffffff;
+  --muted: #5a5675;
+
+  --yellow: #ffd124;
+  --sky: #58c7f3;
+  --coral: #ff7a66;
+  --mint: #63d8a4;
+  --lilac: #b9a4ff;
+
+  /* ページ（アプリ）ごとの色。下の [data-app] で差し替える。背景にだけ使い、文字の色には使わない */
+  --accent: var(--yellow);
+
+  --line: 2.5px solid var(--ink);
+  --shadow: 4px 4px 0 var(--ink);
+  --shadow-lg: 7px 7px 0 var(--ink);
+  --radius: 20px;
+
+  --font-body: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-display: "Dela Gothic One", var(--font-body);
+
+  --pop: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-app="storm-volley"]    { --accent: var(--yellow); }
+[data-app="storm-badminton"] { --accent: var(--sky); }
+[data-app="vollog"]          { --accent: var(--coral); }
+
+body {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--ink);
+  background-color: var(--bg);
+  background-image: radial-gradient(rgba(29, 26, 58, 0.11) 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---------- ヘッダー ---------- */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding: 18px 24px;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--yellow);
+  border: var(--line);
+  border-radius: 999px;
+  padding: 6px 16px;
+  box-shadow: var(--shadow);
+  transform: rotate(-2deg);
+  transition: transform 0.25s var(--pop), box-shadow 0.15s;
+}
+.brand:hover { transform: rotate(2deg) scale(1.04); }
+.brand:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--ink); }
+
+.header-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+}
+.header-links a {
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  background: linear-gradient(transparent 62%, var(--accent) 62%) no-repeat 0 0 / 0 100%;
+  transition: background-size 0.25s ease;
+}
+.header-links a:hover { background-size: 100% 100%; }
+
+/* ---------- 本文の枠 ---------- */
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 28px 24px 88px;
+}
+
+/* ---------- 言語の切り替え ---------- */
+
+/* アプリ紹介のページは <html lang> に合う側だけを見せる（スクリプトが動かなければ日本語） */
+html:not([lang="en"]) .en { display: none; }
+html[lang="en"] .ja { display: none; }
+
+/* 規約などのページは .active の付いた側だけを見せる */
+.lang-content { display: none; }
+.lang-content.active { display: block; }
+
+.lang-switcher {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.lang-btn {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 16px;
+  border: var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 0.2s var(--pop), box-shadow 0.15s, background-color 0.15s;
+}
+.lang-btn:hover { transform: translateY(-2px) rotate(-2deg); }
+
+.lang-btn.active,
+html:not([lang="en"]) .lang-btn[data-lang="ja"],
+html[lang="en"] .lang-btn[data-lang="en"] {
+  background: var(--ink);
+  color: var(--bg);
+  box-shadow: 3px 3px 0 var(--accent);
+}
+
+/* ---------- トップページ ---------- */
+
+.home main {
+  max-width: 1040px;
+  text-align: center;
+}
+
+.home-hero {
+  position: relative;
+  padding: 56px 0 64px;
+}
+
+.home-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(34px, 8.5vw, 72px);
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  text-shadow: 3px 3px 0 var(--card), 7px 7px 0 var(--yellow);
+  transform: rotate(-2.5deg);
+  margin-bottom: 28px;
+  animation: popIn 0.7s var(--pop) both;
+}
+
+.home-hero .desc {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  background: var(--card);
+  border: var(--line);
+  border-radius: 999px;
+  padding: 8px 22px;
+  box-shadow: var(--shadow);
+  transform: rotate(1deg);
+  animation: popIn 0.7s 0.12s var(--pop) both;
+}
+
+/* ヒーローのまわりに浮かぶ飾り */
+.deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.deco svg {
+  position: absolute;
+  overflow: visible;
+  stroke: var(--ink);
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  filter: drop-shadow(3px 3px 0 var(--ink));
+  animation: float 5s ease-in-out infinite;
+}
+.deco-bolt  { width: clamp(44px, 9vw, 84px);  left: 4%;   top: 6%;     fill: var(--yellow); --tilt: -14deg; }
+.deco-cloud { width: clamp(64px, 13vw, 128px); right: 3%;  top: 0;      fill: var(--card);   --tilt: 6deg;  animation-delay: -1.6s; }
+.deco-ball  { width: clamp(36px, 7vw, 64px);  right: 12%; bottom: 4%;  fill: var(--coral);  --tilt: 18deg; animation-delay: -3.1s; }
+.deco-star  { width: clamp(26px, 5vw, 44px);  left: 14%;  bottom: 10%; fill: var(--sky);    --tilt: -8deg; animation-delay: -2.3s; }
+
+.apps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 28px;
+  text-align: left;
+}
+
+.app-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.25s var(--pop), box-shadow 0.2s;
+  animation: popIn 0.7s var(--pop) both;
+}
+.app-card:nth-child(1) { animation-delay: 0.2s; }
+.app-card:nth-child(2) { animation-delay: 0.3s; }
+.app-card:nth-child(3) { animation-delay: 0.4s; }
+
+.app-card:hover {
+  transform: translate(-3px, -5px) rotate(-1.2deg);
+  box-shadow: 11px 13px 0 var(--ink);
+}
+.app-card:nth-child(even):hover { transform: translate(-3px, -5px) rotate(1.2deg); }
+.app-card:active {
+  transform: translate(5px, 5px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+/* カードの上の色の帯。アイコンが下にはみ出す */
+.app-card-top {
+  height: 84px;
+  border-bottom: var(--line);
+  border-radius: 17px 17px 0 0;
+  background-color: var(--accent);
+  background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.35) 0 10px, transparent 10px 20px);
+}
+
+.app-card img {
+  display: block;
+  width: 84px;
+  height: 84px;
+  margin: 30px 0 0 20px;
+  border: var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  background: var(--card);
+  transform: rotate(-5deg);
+  transition: transform 0.3s var(--pop);
+}
+.app-card:hover img { transform: rotate(4deg) scale(1.06); }
+
+.app-card-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 46px 20px 22px;
+}
+
+.app-tag {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  padding: 5px 10px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--lilac);
+  margin-bottom: 10px;
+}
+.app-tag.game { background: var(--mint); }
+
+.app-card-text h2 {
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.app-card-text p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.app-status {
+  margin-top: auto;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border: 2px dashed var(--ink);
+  border-radius: 999px;
+}
+.app-status.live {
+  border-style: solid;
+  background: var(--yellow);
+}
+
+.app-card-arrow {
+  position: absolute;
+  top: 100px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+  padding-bottom: 4px;
+  background: var(--card);
+  border: var(--line);
+  border-radius: 50%;
+  transition: transform 0.25s var(--pop), background-color 0.15s;
+}
+.app-card:hover .app-card-arrow {
+  background: var(--accent);
+  transform: translateX(5px) scale(1.1);
+}
+
+/* ---------- アプリ紹介のページ ---------- */
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 24px 28px;
+  padding: 32px;
+  margin-bottom: 64px;
+  border: var(--line);
+  border-radius: 28px;
+  box-shadow: var(--shadow-lg);
+  background-color: var(--accent);
+  background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.28) 0 14px, transparent 14px 28px);
+  animation: popIn 0.7s var(--pop) both;
+}
+
+.app-icon {
+  width: 112px;
+  height: 112px;
+  border: var(--line);
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+  background: var(--card);
+  transform: rotate(-6deg);
+  transition: transform 0.3s var(--pop);
+}
+.app-icon:hover { transform: rotate(5deg) scale(1.06); }
+
+.hero-text h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(27px, 6vw, 42px);
+  line-height: 1.3;
+  text-shadow: 3px 3px 0 var(--card);
+  margin-bottom: 12px;
+}
+
+.hero-text h1 span {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-shadow: none;
+  margin-bottom: 4px;
+}
+
+.hero-text p {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border: 2px dashed var(--ink);
+  border-radius: 999px;
+}
+.badge.accent {
+  border-style: solid;
+  background: var(--card);
+}
+
+.store-buttons {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 22px;
+  border: var(--line);
+  border-radius: 16px;
+  background: var(--ink);
+  color: var(--card);
+  box-shadow: 4px 4px 0 var(--card);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 900;
+  transition: transform 0.2s var(--pop), box-shadow 0.15s;
+}
+.store-btn:hover { transform: translate(-2px, -3px) rotate(-1.5deg); box-shadow: 7px 8px 0 var(--card); }
+.store-btn:active { transform: translate(3px, 3px); box-shadow: 1px 1px 0 var(--card); }
+
+.store-btn svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.store-btn-label {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+.store-btn-label small {
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.store-btn-soon,
+.store-btn-soon:hover,
+.store-btn-soon:active {
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--ink);
+  border-style: dashed;
+  box-shadow: none;
+  transform: none;
+  cursor: default;
+}
+
+section {
+  margin-bottom: 56px;
+  animation: popIn 0.7s 0.15s var(--pop) both;
+}
+
+section h2 {
+  display: inline-block;
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 1.4;
+  padding: 0 6px;
+  margin-bottom: 22px;
+  background: linear-gradient(transparent 58%, var(--accent) 58%);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 22px;
+}
+
+.feature-card {
+  background: var(--card);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px 20px;
+  transition: transform 0.25s var(--pop), box-shadow 0.2s;
+}
+.feature-card:hover {
+  transform: translate(-2px, -3px) rotate(-1deg);
+  box-shadow: 7px 8px 0 var(--ink);
+}
+.feature-card:nth-child(even):hover { transform: translate(-2px, -3px) rotate(1deg); }
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--line);
+  border-radius: 15px;
+  background: var(--yellow);
+  transform: rotate(-6deg);
+  margin-bottom: 14px;
+  transition: transform 0.3s var(--pop);
+}
+.feature-card:nth-child(4n + 2) .feature-icon { background: var(--sky);   transform: rotate(5deg); }
+.feature-card:nth-child(4n + 3) .feature-icon { background: var(--coral); transform: rotate(-3deg); }
+.feature-card:nth-child(4n + 4) .feature-icon { background: var(--mint);  transform: rotate(7deg); }
+.feature-card:hover .feature-icon { transform: rotate(0) scale(1.12); }
+
+.feature-icon svg {
+  width: 26px;
+  height: 26px;
+  color: var(--ink);
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.feature-card h3 {
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.section-note {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-top: 14px;
+}
+
+.section-note a,
+.paper a {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+.section-note a:hover,
+.paper a:hover { background: var(--accent); }
+
+/* 見出しがシールのように上の辺に乗る、お知らせの箱 */
+.callout {
+  position: relative;
+  background: var(--card);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px 24px 22px;
+  margin-top: 20px;
+}
+.callout h2 {
+  position: absolute;
+  top: -19px;
+  left: 18px;
+  font-size: 15px;
+  padding: 3px 16px;
+  margin: 0;
+  background: var(--accent);
+  border: var(--line);
+  border-radius: 999px;
+  transform: rotate(-2deg);
+}
+.callout .section-note { margin-top: 0; }
+
+.stats-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.stat-chip {
+  font-size: 15px;
+  font-weight: 900;
+  background: var(--card);
+  border: var(--line);
+  border-radius: 14px;
+  box-shadow: 3px 3px 0 var(--ink);
+  padding: 8px 16px;
+}
+.stat-chip:nth-child(odd)  { transform: rotate(-1.2deg); }
+.stat-chip:nth-child(even) { transform: rotate(1.2deg); }
+
+.stat-chip span {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-left: 6px;
+}
+
+.plan-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  background: var(--card);
+  border: var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.plan-table th,
+.plan-table td {
+  padding: 13px 14px;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: 2px dotted rgba(29, 26, 58, 0.25);
+}
+.plan-table tbody tr:last-child td { border-bottom: 0; }
+
+.plan-table thead th {
+  font-size: 13px;
+  border-bottom: var(--line);
+}
+
+.plan-table th:first-child,
+.plan-table td:first-child {
+  text-align: left;
+}
+
+/* PRO の列を目立たせる */
+.plan-table th:last-child,
+.plan-table td:last-child {
+  background: #fff0b0;
+  border-left: var(--line);
+}
+.plan-table thead th:last-child { background: var(--yellow); }
+
+.plan-table .check { font-size: 16px; font-weight: 900; }
+.plan-table .cross { color: rgba(29, 26, 58, 0.35); }
+
+.plan-label-free,
+.plan-label-pro {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+}
+
+.price-note {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* ---------- 規約などの文章のページ ---------- */
+
+.legal { max-width: 800px; }
+
+.paper {
+  background: var(--card);
+  border: var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+  padding: 36px 40px 48px;
+  font-size: 16px;
+  line-height: 1.8;
+  animation: popIn 0.6s var(--pop) both;
+}
+
+.paper h1 {
+  font-weight: 900;
+  font-size: clamp(24px, 5vw, 32px);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.paper h2 {
+  display: table;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.5;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  padding: 0 4px;
+  background: linear-gradient(transparent 60%, var(--yellow) 60%);
+}
+
+.paper p  { margin: 8px 0; }
+.paper ul { padding-left: 24px; margin: 8px 0; }
+.paper li { margin: 4px 0; }
+
+.paper .updated {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.paper .lang-switcher { justify-content: flex-start; }
+
+.paper .note {
+  background: var(--bg);
+  border: 2px dashed var(--ink);
+  border-radius: 14px;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: var(--muted);
+  margin: 12px 0;
+}
+
+.paper table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+.paper th,
+.paper td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 2px dotted rgba(29, 26, 58, 0.25);
+  vertical-align: top;
+}
+.paper th {
+  width: 36%;
+  font-weight: 900;
+  background: var(--bg);
+}
+.paper td { width: 64%; }
+
+/* ---------- フッター ---------- */
+
+.site-footer {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 30px 24px 26px;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: var(--yellow); }
+
+.site-footer p {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+/* ---------- 動き ---------- */
+
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.94) rotate(-2deg); }
+  to   { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(var(--tilt, 0deg)); }
+  50%      { transform: translateY(-12px) rotate(calc(var(--tilt, 0deg) + 6deg)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .deco svg { transform: rotate(var(--tilt, 0deg)); }
+}
+
+/* ---------- せまい画面 ---------- */
+
+@media (max-width: 600px) {
+  .site-header { padding: 16px 16px; }
+  main { padding: 20px 16px 72px; }
+
+  .home-hero { padding: 64px 0 56px; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 24px 20px;
+    gap: 20px;
+  }
+  .app-icon { width: 92px; height: 92px; border-radius: 22px; }
+
+  .plan-table th,
+  .plan-table td { padding: 11px 8px; font-size: 13px; }
+
+  .paper { padding: 24px 18px 36px; border-radius: 20px; }
+  .paper th,
+  .paper td { padding: 10px 10px; }
+}

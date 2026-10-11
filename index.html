@@ -4,235 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AsakusaSemao</title>
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      --bg: #0a0a0f;
-      --card: #13131a;
-      --border: #1e1e2e;
-      --accent: #7c6aff;
-      --accent2: #ff6a9b;
-      --text: #e8e8f0;
-      --muted: #6b6b80;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: -30%;
-      left: -20%;
-      width: 70vw;
-      height: 70vw;
-      background: radial-gradient(circle, rgba(124,106,255,0.15) 0%, transparent 65%);
-      pointer-events: none;
-      z-index: 0;
-    }
-    body::after {
-      content: "";
-      position: fixed;
-      bottom: -20%;
-      right: -10%;
-      width: 60vw;
-      height: 60vw;
-      background: radial-gradient(circle, rgba(255,106,155,0.12) 0%, transparent 65%);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    main {
-      position: relative;
-      z-index: 1;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 24px;
-      text-align: center;
-    }
-
-    .logo {
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 20px;
-      animation: fadeUp 0.6s ease both;
-    }
-
-    h1 {
-      font-size: clamp(28px, 7vw, 48px);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin-bottom: 16px;
-      animation: fadeUp 0.6s 0.05s ease both;
-    }
-
-    .desc {
-      font-size: 15px;
-      color: var(--muted);
-      line-height: 1.8;
-      max-width: 420px;
-      margin-bottom: 48px;
-      animation: fadeUp 0.6s 0.1s ease both;
-    }
-
-    /* App card */
-    .apps {
-      width: 100%;
-      max-width: 480px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-bottom: 48px;
-      animation: fadeUp 0.6s 0.15s ease both;
-    }
-
-    .app-card {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px 20px;
-      text-decoration: none;
-      color: var(--text);
-      text-align: left;
-      transition: border-color 0.2s, transform 0.15s;
-    }
-
-    .app-card:hover {
-      border-color: rgba(124,106,255,0.5);
-      transform: translateY(-2px);
-    }
-
-    .app-card img {
-      width: 56px;
-      height: 56px;
-      border-radius: 13px;
-      flex-shrink: 0;
-    }
-
-    .app-tag {
-      display: inline-block;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      line-height: 1;
-      padding: 4px 8px;
-      border-radius: 999px;
-      margin-bottom: 6px;
-      color: var(--accent);
-      background: rgba(124,106,255,0.14);
-    }
-
-    .app-tag.game {
-      color: var(--accent2);
-      background: rgba(255,106,155,0.14);
-    }
-
-    .app-card-text h2 {
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .app-card-text p {
-      font-size: 12px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .app-card-arrow {
-      margin-left: auto;
-      color: var(--muted);
-      font-size: 18px;
-      flex-shrink: 0;
-    }
-
-    /* Footer links */
-    .links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      animation: fadeUp 0.6s 0.2s ease both;
-    }
-    .links a {
-      font-size: 12px;
-      color: var(--muted);
-      text-decoration: none;
-      letter-spacing: 0.05em;
-      transition: color 0.2s;
-    }
-    .links a:hover { color: var(--accent); }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
 </head>
-<body>
+<body class="home">
+
+  <header class="site-header">
+    <a class="brand" href="/">AsakusaSemao</a>
+  </header>
+
   <main>
-    <p class="logo">AsakusaSemao</p>
-    <h1>スマホアプリを<br>つくっています。</h1>
-    <p class="desc">個人でiOS・Androidアプリを開発しています。</p>
+    <div class="home-hero">
+      <!-- 飾り。雷・雲・ボール・星 -->
+      <div class="deco" aria-hidden="true">
+        <svg class="deco-bolt" viewBox="0 0 24 24"><path d="M14 1 3 13h7L7 23 21 9h-7z"/></svg>
+        <svg class="deco-cloud" viewBox="0 0 32 20"><path d="M8 19a6 6 0 0 1-.9-11.93A8.5 8.5 0 0 1 23.4 6.1 6.5 6.5 0 0 1 24.5 19z"/></svg>
+        <svg class="deco-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5"/><path d="M12 1.5c3.5 3 5 6.5 4.6 10.9M3.2 17.7c4.4.9 8.2-.2 11.2-3.3M2.2 9.3c3.2-2.5 6.9-3.3 10.8-2.3" fill="none"/></svg>
+        <svg class="deco-star" viewBox="0 0 24 24"><path d="m12 1.5 3.1 6.7 7.4.9-5.4 5.1 1.4 7.3L12 17.9l-6.5 3.6 1.4-7.3L1.5 9.1l7.4-.9z"/></svg>
+      </div>
+      <h1>スマホアプリを<br>つくっています。</h1>
+      <p class="desc">個人でiOS・Androidアプリを開発しています。</p>
+    </div>
 
     <div class="apps">
-      <a class="app-card" href="/apps/storm-volley/">
-        <img src="/assets/images/storm-volley-icon.png" alt="嵐のバレーボールのアイコン" />
+      <a class="app-card" data-app="storm-volley" href="/apps/storm-volley/">
+        <div class="app-card-top">
+          <img src="/assets/images/storm-volley-icon.png" alt="嵐のバレーボールのアイコン" />
+        </div>
         <div class="app-card-text">
           <span class="app-tag game">ゲーム</span>
           <h2>嵐のバレーボール</h2>
-          <p>風と雷を読んで打ち合う、嵐の中の1対1バレーボール<br>iOS / Android 版準備中</p>
+          <p>風と雷を読んで打ち合う、嵐の中の1対1バレーボール</p>
+          <span class="app-status">iOS / Android 版準備中</span>
         </div>
-        <span class="app-card-arrow">›</span>
+        <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>
-      <a class="app-card" href="/apps/storm-badminton/">
-        <img src="/assets/images/storm-badminton-icon.png" alt="嵐のバドミントンのアイコン" />
+      <a class="app-card" data-app="storm-badminton" href="/apps/storm-badminton/">
+        <div class="app-card-top">
+          <img src="/assets/images/storm-badminton-icon.png" alt="嵐のバドミントンのアイコン" />
+        </div>
         <div class="app-card-text">
           <span class="app-tag game">ゲーム</span>
           <h2>嵐のバドミントン</h2>
-          <p>風と雷を読んで打ち合う、嵐の中の1対1バドミントン<br>iOS / Android 版準備中</p>
+          <p>風と雷を読んで打ち合う、嵐の中の1対1バドミントン</p>
+          <span class="app-status">iOS / Android 版準備中</span>
         </div>
-        <span class="app-card-arrow">›</span>
+        <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>
-      <a class="app-card" href="/apps/vollog/">
-        <img src="/assets/images/vollog-icon.png" alt="Vollogアイコン" />
+      <a class="app-card" data-app="vollog" href="/apps/vollog/">
+        <div class="app-card-top">
+          <img src="/assets/images/vollog-icon.png" alt="Vollogアイコン" />
+        </div>
         <div class="app-card-text">
           <span class="app-tag">記録・分析ツール</span>
           <h2>Vollog（バレログ）</h2>
-          <p>バレーボールの選手管理・試合記録・成績データ集計アプリ<br>iOS / Android 版公開中</p>
+          <p>バレーボールの選手管理・試合記録・成績データ集計アプリ</p>
+          <span class="app-status live">iOS / Android 版公開中</span>
         </div>
-        <span class="app-card-arrow">›</span>
+        <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>
     </div>
+  </main>
 
-    <div class="links">
+  <footer class="site-footer">
+    <div class="footer-links">
       <a href="/apps/privacy.html">プライバシーポリシー</a>
       <a href="/apps/vollog/terms.html">Vollog 利用規約</a>
       <a href="/apps/tokushoho.html">特定商取引法に基づく表記</a>
     </div>
-  </main>
+    <p>© 2026 AsakusaSemao. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
