@@ -39,6 +39,7 @@
 
 [data-app="storm-volley"]    { --accent: var(--yellow); }
 [data-app="storm-badminton"] { --accent: var(--sky); }
+[data-app="storm-tennis"]    { --accent: var(--mint); }
 [data-app="vollog"]          { --accent: var(--coral); }
 
 body {
