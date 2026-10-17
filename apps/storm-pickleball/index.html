@@ -1,10 +1,75 @@
 <!DOCTYPE html>
+<!-- tools/build.mjs が作ったページ。直すときは tools/ の文言かスクリプトを直して、npm run build -->
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>嵐のピックルボール（Storm Pickleball）- 嵐の中の1対1ピックルボール</title>
-  <meta name="description" content="嵐の中で1対1のピックルボールをするスマホゲーム。風でボールが流され、カウントが0になった瞬間、ボールのあるコートに雷が落ちます。タップとスワイプだけで遊べます。iOS / Android 版を準備中です。" />
+  <script>
+    (function () {
+      var LOCALES = ["id","ms","cs","de","en","es","fil","fr","it","pl","pt","sr","vi","tr","ru","uk","hi","th","ja","zh-Hans","zh-Hant","ko"], HERE = "ja", PATH = "apps/storm-pickleball/";
+      function candidates(tag) {
+        try {
+          var l = new Intl.Locale(tag).maximize();
+          return [tag, l.language + '-' + l.script + '-' + l.region, l.language + '-' + l.script, l.language + '-' + l.region, l.language];
+        } catch (e) {
+          return [tag];
+        }
+      }
+      function match(tags) {
+        for (var i = 0; i < tags.length; i++) {
+          var c = candidates(tags[i]);
+          for (var j = 0; j < c.length; j++) {
+            for (var k = 0; k < LOCALES.length; k++) if (LOCALES[k].toLowerCase() === String(c[j]).toLowerCase()) return LOCALES[k];
+          }
+        }
+        return null;
+      }
+      var want = null, asked = new URLSearchParams(location.search).get('lang');
+      if (asked) {
+        want = match([asked]) || "en";
+        try { localStorage.setItem('site-lang', want); } catch (e) {}
+      } else if (HERE === 'ja') {
+        try { want = localStorage.getItem('site-lang'); } catch (e) {}
+        if (LOCALES.indexOf(want) < 0) want = match(navigator.languages || [navigator.language || 'ja']) || "en";
+      }
+      if (want && want !== HERE) {
+        location.replace((want === 'ja' ? '/' : '/' + want + '/') + PATH);
+        return;
+      }
+      // このページの言語を覚える（利用規約などから / へ戻ったとき、最後に見ていた言語に戻すため）。
+      // 覚えている言語がこのページにないとき（Vollog のページを開いたマレー語の人）は、上書きしない
+      try {
+        var saved = localStorage.getItem('site-lang');
+        if (!saved || LOCALES.indexOf(saved) >= 0) localStorage.setItem('site-lang', HERE);
+      } catch (e) {}
+    })();
+  </script>
+  <title>嵐のピックルボール（Storm Pickleball）- 嵐の日でもピックルボールがしたい！</title>
+  <meta name="description" content="たとえ強風でも、霧がかかっても、雷に打たれても、ピックルボールがやりたい！ 嵐の中で戦う、1対1（シングルス）のピックルボールゲーム。 風でボールが流され、霧で相手のコートがかすみ、カウントが0になった瞬間、ボールのあるコートに雷が落ちます。 天気を読んで、相手のコートに打ちこむゲームです。" />
+  <link rel="canonical" href="https://asakusasemao.com/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="id" href="https://asakusasemao.com/id/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="ms" href="https://asakusasemao.com/ms/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="cs" href="https://asakusasemao.com/cs/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="de" href="https://asakusasemao.com/de/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="en" href="https://asakusasemao.com/en/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="es" href="https://asakusasemao.com/es/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="fil" href="https://asakusasemao.com/fil/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="fr" href="https://asakusasemao.com/fr/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="it" href="https://asakusasemao.com/it/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="pl" href="https://asakusasemao.com/pl/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="pt" href="https://asakusasemao.com/pt/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="sr" href="https://asakusasemao.com/sr/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="vi" href="https://asakusasemao.com/vi/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="tr" href="https://asakusasemao.com/tr/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="ru" href="https://asakusasemao.com/ru/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="uk" href="https://asakusasemao.com/uk/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="hi" href="https://asakusasemao.com/hi/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="th" href="https://asakusasemao.com/th/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="ja" href="https://asakusasemao.com/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://asakusasemao.com/zh-Hans/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://asakusasemao.com/zh-Hant/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="ko" href="https://asakusasemao.com/ko/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="x-default" href="https://asakusasemao.com/apps/storm-pickleball/" />
   <link rel="icon" href="/favicon.ico" sizes="48x48" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
@@ -19,21 +84,40 @@
   <header class="site-header">
     <a class="brand" href="/">AsakusaSemao</a>
     <nav class="header-links">
-      <a class="ja" href="/apps/storm-pickleball/privacy.html">プライバシーポリシー</a>
-      <a class="ja" href="/apps/tokushoho.html">特定商取引法</a>
-      <a class="en" lang="en" href="/apps/storm-pickleball/privacy.html">Privacy Policy</a>
+      <a href="/apps/storm-pickleball/privacy.html">プライバシーポリシー</a>
+      <a href="/apps/tokushoho.html">特定商取引法</a>
     </nav>
   </header>
 
-  <main class="ja">
+  <main>
+    <details class="lang-picker">
+      <summary aria-label="言語"><!-- Lucide: globe --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span lang="ja">日本語</span></summary>
+      <ul>
+          <li><a href="/id/apps/storm-pickleball/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ms/apps/storm-pickleball/" hreflang="ms" lang="ms" data-lang="ms">Bahasa Melayu</a></li>
+          <li><a href="/cs/apps/storm-pickleball/" hreflang="cs" lang="cs" data-lang="cs">Čeština</a></li>
+          <li><a href="/de/apps/storm-pickleball/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="/en/apps/storm-pickleball/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/es/apps/storm-pickleball/" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a href="/fil/apps/storm-pickleball/" hreflang="fil" lang="fil" data-lang="fil">Filipino</a></li>
+          <li><a href="/fr/apps/storm-pickleball/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="/it/apps/storm-pickleball/" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="/pl/apps/storm-pickleball/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li>
+          <li><a href="/pt/apps/storm-pickleball/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li>
+          <li><a href="/sr/apps/storm-pickleball/" hreflang="sr" lang="sr" data-lang="sr">Srpski</a></li>
+          <li><a href="/vi/apps/storm-pickleball/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li>
+          <li><a href="/tr/apps/storm-pickleball/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          <li><a href="/ru/apps/storm-pickleball/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li>
+          <li><a href="/uk/apps/storm-pickleball/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li>
+          <li><a href="/hi/apps/storm-pickleball/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li>
+          <li><a href="/th/apps/storm-pickleball/" hreflang="th" lang="th" data-lang="th">ไทย</a></li>
+          <li><a href="/apps/storm-pickleball/" hreflang="ja" lang="ja" data-lang="ja" aria-current="page">日本語</a></li>
+          <li><a href="/zh-Hans/apps/storm-pickleball/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li>
+          <li><a href="/zh-Hant/apps/storm-pickleball/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li>
+          <li><a href="/ko/apps/storm-pickleball/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+      </ul>
+    </details>
 
-    <!-- 言語の切り替え。最初は、ブラウザの言語に合わせる（下のスクリプト） -->
-    <div class="lang-switcher">
-      <button class="lang-btn" type="button" data-lang="ja">日本語</button>
-      <button class="lang-btn" type="button" data-lang="en">English</button>
-    </div>
-
-    <!-- Hero -->
     <div class="hero">
       <img class="app-icon" src="/assets/images/storm-pickleball-icon.png" alt="嵐のピックルボールのアイコン" />
       <div class="hero-text">
@@ -41,17 +125,17 @@
           <span>嵐の日でもピックルボールがしたい！</span>
           嵐のピックルボール
         </h1>
-        <p>たとえ強風でも、霧がかかっても、雷に打たれても、ピックルボールがやりたい！<br>嵐の中の1対1のピックルボールゲーム。かんたんな操作、指一本であそべます。<br>天気を読んで、相手のコートにボールを打ちこみましょう。</p>
+        <p>たとえ強風でも、霧がかかっても、雷に打たれても、ピックルボールがやりたい！<br>嵐の中で戦う、1対1（シングルス）のピックルボールゲーム。</p>
+        <p>風でボールが流され、霧で相手のコートがかすみ、カウントが0になった瞬間、ボールのあるコートに雷が落ちます。<br>天気を読んで、相手のコートに打ちこむゲームです。</p>
         <div class="badge-row">
           <span class="badge accent">無料で遊べる</span>
           <span class="badge accent">アカウント登録不要</span>
           <span class="badge accent">縦持ち・横持ち対応</span>
-          <span class="badge accent">日本語 / English</span>
-          <span class="badge">iOS / Android 準備中</span>
+          <span class="badge accent">22の言語に対応</span>
+          <span class="badge">iOS 準備中</span>
+          <span class="badge">Android 準備中</span>
         </div>
       </div>
-
-      <!-- Store buttons（公開したら、Vollog のページと同じ形のリンクに替える） -->
       <div class="store-buttons">
         <span class="store-btn store-btn-soon">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -70,51 +154,71 @@
       </div>
     </div>
 
-    <!-- Features -->
+    <section>
+      <h2>このゲームならでは</h2>
+      <div class="feature-grid">
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">1</div>
+          <h3>本物のルール</h3>
+          <p>サーブした側だけが点を取れる「サイドアウト制」、ネットの前でボレーできない「キッチン」、サーブとその返球はバウンドさせてから打つ「ツーバウンドルール」。</p>
+        </div>
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">2</div>
+          <h3>ネット際の駆け引き</h3>
+          <p>ディンクで相手のキッチンへそっと落とし、浮いた球をドライブで叩きます。</p>
+        </div>
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">3</div>
+          <h3>花火の夜から、嵐の海へ</h3>
+          <p>花火の上がる穏やかな夜の港で始まり、試合の途中で急に嵐がやってきます。もう1つの舞台は、荒れた海をゆく客船のデッキです。</p>
+        </div>
+      </div>
+    </section>
+
     <section>
       <h2>どんなゲーム</h2>
       <div class="feature-grid">
         <div class="feature-card">
           <div class="feature-icon">
-            <!-- Lucide: pointer --><svg viewBox="0 0 24 24"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+            <!-- Lucide: pointer --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
           </div>
           <h3>タップとスワイプだけ</h3>
-          <p>選手は自動で走ります。足もとの輪が光ったらタップでディンク（ネットのすぐ先へ）。上にスワイプでロブ、下にスワイプでドライブ。</p>
+          <p>選手は自動で走ります。足もとの輪が光ったらタップ。</p><p>タップでディンク（相手のキッチンへ短く落とす）、上にスワイプでロブ、下にスワイプでドライブ。高い球のドライブは、スマッシュになります。画面の左右どこを触ったかで、ねらうコースが変わります。</p><p>はじめての人向けに、遊び方のチュートリアルがあります。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
-            <!-- Lucide: wind --><svg viewBox="0 0 24 24"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
+            <!-- Lucide: zap --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
           </div>
-          <h3>風</h3>
-          <p>ボールが風に流されます。風向きを読んでねらえば、コートに入ります。読みちがえると、流されてアウト。</p>
+          <h3>風・霧・雷</h3>
+          <ul><li><b>風</b>: ボールが流されます。風向きを読んでねらえば、コートに入ります。読みちがえると、流されてアウト。</li><li><b>霧</b>: 相手のコートが見えにくくなります。</li><li><b>雷</b>: 雷の気配が高まると数字が出ます。0の瞬間にボールがあるコートへ落ちて、サーブ権に関係なく、落ちなかった側に1点。</li></ul><p>試合が進むほど、嵐は激しくなります。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
-            <!-- Lucide: zap --><svg viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+            <!-- Lucide: book --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
-          <h3>雷</h3>
-          <p>カウントが0になった瞬間、ボールがあるコートに雷が落ちて、相手の得点になります。</p>
+          <h3>ピックルボールの決まりで、短く遊べる</h3>
+          <p>サーブは1本だけ、下から打ちます。点が入るのはサーブした側だけ（サイドアウト制）。</p><p>ネットの前のキッチン（ノンボレーゾーン）では、バウンドの前に打つと違反。サーブを受ける人は、バウンドさせてから返します。サーブした人も、返ってきた球はバウンドさせてから打ちます（ツーバウンドルール）。</p><p>7点先取。6対6からは2点差がつくまで続きます（10点で決着）。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
-            <!-- Lucide: cloud-fog --><svg viewBox="0 0 24 24"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M16 17H7"/><path d="M17 21H9"/></svg>
+            <!-- Lucide: shirt --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
           </div>
-          <h3>霧</h3>
-          <p>霧が出ると、相手のコートが見えにくくなります。</p>
+          <h3>きせかえ</h3>
+          <p>あなたも相手も、肌の色・髪型・髪の色を選べます。</p><p>試合中に飛んでくる「めずらしいもの」（ポップコーン、わたあめ、ランタン、浮き輪、カモメ など）を何度か見かけると、同じ形の帽子や、ボール・パドル・ウェアが手に入ります。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
-            <!-- Lucide: ship --><svg viewBox="0 0 24 24"><path d="M12 10.189V14"/><path d="M12 2v3"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-8.188-3.639a2 2 0 0 0-1.624 0L3 14a11.6 11.6 0 0 0 2.81 7.76"/><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>
+            <!-- Lucide: share --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
           </div>
-          <h3>2つの舞台</h3>
-          <p>花火の上がる穏やかな夜から、途中で急に嵐になる「夜の港」と、最初から嵐の「客船のデッキ」。</p>
+          <h3>記録と共有</h3>
+          <p>勝敗と勝率、雷に打たれた回数、いちばん長いラリーが残ります。</p><p>試合の成績を1枚の画像にして、共有できます。</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
-            <!-- Lucide: shirt --><svg viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+            <!-- Lucide: sliders --><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="21" x2="14" y1="4" y2="4"/><line x1="10" x2="3" y1="4" y2="4"/><line x1="21" x2="12" y1="12" y2="12"/><line x1="8" x2="3" y1="12" y2="12"/><line x1="21" x2="16" y1="20" y2="20"/><line x1="12" x2="3" y1="20" y2="20"/><line x1="14" x2="14" y1="2" y2="6"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="16" x2="16" y1="18" y2="22"/></svg>
           </div>
-          <h3>きせかえと記録</h3>
-          <p>試合中に飛んでくる「めずらしいもの」を見つけると、帽子・ボール・パドル・ウェアなどのアイテムが手に入ります。成績は画像にして共有できます。</p>
+          <h3>そのほか</h3>
+          <ul><li>CPUの強さは3段階</li><li>視点は4つ。縦持ちでも横持ちでも遊べます</li><li>雷の光り方は、設定で弱くできます</li><li>22の言語に対応</li></ul>
         </div>
       </div>
     </section>
@@ -133,119 +237,6 @@
       <h2>お問い合わせ</h2>
       <p class="section-note"><a href="mailto:asakusasemao@gmail.com">asakusasemao@gmail.com</a></p>
     </section>
-
-  </main>
-
-  <!-- English（中身は日本語の側と同じ並び。片方を直したら、もう片方も直す） -->
-  <main class="en" lang="en">
-
-    <!-- 言語の切り替え。最初は、ブラウザの言語に合わせる（下のスクリプト） -->
-    <div class="lang-switcher">
-      <button class="lang-btn" type="button" data-lang="ja">日本語</button>
-      <button class="lang-btn" type="button" data-lang="en">English</button>
-    </div>
-
-    <!-- Hero -->
-    <div class="hero">
-      <img class="app-icon" src="/assets/images/storm-pickleball-icon.png" alt="Storm Pickleball icon" />
-      <div class="hero-text">
-        <h1>
-          <span>Pickleball, even in a storm!</span>
-          Storm Pickleball
-        </h1>
-        <p>Gale-force winds, thick fog, a lightning strike or two… and we still want to play pickleball!<br>A one-on-one pickleball game in a storm, with simple one-finger controls.<br>Read the weather and hit the ball into your opponent's court.</p>
-        <div class="badge-row">
-          <span class="badge accent">Free to play</span>
-          <span class="badge accent">No account needed</span>
-          <span class="badge accent">Portrait or landscape</span>
-          <span class="badge accent">日本語 / English</span>
-          <span class="badge">iOS / Android coming soon</span>
-        </div>
-      </div>
-
-      <!-- Store buttons（日本語の側と同じ。公開したら、リンクに替える） -->
-      <div class="store-buttons">
-        <span class="store-btn store-btn-soon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          <span class="store-btn-label">
-            <small>Coming soon</small>
-            App Store
-          </span>
-        </span>
-        <span class="store-btn store-btn-soon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76a2 2 0 0 0 2.07-.22l11.4-6.58-2.53-2.53L3.18 23.76zM.5 1.26C.19 1.67 0 2.28 0 3.07v17.87c0 .79.19 1.4.51 1.8l.09.09 10.01-10.01v-.24L.59 1.17.5 1.26zM20.93 10.37l-2.9-1.67-2.83 2.83 2.83 2.83 2.91-1.68c.83-.48.83-1.26-.01-1.31zM5.25.46l11.4 6.58-2.53 2.53L3.18.22A2 2 0 0 1 5.25.46z"/></svg>
-          <span class="store-btn-label">
-            <small>Coming soon</small>
-            Google Play
-          </span>
-        </span>
-      </div>
-    </div>
-
-    <!-- Features -->
-    <section>
-      <h2>The game</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <!-- Lucide: pointer --><svg viewBox="0 0 24 24"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
-          </div>
-          <h3>Just taps and swipes</h3>
-          <p>Your player runs on their own. When the ring at your feet lights up, tap for a dink just over the net. Swipe up for a lob, swipe down for a drive.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <!-- Lucide: wind --><svg viewBox="0 0 24 24"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
-          </div>
-          <h3>Wind</h3>
-          <p>The wind carries the ball. Read the wind and your shot lands in. Misread it and it drifts out.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <!-- Lucide: zap --><svg viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
-          </div>
-          <h3>Lightning</h3>
-          <p>When the count hits 0, lightning strikes whichever court the ball is over, and the other side scores.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <!-- Lucide: cloud-fog --><svg viewBox="0 0 24 24"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M16 17H7"/><path d="M17 21H9"/></svg>
-          </div>
-          <h3>Fog</h3>
-          <p>When fog rolls in, your opponent's side gets hard to see.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <!-- Lucide: ship --><svg viewBox="0 0 24 24"><path d="M12 10.189V14"/><path d="M12 2v3"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-8.188-3.639a2 2 0 0 0-1.624 0L3 14a11.6 11.6 0 0 0 2.81 7.76"/><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg>
-          </div>
-          <h3>Two venues</h3>
-          <p>Harbor night starts calm with fireworks, until a storm suddenly rolls in. On the Cruise deck, it's stormy from the first serve.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <!-- Lucide: shirt --><svg viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
-          </div>
-          <h3>Outfits and records</h3>
-          <p>Spot the rare things that fly past during a match to unlock hats, balls, paddles, shirts, and more. You can share your results as an image.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="callout">
-      <h2>Ads and in-app purchases</h2>
-      <p class="section-note">An ad appears at the top of the screen. Buy "Remove ads" once and it's gone for good. "Support the developer" gets you a short thank-you clip. Prices are shown in each store.<br>Supporting the developer doesn't come with a promise to act on requests or add features. If you have feedback or requests, a store review would mean a lot.</p>
-    </section>
-
-    <section class="callout">
-      <h2>Please note</h2>
-      <p class="section-note">The screen flashes brightly when lightning strikes. You can tone it down under "Lightning effects" in Settings.<br>This is just a game. If you hear real thunder or the wind picks up, head indoors. Play pickleball somewhere safe.</p>
-    </section>
-
-    <section class="callout">
-      <h2>Contact</h2>
-      <p class="section-note"><a href="mailto:asakusasemao@gmail.com">asakusasemao@gmail.com</a></p>
-    </section>
-
   </main>
 
   <!--
@@ -295,39 +286,20 @@
 
   <footer class="site-footer">
     <div class="footer-links">
-      <a class="ja" href="/">トップ</a>
-      <a class="ja" href="/apps/storm-pickleball/privacy.html">プライバシーポリシー</a>
-      <a class="ja" href="/apps/tokushoho.html">特定商取引法に基づく表記</a>
-      <a class="en" lang="en" href="/">Home</a>
-      <a class="en" lang="en" href="/apps/storm-pickleball/privacy.html">Privacy Policy</a>
+      <a href="/">トップ</a>
+      <a href="/apps/storm-pickleball/privacy.html">プライバシーポリシー</a>
+      <a href="/apps/tokushoho.html">特定商取引法に基づく表記</a>
     </div>
     <p>© 2026 AsakusaSemao. All rights reserved.</p>
-    <p class="ja">アイコン: <a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a>（ISC License）</p>
-    <p class="en" lang="en">Icons: <a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a> (ISC License)</p>
+    <p>アイコン: <a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a>（ISC License）</p>
   </footer>
 
   <script>
-    // 最初は、ブラウザの言語に合わせる（日本語でなければ英語）。?lang=en / ?lang=ja で決められる
-    const TITLES = {
-      ja: document.title,
-      en: 'Storm Pickleball - One-on-one pickleball in a storm',
-    };
-
-    function switchLang(lang) {
-      document.documentElement.lang = lang;
-      document.title = TITLES[lang];
-    }
-
-    document.querySelectorAll('.lang-btn').forEach((button) => {
-      button.addEventListener('click', () => switchLang(button.dataset.lang));
+    document.querySelectorAll('.lang-picker a[data-lang]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        try { localStorage.setItem('site-lang', a.dataset.lang); } catch (e) {}
+      });
     });
-
-    const asked = new URLSearchParams(location.search).get('lang');
-    const browserLang = navigator.language || navigator.userLanguage || 'ja';
-    if (asked === 'en' || (asked !== 'ja' && !browserLang.startsWith('ja'))) {
-      switchLang('en');
-    }
   </script>
-
 </body>
 </html>

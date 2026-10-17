@@ -1,0 +1,151 @@
+{
+  "lang": "Filipino",
+  "site": {
+    "home": "Home",
+    "privacy": "Patakaran sa Privacy",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "Makipag-ugnayan",
+    "language": "Wika",
+    "icons": "Mga icon: {lucide} (ISC License)",
+    "iconAlt": "Icon ng {name}",
+    "released": "Available na sa {p}",
+    "coming": "Malapit na sa {p}",
+    "releasedShort": "Available na sa {p}",
+    "comingShort": "{p}: malapit na",
+    "soon": "Malapit na"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "Gumagawa ako ng<br>mga app sa phone.",
+    "desc": "Isang independent developer na gumagawa ng mga app para sa iOS at Android.",
+    "game": "Laro",
+    "tool": "Record at stats",
+    "vollogCard": "Volleyball app para sa pag-manage ng players, pag-record ng laban, at pag-compute ng stats",
+    "vollogTerms": "Mga Tuntunin ng Paggamit ng Vollog"
+  },
+  "game": {
+    "unique": "Dito lang sa larong ito",
+    "features": "Paano laruin",
+    "badges": [
+      "Libreng laruin",
+      "Walang account na kailangan",
+      "Portrait o landscape",
+      "Available sa 22 wika"
+    ],
+    "ads": "Ads at in-app purchases",
+    "adsBody": "May ads sa itaas ng screen. Bilhin nang isang beses ang “{removeAds}” at mawawala na ito nang tuluyan. Sa “{support}”, magpapakita kami ng maikling movie bilang pasasalamat. Para sa presyo, tingnan sa app store mo.",
+    "adsNote": "Hindi pangako ang suporta na susundin ang mga request o magdadagdag ng features. Malaking tulong at inspirasyon ang mga review mo sa store."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "One-on-one na volleyball sa gitna ng unos. Panatilihin ang rally at makipagtagisan sa kidlat",
+      "unique": [
+        [
+          "Panatilihin, saka i-spike",
+          "Sa volleyball, hindi dapat tumama sa lupa ang bola. Tumalon sa ibabaw ng mataas na net at ibagsak ang spike."
+        ],
+        [
+          "Saya ng mahahabang rally",
+          "Tuloy-tuloy ang rally, kaya kahit baguhan ay agad nakakalaro ng totoong volleyball. Habang tumatagal, lumalapit ang bilang ng kidlat."
+        ],
+        [
+          "Laro laban sa kidlat",
+          "2 puntos ang kidlat. Bantayan ang bilang, gamitin ang lob, bump, at spike para itakda kung gaano katagal nasa ere ang bola, at siguraduhing nasa ibabaw ng court ng kalaban ito pagdating ng 0."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "One-on-one na badminton sa gitna ng unos. Tinatangay ng hangin ang shuttlecock: paabante at paatras ang kalaban",
+      "unique": [
+        [
+          "Malambot na drop, matalim na smash",
+          "Drop na dahan-dahang bumabagsak sa harap ng net, mataas na clear papunta sa likod, at matalim na smash. Paabantehin at paatrasin ang kalaban."
+        ],
+        [
+          "Shuttlecock sa hangin",
+          "Tinatangay ng hangin ang magaang shuttlecock. Kapag mas mataas ang clear, mas malayo itong naaanod."
+        ],
+        [
+          "Smash",
+          "Kapag mataas ang dating ng shuttlecock, tumalon at ibagsak ito mula sa itaas."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "One-on-one na tennis sa gitna ng unos. Pinakamabilis sa serye: tamaan ang mga linya",
+      "unique": [
+        [
+          "Labanan ng bilis",
+          "Kahit may unos, mabilis at matalim ang lipad ng bola. Ang mataas na bola ay nagiging smash kapag pinalo mo ng power shot."
+        ],
+        [
+          "Manalo sa placement",
+          "Paluin pakaliwa at pakanan, at ipadala ang bola kung saan hindi abot ng kalaban."
+        ],
+        [
+          "Bounce at serve",
+          "Hayaang tumalbog nang isang beses ang bola, saka ibalik. Sa serve, ihahagis mo ang bola pataas, sa tatlong paraan: mabilis, normal, o mahina."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "One-on-one na pickleball sa gitna ng unos. Kitchen at side-out: totoong rules ng pickleball",
+      "unique": [
+        [
+          "Totoong rules ng pickleball",
+          "Side-out scoring: ang nagse-serve lang ang nakakapuntos. Ang kitchen sa harap ng net, kung saan bawal kang mag-volley. At ang two-bounce rule: kailangang tumalbog muna ang serve at ang return nito."
+        ],
+        [
+          "Labanan sa net",
+          "Ihulog nang mahina ang dink sa kitchen ng kalaban, saka paluin ng drive ang bolang umangat."
+        ],
+        [
+          "Mula paputok hanggang maalong dagat",
+          "Nagsisimula sa tahimik na pantalan sa gabi na may paputok, hanggang biglang dumating ang unos sa gitna ng laban. Ang isa pang lugar: ang deck ng cruise ship sa gitna ng maalong dagat."
+        ]
+      ]
+    }
+  },
+  "vollog": {
+    "terms": "Mga Tuntunin ng Paggamit",
+    "features": "Mga pangunahing feature",
+    "stats": "Mga datos na maire-record",
+    "plans": "Mga plan",
+    "listSep": ", ",
+    "badges": [
+      "Libreng gamitin",
+      "Gumagana offline",
+      "Walang account na kailangan",
+      "iOS at Android",
+      "Available sa 21 wika"
+    ],
+    "statsNote": "Sa bawat laro, mapipili mo kung ire-record ang {reception}. Ang mga team na hindi gumagamit nito ay makakapag-record nang wala ang mga field na iyon.",
+    "cards": [
+      [
+        "Profile ng mga manlalaro",
+        "I-register ang jersey number, pangalan, at posisyon. Mapapamahalaan mo rin ang record ng bawat manlalaro sa mga laro."
+      ],
+      [
+        "Record ng laro at set",
+        "Mag-record habang naglalaro gamit ang “{realtime}” o pagkatapos gamit ang “{summary}”. Itala ang iskor ng bawat set at ang stats ng bawat manlalaro."
+      ],
+      [
+        "Stats",
+        "Tingnan ang kabuuang stats ng bawat manlalaro. Makikita ang pag-unlad sa mga trend graph para sa buong panahon o sa piniling yugto."
+      ],
+      [
+        "Export",
+        "Available sa lahat ng plan ang pag-export ng stats bilang larawan o PDF. Kasama sa Pro ang CSV export."
+      ],
+      [
+        "Pag-share ng data",
+        "I-share ang record ng team at mga laro sa ibang user ng Vollog gamit ang file. Kailangan ng Pro para magpadala; libre ang pagtanggap."
+      ],
+      [
+        "8 tema",
+        "Pumili ng kulay mula sa 8 tema, gaya ng {themes}."
+      ]
+    ]
+  }
+}

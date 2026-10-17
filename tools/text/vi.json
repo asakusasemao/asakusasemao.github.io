@@ -1,0 +1,151 @@
+{
+  "lang": "Tiếng Việt",
+  "site": {
+    "home": "Trang chủ",
+    "privacy": "Chính sách quyền riêng tư",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "Liên hệ",
+    "language": "Ngôn ngữ",
+    "icons": "Biểu tượng: {lucide} (Giấy phép ISC)",
+    "iconAlt": "Biểu tượng {name}",
+    "released": "Đã có trên {p}",
+    "coming": "Sắp có trên {p}",
+    "releasedShort": "Đã có trên {p}",
+    "comingShort": "{p}: sắp ra mắt",
+    "soon": "Sắp ra mắt"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "Tôi làm<br>ứng dụng điện thoại.",
+    "desc": "Nhà phát triển độc lập làm ứng dụng cho iOS và Android.",
+    "game": "Trò chơi",
+    "tool": "Ghi chép & thống kê",
+    "vollogCard": "Ứng dụng bóng chuyền để quản lý cầu thủ, ghi lại trận đấu và tổng hợp thống kê",
+    "vollogTerms": "Điều khoản sử dụng Vollog"
+  },
+  "game": {
+    "unique": "Chỉ có trong trò chơi này",
+    "features": "Cách chơi",
+    "badges": [
+      "Chơi miễn phí",
+      "Không cần tài khoản",
+      "Màn hình dọc hoặc ngang",
+      "Hỗ trợ 22 ngôn ngữ"
+    ],
+    "ads": "Quảng cáo và mua hàng trong ứng dụng",
+    "adsBody": "Quảng cáo hiện ở phía trên màn hình. Mua “{removeAds}” một lần là quảng cáo biến mất vĩnh viễn. Với “{support}”, bạn sẽ được xem một đoạn phim ngắn để cảm ơn. Vui lòng xem giá trên kho ứng dụng của bạn.",
+    "adsNote": "Ủng hộ không phải là lời hứa đáp ứng yêu cầu hay thêm tính năng. Cảm nhận và góp ý của bạn trong phần đánh giá trên kho ứng dụng là nguồn động viên rất lớn."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "Bóng chuyền một đấu một giữa bão. Giữ pha bóng thật lâu và đấu trí với sét",
+      "unique": [
+        [
+          "Giữ bóng, rồi đập",
+          "Trong bóng chuyền, bóng không được chạm đất. Bật nhảy qua tấm lưới cao và đập bóng thật mạnh."
+        ],
+        [
+          "Vui với những pha bóng dài",
+          "Các pha bóng kéo dài, nên cả người mới chơi cũng có ngay một trận bóng chuyền thực thụ. Pha bóng càng dài, đồng hồ đếm ngược của sét càng đến gần."
+        ],
+        [
+          "Đấu trí với sét",
+          "Sét đánh được tính 2 điểm. Theo dõi đồng hồ đếm ngược, dùng bóng bổng, đệm bóng và đập bóng để chỉnh thời gian bóng bay, sao cho bóng ở trên phần sân đối phương khi về 0."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "Cầu lông một đấu một giữa bão. Cầu bay theo gió, đẩy đối thủ lên xuống liên tục",
+      "unique": [
+        [
+          "Bỏ nhỏ nhẹ nhàng, đập cầu sắc gọn",
+          "Cú bỏ nhỏ rơi nhẹ ngay sau lưới, cú phông cầu cao ra cuối sân và cú đập cầu sắc gọn. Đẩy đối thủ chạy lên chạy xuống."
+        ],
+        [
+          "Quả cầu theo gió",
+          "Quả cầu nhẹ bị gió cuốn đi. Phông cầu càng cao, cầu càng bị thổi xa."
+        ],
+        [
+          "Đập cầu",
+          "Khi cầu đến cao, hãy bật nhảy và đập mạnh từ trên xuống."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "Quần vợt một đấu một giữa bão. Nhanh nhất cả loạt game: nhắm vào các đường biên",
+      "unique": [
+        [
+          "Đọ tốc độ",
+          "Ngay cả giữa bão, bóng vẫn bay mạnh và nhanh. Bóng cao đánh mạnh sẽ thành cú đập."
+        ],
+        [
+          "Thắng nhờ điểm rơi",
+          "Đánh sang trái, sang phải, đưa bóng đến chỗ đối thủ không với tới."
+        ],
+        [
+          "Bóng nảy và giao bóng",
+          "Để bóng nảy một lần rồi đánh trả. Khi giao bóng, bạn tung bóng lên rồi đánh, theo ba cách: nhanh, thường hoặc nhẹ."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "Pickleball một đấu một giữa bão. Bếp và đổi giao bóng: luật pickleball thật",
+      "unique": [
+        [
+          "Luật pickleball thật",
+          "Đổi giao bóng: chỉ bên giao bóng mới được ghi điểm. Bếp sát lưới, nơi bạn không được đánh vô lê. Và luật hai lần nảy: quả giao bóng và quả trả giao bóng phải nảy trước khi đánh."
+        ],
+        [
+          "Đấu trí sát lưới",
+          "Thả cú dink nhẹ vào bếp của đối thủ, rồi drive thật mạnh vào quả bóng bị bật cao."
+        ],
+        [
+          "Từ pháo hoa đến biển bão",
+          "Bắt đầu ở một bến cảng yên bình về đêm với pháo hoa, cho đến khi cơn bão bất ngờ ập đến giữa trận. Địa điểm còn lại: boong một con tàu du lịch giữa biển động dữ dội."
+        ]
+      ]
+    }
+  },
+  "vollog": {
+    "terms": "Điều khoản sử dụng",
+    "features": "Tính năng chính",
+    "stats": "Dữ liệu có thể ghi",
+    "plans": "Gói",
+    "listSep": ", ",
+    "badges": [
+      "Dùng miễn phí",
+      "Dùng được khi offline",
+      "Không cần tài khoản",
+      "iOS và Android",
+      "Hỗ trợ 21 ngôn ngữ"
+    ],
+    "statsNote": "Bạn chọn cho từng trận có ghi {reception} hay không. Đội không dùng có thể ghi mà không hiện các mục đó.",
+    "cards": [
+      [
+        "Hồ sơ cầu thủ",
+        "Nhập số áo, tên và vị trí. Bạn cũng quản lý được dữ liệu thi đấu của từng cầu thủ."
+      ],
+      [
+        "Ghi trận đấu và set",
+        "Ghi trong trận với “{realtime}” hoặc sau trận với “{summary}”. Lưu tỉ số từng set và thống kê cá nhân."
+      ],
+      [
+        "Thống kê",
+        "Tổng hợp theo từng cầu thủ. Biểu đồ diễn biến cho toàn bộ thời gian hoặc khoảng thời gian tự chọn cho thấy sự tiến bộ."
+      ],
+      [
+        "Xuất dữ liệu",
+        "Xuất thống kê ra ảnh hoặc PDF có ở mọi gói. Xuất CSV có trong gói Pro."
+      ],
+      [
+        "Chia sẻ dữ liệu",
+        "Chia sẻ dữ liệu đội và trận đấu cho người dùng Vollog khác bằng tệp. Gửi cần gói Pro, nhận thì miễn phí."
+      ],
+      [
+        "8 giao diện",
+        "Chọn màu sắc từ 8 giao diện, như {themes}."
+      ]
+    ]
+  }
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!-- tools/build.mjs が作ったページ。直すときは tools/ の文言かスクリプトを直して、npm run build -->
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var LOCALES = ["id","ms","cs","de","en","es","fil","fr","it","pl","pt","sr","vi","tr","ru","uk","hi","th","ja","zh-Hans","zh-Hant","ko"], HERE = "ru", PATH = "apps/storm-badminton/";
+      function candidates(tag) {
+        try {
+          var l = new Intl.Locale(tag).maximize();
+          return [tag, l.language + '-' + l.script + '-' + l.region, l.language + '-' + l.script, l.language + '-' + l.region, l.language];
+        } catch (e) {
+          return [tag];
+        }
+      }
+      function match(tags) {
+        for (var i = 0; i < tags.length; i++) {
+          var c = candidates(tags[i]);
+          for (var j = 0; j < c.length; j++) {
+            for (var k = 0; k < LOCALES.length; k++) if (LOCALES[k].toLowerCase() === String(c[j]).toLowerCase()) return LOCALES[k];
+          }
+        }
+        return null;
+      }
+      var want = null, asked = new URLSearchParams(location.search).get('lang');
+      if (asked) {
+        want = match([asked]) || "en";
+        try { localStorage.setItem('site-lang', want); } catch (e) {}
+      } else if (HERE === 'ja') {
+        try { want = localStorage.getItem('site-lang'); } catch (e) {}
+        if (LOCALES.indexOf(want) < 0) want = match(navigator.languages || [navigator.language || 'ja']) || "en";
+      }
+      if (want && want !== HERE) {
+        location.replace((want === 'ja' ? '/' : '/' + want + '/') + PATH);
+        return;
+      }
+      // このページの言語を覚える（利用規約などから / へ戻ったとき、最後に見ていた言語に戻すため）。
+      // 覚えている言語がこのページにないとき（Vollog のページを開いたマレー語の人）は、上書きしない
+      try {
+        var saved = localStorage.getItem('site-lang');
+        if (!saved || LOCALES.indexOf(saved) >= 0) localStorage.setItem('site-lang', HERE);
+      } catch (e) {}
+    })();
+  </script>
+  <title>Бадминтон в грозу (Storm Badminton) - Бадминтон, даже в грозу!</title>
+  <meta name="description" content="Шквальный ветер, густой туман, пара ударов молнии… а мы всё равно хотим играть в бадминтон! Бадминтон в одиночном разряде в самый разгар грозы. Ветер сносит волан. Туман скрывает сторону соперника. А когда отсчёт дойдёт до 0, молния бьёт в ту половину площадки, над которой волан. Читай погоду и приземляй волан на стороне соперника." />
+  <link rel="canonical" href="https://asakusasemao.com/ru/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="id" href="https://asakusasemao.com/id/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="ms" href="https://asakusasemao.com/ms/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="cs" href="https://asakusasemao.com/cs/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="de" href="https://asakusasemao.com/de/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="en" href="https://asakusasemao.com/en/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="es" href="https://asakusasemao.com/es/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="fil" href="https://asakusasemao.com/fil/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="fr" href="https://asakusasemao.com/fr/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="it" href="https://asakusasemao.com/it/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="pl" href="https://asakusasemao.com/pl/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="pt" href="https://asakusasemao.com/pt/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="sr" href="https://asakusasemao.com/sr/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="vi" href="https://asakusasemao.com/vi/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="tr" href="https://asakusasemao.com/tr/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="ru" href="https://asakusasemao.com/ru/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="uk" href="https://asakusasemao.com/uk/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="hi" href="https://asakusasemao.com/hi/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="th" href="https://asakusasemao.com/th/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="ja" href="https://asakusasemao.com/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://asakusasemao.com/zh-Hans/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://asakusasemao.com/zh-Hant/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="ko" href="https://asakusasemao.com/ko/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="x-default" href="https://asakusasemao.com/apps/storm-badminton/" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body data-app="storm-badminton">
+
+  <header class="site-header">
+    <a class="brand" href="/ru/">AsakusaSemao</a>
+    <nav class="header-links">
+      <a href="/apps/storm-badminton/privacy.html">Политика конфиденциальности</a>
+    </nav>
+  </header>
+
+  <main>
+    <details class="lang-picker">
+      <summary aria-label="Язык"><!-- Lucide: globe --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span lang="ru">Русский</span></summary>
+      <ul>
+          <li><a href="/id/apps/storm-badminton/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ms/apps/storm-badminton/" hreflang="ms" lang="ms" data-lang="ms">Bahasa Melayu</a></li>
+          <li><a href="/cs/apps/storm-badminton/" hreflang="cs" lang="cs" data-lang="cs">Čeština</a></li>
+          <li><a href="/de/apps/storm-badminton/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="/en/apps/storm-badminton/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/es/apps/storm-badminton/" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a href="/fil/apps/storm-badminton/" hreflang="fil" lang="fil" data-lang="fil">Filipino</a></li>
+          <li><a href="/fr/apps/storm-badminton/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="/it/apps/storm-badminton/" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="/pl/apps/storm-badminton/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li>
+          <li><a href="/pt/apps/storm-badminton/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li>
+          <li><a href="/sr/apps/storm-badminton/" hreflang="sr" lang="sr" data-lang="sr">Srpski</a></li>
+          <li><a href="/vi/apps/storm-badminton/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li>
+          <li><a href="/tr/apps/storm-badminton/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          <li><a href="/ru/apps/storm-badminton/" hreflang="ru" lang="ru" data-lang="ru" aria-current="page">Русский</a></li>
+          <li><a href="/uk/apps/storm-badminton/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li>
+          <li><a href="/hi/apps/storm-badminton/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li>
+          <li><a href="/th/apps/storm-badminton/" hreflang="th" lang="th" data-lang="th">ไทย</a></li>
+          <li><a href="/apps/storm-badminton/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          <li><a href="/zh-Hans/apps/storm-badminton/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li>
+          <li><a href="/zh-Hant/apps/storm-badminton/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li>
+          <li><a href="/ko/apps/storm-badminton/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+      </ul>
+    </details>
+
+    <div class="hero">
+      <img class="app-icon" src="/assets/images/storm-badminton-icon.png" alt="Иконка игры «Бадминтон в грозу»" />
+      <div class="hero-text">
+        <h1>
+          <span>Бадминтон, даже в грозу!</span>
+          Бадминтон в грозу
+        </h1>
+        <p>Шквальный ветер, густой туман, пара ударов молнии… а мы всё равно хотим играть в бадминтон!<br>Бадминтон в одиночном разряде в самый разгар грозы.</p>
+        <p>Ветер сносит волан. Туман скрывает сторону соперника. А когда отсчёт дойдёт до 0, молния бьёт в ту половину площадки, над которой волан.<br>Читай погоду и приземляй волан на стороне соперника.</p>
+        <div class="badge-row">
+          <span class="badge accent">Бесплатно</span>
+          <span class="badge accent">Без регистрации</span>
+          <span class="badge accent">Вертикально и горизонтально</span>
+          <span class="badge accent">22 языка</span>
+          <span class="badge">iOS: скоро</span>
+          <span class="badge">Android: скоро</span>
+        </div>
+      </div>
+      <div class="store-buttons">
+        <span class="store-btn store-btn-soon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span class="store-btn-label">
+            <small>Скоро</small>
+            App Store
+          </span>
+        </span>
+        <span class="store-btn store-btn-soon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76a2 2 0 0 0 2.07-.22l11.4-6.58-2.53-2.53L3.18 23.76zM.5 1.26C.19 1.67 0 2.28 0 3.07v17.87c0 .79.19 1.4.51 1.8l.09.09 10.01-10.01v-.24L.59 1.17.5 1.26zM20.93 10.37l-2.9-1.67-2.83 2.83 2.83 2.83 2.91-1.68c.83-.48.83-1.26-.01-1.31zM5.25.46l11.4 6.58-2.53 2.53L3.18.22A2 2 0 0 1 5.25.46z"/></svg>
+          <span class="store-btn-label">
+            <small>Скоро</small>
+            Google Play
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <section>
+      <h2>Только в этой игре</h2>
+      <div class="feature-grid">
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">1</div>
+          <h3>Мягко у сетки, резко вниз</h3>
+          <p>Укороченный, который мягко падает за сеткой, высоко-далёкий удар к задней линии и резкий смэш. Гоняй соперника вперёд и назад.</p>
+        </div>
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">2</div>
+          <h3>Волан на ветру</h3>
+          <p>Лёгкий волан несёт ветер. Чем выше высоко-далёкий удар, тем дальше его сносит.</p>
+        </div>
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">3</div>
+          <h3>Смэш</h3>
+          <p>Когда волан летит высоко, выпрыгни и пробей сверху вниз.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Как играть</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: pointer --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+          </div>
+          <h3>Только касания и свайпы</h3>
+          <p>Твой игрок бегает сам. Когда круг у ног загорится, коснись экрана.</p><p>Коснись — укороченный, проведи вверх — высоко-далёкий удар, проведи вниз — смэш. Место касания (слева или справа) задаёт направление.</p><p>В первый раз короткое обучение покажет, как играть.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: zap --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+          </div>
+          <h3>Ветер, туман и молнии</h3>
+          <ul><li><b>Ветер</b>: он сносит волан. Правильно прочитаешь ветер — удар попадёт в поле. Ошибёшься — волан унесёт в аут.</li><li><b>Туман</b>: сторону соперника плохо видно.</li><li><b>Молния</b>: когда заряд растёт, появляется отсчёт. На 0 молния бьёт в ту половину, над которой волан, и очки получает другая сторона.</li></ul><p>Чем выше счёт, тем сильнее бушует гроза.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: school --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 22v-4a2 2 0 1 0-4 0v4"/><path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2"/><path d="M18 5v17"/><path d="m4 6 8-4 8 4"/><path d="M6 5v17"/><circle cx="12" cy="9" r="2"/></svg>
+          </div>
+          <h3>Две площадки</h3>
+          <ul><li><b>Спортзал</b>: сначала безветрие. Потом крыша и стены улетают, и ты оказываешься посреди грозы.</li><li><b>Парк</b>: гроза с первой подачи.</li></ul>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: shirt --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+          </div>
+          <h3>Гардероб</h3>
+          <p>Выбери себе и сопернику цвет кожи, причёску и цвет волос.</p><p>Замечай редкие вещи, которые пролетают во время матча, и открывай головные уборы, воланы, ракетки и футболки.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: share --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+          </div>
+          <h3>Статистика и публикация</h3>
+          <p>Игра запоминает победы и поражения, процент побед, сколько раз в тебя била молния, и самый долгий розыгрыш.</p><p>Собери результаты в одну картинку и поделись ею.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: sliders --><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="21" x2="14" y1="4" y2="4"/><line x1="10" x2="3" y1="4" y2="4"/><line x1="21" x2="12" y1="12" y2="12"/><line x1="8" x2="3" y1="12" y2="12"/><line x1="21" x2="16" y1="20" y2="20"/><line x1="12" x2="3" y1="20" y2="20"/><line x1="14" x2="14" y1="2" y2="6"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="16" x2="16" y1="18" y2="22"/></svg>
+          </div>
+          <h3>А ещё</h3>
+          <ul><li>Три уровня сложности</li><li>Четыре ракурса камеры. Можно играть вертикально и горизонтально</li><li>Вспышки молний можно ослабить в Настройках</li><li>Доступна на 22 языках</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="callout">
+      <h2>Реклама и покупки в приложении</h2>
+      <p class="section-note">Вверху экрана показывается реклама. Купи «Убрать рекламу» один раз — и она исчезнет навсегда. В благодарность за «Поддержать разработчика» мы покажем короткий ролик. Цены смотри в своём магазине приложений.<br>Поддержка не означает обещания выполнить пожелания или добавить функции. Твои впечатления и идеи в отзыве в магазине очень нас воодушевят.</p>
+    </section>
+
+    <section class="callout">
+      <h2>Обрати внимание</h2>
+      <p class="section-note">Когда бьёт молния, экран ярко вспыхивает. Это можно смягчить в Настройках, в пункте «Эффекты молний».<br>Это всего лишь игра. Если слышишь настоящий гром или поднимается сильный ветер, уйди в помещение. Играй в бадминтон в безопасном месте.</p>
+    </section>
+
+    <section class="callout">
+      <h2>Контакты</h2>
+      <p class="section-note"><a href="mailto:asakusasemao@gmail.com">asakusasemao@gmail.com</a></p>
+    </section>
+  </main>
+
+  <!--
+    このページの絵記号（「Lucide: ...」と書いてある SVG）は、Lucide（https://lucide.dev）のもの。
+    ライセンスは、著作権表示と許諾の文を写しに残すことを求めるので、ここに置く。絵記号を足しても、この文はそのままでよい。
+
+    ISC License
+
+    Copyright (c) 2026 Lucide Icons and Contributors
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+    ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+    Lucide の絵記号の一部は Feather（https://feathericons.com）がもとで、そちらは次のライセンス。
+
+    The MIT License (MIT) (for the icons derived from the Feather project)
+
+    Copyright (c) 2013-present Cole Bemis
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+  -->
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/ru/">Главная</a>
+      <a href="/apps/storm-badminton/privacy.html">Политика конфиденциальности</a>
+    </div>
+    <p>© 2026 AsakusaSemao. All rights reserved.</p>
+    <p>Иконки: <a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a> (лицензия ISC)</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.lang-picker a[data-lang]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        try { localStorage.setItem('site-lang', a.dataset.lang); } catch (e) {}
+      });
+    });
+  </script>
+</body>
+</html>

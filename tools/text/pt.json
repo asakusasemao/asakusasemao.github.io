@@ -1,0 +1,151 @@
+{
+  "lang": "Português",
+  "site": {
+    "home": "Início",
+    "privacy": "Política de Privacidade",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "Contato",
+    "language": "Idioma",
+    "icons": "Ícones: {lucide} (licença ISC)",
+    "iconAlt": "Ícone do {name}",
+    "released": "Já no {p}",
+    "coming": "Em breve no {p}",
+    "releasedShort": "Já no {p}",
+    "comingShort": "{p}: em breve",
+    "soon": "Em breve"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "Eu crio apps<br>para celular.",
+    "desc": "Apps para iOS e Android, desenvolvidos de forma independente.",
+    "game": "Jogo",
+    "tool": "Súmulas e estatísticas",
+    "vollogCard": "App de vôlei para gerenciar jogadores, registrar partidas e reunir estatísticas",
+    "vollogTerms": "Termos de Uso do Vollog"
+  },
+  "game": {
+    "unique": "Só neste jogo",
+    "features": "Como se joga",
+    "badges": [
+      "Grátis para jogar",
+      "Sem cadastro",
+      "Na vertical ou na horizontal",
+      "Disponível em 22 idiomas"
+    ],
+    "ads": "Anúncios e compras no app",
+    "adsBody": "Aparecem anúncios no alto da tela. Compre “{removeAds}” uma vez e eles somem de vez. Com “{support}”, você ganha um filminho como agradecimento. Confira os preços na sua loja de apps.",
+    "adsNote": "O apoio não é uma promessa de atender pedidos nem de adicionar recursos. Suas impressões e ideias numa avaliação na loja nos animam muito."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "Vôlei um contra um na tempestade. Mantenha o rali vivo e jogue contra o raio",
+      "unique": [
+        [
+          "Mantenha no ar e corte",
+          "No vôlei, a bola não pode tocar o chão. Salte acima da rede alta e mande uma cortada."
+        ],
+        [
+          "Ralis longos e divertidos",
+          "Os ralis duram bastante, então até quem joga pela primeira vez já entra numa partida de vôlei de verdade. Quanto mais duram, mais perto fica a contagem do raio."
+        ],
+        [
+          "Jogue com o raio",
+          "Um raio vale 2 pontos. Fique de olho na contagem, alterne balão, manchete e cortada para controlar quanto tempo a bola fica no ar, e faça ela estar sobre a quadra adversária no 0."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "Badminton um contra um na tempestade. A peteca vai com o vento: faça o rival correr para a frente e para trás",
+      "unique": [
+        [
+          "Suave na rede, forte para baixo",
+          "Um drop que cai suave logo depois da rede, um clear alto no fundo da quadra e um smash seco. Faça o rival correr para a frente e para trás."
+        ],
+        [
+          "Uma peteca no vento",
+          "A peteca, levinha, é levada pelo vento. Quanto mais alto o clear, mais longe ela vai."
+        ],
+        [
+          "Smash",
+          "Quando a peteca vem alta, salte e bata nela de cima para baixo."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "Tênis um contra um na tempestade. O mais rápido da série: mire nas linhas",
+      "unique": [
+        [
+          "Pura velocidade",
+          "Mesmo na tempestade, a bola voa forte e rápida. Uma bola alta com uma batida forte vira um smash."
+        ],
+        [
+          "Vença no posicionamento",
+          "Alterne esquerda e direita e mande a bola para onde o rival não alcança."
+        ],
+        [
+          "Quique e saque",
+          "Deixe a bola quicar uma vez e devolva. No saque, você joga a bola para o alto, de três jeitos: rápido, normal ou suave."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "Pickleball um contra um na tempestade. Cozinha e side-out: regras de verdade",
+      "unique": [
+        [
+          "Regras de pickleball de verdade",
+          "Sistema de side-out: só quem saca pontua. A cozinha junto à rede, onde você não pode volear. E a regra dos dois quiques: o saque e a devolução precisam quicar primeiro."
+        ],
+        [
+          "Duelos junto à rede",
+          "Deixe cair um dink suave na cozinha do rival e castigue com um drive a bola que subir."
+        ],
+        [
+          "Dos fogos de artifício ao mar revolto",
+          "Tudo começa num porto tranquilo à noite, com fogos de artifício, até que a tempestade chega de repente no meio da partida. O outro cenário: o convés de um cruzeiro num mar revolto."
+        ]
+      ]
+    }
+  },
+  "vollog": {
+    "terms": "Termos de Uso",
+    "features": "Principais recursos",
+    "stats": "O que você pode registrar",
+    "plans": "Planos",
+    "listSep": ", ",
+    "badges": [
+      "Grátis",
+      "Funciona offline",
+      "Sem cadastro",
+      "iOS e Android",
+      "Disponível em 21 idiomas"
+    ],
+    "statsNote": "Em cada partida, você escolhe se registra a {reception}. Equipes que não a usam podem registrar sem esses campos.",
+    "cards": [
+      [
+        "Perfis dos jogadores",
+        "Cadastre número da camisa, nome e posição. Também dá para gerenciar os registros de partida de cada jogador."
+      ],
+      [
+        "Partidas e sets",
+        "Registre durante a partida com “{realtime}” ou depois com “{summary}”. Guarde o placar de cada set e as estatísticas individuais."
+      ],
+      [
+        "Estatísticas",
+        "Resumos por jogador. Gráficos de evolução, de todo o histórico ou de um período escolhido, mostram o progresso."
+      ],
+      [
+        "Exportar",
+        "Exportar estatísticas como imagem ou PDF está em todos os planos. A exportação em CSV faz parte do Pro."
+      ],
+      [
+        "Compartilhar dados",
+        "Compartilhe os registros da equipe e das partidas com outro usuário do Vollog por arquivo. Enviar exige o Pro; receber é grátis."
+      ],
+      [
+        "8 temas",
+        "Escolha as cores entre 8 temas, como {themes}."
+      ]
+    ]
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "lang": "Srpski",
+  "site": {
+    "home": "Početna",
+    "privacy": "Politika privatnosti",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "Kontakt",
+    "language": "Jezik",
+    "icons": "Ikone: {lucide} (ISC licenca)",
+    "iconAlt": "Ikona igre {name}",
+    "released": "Već na {p}",
+    "coming": "Uskoro na {p}",
+    "releasedShort": "Već na {p}",
+    "comingShort": "{p}: uskoro",
+    "soon": "Uskoro"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "Pravim<br>aplikacije za telefon.",
+    "desc": "Nezavisan razvoj aplikacija za iOS i Android.",
+    "game": "Igra",
+    "tool": "Zapisnik i statistika",
+    "vollogCard": "Odbojkaška aplikacija za vođenje igrača, zapisnik utakmica i statistiku",
+    "vollogTerms": "Uslovi korišćenja aplikacije Vollog"
+  },
+  "game": {
+    "unique": "Samo u ovoj igri",
+    "features": "Kako se igra",
+    "badges": [
+      "Besplatno",
+      "Bez naloga",
+      "Uspravno i položeno",
+      "Na 22 jezika"
+    ],
+    "ads": "Reklame i kupovine u aplikaciji",
+    "adsBody": "Na vrhu ekrana se prikazuju reklame. Kupi jednom „{removeAds}” i nestaju zauvek. Uz „{support}” ti se zahvaljujemo kratkim filmom. Cene proveri u svojoj prodavnici aplikacija.",
+    "adsNote": "Podrška nije obećanje da će želje biti ispunjene ili funkcije dodate. Tvoji utisci i ideje u recenziji u prodavnici mnogo nam znače."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "Odbojka jedan na jedan u oluji. Održi akciju i nadmudri munju",
+      "unique": [
+        [
+          "Održi loptu, pa smeč",
+          "U odbojci lopta ne sme da dodirne tlo. Skoči iznad visoke mreže i zakucaj smeč."
+        ],
+        [
+          "Čar dugih akcija",
+          "Akcije traju dugo, pa i početnici odmah igraju pravu odbojku. Što duže traju, to je bliže odbrojavanje munje."
+        ],
+        [
+          "Igra sa munjom",
+          "Munja vredi 2 poena. Prati odbrojavanje, lobom, čekićem i smečom biraj koliko dugo je lopta u vazduhu, i neka na 0 bude iznad protivnikove polovine."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "Badminton jedan na jedan u oluji. Vetar nosi lopticu, a ti teraš protivnika napred i nazad",
+      "unique": [
+        [
+          "Nežno uz mrežu, oštro nadole",
+          "Skraćeni udarac koji nežno pada iza mreže, visoki udarac u dubinu i oštar smeč. Teraj protivnika da trči napred i nazad."
+        ],
+        [
+          "Loptica na vetru",
+          "Laku lopticu nosi vetar. Što je viši udarac u dubinu, to je dalje odnese."
+        ],
+        [
+          "Smeč",
+          "Kad loptica dođe visoko, skoči i udari je odozgo."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "Tenis jedan na jedan u oluji. Najbrži u seriji: gađaj linije",
+      "unique": [
+        [
+          "Čista brzina",
+          "I u oluji lopta leti jako i brzo. Visoka lopta odigrana jakim udarcem postaje smeč."
+        ],
+        [
+          "Pobeda plasmanom",
+          "Igraj levo i desno i pošalji loptu tamo gde protivnik ne stiže."
+        ],
+        [
+          "Odskok i servis",
+          "Pusti da lopta jednom odskoči, pa je vrati. Na servisu bacaš loptu uvis, na tri načina: brzo, normalno ili meko."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "Pickleball jedan na jedan u oluji. Kuhinja i promena servisa: prava pravila",
+      "unique": [
+        [
+          "Prava pravila pickleballa",
+          "Promena servisa: poene osvaja samo strana koja servira. Kuhinja kod mreže, u kojoj ne smeš da igraš volej. I pravilo dva odskoka: servis i njegov povratak moraju prvo da odskoče."
+        ],
+        [
+          "Dvoboji kod mreže",
+          "Spusti mek dink u protivnikovu kuhinju, a loptu koja se podigne kazni drajvom."
+        ],
+        [
+          "Od vatrometa do uzburkanog mora",
+          "Sve počinje u mirnoj luci noću, uz vatromet, dok usred meča iznenada ne stigne oluja. Drugo mesto: paluba kruzera na uzburkanom moru."
+        ]
+      ]
+    }
+  },
+  "vollog": {
+    "terms": "Uslovi korišćenja",
+    "features": "Glavne funkcije",
+    "stats": "Šta možete da beležite",
+    "plans": "Planovi",
+    "listSep": ", ",
+    "badges": [
+      "Besplatno",
+      "Radi bez interneta",
+      "Bez naloga",
+      "iOS i Android",
+      "Na 21 jeziku"
+    ],
+    "statsNote": "Za svaku utakmicu birate da li ćete beležiti {reception}. Timovi koji ga ne prate mogu da beleže bez tih polja.",
+    "cards": [
+      [
+        "Profili igrača",
+        "Unesite broj na dresu, ime i poziciju. Možete voditi i zapisnike utakmica za svakog igrača."
+      ],
+      [
+        "Utakmice i setovi",
+        "Beležite tokom utakmice u režimu „{realtime}” ili posle nje u režimu „{summary}”. Čuvaju se rezultati setova i pojedinačna statistika."
+      ],
+      [
+        "Statistika",
+        "Pregled za svakog igrača. Grafikoni napretka za ceo period ili izabrani period pokazuju razvoj."
+      ],
+      [
+        "Izvoz",
+        "Izvoz statistike kao slike ili PDF-a dostupan je u svim planovima. Izvoz u CSV je deo plana Pro."
+      ],
+      [
+        "Deljenje podataka",
+        "Delite podatke tima i utakmica sa drugim korisnikom aplikacije Vollog putem datoteke. Slanje zahteva Pro, primanje je besplatno."
+      ],
+      [
+        "8 tema",
+        "Izaberite boje među 8 tema, na primer {themes}."
+      ]
+    ]
+  }
+}

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<!-- tools/build.mjs が作ったページ。直すときは tools/ の文言かスクリプトを直して、npm run build -->
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var LOCALES = ["id","cs","de","en","es","fil","fr","it","pl","pt","sr","vi","tr","ru","uk","hi","th","ja","zh-Hans","zh-Hant","ko"], HERE = "de", PATH = "apps/vollog/";
+      function candidates(tag) {
+        try {
+          var l = new Intl.Locale(tag).maximize();
+          return [tag, l.language + '-' + l.script + '-' + l.region, l.language + '-' + l.script, l.language + '-' + l.region, l.language];
+        } catch (e) {
+          return [tag];
+        }
+      }
+      function match(tags) {
+        for (var i = 0; i < tags.length; i++) {
+          var c = candidates(tags[i]);
+          for (var j = 0; j < c.length; j++) {
+            for (var k = 0; k < LOCALES.length; k++) if (LOCALES[k].toLowerCase() === String(c[j]).toLowerCase()) return LOCALES[k];
+          }
+        }
+        return null;
+      }
+      var want = null, asked = new URLSearchParams(location.search).get('lang');
+      if (asked) {
+        want = match([asked]) || "en";
+        try { localStorage.setItem('site-lang', want); } catch (e) {}
+      } else if (HERE === 'ja') {
+        try { want = localStorage.getItem('site-lang'); } catch (e) {}
+        if (LOCALES.indexOf(want) < 0) want = match(navigator.languages || [navigator.language || 'ja']) || "en";
+      }
+      if (want && want !== HERE) {
+        location.replace((want === 'ja' ? '/' : '/' + want + '/') + PATH);
+        return;
+      }
+      // このページの言語を覚える（利用規約などから / へ戻ったとき、最後に見ていた言語に戻すため）。
+      // 覚えている言語がこのページにないとき（Vollog のページを開いたマレー語の人）は、上書きしない
+      try {
+        var saved = localStorage.getItem('site-lang');
+        if (!saved || LOCALES.indexOf(saved) >= 0) localStorage.setItem('site-lang', HERE);
+      } catch (e) {}
+    })();
+  </script>
+  <title>Vollog: Volleyball Statistik - Spiele erfassen,Leistung sehen</title>
+  <meta name="description" content="Alles, was dein Volleyballteam braucht – in einer App. Vollog hilft Trainern, Managern und Spielern, ihren Kader zu verwalten, Spielergebnisse zu erfassen und Leistungsstatistiken zu verfolgen – ganz ohne den Aufwand von Tabellen oder Notizzetteln." />
+  <link rel="canonical" href="https://asakusasemao.com/de/apps/vollog/" />
+  <link rel="alternate" hreflang="id" href="https://asakusasemao.com/id/apps/vollog/" />
+  <link rel="alternate" hreflang="cs" href="https://asakusasemao.com/cs/apps/vollog/" />
+  <link rel="alternate" hreflang="de" href="https://asakusasemao.com/de/apps/vollog/" />
+  <link rel="alternate" hreflang="en" href="https://asakusasemao.com/en/apps/vollog/" />
+  <link rel="alternate" hreflang="es" href="https://asakusasemao.com/es/apps/vollog/" />
+  <link rel="alternate" hreflang="fil" href="https://asakusasemao.com/fil/apps/vollog/" />
+  <link rel="alternate" hreflang="fr" href="https://asakusasemao.com/fr/apps/vollog/" />
+  <link rel="alternate" hreflang="it" href="https://asakusasemao.com/it/apps/vollog/" />
+  <link rel="alternate" hreflang="pl" href="https://asakusasemao.com/pl/apps/vollog/" />
+  <link rel="alternate" hreflang="pt" href="https://asakusasemao.com/pt/apps/vollog/" />
+  <link rel="alternate" hreflang="sr" href="https://asakusasemao.com/sr/apps/vollog/" />
+  <link rel="alternate" hreflang="vi" href="https://asakusasemao.com/vi/apps/vollog/" />
+  <link rel="alternate" hreflang="tr" href="https://asakusasemao.com/tr/apps/vollog/" />
+  <link rel="alternate" hreflang="ru" href="https://asakusasemao.com/ru/apps/vollog/" />
+  <link rel="alternate" hreflang="uk" href="https://asakusasemao.com/uk/apps/vollog/" />
+  <link rel="alternate" hreflang="hi" href="https://asakusasemao.com/hi/apps/vollog/" />
+  <link rel="alternate" hreflang="th" href="https://asakusasemao.com/th/apps/vollog/" />
+  <link rel="alternate" hreflang="ja" href="https://asakusasemao.com/apps/vollog/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://asakusasemao.com/zh-Hans/apps/vollog/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://asakusasemao.com/zh-Hant/apps/vollog/" />
+  <link rel="alternate" hreflang="ko" href="https://asakusasemao.com/ko/apps/vollog/" />
+  <link rel="alternate" hreflang="x-default" href="https://asakusasemao.com/apps/vollog/" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body data-app="vollog">
+
+  <header class="site-header">
+    <a class="brand" href="/de/">AsakusaSemao</a>
+    <nav class="header-links">
+      <a href="/apps/vollog/privacy.html">Datenschutzerklärung</a>
+      <a href="/apps/vollog/terms.html">Nutzungsbedingungen</a>
+    </nav>
+  </header>
+
+  <main>
+    <details class="lang-picker">
+      <summary aria-label="Sprache"><!-- Lucide: globe --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span lang="de">Deutsch</span></summary>
+      <ul>
+          <li><a href="/id/apps/vollog/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/cs/apps/vollog/" hreflang="cs" lang="cs" data-lang="cs">Čeština</a></li>
+          <li><a href="/de/apps/vollog/" hreflang="de" lang="de" data-lang="de" aria-current="page">Deutsch</a></li>
+          <li><a href="/en/apps/vollog/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/es/apps/vollog/" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a href="/fil/apps/vollog/" hreflang="fil" lang="fil" data-lang="fil">Filipino</a></li>
+          <li><a href="/fr/apps/vollog/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="/it/apps/vollog/" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="/pl/apps/vollog/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li>
+          <li><a href="/pt/apps/vollog/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li>
+          <li><a href="/sr/apps/vollog/" hreflang="sr" lang="sr" data-lang="sr">Srpski</a></li>
+          <li><a href="/vi/apps/vollog/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li>
+          <li><a href="/tr/apps/vollog/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          <li><a href="/ru/apps/vollog/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li>
+          <li><a href="/uk/apps/vollog/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li>
+          <li><a href="/hi/apps/vollog/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li>
+          <li><a href="/th/apps/vollog/" hreflang="th" lang="th" data-lang="th">ไทย</a></li>
+          <li><a href="/apps/vollog/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          <li><a href="/zh-Hans/apps/vollog/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li>
+          <li><a href="/zh-Hant/apps/vollog/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li>
+          <li><a href="/ko/apps/vollog/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+      </ul>
+    </details>
+
+    <div class="hero">
+      <img class="app-icon" src="/assets/images/vollog-icon.png" alt="Icon von Vollog" />
+      <div class="hero-text">
+        <h1>
+          <span>Spiele erfassen,Leistung sehen</span>
+          Vollog: Volleyball Statistik
+        </h1>
+        <p>Alles, was dein Volleyballteam braucht – in einer App.</p>
+        <p>Vollog hilft Trainern, Managern und Spielern, ihren Kader zu verwalten, Spielergebnisse zu erfassen und Leistungsstatistiken zu verfolgen – ganz ohne den Aufwand von Tabellen oder Notizzetteln.</p>
+        <div class="badge-row">
+          <span class="badge accent">Kostenlos nutzbar</span>
+          <span class="badge accent">Funktioniert offline</span>
+          <span class="badge accent">Kein Konto nötig</span>
+          <span class="badge accent">iOS &amp; Android</span>
+          <span class="badge accent">In 21 Sprachen</span>
+        </div>
+      </div>
+      <div class="store-buttons">
+        <a class="store-btn store-btn-apple" href="https://apps.apple.com/app/vollog/id6761419267" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span class="store-btn-label">
+            <small>Download on the</small>
+            App Store
+          </span>
+        </a>
+        <a class="store-btn store-btn-google" href="https://play.google.com/store/apps/details?id=com.asakusasemao.vollog" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76a2 2 0 0 0 2.07-.22l11.4-6.58-2.53-2.53L3.18 23.76zM.5 1.26C.19 1.67 0 2.28 0 3.07v17.87c0 .79.19 1.4.51 1.8l.09.09 10.01-10.01v-.24L.59 1.17.5 1.26zM20.93 10.37l-2.9-1.67-2.83 2.83 2.83 2.83 2.91-1.68c.83-.48.83-1.26-.01-1.31zM5.25.46l11.4 6.58-2.53 2.53L3.18.22A2 2 0 0 1 5.25.46z"/></svg>
+          <span class="store-btn-label">
+            <small>GET IT ON</small>
+            Google Play
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <section>
+      <h2>Wichtigste Funktionen</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: users --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Spielerprofile</h3>
+          <p>Trikotnummer, Name und Position eintragen. Auch die Spielstatistiken jedes Spielers verwaltest du hier.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: clipboard --><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+          </div>
+          <h3>Spiele &amp; Sätze erfassen</h3>
+          <p>Erfasse während des Spiels per „Live-Eingabe“ oder danach per „Zusammenfassung“. Satzergebnisse und Einzelstatistiken werden gespeichert.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: chart --><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+          </div>
+          <h3>Statistiken</h3>
+          <p>Auswertungen für jeden Spieler. Verlaufsdiagramme für die gesamte Zeit oder einen gewählten Zeitraum zeigen die Entwicklung.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: export --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" x2="12" y1="2" y2="15"/></svg>
+          </div>
+          <h3>Export</h3>
+          <p>Statistiken als Bild oder PDF exportieren geht in jedem Plan. CSV-Export gibt es mit Pro.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: swap --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg>
+          </div>
+          <h3>Daten teilen</h3>
+          <p>Teile Team- und Spieldaten per Datei mit anderen Vollog-Nutzern. Senden braucht Pro, Empfangen ist kostenlos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: palette --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          </div>
+          <h3>8 Designs</h3>
+          <p>Wähle das Farbschema aus 8 Designs, darunter Blau, Grün, Dunkel, Anzeigetafel.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Was du erfassen kannst</h2>
+      <div class="stats-list">
+        <div class="stat-chip">Aufschlag <span>Aufschläge / Ass / Aufschlagfehler</span></div>
+        <div class="stat-chip">Angriff <span>Angriffe / Angriffspunkt / Angriffsfehler</span></div>
+        <div class="stat-chip">Block <span>Blockpunkt</span></div>
+        <div class="stat-chip">Annahme <span>Annahmen / Positive Annahme / Annahmefehler</span></div>
+      </div>
+      <p class="section-note">Du legst für jedes Spiel fest, ob die Annahme erfasst wird. Teams, die sie nicht nutzen, erfassen ohne diese Felder.</p>
+    </section>
+
+    <section>
+      <h2>Pläne</h2>
+      <table class="plan-table">
+        <thead>
+          <tr>
+            <th>Funktion</th>
+            <th><span class="plan-label-free">FREE</span></th>
+            <th><span class="plan-label-pro">PRO</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Werbung</td>
+            <td>Ja</td>
+            <td><span class="check">Nein</span></td>
+          </tr>
+          <tr>
+            <td>Teams</td>
+            <td>Nur 1 Team</td>
+            <td><span class="check">Unbegrenzt</span></td>
+          </tr>
+          <tr>
+            <td>Spieler</td>
+            <td>Bis zu 15</td>
+            <td><span class="check">Unbegrenzt</span></td>
+          </tr>
+          <tr>
+            <td>Spiel- &amp; Statistikeingabe</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Statistiken &amp; Diagramme</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Bild- &amp; PDF-Export</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>CSV-Export</td>
+            <td><span class="cross">—</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Datensicherung &amp; -wiederherstellung</td>
+            <td><span class="cross">—</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td>Datenfreigabe</td>
+            <td>Nur empfangen</td>
+            <td><span class="check">Senden &amp; empfangen</span></td>
+          </tr>
+          <tr>
+            <td>Spieler aus anderen Teams kopieren</td>
+            <td><span class="cross">—</span></td>
+            <td><span class="check">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="callout">
+      <h2>Kontakt</h2>
+      <p class="section-note"><a href="mailto:asakusasemao@gmail.com">asakusasemao@gmail.com</a></p>
+    </section>
+  </main>
+
+  <!--
+    このページの絵記号（「Lucide: ...」と書いてある SVG）は、Lucide（https://lucide.dev）のもの。
+    ライセンスは、著作権表示と許諾の文を写しに残すことを求めるので、ここに置く。絵記号を足しても、この文はそのままでよい。
+
+    ISC License
+
+    Copyright (c) 2026 Lucide Icons and Contributors
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+    ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+    Lucide の絵記号の一部は Feather（https://feathericons.com）がもとで、そちらは次のライセンス。
+
+    The MIT License (MIT) (for the icons derived from the Feather project)
+
+    Copyright (c) 2013-present Cole Bemis
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+  -->
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/de/">Startseite</a>
+      <a href="/apps/vollog/privacy.html">Datenschutzerklärung</a>
+      <a href="/apps/vollog/terms.html">Nutzungsbedingungen</a>
+    </div>
+    <p>© 2026 AsakusaSemao. All rights reserved.</p>
+    <p>Icons: <a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a> (ISC-Lizenz)</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.lang-picker a[data-lang]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        try { localStorage.setItem('site-lang', a.dataset.lang); } catch (e) {}
+      });
+    });
+  </script>
+</body>
+</html>

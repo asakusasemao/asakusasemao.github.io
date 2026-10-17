@@ -1,0 +1,151 @@
+{
+  "lang": "Deutsch",
+  "site": {
+    "home": "Startseite",
+    "privacy": "Datenschutzerklärung",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "Kontakt",
+    "language": "Sprache",
+    "icons": "Icons: {lucide} (ISC-Lizenz)",
+    "iconAlt": "Icon von {name}",
+    "released": "Jetzt für {p}",
+    "coming": "Bald für {p}",
+    "releasedShort": "Jetzt für {p}",
+    "comingShort": "{p}: bald verfügbar",
+    "soon": "Bald verfügbar"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "Ich mache<br>Smartphone-Apps.",
+    "desc": "Apps für iOS und Android, unabhängig entwickelt.",
+    "game": "Spiel",
+    "tool": "Statistik & Spielberichte",
+    "vollogCard": "Volleyball-App für Spielerverwaltung, Spielberichte und Statistiken",
+    "vollogTerms": "Nutzungsbedingungen von Vollog"
+  },
+  "game": {
+    "unique": "Nur in diesem Spiel",
+    "features": "So wird gespielt",
+    "badges": [
+      "Kostenlos spielbar",
+      "Kein Konto nötig",
+      "Hoch- und Querformat",
+      "In 22 Sprachen"
+    ],
+    "ads": "Werbung und In-App-Käufe",
+    "adsBody": "Oben auf dem Bildschirm erscheint Werbung. Kaufst du einmal „{removeAds}“, ist sie für immer weg. Mit „{support}“ bekommst du als Dankeschön einen kurzen Film zu sehen. Die Preise findest du im jeweiligen App Store.",
+    "adsNote": "Die Unterstützung ist kein Versprechen, Wünsche umzusetzen oder Funktionen hinzuzufügen. Über Eindrücke und Ideen in einer Bewertung im Store freue ich mich sehr."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "Volleyball eins gegen eins im Sturm. Halte den Ballwechsel am Leben und spiel gegen den Blitz",
+      "unique": [
+        [
+          "Ball halten, dann schmettern",
+          "Beim Volleyball darf der Ball nie den Boden berühren. Spring über das hohe Netz und hau einen Schmetterball hinunter."
+        ],
+        [
+          "Lange Ballwechsel",
+          "Die Ballwechsel laufen lange, so spielen auch Neulinge sofort richtiges Volleyball. Je länger sie dauern, desto näher rückt der Blitz-Countdown."
+        ],
+        [
+          "Spiel mit dem Blitz",
+          "Ein Blitz zählt 2 Punkte. Behalte den Countdown im Blick, steuere mit Lob, Bagger und Schmetterball, wie lange der Ball in der Luft bleibt, und sorge dafür, dass er bei 0 über der gegnerischen Hälfte ist."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "Badminton eins gegen eins im Sturm. Der Federball treibt im Wind, du jagst den Gegner vor und zurück",
+      "unique": [
+        [
+          "Sanft fallen lassen, scharf schmettern",
+          "Ein Drop, der sanft hinters Netz fällt, ein hoher Clear nach hinten, ein scharfer Smash. Jag den Gegner vor und zurück."
+        ],
+        [
+          "Federball im Wind",
+          "Der leichte Federball treibt im Wind. Je höher der Clear, desto weiter treibt er ab."
+        ],
+        [
+          "Smash",
+          "Kommt der Federball hoch, spring hoch und schlag ihn von oben hinunter."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "Tennis eins gegen eins im Sturm. Das Schnellste der Reihe: Schlag die Bälle auf die Linien",
+      "unique": [
+        [
+          "Tempo pur",
+          "Selbst im Sturm fliegt der Ball hart und schnell. Einen hohen Ball verwandelst du mit dem Powerschlag in einen Smash."
+        ],
+        [
+          "Mit Platzierung punkten",
+          "Spiel nach links und rechts und schlag den Ball dahin, wo der Gegner nicht mehr hinkommt."
+        ],
+        [
+          "Aufspringen und Aufschlag",
+          "Lass den Ball einmal aufspringen und spiel ihn zurück. Beim Aufschlag wirfst du den Ball hoch, auf drei Arten: schnell, normal oder sanft."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "Pickleball eins gegen eins im Sturm. Küche und Side-Out: echte Pickleball-Regeln",
+      "unique": [
+        [
+          "Echte Pickleball-Regeln",
+          "Side-Out: Punkte macht nur, wer aufschlägt. Die Küche vor dem Netz, in der du nicht volley spielen darfst. Und die Zwei-Bounce-Regel: Aufschlag und Return müssen erst aufspringen."
+        ],
+        [
+          "Duelle am Netz",
+          "Setz einen sanften Dink in die Küche des Gegners und schlag den hochspringenden Ball mit einem Drive."
+        ],
+        [
+          "Vom Feuerwerk aufs stürmische Meer",
+          "Es beginnt in einem ruhigen Hafen bei Nacht mit Feuerwerk, bis mitten im Spiel plötzlich ein Sturm aufzieht. Der zweite Schauplatz: das Deck eines Kreuzfahrtschiffs auf tosender See."
+        ]
+      ]
+    }
+  },
+  "vollog": {
+    "terms": "Nutzungsbedingungen",
+    "features": "Wichtigste Funktionen",
+    "stats": "Was du erfassen kannst",
+    "plans": "Pläne",
+    "listSep": ", ",
+    "badges": [
+      "Kostenlos nutzbar",
+      "Funktioniert offline",
+      "Kein Konto nötig",
+      "iOS & Android",
+      "In 21 Sprachen"
+    ],
+    "statsNote": "Du legst für jedes Spiel fest, ob die {reception} erfasst wird. Teams, die sie nicht nutzen, erfassen ohne diese Felder.",
+    "cards": [
+      [
+        "Spielerprofile",
+        "Trikotnummer, Name und Position eintragen. Auch die Spielstatistiken jedes Spielers verwaltest du hier."
+      ],
+      [
+        "Spiele & Sätze erfassen",
+        "Erfasse während des Spiels per „{realtime}“ oder danach per „{summary}“. Satzergebnisse und Einzelstatistiken werden gespeichert."
+      ],
+      [
+        "Statistiken",
+        "Auswertungen für jeden Spieler. Verlaufsdiagramme für die gesamte Zeit oder einen gewählten Zeitraum zeigen die Entwicklung."
+      ],
+      [
+        "Export",
+        "Statistiken als Bild oder PDF exportieren geht in jedem Plan. CSV-Export gibt es mit Pro."
+      ],
+      [
+        "Daten teilen",
+        "Teile Team- und Spieldaten per Datei mit anderen Vollog-Nutzern. Senden braucht Pro, Empfangen ist kostenlos."
+      ],
+      [
+        "8 Designs",
+        "Wähle das Farbschema aus 8 Designs, darunter {themes}."
+      ]
+    ]
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "lang": "Polski",
+  "site": {
+    "home": "Strona główna",
+    "privacy": "Polityka prywatności",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "Kontakt",
+    "language": "Język",
+    "icons": "Ikony: {lucide} (licencja ISC)",
+    "iconAlt": "Ikona gry {name}",
+    "released": "Już na {p}",
+    "coming": "Wkrótce na {p}",
+    "releasedShort": "Już na {p}",
+    "comingShort": "{p}: wkrótce",
+    "soon": "Wkrótce"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "Tworzę<br>aplikacje mobilne.",
+    "desc": "Aplikacje na iOS i Androida tworzone niezależnie.",
+    "game": "Gra",
+    "tool": "Zapis meczów i statystyki",
+    "vollogCard": "Aplikacja siatkarska do zarządzania zawodnikami, zapisu meczów i zbierania statystyk",
+    "vollogTerms": "Warunki korzystania z Vollog"
+  },
+  "game": {
+    "unique": "Tylko w tej grze",
+    "features": "Jak się gra",
+    "badges": [
+      "Za darmo",
+      "Bez zakładania konta",
+      "Pionowo i poziomo",
+      "Dostępna w 22 językach"
+    ],
+    "ads": "Reklamy i zakupy w aplikacji",
+    "adsBody": "U góry ekranu wyświetlają się reklamy. Kup raz „{removeAds}”, a znikną na zawsze. W ramach „{support}” w podziękowaniu pokażemy ci krótki film. Ceny sprawdzisz w swoim sklepie z aplikacjami.",
+    "adsNote": "Wsparcie nie jest obietnicą spełnienia próśb ani dodania funkcji. Twoje wrażenia i pomysły w recenzji w sklepie bardzo nas motywują."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "Siatkówka jeden na jednego w czasie burzy. Podtrzymuj akcję i graj z piorunem",
+      "unique": [
+        [
+          "Utrzymaj piłkę, potem atakuj",
+          "W siatkówce piłka nie może dotknąć ziemi. Wyskocz nad wysoką siatkę i zaatakuj z całej siły."
+        ],
+        [
+          "Radość z długich akcji",
+          "Akcje trwają długo, więc nawet początkujący od razu grają w prawdziwą siatkówkę. Im dłużej trwają, tym bliżej odliczanie pioruna."
+        ],
+        [
+          "Gra z piorunem",
+          "Piorun to 2 punkty. Obserwuj odliczanie, zmieniaj lob, odbicie i atak, by decydować, jak długo piłka jest w powietrzu, i sprawić, by przy 0 była nad połową rywala."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "Badminton jeden na jednego w czasie burzy. Lotka leci z wiatrem, rywal biega do przodu i do tyłu",
+      "unique": [
+        [
+          "Miękko przy siatce, ostro w dół",
+          "Drop, który miękko spada tuż za siatką, wysoki clear na koniec kortu i ostry smecz. Zmuszaj rywala do biegania do przodu i do tyłu."
+        ],
+        [
+          "Lotka na wietrze",
+          "Lekką lotkę niesie wiatr. Im wyższy clear, tym dalej ją zniesie."
+        ],
+        [
+          "Smecz",
+          "Gdy lotka nadlatuje wysoko, wyskocz i uderz ją z góry."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "Tenis jeden na jednego w czasie burzy. Najszybszy w serii: celuj w linie",
+      "unique": [
+        [
+          "Czysta szybkość",
+          "Nawet w burzy piłka leci mocno i szybko. Wysoka piłka zagrana mocnym uderzeniem zamienia się w smecz."
+        ],
+        [
+          "Wygrywaj precyzją",
+          "Zagrywaj na lewo i na prawo i posyłaj piłkę tam, gdzie rywal nie sięgnie."
+        ],
+        [
+          "Kozioł i serwis",
+          "Pozwól piłce odbić się raz, a potem ją oddaj. Serwujesz z podrzutu, na trzy sposoby: szybko, normalnie lub miękko."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "Pickleball jeden na jednego w czasie burzy. Kuchnia i zmiana serwisu: prawdziwe zasady",
+      "unique": [
+        [
+          "Prawdziwe zasady pickleballa",
+          "Zmiana serwisu: punkty zdobywa tylko strona serwująca. Kuchnia przy siatce, w której nie wolno grać z woleja. I zasada dwóch odbić: serwis i jego odbiór muszą najpierw odbić się od kortu."
+        ],
+        [
+          "Pojedynki przy siatce",
+          "Zagraj miękki dink w kuchnię rywala, a piłkę, która się podniesie, skarć drive’em."
+        ],
+        [
+          "Od fajerwerków po wzburzone morze",
+          "Wszystko zaczyna się w spokojnym porcie nocą, przy fajerwerkach, aż w połowie meczu nagle nadciąga burza. Drugie miejsce: pokład wycieczkowca na wzburzonym morzu."
+        ]
+      ]
+    }
+  },
+  "vollog": {
+    "terms": "Warunki korzystania",
+    "features": "Najważniejsze funkcje",
+    "stats": "Co możesz zapisywać",
+    "plans": "Plany",
+    "listSep": ", ",
+    "badges": [
+      "Za darmo",
+      "Działa offline",
+      "Bez zakładania konta",
+      "iOS i Android",
+      "Dostępna w 21 językach"
+    ],
+    "statsNote": "Dla każdego meczu wybierasz, czy zapisywać {reception}. Drużyny, które tego nie śledzą, mogą zapisywać bez tych pól.",
+    "cards": [
+      [
+        "Profile zawodników",
+        "Wpisz numer, imię i nazwisko oraz pozycję. Możesz też zarządzać zapisami meczów każdego zawodnika."
+      ],
+      [
+        "Mecze i sety",
+        "Zapisuj w trakcie meczu w trybie „{realtime}” albo po nim w trybie „{summary}”. Zapiszesz wynik każdego seta i statystyki indywidualne."
+      ],
+      [
+        "Statystyki",
+        "Zestawienia dla każdego zawodnika. Wykresy zmian za cały czas lub wybrany okres pokazują postępy."
+      ],
+      [
+        "Eksport",
+        "Eksport statystyk do obrazu lub PDF jest w każdym planie. Eksport CSV jest dostępny w planie Pro."
+      ],
+      [
+        "Udostępnianie danych",
+        "Udostępniaj dane drużyny i meczów innemu użytkownikowi Vollog w pliku. Wysyłanie wymaga Pro, odbieranie jest za darmo."
+      ],
+      [
+        "8 motywów",
+        "Wybierz kolorystykę spośród 8 motywów, m.in. {themes}."
+      ]
+    ]
+  }
+}

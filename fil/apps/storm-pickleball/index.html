@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!-- tools/build.mjs が作ったページ。直すときは tools/ の文言かスクリプトを直して、npm run build -->
+<html lang="fil">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var LOCALES = ["id","ms","cs","de","en","es","fil","fr","it","pl","pt","sr","vi","tr","ru","uk","hi","th","ja","zh-Hans","zh-Hant","ko"], HERE = "fil", PATH = "apps/storm-pickleball/";
+      function candidates(tag) {
+        try {
+          var l = new Intl.Locale(tag).maximize();
+          return [tag, l.language + '-' + l.script + '-' + l.region, l.language + '-' + l.script, l.language + '-' + l.region, l.language];
+        } catch (e) {
+          return [tag];
+        }
+      }
+      function match(tags) {
+        for (var i = 0; i < tags.length; i++) {
+          var c = candidates(tags[i]);
+          for (var j = 0; j < c.length; j++) {
+            for (var k = 0; k < LOCALES.length; k++) if (LOCALES[k].toLowerCase() === String(c[j]).toLowerCase()) return LOCALES[k];
+          }
+        }
+        return null;
+      }
+      var want = null, asked = new URLSearchParams(location.search).get('lang');
+      if (asked) {
+        want = match([asked]) || "en";
+        try { localStorage.setItem('site-lang', want); } catch (e) {}
+      } else if (HERE === 'ja') {
+        try { want = localStorage.getItem('site-lang'); } catch (e) {}
+        if (LOCALES.indexOf(want) < 0) want = match(navigator.languages || [navigator.language || 'ja']) || "en";
+      }
+      if (want && want !== HERE) {
+        location.replace((want === 'ja' ? '/' : '/' + want + '/') + PATH);
+        return;
+      }
+      // このページの言語を覚える（利用規約などから / へ戻ったとき、最後に見ていた言語に戻すため）。
+      // 覚えている言語がこのページにないとき（Vollog のページを開いたマレー語の人）は、上書きしない
+      try {
+        var saved = localStorage.getItem('site-lang');
+        if (!saved || LOCALES.indexOf(saved) >= 0) localStorage.setItem('site-lang', HERE);
+      } catch (e) {}
+    })();
+  </script>
+  <title>Pickleball sa Unos (Storm Pickleball) - Pickleball, kahit may unos!</title>
+  <meta name="description" content="Malakas na hangin, makapal na hamog, isa o dalawang kidlat… pero gusto pa rin naming mag-pickleball! Isang singles (one-on-one) na pickleball game sa gitna ng unos. Tinatangay ng hangin ang bola. Tinatakpan ng hamog ang panig ng kalaban. At kapag umabot sa 0 ang bilang, tatamaan ng kidlat ang court kung nasaan ang bola. Basahin ang panahon at ibalik ang bola sa court ng kalaban." />
+  <link rel="canonical" href="https://asakusasemao.com/fil/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="id" href="https://asakusasemao.com/id/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="ms" href="https://asakusasemao.com/ms/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="cs" href="https://asakusasemao.com/cs/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="de" href="https://asakusasemao.com/de/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="en" href="https://asakusasemao.com/en/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="es" href="https://asakusasemao.com/es/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="fil" href="https://asakusasemao.com/fil/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="fr" href="https://asakusasemao.com/fr/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="it" href="https://asakusasemao.com/it/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="pl" href="https://asakusasemao.com/pl/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="pt" href="https://asakusasemao.com/pt/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="sr" href="https://asakusasemao.com/sr/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="vi" href="https://asakusasemao.com/vi/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="tr" href="https://asakusasemao.com/tr/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="ru" href="https://asakusasemao.com/ru/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="uk" href="https://asakusasemao.com/uk/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="hi" href="https://asakusasemao.com/hi/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="th" href="https://asakusasemao.com/th/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="ja" href="https://asakusasemao.com/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://asakusasemao.com/zh-Hans/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://asakusasemao.com/zh-Hant/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="ko" href="https://asakusasemao.com/ko/apps/storm-pickleball/" />
+  <link rel="alternate" hreflang="x-default" href="https://asakusasemao.com/apps/storm-pickleball/" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body data-app="storm-pickleball">
+
+  <header class="site-header">
+    <a class="brand" href="/fil/">AsakusaSemao</a>
+    <nav class="header-links">
+      <a href="/apps/storm-pickleball/privacy.html">Patakaran sa Privacy</a>
+    </nav>
+  </header>
+
+  <main>
+    <details class="lang-picker">
+      <summary aria-label="Wika"><!-- Lucide: globe --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span lang="fil">Filipino</span></summary>
+      <ul>
+          <li><a href="/id/apps/storm-pickleball/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ms/apps/storm-pickleball/" hreflang="ms" lang="ms" data-lang="ms">Bahasa Melayu</a></li>
+          <li><a href="/cs/apps/storm-pickleball/" hreflang="cs" lang="cs" data-lang="cs">Čeština</a></li>
+          <li><a href="/de/apps/storm-pickleball/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="/en/apps/storm-pickleball/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/es/apps/storm-pickleball/" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a href="/fil/apps/storm-pickleball/" hreflang="fil" lang="fil" data-lang="fil" aria-current="page">Filipino</a></li>
+          <li><a href="/fr/apps/storm-pickleball/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="/it/apps/storm-pickleball/" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="/pl/apps/storm-pickleball/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li>
+          <li><a href="/pt/apps/storm-pickleball/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li>
+          <li><a href="/sr/apps/storm-pickleball/" hreflang="sr" lang="sr" data-lang="sr">Srpski</a></li>
+          <li><a href="/vi/apps/storm-pickleball/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li>
+          <li><a href="/tr/apps/storm-pickleball/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          <li><a href="/ru/apps/storm-pickleball/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li>
+          <li><a href="/uk/apps/storm-pickleball/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li>
+          <li><a href="/hi/apps/storm-pickleball/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li>
+          <li><a href="/th/apps/storm-pickleball/" hreflang="th" lang="th" data-lang="th">ไทย</a></li>
+          <li><a href="/apps/storm-pickleball/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          <li><a href="/zh-Hans/apps/storm-pickleball/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li>
+          <li><a href="/zh-Hant/apps/storm-pickleball/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li>
+          <li><a href="/ko/apps/storm-pickleball/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+      </ul>
+    </details>
+
+    <div class="hero">
+      <img class="app-icon" src="/assets/images/storm-pickleball-icon.png" alt="Icon ng Pickleball sa Unos" />
+      <div class="hero-text">
+        <h1>
+          <span>Pickleball, kahit may unos!</span>
+          Pickleball sa Unos
+        </h1>
+        <p>Malakas na hangin, makapal na hamog, isa o dalawang kidlat… pero gusto pa rin naming mag-pickleball!<br>Isang singles (one-on-one) na pickleball game sa gitna ng unos.</p>
+        <p>Tinatangay ng hangin ang bola. Tinatakpan ng hamog ang panig ng kalaban. At kapag umabot sa 0 ang bilang, tatamaan ng kidlat ang court kung nasaan ang bola.<br>Basahin ang panahon at ibalik ang bola sa court ng kalaban.</p>
+        <div class="badge-row">
+          <span class="badge accent">Libreng laruin</span>
+          <span class="badge accent">Walang account na kailangan</span>
+          <span class="badge accent">Portrait o landscape</span>
+          <span class="badge accent">Available sa 22 wika</span>
+          <span class="badge">iOS: malapit na</span>
+          <span class="badge">Android: malapit na</span>
+        </div>
+      </div>
+      <div class="store-buttons">
+        <span class="store-btn store-btn-soon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span class="store-btn-label">
+            <small>Malapit na</small>
+            App Store
+          </span>
+        </span>
+        <span class="store-btn store-btn-soon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76a2 2 0 0 0 2.07-.22l11.4-6.58-2.53-2.53L3.18 23.76zM.5 1.26C.19 1.67 0 2.28 0 3.07v17.87c0 .79.19 1.4.51 1.8l.09.09 10.01-10.01v-.24L.59 1.17.5 1.26zM20.93 10.37l-2.9-1.67-2.83 2.83 2.83 2.83 2.91-1.68c.83-.48.83-1.26-.01-1.31zM5.25.46l11.4 6.58-2.53 2.53L3.18.22A2 2 0 0 1 5.25.46z"/></svg>
+          <span class="store-btn-label">
+            <small>Malapit na</small>
+            Google Play
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <section>
+      <h2>Dito lang sa larong ito</h2>
+      <div class="feature-grid">
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">1</div>
+          <h3>Totoong rules ng pickleball</h3>
+          <p>Side-out scoring: ang nagse-serve lang ang nakakapuntos. Ang kitchen sa harap ng net, kung saan bawal kang mag-volley. At ang two-bounce rule: kailangang tumalbog muna ang serve at ang return nito.</p>
+        </div>
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">2</div>
+          <h3>Labanan sa net</h3>
+          <p>Ihulog nang mahina ang dink sa kitchen ng kalaban, saka paluin ng drive ang bolang umangat.</p>
+        </div>
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">3</div>
+          <h3>Mula paputok hanggang maalong dagat</h3>
+          <p>Nagsisimula sa tahimik na pantalan sa gabi na may paputok, hanggang biglang dumating ang unos sa gitna ng laban. Ang isa pang lugar: ang deck ng cruise ship sa gitna ng maalong dagat.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Paano laruin</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: pointer --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+          </div>
+          <h3>Tap at swipe lang</h3>
+          <p>Kusang tumatakbo ang player mo. Kapag umilaw ang bilog sa paanan mo, i-tap ang screen.</p><p>I-tap para sa dink (mahinang palo papunta sa kitchen), i-swipe pataas para sa lob, i-swipe pababa para sa drive. Nagiging smash ang drive sa mataas na bola. Kung saan ka pumindot (kaliwa o kanan) ang magtatakda ng puntirya mo.</p><p>Sa unang laro, may maikling tutorial na magtuturo kung paano maglaro.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: zap --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+          </div>
+          <h3>Hangin, hamog, at kidlat</h3>
+          <ul><li><b>Hangin</b>: tinatangay nito ang bola. Basahin nang tama ang hangin at papasok ang tira mo. Kapag nagkamali ka, aanod ito palabas.</li><li><b>Hamog</b>: mahirap makita ang panig ng kalaban.</li><li><b>Kidlat</b>: kapag tumaas ang karga, may lalabas na countdown. Sa 0, tatamaan ng kidlat ang court kung nasaan ang bola, at 1 puntos ang makukuha ng kabilang panig, sinuman ang nag-serve.</li></ul><p>Habang tumataas ang score, lalong lumalakas ang unos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: book --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>Totoong rules ng pickleball, maiikling laro</h3>
+          <p>Isang serve lang, underhand. Ang nagse-serve lang ang nakakapuntos (side-out scoring).</p><p>Kitchen (non-volley zone) sa harap ng net: kapag nag-volley ka habang nasa loob nito, talo ka sa rally. May two-bounce rule din.</p><p>Hanggang 7 puntos, kailangang lamang ng 2 (hanggang 10 lang).</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: shirt --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+          </div>
+          <h3>Kasuotan</h3>
+          <p>Piliin ang kulay ng balat, hairstyle, at kulay ng buhok para sa iyo at sa kalaban mo.</p><p>Patuloy na hanapin ang mga bihirang bagay na lumilipad habang may laban (popcorn, cotton candy, papel na parol, salbabida, gaviota, at iba pa) para makakuha ng mga sombrerong kahugis nila, pati mga bola, paddle, at shirt.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: share --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+          </div>
+          <h3>Mga record at pag-share</h3>
+          <p>Naitatala ang mga panalo at talo mo, win rate, ilang beses kang tinamaan ng kidlat, at ang pinakamahaba mong rally.</p><p>Gawing isang larawan ang resulta ng laban mo at i-share ito.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: sliders --><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="21" x2="14" y1="4" y2="4"/><line x1="10" x2="3" y1="4" y2="4"/><line x1="21" x2="12" y1="12" y2="12"/><line x1="8" x2="3" y1="12" y2="12"/><line x1="21" x2="16" y1="20" y2="20"/><line x1="12" x2="3" y1="20" y2="20"/><line x1="14" x2="14" y1="2" y2="6"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="16" x2="16" y1="18" y2="22"/></svg>
+          </div>
+          <h3>Iba pa</h3>
+          <ul><li>Tatlong level ng hirap</li><li>Apat na view ng camera. Puwedeng patayo o pahiga</li><li>Puwedeng hinaan ang kislap ng kidlat sa Mga Setting</li><li>Available sa 22 wika</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="callout">
+      <h2>Ads at in-app purchases</h2>
+      <p class="section-note">May ads sa itaas ng screen. Bilhin nang isang beses ang “Alisin ang ads” at mawawala na ito nang tuluyan. Sa “Suportahan ang developer”, magpapakita kami ng maikling movie bilang pasasalamat. Para sa presyo, tingnan sa app store mo.<br>Hindi pangako ang suporta na susundin ang mga request o magdadagdag ng features. Malaking tulong at inspirasyon ang mga review mo sa store.</p>
+    </section>
+
+    <section class="callout">
+      <h2>Paalala</h2>
+      <p class="section-note">Kumikislap nang malakas ang screen kapag tumatama ang kidlat. Mahihinaan mo ito sa &quot;Epekto ng kidlat&quot; sa Mga Setting.<br>Laro lang ito. Kapag may naririnig kang totoong kulog o malakas ang hangin, pumasok sa loob ng gusali. Maglaro ng pickleball sa ligtas na lugar.</p>
+    </section>
+
+    <section class="callout">
+      <h2>Makipag-ugnayan</h2>
+      <p class="section-note"><a href="mailto:asakusasemao@gmail.com">asakusasemao@gmail.com</a></p>
+    </section>
+  </main>
+
+  <!--
+    このページの絵記号（「Lucide: ...」と書いてある SVG）は、Lucide（https://lucide.dev）のもの。
+    ライセンスは、著作権表示と許諾の文を写しに残すことを求めるので、ここに置く。絵記号を足しても、この文はそのままでよい。
+
+    ISC License
+
+    Copyright (c) 2026 Lucide Icons and Contributors
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+    ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+    Lucide の絵記号の一部は Feather（https://feathericons.com）がもとで、そちらは次のライセンス。
+
+    The MIT License (MIT) (for the icons derived from the Feather project)
+
+    Copyright (c) 2013-present Cole Bemis
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+  -->
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/fil/">Home</a>
+      <a href="/apps/storm-pickleball/privacy.html">Patakaran sa Privacy</a>
+    </div>
+    <p>© 2026 AsakusaSemao. All rights reserved.</p>
+    <p>Mga icon: <a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a> (ISC License)</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.lang-picker a[data-lang]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        try { localStorage.setItem('site-lang', a.dataset.lang); } catch (e) {}
+      });
+    });
+  </script>
+</body>
+</html>

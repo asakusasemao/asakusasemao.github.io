@@ -1,0 +1,151 @@
+{
+  "lang": "Čeština",
+  "site": {
+    "home": "Domů",
+    "privacy": "Zásady ochrany soukromí",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "Kontakt",
+    "language": "Jazyk",
+    "icons": "Ikony: {lucide} (licence ISC)",
+    "iconAlt": "Ikona hry {name}",
+    "released": "Už na {p}",
+    "coming": "Brzy na {p}",
+    "releasedShort": "Už na {p}",
+    "comingShort": "{p}: brzy",
+    "soon": "Již brzy"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "Tvořím<br>mobilní aplikace.",
+    "desc": "Aplikace pro iOS a Android, vyvíjené nezávisle.",
+    "game": "Hra",
+    "tool": "Záznamy a statistiky",
+    "vollogCard": "Volejbalová aplikace pro správu hráčů, záznam zápasů a statistiky",
+    "vollogTerms": "Podmínky používání Vollog"
+  },
+  "game": {
+    "unique": "Jen v této hře",
+    "features": "Jak se hraje",
+    "badges": [
+      "Hraní zdarma",
+      "Bez registrace",
+      "Na výšku i na šířku",
+      "Ve 22 jazycích"
+    ],
+    "ads": "Reklamy a nákupy v aplikaci",
+    "adsBody": "Nahoře na obrazovce se zobrazují reklamy. Stačí jednou koupit „{removeAds}“ a zmizí natrvalo. Za „{support}“ ti jako poděkování ukážeme krátký film. Ceny najdeš v obchodě s aplikacemi.",
+    "adsNote": "Podpora není příslibem splnění přání ani přidání funkcí. Tvé dojmy a nápady v recenzi v obchodě nás moc povzbudí."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "Volejbal jeden na jednoho v bouři. Udrž výměnu a přechytrač blesk",
+      "unique": [
+        [
+          "Udrž míč, pak smeč",
+          "Ve volejbale se míč nesmí dotknout země. Vyskoč nad vysokou síť a zatluč smeč."
+        ],
+        [
+          "Radost z dlouhých výměn",
+          "Výměny vydrží dlouho, takže i začátečníci hned hrají opravdový volejbal. Čím déle trvají, tím blíž je odpočet blesku."
+        ],
+        [
+          "Souboj s bleskem",
+          "Blesk má hodnotu 2 bodů. Sleduj odpočet, lobem, bagrem a smečí měň, jak dlouho je míč ve vzduchu, a na 0 ho měj nad soupeřovou polovinou."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "Badminton jeden na jednoho v bouři. Košíček nese vítr, soupeře honíš dopředu a dozadu",
+      "unique": [
+        [
+          "Jemně pustit, ostře zatlačit",
+          "Kraťas, který jemně padne za síť, vysoký clear do zadního pole a ostrý smeč. Hoň soupeře dopředu a dozadu."
+        ],
+        [
+          "Košíček ve větru",
+          "Lehký košíček nese vítr. Čím vyšší clear, tím dál ho vítr zanese."
+        ],
+        [
+          "Smeč",
+          "Když košíček přiletí vysoko, vyskoč a zatluč ho shora."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "Tenis jeden na jednoho v bouři. Nejrychlejší z celé série: trefuj se do čar",
+      "unique": [
+        [
+          "Souboj rychlosti",
+          "I v bouři létá míček ostře a rychle. Vysoký míček silným úderem proměníš ve smeč."
+        ],
+        [
+          "Vítězství umístěním",
+          "Střídej strany a posílej míček tam, kam soupeř nedosáhne."
+        ],
+        [
+          "Odskok a podání",
+          "Míček nech jednou odskočit a pak ho vrať. Podáváš z nadhozu, třemi způsoby: rychle, normálně nebo měkce."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "Pickleball jeden na jednoho v bouři. Kuchyně i ztráta podání: opravdová pravidla",
+      "unique": [
+        [
+          "Opravdová pravidla pickleballu",
+          "Body získává jen podávající strana (ztráta podání). Kuchyně u sítě, kde nesmíš hrát volej. A pravidlo dvou dopadů: podání i jeho return musí nejdřív dopadnout."
+        ],
+        [
+          "Souboje u sítě",
+          "Dinkem jemně pusť míček do soupeřovy kuchyně a míček, který se zvedne, rozdrť drivem."
+        ],
+        [
+          "Od ohňostroje po rozbouřené moře",
+          "Začíná se v klidném nočním přístavu s ohňostrojem, dokud uprostřed zápasu náhle nepřijde bouřka. Druhé prostředí: paluba výletní lodi na rozbouřeném moři."
+        ]
+      ]
+    }
+  },
+  "vollog": {
+    "terms": "Podmínky používání",
+    "features": "Hlavní funkce",
+    "stats": "Co můžete zapisovat",
+    "plans": "Tarify",
+    "listSep": ", ",
+    "badges": [
+      "Zdarma",
+      "Funguje offline",
+      "Bez registrace",
+      "iOS i Android",
+      "Ve 21 jazycích"
+    ],
+    "statsNote": "U každého zápasu si zvolíte, zda zapisovat {reception}. Týmy, které ho nesledují, mohou zapisovat bez těchto polí.",
+    "cards": [
+      [
+        "Profily hráčů",
+        "Zadejte čísla dresů, jména a posty. Spravovat můžete i zápasové záznamy jednotlivých hráčů."
+      ],
+      [
+        "Záznam zápasů a setů",
+        "Zapisujte během zápasu v režimu „{realtime}“ nebo po něm v režimu „{summary}“. Zaznamenáte skóre setů i individuální statistiky."
+      ],
+      [
+        "Statistiky",
+        "Souhrny pro každého hráče. Grafy vývoje za celou dobu nebo za zvolené období ukážou pokrok."
+      ],
+      [
+        "Export",
+        "Export statistik do obrázku nebo PDF je ve všech tarifech. Export do CSV je součástí tarifu Pro."
+      ],
+      [
+        "Sdílení dat",
+        "Sdílejte záznamy týmu a zápasů s jiným uživatelem Vollog pomocí souboru. Odesílání vyžaduje Pro, přijímání je zdarma."
+      ],
+      [
+        "8 motivů",
+        "Barevné schéma si vyberete z 8 motivů, například {themes}."
+      ]
+    ]
+  }
+}

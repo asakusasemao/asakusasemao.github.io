@@ -1,0 +1,151 @@
+{
+  "lang": "English",
+  "site": {
+    "home": "Home",
+    "privacy": "Privacy Policy",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "Contact",
+    "language": "Language",
+    "icons": "Icons: {lucide} (ISC License)",
+    "iconAlt": "{name} icon",
+    "released": "Out now on {p}",
+    "coming": "Coming soon to {p}",
+    "releasedShort": "Out now on {p}",
+    "comingShort": "{p}: coming soon",
+    "soon": "Coming soon"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "I make<br>smartphone apps.",
+    "desc": "An independent developer making apps for iOS and Android.",
+    "game": "Game",
+    "tool": "Stats & scoring",
+    "vollogCard": "Manage players, record matches, and track stats for volleyball",
+    "vollogTerms": "Vollog Terms of Use"
+  },
+  "game": {
+    "unique": "Only in this game",
+    "features": "How it plays",
+    "badges": [
+      "Free to play",
+      "No account needed",
+      "Portrait or landscape",
+      "22 languages"
+    ],
+    "ads": "Ads and in-app purchases",
+    "adsBody": "Ads appear at the top of the screen. Buy “{removeAds}” once, and they're gone for good. “{support}” thanks you with a short movie. For prices, please check your app store.",
+    "adsNote": "Support isn't a promise to take requests or add features. If you have thoughts or ideas, a review on the store would mean a lot."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "One-on-one volleyball in a storm. Keep the rally alive and race the lightning",
+      "unique": [
+        [
+          "Keep it up, then spike it",
+          "In volleyball, the ball never touches the ground. Leap above the high net and smash a spike down."
+        ],
+        [
+          "Long, fun rallies",
+          "Rallies keep going, so even first-timers are playing real volleyball right away. The longer they last, the closer the lightning count gets."
+        ],
+        [
+          "Play the lightning",
+          "A strike is worth 2 points. Watch the count, mix lobs, bumps, and spikes to time how long the ball stays up, and have it over your opponent's court at 0."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "One-on-one badminton in a storm. Ride the wind and work your opponent front to back",
+      "unique": [
+        [
+          "Float it short, drive it down",
+          "Float a drop shot just over the net, send a clear high to the back, or fire a sharp smash. Work your opponent front to back and make them run."
+        ],
+        [
+          "A shuttle on the wind",
+          "The light shuttle rides the wind. The higher the clear, the farther it drifts."
+        ],
+        [
+          "Smash",
+          "When the shuttle comes in high, jump and hammer it down."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "One-on-one tennis in a storm. The fastest of the series: paint the lines",
+      "unique": [
+        [
+          "Pure speed",
+          "Even in a storm, the ball flies hard and fast. Hit a high ball with a power shot and it's a smash."
+        ],
+        [
+          "Win with placement",
+          "Hit left and right, and drive it where your opponent can't reach."
+        ],
+        [
+          "Bounces and serves",
+          "Let the ball bounce once, then hit it back. Toss and serve three ways: fast, normal, or soft."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "One-on-one pickleball in a storm. Kitchen, side-out scoring: real pickleball rules",
+      "unique": [
+        [
+          "Real pickleball rules",
+          "Side-out scoring, so only the serving side can score. The kitchen, where you can't volley. And the two-bounce rule: the serve and the return must bounce first."
+        ],
+        [
+          "Battles at the net",
+          "Dink softly into your opponent's kitchen, then drive the ball that pops up."
+        ],
+        [
+          "From fireworks to a stormy sea",
+          "Start in a calm harbor at night, with fireworks overhead, until a storm suddenly rolls in mid-game. The other venue: the deck of a cruise ship on a raging sea."
+        ]
+      ]
+    }
+  },
+  "vollog": {
+    "terms": "Terms of Use",
+    "features": "Key features",
+    "stats": "What you can record",
+    "plans": "Plans",
+    "listSep": ", ",
+    "badges": [
+      "Free to use",
+      "Works offline",
+      "No account needed",
+      "iOS & Android",
+      "21 languages"
+    ],
+    "statsNote": "Choose for each match whether to record {reception}. Teams that don’t track it can record without those fields.",
+    "cards": [
+      [
+        "Player profiles",
+        "Register jersey numbers, names, and positions, and keep each player’s match records."
+      ],
+      [
+        "Match & set records",
+        "Enter data during the match with “{realtime}” or afterward with “{summary}”. Record set scores and individual stats."
+      ],
+      [
+        "Stats",
+        "See totals for each player, and track growth with trend graphs for all time or a chosen period."
+      ],
+      [
+        "Export",
+        "Export stats as images or PDFs on every plan. CSV export is available with Pro."
+      ],
+      [
+        "Data sharing",
+        "Share team and match records with another Vollog user as a file. Sending requires Pro; receiving is free."
+      ],
+      [
+        "8 themes",
+        "Pick a color scheme from 8 themes, including {themes}."
+      ]
+    ]
+  }
+}

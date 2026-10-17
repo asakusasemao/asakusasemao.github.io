@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!-- tools/build.mjs が作ったページ。直すときは tools/ の文言かスクリプトを直して、npm run build -->
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var LOCALES = ["id","ms","cs","de","en","es","fil","fr","it","pl","pt","sr","vi","tr","ru","uk","hi","th","ja","zh-Hans","zh-Hant","ko"], HERE = "hi", PATH = "apps/storm-tennis/";
+      function candidates(tag) {
+        try {
+          var l = new Intl.Locale(tag).maximize();
+          return [tag, l.language + '-' + l.script + '-' + l.region, l.language + '-' + l.script, l.language + '-' + l.region, l.language];
+        } catch (e) {
+          return [tag];
+        }
+      }
+      function match(tags) {
+        for (var i = 0; i < tags.length; i++) {
+          var c = candidates(tags[i]);
+          for (var j = 0; j < c.length; j++) {
+            for (var k = 0; k < LOCALES.length; k++) if (LOCALES[k].toLowerCase() === String(c[j]).toLowerCase()) return LOCALES[k];
+          }
+        }
+        return null;
+      }
+      var want = null, asked = new URLSearchParams(location.search).get('lang');
+      if (asked) {
+        want = match([asked]) || "en";
+        try { localStorage.setItem('site-lang', want); } catch (e) {}
+      } else if (HERE === 'ja') {
+        try { want = localStorage.getItem('site-lang'); } catch (e) {}
+        if (LOCALES.indexOf(want) < 0) want = match(navigator.languages || [navigator.language || 'ja']) || "en";
+      }
+      if (want && want !== HERE) {
+        location.replace((want === 'ja' ? '/' : '/' + want + '/') + PATH);
+        return;
+      }
+      // このページの言語を覚える（利用規約などから / へ戻ったとき、最後に見ていた言語に戻すため）。
+      // 覚えている言語がこのページにないとき（Vollog のページを開いたマレー語の人）は、上書きしない
+      try {
+        var saved = localStorage.getItem('site-lang');
+        if (!saved || LOCALES.indexOf(saved) >= 0) localStorage.setItem('site-lang', HERE);
+      } catch (e) {}
+    })();
+  </script>
+  <title>तूफ़ानी टेनिस (Storm Tennis) - तूफ़ान में भी टेनिस!</title>
+  <meta name="description" content="तेज़ आँधी, घना कोहरा, एक-दो बार बिजली… फिर भी हमें टेनिस खेलना है! तूफ़ान के बीच सिंगल्स (1 बनाम 1) टेनिस गेम। हवा बॉल को उड़ा ले जाती है। कोहरा सामने वाले का पाला छिपा देता है। और गिनती 0 होते ही, बॉल जिस कोर्ट के ऊपर हो, वहाँ बिजली गिरती है। मौसम को पढ़ें और बॉल सामने वाले के कोर्ट में भेजें।" />
+  <link rel="canonical" href="https://asakusasemao.com/hi/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="id" href="https://asakusasemao.com/id/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="ms" href="https://asakusasemao.com/ms/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="cs" href="https://asakusasemao.com/cs/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="de" href="https://asakusasemao.com/de/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="en" href="https://asakusasemao.com/en/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="es" href="https://asakusasemao.com/es/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="fil" href="https://asakusasemao.com/fil/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="fr" href="https://asakusasemao.com/fr/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="it" href="https://asakusasemao.com/it/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="pl" href="https://asakusasemao.com/pl/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="pt" href="https://asakusasemao.com/pt/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="sr" href="https://asakusasemao.com/sr/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="vi" href="https://asakusasemao.com/vi/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="tr" href="https://asakusasemao.com/tr/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="ru" href="https://asakusasemao.com/ru/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="uk" href="https://asakusasemao.com/uk/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="hi" href="https://asakusasemao.com/hi/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="th" href="https://asakusasemao.com/th/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="ja" href="https://asakusasemao.com/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://asakusasemao.com/zh-Hans/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://asakusasemao.com/zh-Hant/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="ko" href="https://asakusasemao.com/ko/apps/storm-tennis/" />
+  <link rel="alternate" hreflang="x-default" href="https://asakusasemao.com/apps/storm-tennis/" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body data-app="storm-tennis">
+
+  <header class="site-header">
+    <a class="brand" href="/hi/">AsakusaSemao</a>
+    <nav class="header-links">
+      <a href="/apps/storm-tennis/privacy.html">निजता नीति</a>
+    </nav>
+  </header>
+
+  <main>
+    <details class="lang-picker">
+      <summary aria-label="भाषा"><!-- Lucide: globe --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span lang="hi">हिन्दी</span></summary>
+      <ul>
+          <li><a href="/id/apps/storm-tennis/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ms/apps/storm-tennis/" hreflang="ms" lang="ms" data-lang="ms">Bahasa Melayu</a></li>
+          <li><a href="/cs/apps/storm-tennis/" hreflang="cs" lang="cs" data-lang="cs">Čeština</a></li>
+          <li><a href="/de/apps/storm-tennis/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="/en/apps/storm-tennis/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/es/apps/storm-tennis/" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a href="/fil/apps/storm-tennis/" hreflang="fil" lang="fil" data-lang="fil">Filipino</a></li>
+          <li><a href="/fr/apps/storm-tennis/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="/it/apps/storm-tennis/" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="/pl/apps/storm-tennis/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li>
+          <li><a href="/pt/apps/storm-tennis/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li>
+          <li><a href="/sr/apps/storm-tennis/" hreflang="sr" lang="sr" data-lang="sr">Srpski</a></li>
+          <li><a href="/vi/apps/storm-tennis/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li>
+          <li><a href="/tr/apps/storm-tennis/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          <li><a href="/ru/apps/storm-tennis/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li>
+          <li><a href="/uk/apps/storm-tennis/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li>
+          <li><a href="/hi/apps/storm-tennis/" hreflang="hi" lang="hi" data-lang="hi" aria-current="page">हिन्दी</a></li>
+          <li><a href="/th/apps/storm-tennis/" hreflang="th" lang="th" data-lang="th">ไทย</a></li>
+          <li><a href="/apps/storm-tennis/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          <li><a href="/zh-Hans/apps/storm-tennis/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li>
+          <li><a href="/zh-Hant/apps/storm-tennis/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li>
+          <li><a href="/ko/apps/storm-tennis/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+      </ul>
+    </details>
+
+    <div class="hero">
+      <img class="app-icon" src="/assets/images/storm-tennis-icon.png" alt="तूफ़ानी टेनिस का आइकन" />
+      <div class="hero-text">
+        <h1>
+          <span>तूफ़ान में भी टेनिस!</span>
+          तूफ़ानी टेनिस
+        </h1>
+        <p>तेज़ आँधी, घना कोहरा, एक-दो बार बिजली… फिर भी हमें टेनिस खेलना है!<br>तूफ़ान के बीच सिंगल्स (1 बनाम 1) टेनिस गेम।</p>
+        <p>हवा बॉल को उड़ा ले जाती है। कोहरा सामने वाले का पाला छिपा देता है। और गिनती 0 होते ही, बॉल जिस कोर्ट के ऊपर हो, वहाँ बिजली गिरती है।<br>मौसम को पढ़ें और बॉल सामने वाले के कोर्ट में भेजें।</p>
+        <div class="badge-row">
+          <span class="badge accent">मुफ़्त में खेलें</span>
+          <span class="badge accent">अकाउंट की ज़रूरत नहीं</span>
+          <span class="badge accent">खड़ी या आड़ी स्क्रीन</span>
+          <span class="badge accent">22 भाषाओं में उपलब्ध</span>
+          <span class="badge">iOS: जल्द आ रहा है</span>
+          <span class="badge">Android: जल्द आ रहा है</span>
+        </div>
+      </div>
+      <div class="store-buttons">
+        <span class="store-btn store-btn-soon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span class="store-btn-label">
+            <small>जल्द आ रहा है</small>
+            App Store
+          </span>
+        </span>
+        <span class="store-btn store-btn-soon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76a2 2 0 0 0 2.07-.22l11.4-6.58-2.53-2.53L3.18 23.76zM.5 1.26C.19 1.67 0 2.28 0 3.07v17.87c0 .79.19 1.4.51 1.8l.09.09 10.01-10.01v-.24L.59 1.17.5 1.26zM20.93 10.37l-2.9-1.67-2.83 2.83 2.83 2.83 2.91-1.68c.83-.48.83-1.26-.01-1.31zM5.25.46l11.4 6.58-2.53 2.53L3.18.22A2 2 0 0 1 5.25.46z"/></svg>
+          <span class="store-btn-label">
+            <small>जल्द आ रहा है</small>
+            Google Play
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <section>
+      <h2>सिर्फ़ इस गेम में</h2>
+      <div class="feature-grid">
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">1</div>
+          <h3>रफ़्तार की टक्कर</h3>
+          <p>तूफ़ान में भी बॉल तेज़ और ज़ोरदार उड़ती है। ऊँची बॉल पर पावर शॉट स्मैश बन जाता है।</p>
+        </div>
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">2</div>
+          <h3>सही जगह पर मारकर जीतें</h3>
+          <p>बाएँ-दाएँ मारें और बॉल वहाँ भेजें जहाँ विरोधी न पहुँच सके।</p>
+        </div>
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">3</div>
+          <h3>टप्पा और सर्विस</h3>
+          <p>बॉल को एक बार टप्पा खाने दें, फिर लौटाएँ। सर्विस में बॉल ऊपर उछालकर मारते हैं, तीन तरह से: तेज़, सामान्य या धीमी।</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>कैसे खेलें</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: pointer --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+          </div>
+          <h3>बस टैप और स्वाइप</h3>
+          <p>आपका खिलाड़ी अपने आप दौड़ता है। पैरों के पास का घेरा चमके, तो टैप करें।</p><p>टैप करें तो पक्का स्ट्रोक, ऊपर स्वाइप करें तो लॉब, नीचे स्वाइप करें तो पावर शॉट। स्क्रीन पर बाईं या दाईं ओर जहाँ छुएँ, उसी से निशाना तय होता है।</p><p>पहली बार खेलने पर एक छोटा ट्यूटोरियल खेलना सिखाता है।</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: zap --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+          </div>
+          <h3>हवा, कोहरा और बिजली</h3>
+          <ul><li><b>हवा</b>: बॉल को उड़ा ले जाती है। हवा को सही पढ़ें, तो शॉट कोर्ट में गिरेगा। ग़लत पढ़ा, तो बॉल बाहर चली जाएगी।</li><li><b>कोहरा</b>: सामने वाले का पाला ठीक से नहीं दिखता।</li><li><b>बिजली</b>: चार्ज बढ़ने पर उलटी गिनती दिखती है। 0 पर बिजली उस कोर्ट पर गिरती है जिसके ऊपर बॉल हो, और दूसरी तरफ़ को अंक मिलते हैं।</li></ul><p>स्कोर जितना बढ़ता है, तूफ़ान उतना ही भयंकर होता जाता है।</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: school --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 22v-4a2 2 0 1 0-4 0v4"/><path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2"/><path d="M18 5v17"/><path d="m4 6 8-4 8 4"/><path d="M6 5v17"/><circle cx="12" cy="9" r="2"/></svg>
+          </div>
+          <h3>दो जगहें</h3>
+          <ul><li><b>इनडोर कोर्ट</b>: शुरू में हवा नहीं होती। फिर छत और दीवारें उड़ जाती हैं, और आप तूफ़ान के बीच पहुँच जाते हैं।</li><li><b>हिल स्टेशन</b>: क्ले कोर्ट, पहली सर्विस से ही तूफ़ान।</li></ul>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: book --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>टेनिस के नियम, छोटे मैच</h3>
+          <p>10 अंक का मैच टाईब्रेक। आपके पास दो सर्विस हैं, और हर 2 अंक पर सर्विस बदलती है।</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: shirt --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+          </div>
+          <h3>आउटफ़िट</h3>
+          <p>अपने और सामने वाले के लिए त्वचा का रंग, हेयरस्टाइल और बालों का रंग चुनें।</p><p>मैच के दौरान उड़कर जाने वाली दुर्लभ चीज़ें बार-बार देखें और टोपियाँ, बॉल, रैकेट और शर्ट अनलॉक करें।</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: share --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+          </div>
+          <h3>रिकॉर्ड और शेयर</h3>
+          <p>जीत-हार, जीत का प्रतिशत, आप पर कितनी बार बिजली गिरी और सबसे लंबी रैली, सब दर्ज होता है।</p><p>अपने नतीजों की एक तस्वीर बनाएँ और शेयर करें।</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: sliders --><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="21" x2="14" y1="4" y2="4"/><line x1="10" x2="3" y1="4" y2="4"/><line x1="21" x2="12" y1="12" y2="12"/><line x1="8" x2="3" y1="12" y2="12"/><line x1="21" x2="16" y1="20" y2="20"/><line x1="12" x2="3" y1="20" y2="20"/><line x1="14" x2="14" y1="2" y2="6"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="16" x2="16" y1="18" y2="22"/></svg>
+          </div>
+          <h3>और भी</h3>
+          <ul><li>मुश्किल के तीन स्तर</li><li>चार कैमरा व्यू। खड़े या आड़े, दोनों तरह खेलें</li><li>सेटिंग्स में बिजली की चमक कम कर सकते हैं</li><li>22 भाषाओं में उपलब्ध</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="callout">
+      <h2>विज्ञापन और इन-ऐप खरीदारी</h2>
+      <p class="section-note">स्क्रीन के ऊपर विज्ञापन दिखते हैं। “विज्ञापन हटाएँ” एक बार खरीदें, तो वे हमेशा के लिए हट जाते हैं। “डेवलपर का समर्थन करें” पर धन्यवाद के तौर पर एक छोटी मूवी दिखाई जाती है। क़ीमत के लिए अपना ऐप स्टोर देखें।<br>समर्थन का मतलब यह वादा नहीं है कि अनुरोध पूरे होंगे या नई सुविधाएँ जुड़ेंगी। स्टोर पर आपकी समीक्षा, राय और सुझाव हमारा हौसला बढ़ाते हैं।</p>
+    </section>
+
+    <section class="callout">
+      <h2>ध्यान दें</h2>
+      <p class="section-note">बिजली गिरने पर स्क्रीन तेज़ी से चमकती है। सेटिंग्स में &quot;बिजली के इफ़ेक्ट&quot; से इसे कम कर सकते हैं।<br>यह सिर्फ़ एक गेम है। अगर सच में बादल गरज रहे हों या तेज़ हवा चल रही हो, तो किसी इमारत के अंदर चले जाएँ। टेनिस सुरक्षित जगह पर खेलें।</p>
+    </section>
+
+    <section class="callout">
+      <h2>संपर्क</h2>
+      <p class="section-note"><a href="mailto:asakusasemao@gmail.com">asakusasemao@gmail.com</a></p>
+    </section>
+  </main>
+
+  <!--
+    このページの絵記号（「Lucide: ...」と書いてある SVG）は、Lucide（https://lucide.dev）のもの。
+    ライセンスは、著作権表示と許諾の文を写しに残すことを求めるので、ここに置く。絵記号を足しても、この文はそのままでよい。
+
+    ISC License
+
+    Copyright (c) 2026 Lucide Icons and Contributors
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+    ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+    Lucide の絵記号の一部は Feather（https://feathericons.com）がもとで、そちらは次のライセンス。
+
+    The MIT License (MIT) (for the icons derived from the Feather project)
+
+    Copyright (c) 2013-present Cole Bemis
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+  -->
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/hi/">होम</a>
+      <a href="/apps/storm-tennis/privacy.html">निजता नीति</a>
+    </div>
+    <p>© 2026 AsakusaSemao. All rights reserved.</p>
+    <p>आइकन: <a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a> (ISC लाइसेंस)</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.lang-picker a[data-lang]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        try { localStorage.setItem('site-lang', a.dataset.lang); } catch (e) {}
+      });
+    });
+  </script>
+</body>
+</html>

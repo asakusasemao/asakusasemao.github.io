@@ -156,6 +156,71 @@ html[lang="en"] .lang-btn[data-lang="en"] {
   box-shadow: 3px 3px 0 var(--accent);
 }
 
+/* 言語を選ぶ一覧（tools/build.mjs）。押すと開いて、言語ごとのページへのリンクが並ぶ */
+.lang-picker {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 28px;
+  z-index: 5;
+}
+.lang-picker summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border: var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  cursor: pointer;
+  transition: transform 0.2s var(--pop);
+}
+.lang-picker summary::-webkit-details-marker { display: none; }
+.lang-picker summary:hover { transform: translateY(-2px) rotate(-2deg); }
+.lang-picker summary svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  fill: none;
+}
+.lang-picker[open] summary { background: var(--ink); color: var(--bg); box-shadow: 3px 3px 0 var(--accent); }
+.lang-picker ul {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(9em, 1fr));
+  gap: 2px 8px;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  background: var(--card);
+  border: var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+.lang-picker a {
+  display: block;
+  font-family: var(--font-body);
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.lang-picker a:hover { background: var(--bg); }
+.lang-picker a[aria-current="page"] { background: var(--accent); font-weight: 700; }
+
+/* 日本語の書体にない文字の言語は、端末の書体で出す（漢字は日本の字形にしない） */
+:lang(zh-Hans) { --font-body: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif; --font-display: var(--font-body); }
+:lang(zh-Hant) { --font-body: "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif; --font-display: var(--font-body); }
+:lang(ko) { --font-body: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif; --font-display: var(--font-body); }
+:lang(vi), :lang(th), :lang(hi) { --font-body: system-ui, sans-serif; --font-display: var(--font-body); }
+
 /* ---------- トップページ ---------- */
 
 .home main {
@@ -395,6 +460,7 @@ html[lang="en"] .lang-btn[data-lang="en"] {
   font-weight: 700;
   line-height: 1.8;
 }
+.hero-text p + p { margin-top: 10px; }
 
 .badge-row {
   display: flex;
@@ -545,6 +611,26 @@ section h2 {
   color: var(--muted);
   line-height: 1.7;
 }
+
+/* ストアの説明文から作ったカードの箇条書き（tools/build.mjs） */
+.feature-card p + p { margin-top: 6px; }
+.feature-card ul {
+  margin: 6px 0 0;
+  padding-left: 1.2em;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.feature-card li + li { margin-top: 4px; }
+.feature-card li b { color: var(--ink); }
+
+/* 「このゲームならでは」は、絵記号の代わりに番号。色はアプリの色 */
+.unique-number {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--ink);
+}
+.feature-card.unique-card .feature-icon { background: var(--accent); }
 
 .section-note {
   font-size: 14px;
@@ -819,3 +905,6 @@ section h2 {
   .paper th,
   .paper td { padding: 10px 10px; }
 }
+
+/* サイトの名前は、どの言語でも同じ書体で出す */
+.brand { font-family: "Dela Gothic One", var(--font-body); }

@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "import": "node tools/import.mjs",
+    "build": "node tools/build.mjs"
+  }
+}

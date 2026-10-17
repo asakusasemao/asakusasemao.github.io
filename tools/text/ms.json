@@ -1,0 +1,110 @@
+{
+  "lang": "Bahasa Melayu",
+  "site": {
+    "home": "Laman utama",
+    "privacy": "Dasar Privasi",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "Hubungi",
+    "language": "Bahasa",
+    "icons": "Ikon: {lucide} (Lesen ISC)",
+    "iconAlt": "Ikon {name}",
+    "released": "Kini di {p}",
+    "coming": "Akan datang ke {p}",
+    "releasedShort": "Kini di {p}",
+    "comingShort": "{p}: akan datang",
+    "soon": "Akan datang"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "Saya membina<br>aplikasi telefon.",
+    "desc": "Pembangun bebas yang membina aplikasi iOS dan Android.",
+    "game": "Permainan",
+    "tool": "Rekod & statistik",
+    "vollogCard": "Aplikasi bola tampar untuk mengurus pemain, merekod perlawanan dan mengumpul statistik",
+    "vollogTerms": "Terma Penggunaan Vollog"
+  },
+  "game": {
+    "unique": "Hanya dalam permainan ini",
+    "features": "Cara bermain",
+    "badges": [
+      "Percuma untuk dimain",
+      "Tanpa akaun",
+      "Mod potret & landskap",
+      "Tersedia dalam 22 bahasa"
+    ],
+    "ads": "Iklan dan pembelian dalam aplikasi",
+    "adsBody": "Iklan dipaparkan di bahagian atas skrin. Beli “{removeAds}” sekali, dan iklan tidak akan muncul lagi. Dengan “{support}”, anda akan menonton filem pendek sebagai tanda terima kasih. Untuk harga, sila semak di gedung aplikasi.",
+    "adsNote": "Sokongan bukan janji untuk memenuhi permintaan atau menambah ciri. Pendapat dan cadangan anda dalam ulasan di gedung aplikasi amat memberi semangat."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "Bola tampar satu lawan satu dalam ribut. Teruskan rali dan berlumba dengan kilat",
+      "unique": [
+        [
+          "Sambung, kemudian rejam",
+          "Dalam bola tampar, bola tidak boleh mencecah tanah. Lompat di atas jaring yang tinggi dan hentam bola dengan rejaman."
+        ],
+        [
+          "Keseronokan rali panjang",
+          "Rali berterusan, jadi pemula pun terus dapat merasai perlawanan bola tampar sebenar. Lebih lama rali, lebih dekat kiraan kilat."
+        ],
+        [
+          "Berlumba dengan kilat",
+          "Kilat bernilai 2 mata. Perhatikan kiraan, atur berapa lama bola di udara dengan lob, sangga dan rejaman, dan pastikan bola berada di atas gelanggang lawan pada 0."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "Badminton satu lawan satu dalam ribut. Bulu tangkis dibawa angin, lawan diasak depan dan belakang",
+      "unique": [
+        [
+          "Jatuhkan perlahan, rejam tajam",
+          "Dropshot yang jatuh perlahan di depan jaring, lob tinggi ke belakang, dan rejaman yang tajam. Asak lawan ke depan dan belakang, dan buat dia berlari."
+        ],
+        [
+          "Bulu tangkis dibawa angin",
+          "Bulu tangkis yang ringan dibawa angin. Lebih tinggi lob, lebih jauh ia hanyut."
+        ],
+        [
+          "Rejaman",
+          "Apabila bulu tangkis datang tinggi, lompat dan rejam dari atas."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "Tenis satu lawan satu dalam ribut. Paling pantas dalam siri ini: tembusi sudut gelanggang",
+      "unique": [
+        [
+          "Adu kepantasan",
+          "Walaupun dalam ribut, bola meluncur tajam dan pantas. Bola tinggi boleh anda smash dengan pukulan kuat."
+        ],
+        [
+          "Menang dengan penempatan",
+          "Halakan bola ke kiri dan kanan, dan tembusi ke tempat yang tidak dapat dicapai lawan."
+        ],
+        [
+          "Lantunan dan servis",
+          "Biarkan bola melantun sekali, kemudian pukul semula. Servis dengan melambung bola, dalam tiga cara: laju, biasa atau perlahan."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "Pickleball satu lawan satu dalam ribut. Kitchen dan side-out: peraturan pickleball sebenar",
+      "unique": [
+        [
+          "Peraturan pickleball sebenar",
+          "Sistem side-out: hanya pihak yang membuat servis boleh mendapat mata. Kitchen di depan jaring, tempat anda tidak boleh memukul voli. Dan peraturan dua lantunan: servis dan pukulan baliknya mesti melantun dahulu."
+        ],
+        [
+          "Pertarungan di depan jaring",
+          "Jatuhkan dink perlahan ke kitchen lawan, kemudian hentam bola yang melambung dengan drive."
+        ],
+        [
+          "Dari bunga api ke laut bergelora",
+          "Bermula di pelabuhan yang tenang pada waktu malam dengan bunga api, kemudian ribut tiba-tiba melanda di tengah perlawanan. Lokasi satu lagi: dek kapal persiaran di laut yang bergelora."
+        ]
+      ]
+    }
+  }
+}

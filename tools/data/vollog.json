@@ -1,0 +1,2165 @@
+{
+  "id": {
+    "name": "Vollog: Statistik Voli",
+    "subtitle": "Catat pertandingan & statistik",
+    "lead": [
+      "Semua yang dibutuhkan tim voli Anda, dalam satu aplikasi.",
+      "Vollog membantu pelatih, manajer, dan pemain mengelola daftar pemain, mencatat skor pertandingan, dan memantau statistik — tanpa repot dengan spreadsheet atau catatan kertas."
+    ],
+    "stats": [
+      [
+        "Servis",
+        [
+          "Jumlah Servis",
+          "Ace",
+          "Gagal"
+        ]
+      ],
+      [
+        "Serangan",
+        [
+          "Jumlah Serangan",
+          "Poin Serangan",
+          "Gagal"
+        ]
+      ],
+      [
+        "Blok",
+        [
+          "Poin Blok"
+        ]
+      ],
+      [
+        "Penerimaan",
+        [
+          "Jumlah Penerimaan",
+          "Bagus",
+          "Gagal"
+        ]
+      ]
+    ],
+    "realtime": "Input Langsung",
+    "summary": "Input Ringkasan",
+    "themes": [
+      "Biru",
+      "Hijau",
+      "Gelap",
+      "Papan Skor"
+    ],
+    "plan": {
+      "feature": "Fitur",
+      "rows": [
+        [
+          "Iklan",
+          "Ada",
+          "Tidak"
+        ],
+        [
+          "Tim",
+          "Hanya 1 tim",
+          "Tanpa batas"
+        ],
+        [
+          "Pemain",
+          "Maks. 15",
+          "Tanpa batas"
+        ],
+        [
+          "Input Pertandingan & Statistik",
+          true,
+          true
+        ],
+        [
+          "Statistik & Grafik",
+          true,
+          true
+        ],
+        [
+          "Ekspor Gambar & PDF",
+          true,
+          true
+        ],
+        [
+          "Ekspor CSV",
+          false,
+          true
+        ],
+        [
+          "Cadangkan & Pulihkan Data",
+          false,
+          true
+        ],
+        [
+          "Berbagi data",
+          "Hanya menerima",
+          "Kirim & terima"
+        ],
+        [
+          "Salin pemain dari tim lain",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "cs": {
+    "name": "Vollog: Volejbalové statistiky",
+    "subtitle": "Zapisujte zápasy a statistiky",
+    "lead": [
+      "Vše, co váš volejbalový tým potřebuje, v jedné aplikaci.",
+      "Vollog pomáhá trenérům, vedoucím týmů i hráčům spravovat soupisku, zapisovat výsledky zápasů a sledovat statistiky — bez tabulek a papírových poznámek."
+    ],
+    "stats": [
+      [
+        "Podání",
+        [
+          "Počet podání",
+          "Eso",
+          "Chyba podání"
+        ]
+      ],
+      [
+        "Útok",
+        [
+          "Počet útoků",
+          "Úspěšný útok",
+          "Chyba útoku"
+        ]
+      ],
+      [
+        "Blok",
+        [
+          "Bod blokem"
+        ]
+      ],
+      [
+        "Příjem",
+        [
+          "Počet příjmů",
+          "Pozitivní příjem",
+          "Chyba příjmu"
+        ]
+      ]
+    ],
+    "realtime": "Živě",
+    "summary": "Souhrnně",
+    "themes": [
+      "Modrý",
+      "Zelený",
+      "Tmavý",
+      "Výsledková tabule"
+    ],
+    "plan": {
+      "feature": "Funkce",
+      "rows": [
+        [
+          "Reklamy",
+          "Ano",
+          "Ne"
+        ],
+        [
+          "Týmy",
+          "Pouze 1 tým",
+          "Neomezeně"
+        ],
+        [
+          "Hráči",
+          "Až 15",
+          "Neomezeně"
+        ],
+        [
+          "Zápis zápasů a statistik",
+          true,
+          true
+        ],
+        [
+          "Statistiky a grafy",
+          true,
+          true
+        ],
+        [
+          "Export obrázku a PDF",
+          true,
+          true
+        ],
+        [
+          "Export CSV",
+          false,
+          true
+        ],
+        [
+          "Záloha a obnova dat",
+          false,
+          true
+        ],
+        [
+          "Sdílení dat",
+          "Jen přijímání",
+          "Odesílání a přijímání"
+        ],
+        [
+          "Kopírování hráčů z jiných týmů",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "de": {
+    "name": "Vollog: Volleyball Statistik",
+    "subtitle": "Spiele erfassen,Leistung sehen",
+    "lead": [
+      "Alles, was dein Volleyballteam braucht – in einer App.",
+      "Vollog hilft Trainern, Managern und Spielern, ihren Kader zu verwalten, Spielergebnisse zu erfassen und Leistungsstatistiken zu verfolgen – ganz ohne den Aufwand von Tabellen oder Notizzetteln."
+    ],
+    "stats": [
+      [
+        "Aufschlag",
+        [
+          "Aufschläge",
+          "Ass",
+          "Aufschlagfehler"
+        ]
+      ],
+      [
+        "Angriff",
+        [
+          "Angriffe",
+          "Angriffspunkt",
+          "Angriffsfehler"
+        ]
+      ],
+      [
+        "Block",
+        [
+          "Blockpunkt"
+        ]
+      ],
+      [
+        "Annahme",
+        [
+          "Annahmen",
+          "Positive Annahme",
+          "Annahmefehler"
+        ]
+      ]
+    ],
+    "realtime": "Live-Eingabe",
+    "summary": "Zusammenfassung",
+    "themes": [
+      "Blau",
+      "Grün",
+      "Dunkel",
+      "Anzeigetafel"
+    ],
+    "plan": {
+      "feature": "Funktion",
+      "rows": [
+        [
+          "Werbung",
+          "Ja",
+          "Nein"
+        ],
+        [
+          "Teams",
+          "Nur 1 Team",
+          "Unbegrenzt"
+        ],
+        [
+          "Spieler",
+          "Bis zu 15",
+          "Unbegrenzt"
+        ],
+        [
+          "Spiel- & Statistikeingabe",
+          true,
+          true
+        ],
+        [
+          "Statistiken & Diagramme",
+          true,
+          true
+        ],
+        [
+          "Bild- & PDF-Export",
+          true,
+          true
+        ],
+        [
+          "CSV-Export",
+          false,
+          true
+        ],
+        [
+          "Datensicherung & -wiederherstellung",
+          false,
+          true
+        ],
+        [
+          "Datenfreigabe",
+          "Nur empfangen",
+          "Senden & empfangen"
+        ],
+        [
+          "Spieler aus anderen Teams kopieren",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "en": {
+    "name": "Vollog: Volleyball Stats",
+    "subtitle": "Log matches, see every stat",
+    "lead": [
+      "Everything your volleyball team needs, all in one app.",
+      "Vollog helps coaches, managers, and players manage their roster, record match scores, and track performance stats — without the hassle of spreadsheets or paper notes."
+    ],
+    "stats": [
+      [
+        "Serve",
+        [
+          "Attempts",
+          "Aces",
+          "Errors"
+        ]
+      ],
+      [
+        "Attack",
+        [
+          "Attempts",
+          "Kills",
+          "Errors"
+        ]
+      ],
+      [
+        "Block",
+        [
+          "Blocks"
+        ]
+      ],
+      [
+        "Reception",
+        [
+          "Attempts",
+          "Good Receptions",
+          "Errors"
+        ]
+      ]
+    ],
+    "realtime": "Live Entry",
+    "summary": "Summary Entry",
+    "themes": [
+      "Blue",
+      "Green",
+      "Dark",
+      "Scoreboard"
+    ],
+    "plan": {
+      "feature": "Feature",
+      "rows": [
+        [
+          "Ads Shown",
+          "Yes",
+          "No"
+        ],
+        [
+          "Teams",
+          "1 team only",
+          "Unlimited"
+        ],
+        [
+          "Players",
+          "Up to 15",
+          "Unlimited"
+        ],
+        [
+          "Match & Stats Entry",
+          true,
+          true
+        ],
+        [
+          "Stats & Graphs",
+          true,
+          true
+        ],
+        [
+          "Image & PDF Export",
+          true,
+          true
+        ],
+        [
+          "CSV Export",
+          false,
+          true
+        ],
+        [
+          "Data Backup & Restore",
+          false,
+          true
+        ],
+        [
+          "Data sharing",
+          "Receive only",
+          "Send & receive"
+        ],
+        [
+          "Copy players from other teams",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "es": {
+    "name": "Vollog: Estadísticas Voleibol",
+    "subtitle": "Registra partidos y mejora",
+    "lead": [
+      "Todo lo que tu equipo de voleibol necesita, en una sola app.",
+      "Vollog ayuda a entrenadores, mánagers y jugadores a gestionar su plantilla, registrar los marcadores de los partidos y seguir las estadísticas de rendimiento, sin las complicaciones de las hojas de cálculo o las notas en papel."
+    ],
+    "stats": [
+      [
+        "Saque",
+        [
+          "Saques",
+          "Ace",
+          "Error de saque"
+        ]
+      ],
+      [
+        "Ataque",
+        [
+          "Ataques",
+          "Punto de ataque",
+          "Error de ataque"
+        ]
+      ],
+      [
+        "Bloqueo",
+        [
+          "Punto de bloqueo"
+        ]
+      ],
+      [
+        "Recepción",
+        [
+          "Recepciones",
+          "Positiva",
+          "Error de recepción"
+        ]
+      ]
+    ],
+    "realtime": "En directo",
+    "summary": "Resumen",
+    "themes": [
+      "Azul",
+      "Verde",
+      "Oscuro",
+      "Marcador"
+    ],
+    "plan": {
+      "feature": "Función",
+      "rows": [
+        [
+          "Anuncios",
+          "Sí",
+          "No"
+        ],
+        [
+          "Equipos",
+          "Solo 1 equipo",
+          "Ilimitados"
+        ],
+        [
+          "Jugadores",
+          "Hasta 15",
+          "Ilimitados"
+        ],
+        [
+          "Registro de partidos y estadísticas",
+          true,
+          true
+        ],
+        [
+          "Estadísticas y gráficos",
+          true,
+          true
+        ],
+        [
+          "Exportar imagen y PDF",
+          true,
+          true
+        ],
+        [
+          "Exportar CSV",
+          false,
+          true
+        ],
+        [
+          "Copia y restauración de datos",
+          false,
+          true
+        ],
+        [
+          "Compartir datos",
+          "Solo recibir",
+          "Enviar y recibir"
+        ],
+        [
+          "Copiar jugadores de otros equipos",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "fil": {
+    "name": "Vollog - Volleyball Stats",
+    "subtitle": "I-record ang laro at stats",
+    "lead": [
+      "Lahat ng kailangan ng volleyball team mo, nasa isang app.",
+      "Tinutulungan ng Vollog ang mga coach, manager, at manlalaro na pamahalaan ang roster, i-record ang iskor ng laro, at subaybayan ang stats — walang abala sa spreadsheet o papel na tala."
+    ],
+    "stats": [
+      [
+        "Serve",
+        [
+          "Attempts",
+          "Service Ace",
+          "Error"
+        ]
+      ],
+      [
+        "Attack",
+        [
+          "Attempts",
+          "Point",
+          "Error"
+        ]
+      ],
+      [
+        "Block",
+        [
+          "Kill Block"
+        ]
+      ],
+      [
+        "Reception",
+        [
+          "Attempts",
+          "Excellent Reception",
+          "Error"
+        ]
+      ]
+    ],
+    "realtime": "Live na Paglalagay",
+    "summary": "Buod na Paglalagay",
+    "themes": [
+      "Asul",
+      "Berde",
+      "Madilim",
+      "Iskorbord"
+    ],
+    "plan": {
+      "feature": "Tampok",
+      "rows": [
+        [
+          "May Ads",
+          "Oo",
+          "Hindi"
+        ],
+        [
+          "Mga Team",
+          "1 team lang",
+          "Walang limitasyon"
+        ],
+        [
+          "Mga Player",
+          "Hanggang 15",
+          "Walang limitasyon"
+        ],
+        [
+          "Paglalagay ng Laro at Stats",
+          true,
+          true
+        ],
+        [
+          "Stats at Graph",
+          true,
+          true
+        ],
+        [
+          "Pag-export ng Larawan at PDF",
+          true,
+          true
+        ],
+        [
+          "Pag-export ng CSV",
+          false,
+          true
+        ],
+        [
+          "Backup at Restore ng Data",
+          false,
+          true
+        ],
+        [
+          "Pagbabahagi ng data",
+          "Pagtanggap lang",
+          "Pagpapadala at pagtanggap"
+        ],
+        [
+          "Kopyahin ang player mula sa ibang team",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "fr": {
+    "name": "Vollog: Stats Volley-ball",
+    "subtitle": "Suivez chaque match et joueur",
+    "lead": [
+      "Tout ce dont votre équipe de volley a besoin, dans une seule app.",
+      "Vollog aide les entraîneurs, les managers et les joueurs à gérer leur effectif, à enregistrer les scores des matchs et à suivre les statistiques de performance, sans la corvée des tableurs ou des notes papier."
+    ],
+    "stats": [
+      [
+        "Service",
+        [
+          "Services",
+          "Ace",
+          "Faute de service"
+        ]
+      ],
+      [
+        "Attaque",
+        [
+          "Attaques",
+          "Point d'attaque",
+          "Faute d'attaque"
+        ]
+      ],
+      [
+        "Contre",
+        [
+          "Point de contre"
+        ]
+      ],
+      [
+        "Réception",
+        [
+          "Réceptions",
+          "Positive",
+          "Faute de réception"
+        ]
+      ]
+    ],
+    "realtime": "En direct",
+    "summary": "Résumé",
+    "themes": [
+      "Bleu",
+      "Vert",
+      "Sombre",
+      "Tableau de score"
+    ],
+    "plan": {
+      "feature": "Fonction",
+      "rows": [
+        [
+          "Publicités",
+          "Oui",
+          "Non"
+        ],
+        [
+          "Équipes",
+          "1 équipe seulement",
+          "Illimité"
+        ],
+        [
+          "Joueurs",
+          "Jusqu'à 15",
+          "Illimité"
+        ],
+        [
+          "Saisie de matchs et stats",
+          true,
+          true
+        ],
+        [
+          "Stats et graphiques",
+          true,
+          true
+        ],
+        [
+          "Export image et PDF",
+          true,
+          true
+        ],
+        [
+          "Export CSV",
+          false,
+          true
+        ],
+        [
+          "Sauvegarde et restauration des données",
+          false,
+          true
+        ],
+        [
+          "Partage de données",
+          "Réception seule",
+          "Envoi et réception"
+        ],
+        [
+          "Copier des joueurs d’autres équipes",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "it": {
+    "name": "Vollog: Statistiche Pallavolo",
+    "subtitle": "Registra partite e prestazioni",
+    "lead": [
+      "Tutto ciò di cui la tua squadra di pallavolo ha bisogno, in un'unica app.",
+      "Vollog aiuta allenatori, manager e giocatori a gestire la rosa, registrare i punteggi delle partite e tenere traccia delle statistiche di rendimento, senza la fatica di fogli di calcolo o appunti su carta."
+    ],
+    "stats": [
+      [
+        "Battuta",
+        [
+          "Battute",
+          "Ace",
+          "Errore in battuta"
+        ]
+      ],
+      [
+        "Attacco",
+        [
+          "Attacchi",
+          "Punto in attacco",
+          "Errore in attacco"
+        ]
+      ],
+      [
+        "Muro",
+        [
+          "Vincente"
+        ]
+      ],
+      [
+        "Ricezione",
+        [
+          "Ricezioni",
+          "Positiva",
+          "Errore in ricezione"
+        ]
+      ]
+    ],
+    "realtime": "In diretta",
+    "summary": "Riepilogo",
+    "themes": [
+      "Blu",
+      "Verde",
+      "Scuro",
+      "Tabellone"
+    ],
+    "plan": {
+      "feature": "Funzione",
+      "rows": [
+        [
+          "Pubblicità",
+          "Sì",
+          "No"
+        ],
+        [
+          "Squadre",
+          "Solo 1 squadra",
+          "Illimitate"
+        ],
+        [
+          "Giocatori",
+          "Fino a 15",
+          "Illimitati"
+        ],
+        [
+          "Inserimento partite e statistiche",
+          true,
+          true
+        ],
+        [
+          "Statistiche e grafici",
+          true,
+          true
+        ],
+        [
+          "Esporta immagine e PDF",
+          true,
+          true
+        ],
+        [
+          "Esporta CSV",
+          false,
+          true
+        ],
+        [
+          "Backup e ripristino dati",
+          false,
+          true
+        ],
+        [
+          "Condivisione dati",
+          "Solo ricezione",
+          "Invio e ricezione"
+        ],
+        [
+          "Copia giocatori da altre squadre",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "pl": {
+    "name": "Vollog: Statystyki siatkówki",
+    "subtitle": "Zapisuj mecze i statystyki",
+    "lead": [
+      "Wszystko, czego potrzebuje Twoja drużyna siatkarska, w jednej aplikacji.",
+      "Vollog pomaga trenerom, kierownikom drużyn i zawodnikom zarządzać składem, zapisywać wyniki meczów i śledzić statystyki — bez arkuszy kalkulacyjnych i papierowych notatek."
+    ],
+    "stats": [
+      [
+        "Zagrywka",
+        [
+          "Liczba zagrywek",
+          "As serwisowy",
+          "Błąd zagrywki"
+        ]
+      ],
+      [
+        "Atak",
+        [
+          "Liczba ataków",
+          "Skuteczny atak",
+          "Błąd ataku"
+        ]
+      ],
+      [
+        "Blok",
+        [
+          "Punkt blokiem"
+        ]
+      ],
+      [
+        "Przyjęcie",
+        [
+          "Liczba przyjęć",
+          "Pozytywne",
+          "Błąd przyjęcia"
+        ]
+      ]
+    ],
+    "realtime": "Na żywo",
+    "summary": "Podsumowanie",
+    "themes": [
+      "Niebieski",
+      "Zielony",
+      "Ciemny",
+      "Tablica wyników"
+    ],
+    "plan": {
+      "feature": "Funkcja",
+      "rows": [
+        [
+          "Reklamy",
+          "Tak",
+          "Nie"
+        ],
+        [
+          "Drużyny",
+          "Tylko 1 drużyna",
+          "Bez limitu"
+        ],
+        [
+          "Zawodnicy",
+          "Do 15",
+          "Bez limitu"
+        ],
+        [
+          "Zapis meczów i statystyk",
+          true,
+          true
+        ],
+        [
+          "Statystyki i wykresy",
+          true,
+          true
+        ],
+        [
+          "Eksport obrazu i PDF",
+          true,
+          true
+        ],
+        [
+          "Eksport CSV",
+          false,
+          true
+        ],
+        [
+          "Kopia zapasowa i przywracanie",
+          false,
+          true
+        ],
+        [
+          "Udostępnianie danych",
+          "Tylko odbieranie",
+          "Wysyłanie i odbieranie"
+        ],
+        [
+          "Kopiowanie zawodników z innych drużyn",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "pt": {
+    "name": "Vollog: Estatísticas de Vôlei",
+    "subtitle": "Registre jogos e desempenho",
+    "lead": [
+      "Tudo o que a sua equipe de vôlei precisa, em um único app.",
+      "O Vollog ajuda técnicos, gerentes e jogadores a gerenciar o elenco, registrar os placares das partidas e acompanhar as estatísticas de desempenho, sem a complicação de planilhas ou anotações em papel."
+    ],
+    "stats": [
+      [
+        "Saque",
+        [
+          "Saques",
+          "Ace",
+          "Erro de saque"
+        ]
+      ],
+      [
+        "Ataque",
+        [
+          "Ataques",
+          "Ponto de ataque",
+          "Erro de ataque"
+        ]
+      ],
+      [
+        "Bloqueio",
+        [
+          "Ponto de bloqueio"
+        ]
+      ],
+      [
+        "Recepção",
+        [
+          "Recepções",
+          "Positiva",
+          "Erro de recepção"
+        ]
+      ]
+    ],
+    "realtime": "Ao vivo",
+    "summary": "Resumo",
+    "themes": [
+      "Azul",
+      "Verde",
+      "Escuro",
+      "Placar"
+    ],
+    "plan": {
+      "feature": "Recurso",
+      "rows": [
+        [
+          "Anúncios",
+          "Sim",
+          "Não"
+        ],
+        [
+          "Times",
+          "Apenas 1 time",
+          "Ilimitados"
+        ],
+        [
+          "Jogadores",
+          "Até 15",
+          "Ilimitados"
+        ],
+        [
+          "Registro de partidas e estatísticas",
+          true,
+          true
+        ],
+        [
+          "Estatísticas e gráficos",
+          true,
+          true
+        ],
+        [
+          "Exportar imagem e PDF",
+          true,
+          true
+        ],
+        [
+          "Exportar CSV",
+          false,
+          true
+        ],
+        [
+          "Backup e restauração de dados",
+          false,
+          true
+        ],
+        [
+          "Compartilhar dados",
+          "Somente receber",
+          "Enviar e receber"
+        ],
+        [
+          "Copiar jogadores de outros times",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "sr": {
+    "name": "Vollog: Odbojkaška statistika",
+    "subtitle": "Beležite statistiku odbojkaških utakmica za tim i svakog igrača",
+    "lead": [
+      "Sve što je vašem odbojkaškom timu potrebno, u jednoj aplikaciji.",
+      "Vollog pomaže trenerima, menadžerima i igračima da vode spisak igrača, beleže rezultate utakmica i prate statistiku — bez tabela i beleški na papiru."
+    ],
+    "stats": [
+      [
+        "Servis",
+        [
+          "Broj servisa",
+          "As",
+          "Greška na servisu"
+        ]
+      ],
+      [
+        "Napad",
+        [
+          "Broj napada",
+          "Uspešan napad",
+          "Greška u napadu"
+        ]
+      ],
+      [
+        "Blok",
+        [
+          "Poen blokom"
+        ]
+      ],
+      [
+        "Prijem",
+        [
+          "Broj prijema",
+          "Pozitivan prijem",
+          "Greška na prijemu"
+        ]
+      ]
+    ],
+    "realtime": "Uživo",
+    "summary": "Zbirno",
+    "themes": [
+      "Plava",
+      "Zelena",
+      "Tamna",
+      "Semafor"
+    ],
+    "plan": {
+      "feature": "Funkcija",
+      "rows": [
+        [
+          "Reklame",
+          "Da",
+          "Ne"
+        ],
+        [
+          "Timovi",
+          "Samo 1 tim",
+          "Neograničeno"
+        ],
+        [
+          "Igrači",
+          "Do 15",
+          "Neograničeno"
+        ],
+        [
+          "Unos utakmica i statistike",
+          true,
+          true
+        ],
+        [
+          "Statistika i grafikoni",
+          true,
+          true
+        ],
+        [
+          "Izvoz slike i PDF-a",
+          true,
+          true
+        ],
+        [
+          "Izvoz CSV",
+          false,
+          true
+        ],
+        [
+          "Rezervna kopija i vraćanje podataka",
+          false,
+          true
+        ],
+        [
+          "Deljenje podataka",
+          "Samo primanje",
+          "Slanje i primanje"
+        ],
+        [
+          "Kopiranje igrača iz drugih timova",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "vi": {
+    "name": "Vollog: Thống kê bóng chuyền",
+    "subtitle": "Ghi trận đấu, xem thống kê",
+    "lead": [
+      "Mọi thứ đội bóng chuyền của bạn cần, trong một ứng dụng.",
+      "Vollog giúp huấn luyện viên, quản lý đội và cầu thủ quản lý danh sách đội, ghi tỉ số trận đấu và theo dõi thống kê — không còn phải loay hoay với bảng tính hay giấy ghi chép."
+    ],
+    "stats": [
+      [
+        "Phát bóng",
+        [
+          "Số lần phát bóng",
+          "Ace",
+          "Lỗi phát bóng"
+        ]
+      ],
+      [
+        "Tấn công",
+        [
+          "Số lần tấn công",
+          "Ghi điểm",
+          "Lỗi tấn công"
+        ]
+      ],
+      [
+        "Chắn bóng",
+        [
+          "Ghi điểm"
+        ]
+      ],
+      [
+        "Đỡ bước một",
+        [
+          "Số lần đỡ bước một",
+          "Tốt",
+          "Lỗi đỡ bước một"
+        ]
+      ]
+    ],
+    "realtime": "Nhập trực tiếp",
+    "summary": "Nhập tổng kết",
+    "themes": [
+      "Xanh dương",
+      "Xanh lá",
+      "Tối",
+      "Bảng điểm"
+    ],
+    "plan": {
+      "feature": "Tính năng",
+      "rows": [
+        [
+          "Quảng cáo",
+          "Có",
+          "Không"
+        ],
+        [
+          "Số đội",
+          "Chỉ 1 đội",
+          "Không giới hạn"
+        ],
+        [
+          "Số cầu thủ",
+          "Tối đa 15",
+          "Không giới hạn"
+        ],
+        [
+          "Ghi trận đấu & thống kê",
+          true,
+          true
+        ],
+        [
+          "Thống kê & biểu đồ",
+          true,
+          true
+        ],
+        [
+          "Xuất ảnh & PDF",
+          true,
+          true
+        ],
+        [
+          "Xuất CSV",
+          false,
+          true
+        ],
+        [
+          "Sao lưu & Khôi phục dữ liệu",
+          false,
+          true
+        ],
+        [
+          "Chia sẻ dữ liệu",
+          "Chỉ nhận",
+          "Gửi & nhận"
+        ],
+        [
+          "Sao chép cầu thủ từ đội khác",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "tr": {
+    "name": "Vollog: Voleybol İstatistik",
+    "subtitle": "Maçları kaydet, istatistik gör",
+    "lead": [
+      "Voleybol takımınızın ihtiyacı olan her şey tek bir uygulamada.",
+      "Vollog; antrenörlerin, takım yöneticilerinin ve oyuncuların kadroyu yönetmesine, maç skorlarını kaydetmesine ve istatistikleri takip etmesine yardımcı olur — tablolarla ya da kâğıt notlarla uğraşmadan."
+    ],
+    "stats": [
+      [
+        "Servis",
+        [
+          "Servis Adedi",
+          "Servis Ası",
+          "Servis Hatası"
+        ]
+      ],
+      [
+        "Hücum",
+        [
+          "Hücum Adedi",
+          "Hücum Sayısı",
+          "Hücum Hatası"
+        ]
+      ],
+      [
+        "Blok",
+        [
+          "Blok Sayısı"
+        ]
+      ],
+      [
+        "Servis Karşılama",
+        [
+          "Karşılama Adedi",
+          "Pozitif Karşılama",
+          "Karşılama Hatası"
+        ]
+      ]
+    ],
+    "realtime": "Canlı Giriş",
+    "summary": "Özet Giriş",
+    "themes": [
+      "Mavi",
+      "Yeşil",
+      "Koyu",
+      "Skorbord"
+    ],
+    "plan": {
+      "feature": "Özellik",
+      "rows": [
+        [
+          "Reklam",
+          "Var",
+          "Yok"
+        ],
+        [
+          "Takımlar",
+          "Yalnızca 1 takım",
+          "Sınırsız"
+        ],
+        [
+          "Oyuncular",
+          "En fazla 15",
+          "Sınırsız"
+        ],
+        [
+          "Maç ve İstatistik Girişi",
+          true,
+          true
+        ],
+        [
+          "İstatistik ve Grafikler",
+          true,
+          true
+        ],
+        [
+          "Görsel ve PDF Dışa Aktarma",
+          true,
+          true
+        ],
+        [
+          "CSV Dışa Aktarma",
+          false,
+          true
+        ],
+        [
+          "Veri Yedekleme ve Geri Yükleme",
+          false,
+          true
+        ],
+        [
+          "Veri paylaşımı",
+          "Yalnızca alma",
+          "Gönderme ve alma"
+        ],
+        [
+          "Başka takımlardan oyuncu kopyalama",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "ru": {
+    "name": "Vollog: Статистика волейбола",
+    "subtitle": "Записывайте матчи и прогресс",
+    "lead": [
+      "Всё, что нужно вашей волейбольной команде, в одном приложении.",
+      "Vollog помогает тренерам, менеджерам и игрокам управлять составом, записывать счёт матчей и отслеживать статистику результатов — без возни с таблицами и бумажными заметками."
+    ],
+    "stats": [
+      [
+        "Подача",
+        [
+          "Подачи",
+          "Эйс",
+          "Ошибка на подаче"
+        ]
+      ],
+      [
+        "Атака",
+        [
+          "Атаки",
+          "Очко в атаке",
+          "Ошибка в атаке"
+        ]
+      ],
+      [
+        "Блок",
+        [
+          "Очко на блоке"
+        ]
+      ],
+      [
+        "Приём",
+        [
+          "Попытки приёма",
+          "Позитивный приём",
+          "Ошибка приёма"
+        ]
+      ]
+    ],
+    "realtime": "В реальном времени",
+    "summary": "Сводный ввод",
+    "themes": [
+      "Синяя",
+      "Зелёная",
+      "Тёмная",
+      "Табло"
+    ],
+    "plan": {
+      "feature": "Функция",
+      "rows": [
+        [
+          "Реклама",
+          "Да",
+          "Нет"
+        ],
+        [
+          "Команды",
+          "Только 1 команда",
+          "Без лимита"
+        ],
+        [
+          "Игроки",
+          "До 15",
+          "Без лимита"
+        ],
+        [
+          "Ввод матчей и статистики",
+          true,
+          true
+        ],
+        [
+          "Статистика и графики",
+          true,
+          true
+        ],
+        [
+          "Экспорт изображения и PDF",
+          true,
+          true
+        ],
+        [
+          "Экспорт CSV",
+          false,
+          true
+        ],
+        [
+          "Резервная копия и восстановление данных",
+          false,
+          true
+        ],
+        [
+          "Обмен данными",
+          "Только получение",
+          "Отправка и получение"
+        ],
+        [
+          "Копирование игроков из других команд",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "uk": {
+    "name": "Vollog: Статистика волейболу",
+    "subtitle": "Записуйте матчі й статистику",
+    "lead": [
+      "Усе, що потрібно вашій волейбольній команді, — в одному застосунку.",
+      "Vollog допомагає тренерам, менеджерам і гравцям керувати складом, записувати рахунок матчів і відстежувати статистику — без таблиць і паперових нотаток."
+    ],
+    "stats": [
+      [
+        "Подача",
+        [
+          "Кількість подач",
+          "Ейс",
+          "Помилка подачі"
+        ]
+      ],
+      [
+        "Атака",
+        [
+          "Кількість атак",
+          "Результативна атака",
+          "Помилка атаки"
+        ]
+      ],
+      [
+        "Блок",
+        [
+          "Очко на блоці"
+        ]
+      ],
+      [
+        "Прийом",
+        [
+          "Кількість прийомів",
+          "Позитивний прийом",
+          "Помилка прийому"
+        ]
+      ]
+    ],
+    "realtime": "Наживо",
+    "summary": "Підсумок",
+    "themes": [
+      "Синя",
+      "Зелена",
+      "Темна",
+      "Табло"
+    ],
+    "plan": {
+      "feature": "Функція",
+      "rows": [
+        [
+          "Реклама",
+          "Так",
+          "Ні"
+        ],
+        [
+          "Команди",
+          "Лише 1 команда",
+          "Без обмежень"
+        ],
+        [
+          "Гравці",
+          "До 15",
+          "Без обмежень"
+        ],
+        [
+          "Запис матчів і статистики",
+          true,
+          true
+        ],
+        [
+          "Статистика й графіки",
+          true,
+          true
+        ],
+        [
+          "Експорт зображення й PDF",
+          true,
+          true
+        ],
+        [
+          "Експорт CSV",
+          false,
+          true
+        ],
+        [
+          "Резервна копія й відновлення",
+          false,
+          true
+        ],
+        [
+          "Обмін даними",
+          "Лише отримання",
+          "Надсилання й отримання"
+        ],
+        [
+          "Копіювання гравців з інших команд",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "hi": {
+    "name": "Vollog: वॉलीबॉल स्टैट्स",
+    "subtitle": "मैच रिकॉर्ड करें, आँकड़े देखें",
+    "lead": [
+      "आपकी वॉलीबॉल टीम की हर ज़रूरत, एक ही ऐप में।",
+      "Vollog कोच, मैनेजर और खिलाड़ियों को टीम की सूची संभालने, मैच के स्कोर दर्ज करने और प्रदर्शन के आँकड़े रखने में मदद करता है — बिना स्प्रेडशीट या कागज़ी नोट्स की झंझट के।"
+    ],
+    "stats": [
+      [
+        "सर्विस",
+        [
+          "संख्या",
+          "ऐस",
+          "एरर"
+        ]
+      ],
+      [
+        "अटैक",
+        [
+          "संख्या",
+          "अंक",
+          "एरर"
+        ]
+      ],
+      [
+        "ब्लॉक",
+        [
+          "अंक"
+        ]
+      ],
+      [
+        "रिसेप्शन",
+        [
+          "प्रयास",
+          "सफल",
+          "एरर"
+        ]
+      ]
+    ],
+    "realtime": "लाइव एंट्री",
+    "summary": "सारांश एंट्री",
+    "themes": [
+      "नीला",
+      "हरा",
+      "डार्क",
+      "स्कोरबोर्ड"
+    ],
+    "plan": {
+      "feature": "सुविधा",
+      "rows": [
+        [
+          "विज्ञापन दिखते हैं",
+          "हाँ",
+          "नहीं"
+        ],
+        [
+          "टीमें",
+          "केवल 1 टीम",
+          "असीमित"
+        ],
+        [
+          "खिलाड़ी",
+          "अधिकतम 15",
+          "असीमित"
+        ],
+        [
+          "मैच और आँकड़े दर्ज करना",
+          true,
+          true
+        ],
+        [
+          "आँकड़े और ग्राफ",
+          true,
+          true
+        ],
+        [
+          "इमेज और PDF एक्सपोर्ट",
+          true,
+          true
+        ],
+        [
+          "CSV एक्सपोर्ट",
+          false,
+          true
+        ],
+        [
+          "डेटा बैकअप और रीस्टोर",
+          false,
+          true
+        ],
+        [
+          "डेटा शेयरिंग",
+          "केवल प्राप्त करना",
+          "भेजना और प्राप्त करना"
+        ],
+        [
+          "दूसरी टीमों से खिलाड़ी कॉपी करें",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "th": {
+    "name": "Vollog: สถิติวอลเลย์บอล",
+    "subtitle": "บันทึกการแข่งขันและดูสถิติ",
+    "lead": [
+      "ทุกอย่างที่ทีมวอลเลย์บอลของคุณต้องการ ครบในแอปเดียว",
+      "Vollog ช่วยให้โค้ช ผู้จัดการทีม และผู้เล่นจัดการรายชื่อผู้เล่น บันทึกคะแนนการแข่งขัน และติดตามสถิติได้ โดยไม่ต้องยุ่งยากกับสเปรดชีตหรือกระดาษจด"
+    ],
+    "stats": [
+      [
+        "เสิร์ฟ",
+        [
+          "จำนวนเสิร์ฟ",
+          "เสิร์ฟเอซ",
+          "เสิร์ฟเสีย"
+        ]
+      ],
+      [
+        "ตบ",
+        [
+          "จำนวนตบ",
+          "ตบได้แต้ม",
+          "ตบเสีย"
+        ]
+      ],
+      [
+        "บล็อก",
+        [
+          "บล็อกได้แต้ม"
+        ]
+      ],
+      [
+        "รับเสิร์ฟ",
+        [
+          "จำนวนรับเสิร์ฟ",
+          "รับเสิร์ฟดี",
+          "รับเสิร์ฟเสีย"
+        ]
+      ]
+    ],
+    "realtime": "กรอกระหว่างแข่ง",
+    "summary": "กรอกสรุป",
+    "themes": [
+      "น้ำเงิน",
+      "เขียว",
+      "มืด",
+      "สกอร์บอร์ด"
+    ],
+    "plan": {
+      "feature": "ฟีเจอร์",
+      "rows": [
+        [
+          "โฆษณา",
+          "มี",
+          "ไม่มี"
+        ],
+        [
+          "จำนวนทีม",
+          "1 ทีมเท่านั้น",
+          "ไม่จำกัด"
+        ],
+        [
+          "จำนวนผู้เล่น",
+          "สูงสุด 15 คน",
+          "ไม่จำกัด"
+        ],
+        [
+          "บันทึกแมตช์และสถิติ",
+          true,
+          true
+        ],
+        [
+          "สถิติและกราฟ",
+          true,
+          true
+        ],
+        [
+          "ส่งออกรูปภาพและ PDF",
+          true,
+          true
+        ],
+        [
+          "ส่งออก CSV",
+          false,
+          true
+        ],
+        [
+          "สำรองและกู้คืนข้อมูล",
+          false,
+          true
+        ],
+        [
+          "แชร์ข้อมูล",
+          "รับได้อย่างเดียว",
+          "ส่งและรับ"
+        ],
+        [
+          "คัดลอกผู้เล่นจากทีมอื่น",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "ja": {
+    "name": "Vollog: バレーボールスコア記録・成績管理 バレログ",
+    "subtitle": "バレーボールの試合を記録、成績を分析",
+    "lead": [
+      "チームの選手管理・試合記録・データ集計をこれ一本で。",
+      "Vollogは、バレーボールの記録アプリです。紙のメモやスプレッドシートに頼らず、スマホだけでチームのデータをまとめて管理することができます。"
+    ],
+    "stats": [
+      [
+        "サーブ",
+        [
+          "打数",
+          "得点",
+          "失点"
+        ]
+      ],
+      [
+        "アタック",
+        [
+          "打数",
+          "得点",
+          "失点"
+        ]
+      ],
+      [
+        "ブロック",
+        [
+          "得点"
+        ]
+      ],
+      [
+        "サーブレシーブ",
+        [
+          "受数",
+          "成功",
+          "失点"
+        ]
+      ]
+    ],
+    "realtime": "リアルタイム入力",
+    "summary": "まとめ入力",
+    "themes": [
+      "ブルー",
+      "グリーン",
+      "ダーク",
+      "スコアボード"
+    ],
+    "plan": {
+      "feature": "機能",
+      "rows": [
+        [
+          "広告表示",
+          "あり",
+          "なし"
+        ],
+        [
+          "チーム数",
+          "1チームのみ",
+          "無制限"
+        ],
+        [
+          "選手登録数",
+          "15名まで",
+          "無制限"
+        ],
+        [
+          "試合・記録入力",
+          true,
+          true
+        ],
+        [
+          "成績集計・グラフ",
+          true,
+          true
+        ],
+        [
+          "成績画像・PDF出力",
+          true,
+          true
+        ],
+        [
+          "CSV出力",
+          false,
+          true
+        ],
+        [
+          "データバックアップ・復元",
+          false,
+          true
+        ],
+        [
+          "データ共有",
+          "受信のみ",
+          "送信・受信"
+        ],
+        [
+          "他チームから選手をコピー",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "zh-Hans": {
+    "name": "Vollog: 排球数据统计记分",
+    "subtitle": "记录每场比赛，掌握球员表现",
+    "lead": [
+      "你的排球队所需的一切，尽在一个 App。",
+      "Vollog 帮助教练、管理者和球员管理球队名单、记录比赛比分并追踪表现数据，无需再为表格或纸质记录而烦恼。"
+    ],
+    "stats": [
+      [
+        "发球",
+        [
+          "次数",
+          "得分",
+          "失误"
+        ]
+      ],
+      [
+        "扣球",
+        [
+          "次数",
+          "得分",
+          "失误"
+        ]
+      ],
+      [
+        "拦网",
+        [
+          "得分"
+        ]
+      ],
+      [
+        "一传",
+        [
+          "次数",
+          "到位",
+          "失误"
+        ]
+      ]
+    ],
+    "realtime": "实时录入",
+    "summary": "汇总录入",
+    "themes": [
+      "蓝色",
+      "绿色",
+      "深色",
+      "记分牌"
+    ],
+    "plan": {
+      "feature": "功能",
+      "rows": [
+        [
+          "广告",
+          "有",
+          "无"
+        ],
+        [
+          "球队数",
+          "仅 1 支",
+          "无限"
+        ],
+        [
+          "球员数",
+          "最多 15 名",
+          "无限"
+        ],
+        [
+          "比赛与数据录入",
+          true,
+          true
+        ],
+        [
+          "统计与图表",
+          true,
+          true
+        ],
+        [
+          "统计图片与 PDF 导出",
+          true,
+          true
+        ],
+        [
+          "CSV 导出",
+          false,
+          true
+        ],
+        [
+          "数据备份与恢复",
+          false,
+          true
+        ],
+        [
+          "数据共享",
+          "仅接收",
+          "发送和接收"
+        ],
+        [
+          "从其他球队复制球员",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "zh-Hant": {
+    "name": "Vollog: 排球數據統計計分",
+    "subtitle": "記錄每場比賽，掌握球員表現",
+    "lead": [
+      "你的排球隊所需的一切，盡在一個 App。",
+      "Vollog 協助教練、管理者與球員管理球隊名單、記錄比賽比分並追蹤表現數據，無需再為表格或紙本記錄而煩惱。"
+    ],
+    "stats": [
+      [
+        "發球",
+        [
+          "次數",
+          "得分",
+          "失誤"
+        ]
+      ],
+      [
+        "攻擊",
+        [
+          "次數",
+          "得分",
+          "失誤"
+        ]
+      ],
+      [
+        "攔網",
+        [
+          "得分"
+        ]
+      ],
+      [
+        "接發球",
+        [
+          "次數",
+          "到位",
+          "失誤"
+        ]
+      ]
+    ],
+    "realtime": "即時輸入",
+    "summary": "彙總輸入",
+    "themes": [
+      "藍色",
+      "綠色",
+      "深色",
+      "記分板"
+    ],
+    "plan": {
+      "feature": "功能",
+      "rows": [
+        [
+          "廣告",
+          "有",
+          "無"
+        ],
+        [
+          "球隊數",
+          "僅 1 支",
+          "無限"
+        ],
+        [
+          "球員數",
+          "最多 15 位",
+          "無限"
+        ],
+        [
+          "比賽與資料輸入",
+          true,
+          true
+        ],
+        [
+          "統計與圖表",
+          true,
+          true
+        ],
+        [
+          "統計圖片與 PDF 匯出",
+          true,
+          true
+        ],
+        [
+          "CSV 匯出",
+          false,
+          true
+        ],
+        [
+          "資料備份與還原",
+          false,
+          true
+        ],
+        [
+          "資料共享",
+          "僅接收",
+          "傳送和接收"
+        ],
+        [
+          "從其他球隊複製球員",
+          false,
+          true
+        ]
+      ]
+    }
+  },
+  "ko": {
+    "name": "Vollog: 배구 기록 통계",
+    "subtitle": "경기를 기록하고 성장을 확인",
+    "lead": [
+      "당신의 배구팀에 필요한 모든 것을 하나의 앱에.",
+      "Vollog는 감독, 매니저, 선수가 선수 명단을 관리하고 경기 점수를 기록하며 경기력 통계를 추적할 수 있도록 도와줍니다. 스프레드시트나 종이 메모의 번거로움은 이제 그만."
+    ],
+    "stats": [
+      [
+        "서브",
+        [
+          "시도",
+          "득점",
+          "범실"
+        ]
+      ],
+      [
+        "공격",
+        [
+          "시도",
+          "득점",
+          "범실"
+        ]
+      ],
+      [
+        "블로킹",
+        [
+          "득점"
+        ]
+      ],
+      [
+        "리시브",
+        [
+          "시도",
+          "성공",
+          "실패"
+        ]
+      ]
+    ],
+    "realtime": "실시간 입력",
+    "summary": "한꺼번에 입력",
+    "themes": [
+      "블루",
+      "그린",
+      "다크",
+      "스코어보드"
+    ],
+    "plan": {
+      "feature": "기능",
+      "rows": [
+        [
+          "광고 표시",
+          "있음",
+          "없음"
+        ],
+        [
+          "팀 수",
+          "1팀만",
+          "무제한"
+        ],
+        [
+          "선수 등록 수",
+          "15명까지",
+          "무제한"
+        ],
+        [
+          "경기·기록 입력",
+          true,
+          true
+        ],
+        [
+          "성적 집계·그래프",
+          true,
+          true
+        ],
+        [
+          "성적 이미지·PDF 내보내기",
+          true,
+          true
+        ],
+        [
+          "CSV 내보내기",
+          false,
+          true
+        ],
+        [
+          "데이터 백업·복원",
+          false,
+          true
+        ],
+        [
+          "데이터 공유",
+          "받기만 가능",
+          "보내기·받기"
+        ],
+        [
+          "다른 팀에서 선수 복사",
+          false,
+          true
+        ]
+      ]
+    }
+  }
+}

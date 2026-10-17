@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!-- tools/build.mjs が作ったページ。直すときは tools/ の文言かスクリプトを直して、npm run build -->
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var LOCALES = ["id","ms","cs","de","en","es","fil","fr","it","pl","pt","sr","vi","tr","ru","uk","hi","th","ja","zh-Hans","zh-Hant","ko"], HERE = "zh-Hant", PATH = "apps/storm-badminton/";
+      function candidates(tag) {
+        try {
+          var l = new Intl.Locale(tag).maximize();
+          return [tag, l.language + '-' + l.script + '-' + l.region, l.language + '-' + l.script, l.language + '-' + l.region, l.language];
+        } catch (e) {
+          return [tag];
+        }
+      }
+      function match(tags) {
+        for (var i = 0; i < tags.length; i++) {
+          var c = candidates(tags[i]);
+          for (var j = 0; j < c.length; j++) {
+            for (var k = 0; k < LOCALES.length; k++) if (LOCALES[k].toLowerCase() === String(c[j]).toLowerCase()) return LOCALES[k];
+          }
+        }
+        return null;
+      }
+      var want = null, asked = new URLSearchParams(location.search).get('lang');
+      if (asked) {
+        want = match([asked]) || "en";
+        try { localStorage.setItem('site-lang', want); } catch (e) {}
+      } else if (HERE === 'ja') {
+        try { want = localStorage.getItem('site-lang'); } catch (e) {}
+        if (LOCALES.indexOf(want) < 0) want = match(navigator.languages || [navigator.language || 'ja']) || "en";
+      }
+      if (want && want !== HERE) {
+        location.replace((want === 'ja' ? '/' : '/' + want + '/') + PATH);
+        return;
+      }
+      // このページの言語を覚える（利用規約などから / へ戻ったとき、最後に見ていた言語に戻すため）。
+      // 覚えている言語がこのページにないとき（Vollog のページを開いたマレー語の人）は、上書きしない
+      try {
+        var saved = localStorage.getItem('site-lang');
+        if (!saved || LOCALES.indexOf(saved) >= 0) localStorage.setItem('site-lang', HERE);
+      } catch (e) {}
+    })();
+  </script>
+  <title>暴風雨羽球 (Storm Badminton) - 暴風雨天也要打羽球！</title>
+  <meta name="description" content="就算狂風大作、濃霧瀰漫、還會被雷劈，也要打羽球！ 在暴風雨中對決的 1 對 1（單打）羽球遊戲。 風會把羽球吹偏，霧會遮住對方的場地。倒數歸零的瞬間，雷會劈向羽球所在一方的場地。 看懂天氣，把球打進對方場地。" />
+  <link rel="canonical" href="https://asakusasemao.com/zh-Hant/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="id" href="https://asakusasemao.com/id/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="ms" href="https://asakusasemao.com/ms/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="cs" href="https://asakusasemao.com/cs/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="de" href="https://asakusasemao.com/de/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="en" href="https://asakusasemao.com/en/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="es" href="https://asakusasemao.com/es/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="fil" href="https://asakusasemao.com/fil/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="fr" href="https://asakusasemao.com/fr/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="it" href="https://asakusasemao.com/it/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="pl" href="https://asakusasemao.com/pl/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="pt" href="https://asakusasemao.com/pt/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="sr" href="https://asakusasemao.com/sr/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="vi" href="https://asakusasemao.com/vi/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="tr" href="https://asakusasemao.com/tr/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="ru" href="https://asakusasemao.com/ru/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="uk" href="https://asakusasemao.com/uk/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="hi" href="https://asakusasemao.com/hi/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="th" href="https://asakusasemao.com/th/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="ja" href="https://asakusasemao.com/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://asakusasemao.com/zh-Hans/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://asakusasemao.com/zh-Hant/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="ko" href="https://asakusasemao.com/ko/apps/storm-badminton/" />
+  <link rel="alternate" hreflang="x-default" href="https://asakusasemao.com/apps/storm-badminton/" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body data-app="storm-badminton">
+
+  <header class="site-header">
+    <a class="brand" href="/zh-Hant/">AsakusaSemao</a>
+    <nav class="header-links">
+      <a href="/apps/storm-badminton/privacy.html">隱私權政策</a>
+    </nav>
+  </header>
+
+  <main>
+    <details class="lang-picker">
+      <summary aria-label="語言"><!-- Lucide: globe --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span lang="zh-Hant">繁體中文</span></summary>
+      <ul>
+          <li><a href="/id/apps/storm-badminton/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ms/apps/storm-badminton/" hreflang="ms" lang="ms" data-lang="ms">Bahasa Melayu</a></li>
+          <li><a href="/cs/apps/storm-badminton/" hreflang="cs" lang="cs" data-lang="cs">Čeština</a></li>
+          <li><a href="/de/apps/storm-badminton/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="/en/apps/storm-badminton/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/es/apps/storm-badminton/" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a href="/fil/apps/storm-badminton/" hreflang="fil" lang="fil" data-lang="fil">Filipino</a></li>
+          <li><a href="/fr/apps/storm-badminton/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="/it/apps/storm-badminton/" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="/pl/apps/storm-badminton/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li>
+          <li><a href="/pt/apps/storm-badminton/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li>
+          <li><a href="/sr/apps/storm-badminton/" hreflang="sr" lang="sr" data-lang="sr">Srpski</a></li>
+          <li><a href="/vi/apps/storm-badminton/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li>
+          <li><a href="/tr/apps/storm-badminton/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          <li><a href="/ru/apps/storm-badminton/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li>
+          <li><a href="/uk/apps/storm-badminton/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li>
+          <li><a href="/hi/apps/storm-badminton/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li>
+          <li><a href="/th/apps/storm-badminton/" hreflang="th" lang="th" data-lang="th">ไทย</a></li>
+          <li><a href="/apps/storm-badminton/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          <li><a href="/zh-Hans/apps/storm-badminton/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li>
+          <li><a href="/zh-Hant/apps/storm-badminton/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant" aria-current="page">繁體中文</a></li>
+          <li><a href="/ko/apps/storm-badminton/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+      </ul>
+    </details>
+
+    <div class="hero">
+      <img class="app-icon" src="/assets/images/storm-badminton-icon.png" alt="暴風雨羽球的圖示" />
+      <div class="hero-text">
+        <h1>
+          <span>暴風雨天也要打羽球！</span>
+          暴風雨羽球
+        </h1>
+        <p>就算狂風大作、濃霧瀰漫、還會被雷劈，也要打羽球！<br>在暴風雨中對決的 1 對 1（單打）羽球遊戲。</p>
+        <p>風會把羽球吹偏，霧會遮住對方的場地。倒數歸零的瞬間，雷會劈向羽球所在一方的場地。<br>看懂天氣，把球打進對方場地。</p>
+        <div class="badge-row">
+          <span class="badge accent">免費遊玩</span>
+          <span class="badge accent">不需註冊帳號</span>
+          <span class="badge accent">支援直向與橫向</span>
+          <span class="badge accent">支援 22 種語言</span>
+          <span class="badge">iOS 即將推出</span>
+          <span class="badge">Android 即將推出</span>
+        </div>
+      </div>
+      <div class="store-buttons">
+        <span class="store-btn store-btn-soon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span class="store-btn-label">
+            <small>即將推出</small>
+            App Store
+          </span>
+        </span>
+        <span class="store-btn store-btn-soon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76a2 2 0 0 0 2.07-.22l11.4-6.58-2.53-2.53L3.18 23.76zM.5 1.26C.19 1.67 0 2.28 0 3.07v17.87c0 .79.19 1.4.51 1.8l.09.09 10.01-10.01v-.24L.59 1.17.5 1.26zM20.93 10.37l-2.9-1.67-2.83 2.83 2.83 2.83 2.91-1.68c.83-.48.83-1.26-.01-1.31zM5.25.46l11.4 6.58-2.53 2.53L3.18.22A2 2 0 0 1 5.25.46z"/></svg>
+          <span class="store-btn-label">
+            <small>即將推出</small>
+            Google Play
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <section>
+      <h2>這款遊戲的獨特之處</h2>
+      <div class="feature-grid">
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">1</div>
+          <h3>輕吊網前，重殺下壓</h3>
+          <p>輕輕落在網前的吊球、高高飛向底線的高遠球，還有凌厲的殺球。前後調動對手，讓對方跑起來。</p>
+        </div>
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">2</div>
+          <h3>隨風飄的羽球</h3>
+          <p>輕盈的羽球會隨風飄走。高遠球打得越高，飄得越遠。</p>
+        </div>
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">3</div>
+          <h3>殺球</h3>
+          <p>球來得高的時候，起跳從上往下殺下去。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>遊戲玩法</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: pointer --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+          </div>
+          <h3>只要點一下和滑動</h3>
+          <p>球員會自動跑位。腳下的圓圈亮起時，點一下螢幕。</p><p>點一下打出吊球，往上滑打出高遠球，往下滑打出殺球。點的位置（左或右）決定方向。</p><p>第一次玩時，會有簡短的教學告訴你怎麼玩。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: zap --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
+          </div>
+          <h3>風、霧和雷電</h3>
+          <ul><li><b>風</b>：羽球會被風吹偏。看準風向去瞄準，就能落進場內；看錯了，就會被吹出界。</li><li><b>霧</b>：對方的場地會看不清楚。</li><li><b>雷電</b>：電荷升高時會出現倒數。歸零的瞬間，雷會劈向羽球所在一方的場地，另一方得分。</li></ul><p>比分越高，暴風雨越猛烈。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: school --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 22v-4a2 2 0 1 0-4 0v4"/><path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2"/><path d="M18 5v17"/><path d="m4 6 8-4 8 4"/><path d="M6 5v17"/><circle cx="12" cy="9" r="2"/></svg>
+          </div>
+          <h3>兩個場地</h3>
+          <ul><li><b>體育館</b>：一開始沒有風。途中屋頂和牆壁被吹飛，就進入暴風雨了。</li><li><b>公園</b>：從第一球開始就是暴風雨。</li></ul>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: shirt --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+          </div>
+          <h3>換裝</h3>
+          <p>你和對手都可以選擇膚色、髮型和髮色。</p><p>多次看到比賽中飛過的稀有物品，就能獲得帽子、羽球、球拍和球衣。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: share --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+          </div>
+          <h3>戰績與分享</h3>
+          <p>會記錄勝負和勝率、被雷劈中的次數，以及最長回合。</p><p>可以把比賽成績做成一張圖片分享出去。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: sliders --><svg viewBox="0 0 24 24" aria-hidden="true"><line x1="21" x2="14" y1="4" y2="4"/><line x1="10" x2="3" y1="4" y2="4"/><line x1="21" x2="12" y1="12" y2="12"/><line x1="8" x2="3" y1="12" y2="12"/><line x1="21" x2="16" y1="20" y2="20"/><line x1="12" x2="3" y1="20" y2="20"/><line x1="14" x2="14" y1="2" y2="6"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="16" x2="16" y1="18" y2="22"/></svg>
+          </div>
+          <h3>其他</h3>
+          <ul><li>CPU 難度分 3 段</li><li>4 種視角，直式橫式都能玩</li><li>可以在設定中調弱雷電的閃光</li><li>支援 22 種語言</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="callout">
+      <h2>廣告與 App 內購買</h2>
+      <p class="section-note">畫面上方會顯示廣告。只要購買一次「移除廣告」，廣告就會永久消失。「支持開發者」會以一段短片向你致謝。價格請以各 App 商店的顯示為準。<br>支持並不代表承諾回應需求或增加功能。歡迎在 App 商店留下評論，分享你的感想與建議，這會是很大的鼓勵。</p>
+    </section>
+
+    <section class="callout">
+      <h2>注意事項</h2>
+      <p class="section-note">落雷時畫面會強烈閃光。可以在設定的「雷電特效」中調弱。<br>這只是遊戲。現實中打雷或颳大風時，請進到建築物裡。請在安全的地方打羽球。</p>
+    </section>
+
+    <section class="callout">
+      <h2>聯絡方式</h2>
+      <p class="section-note"><a href="mailto:asakusasemao@gmail.com">asakusasemao@gmail.com</a></p>
+    </section>
+  </main>
+
+  <!--
+    このページの絵記号（「Lucide: ...」と書いてある SVG）は、Lucide（https://lucide.dev）のもの。
+    ライセンスは、著作権表示と許諾の文を写しに残すことを求めるので、ここに置く。絵記号を足しても、この文はそのままでよい。
+
+    ISC License
+
+    Copyright (c) 2026 Lucide Icons and Contributors
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+    ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+    Lucide の絵記号の一部は Feather（https://feathericons.com）がもとで、そちらは次のライセンス。
+
+    The MIT License (MIT) (for the icons derived from the Feather project)
+
+    Copyright (c) 2013-present Cole Bemis
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+  -->
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/zh-Hant/">首頁</a>
+      <a href="/apps/storm-badminton/privacy.html">隱私權政策</a>
+    </div>
+    <p>© 2026 AsakusaSemao. All rights reserved.</p>
+    <p>圖示：<a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a>（ISC 授權）</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.lang-picker a[data-lang]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        try { localStorage.setItem('site-lang', a.dataset.lang); } catch (e) {}
+      });
+    });
+  </script>
+</body>
+</html>

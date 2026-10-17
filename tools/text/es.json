@@ -1,0 +1,151 @@
+{
+  "lang": "Español",
+  "site": {
+    "home": "Inicio",
+    "privacy": "Política de privacidad",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "Contacto",
+    "language": "Idioma",
+    "icons": "Iconos: {lucide} (licencia ISC)",
+    "iconAlt": "Icono de {name}",
+    "released": "Ya en {p}",
+    "coming": "Pronto en {p}",
+    "releasedShort": "Ya en {p}",
+    "comingShort": "{p}: muy pronto",
+    "soon": "Muy pronto"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "Hago apps<br>para móviles.",
+    "desc": "Apps para iOS y Android, desarrolladas de forma independiente.",
+    "game": "Juego",
+    "tool": "Registro y estadísticas",
+    "vollogCard": "App de voleibol para gestionar jugadores, registrar partidos y sacar estadísticas",
+    "vollogTerms": "Términos de uso de Vollog"
+  },
+  "game": {
+    "unique": "Solo en este juego",
+    "features": "Cómo se juega",
+    "badges": [
+      "Gratis",
+      "Sin crear cuenta",
+      "En vertical u horizontal",
+      "Disponible en 22 idiomas"
+    ],
+    "ads": "Anuncios y compras dentro de la app",
+    "adsBody": "Arriba de la pantalla aparecen anuncios. Compra «{removeAds}» una vez y desaparecen para siempre. Con «{support}», te damos las gracias con una película corta. Consulta los precios en tu tienda de apps.",
+    "adsNote": "El apoyo no es una promesa de atender peticiones ni de añadir funciones. Tus impresiones e ideas en una reseña de la tienda nos animan mucho."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "Voleibol uno contra uno en plena tormenta. Mantén vivo el punto y juega contra el rayo",
+      "unique": [
+        [
+          "Mantenla arriba y remata",
+          "En el voleibol, el balón no puede tocar el suelo. Salta por encima de la red alta y clava un remate."
+        ],
+        [
+          "Puntos largos y divertidos",
+          "Los puntos se alargan, así que hasta quien juega por primera vez disfruta enseguida de un partido de voleibol de verdad. Cuanto más duran, más se acerca la cuenta del rayo."
+        ],
+        [
+          "Juega con el rayo",
+          "Un rayo vale 2 puntos. Mira la cuenta, alterna globo, toque y remate para controlar cuánto tiempo vuela el balón, y haz que esté sobre el campo rival al llegar a 0."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "Bádminton uno contra uno en plena tormenta. El volante vuela con el viento: mueve al rival adelante y atrás",
+      "unique": [
+        [
+          "Suave junto a la red, fuerte hacia abajo",
+          "Una dejada que cae suave tras la red, un clear alto al fondo y un remate seco. Mueve al rival adelante y atrás y hazlo correr."
+        ],
+        [
+          "Un volante en el viento",
+          "El volante, tan ligero, se deja llevar por el viento. Cuanto más alto el clear, más lejos se desvía."
+        ],
+        [
+          "Remate",
+          "Cuando el volante llega alto, salta y remátalo de arriba abajo."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "Tenis uno contra uno en plena tormenta. El más rápido de la serie: busca las líneas",
+      "unique": [
+        [
+          "Pura velocidad",
+          "Incluso en la tormenta, la pelota vuela fuerte y rápida. Una pelota alta con un golpe fuerte se convierte en un smash."
+        ],
+        [
+          "Gana colocando la pelota",
+          "Alterna izquierda y derecha y manda la pelota adonde el rival no llega."
+        ],
+        [
+          "Bote y saque",
+          "Deja botar la pelota una vez y devuélvela. Sacas lanzando la pelota al aire, de tres formas: rápido, normal o suave."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "Pickleball uno contra uno en plena tormenta. Cocina y cambio de saque: reglas reales",
+      "unique": [
+        [
+          "Reglas reales del pickleball",
+          "Sistema de cambio de saque: solo puntúa el lado que saca. La cocina junto a la red, donde no puedes volear. Y la regla del doble bote: el saque y su devolución tienen que botar primero."
+        ],
+        [
+          "Duelos junto a la red",
+          "Deja caer un dink suave en la cocina del rival y castiga con un drive la pelota que se levante."
+        ],
+        [
+          "De los fuegos artificiales al mar en tormenta",
+          "Empieza en un puerto tranquilo de noche, con fuegos artificiales, hasta que de pronto llega la tormenta a mitad del partido. El otro escenario: la cubierta de un crucero en un mar embravecido."
+        ]
+      ]
+    }
+  },
+  "vollog": {
+    "terms": "Términos de uso",
+    "features": "Funciones principales",
+    "stats": "Datos que puedes registrar",
+    "plans": "Planes",
+    "listSep": ", ",
+    "badges": [
+      "Gratis",
+      "Funciona sin conexión",
+      "Sin crear cuenta",
+      "iOS y Android",
+      "Disponible en 21 idiomas"
+    ],
+    "statsNote": "En cada partido eliges si registrar la {reception}. Los equipos que no la usan pueden registrar sin esos campos.",
+    "cards": [
+      [
+        "Perfiles de jugadores",
+        "Registra dorsal, nombre y posición. También puedes gestionar los registros de partido de cada jugador."
+      ],
+      [
+        "Partidos y sets",
+        "Registra durante el partido con «{realtime}» o después con «{summary}». Guarda el marcador de cada set y las estadísticas individuales."
+      ],
+      [
+        "Estadísticas",
+        "Resúmenes por jugador. Las gráficas de evolución, de todo el historial o de un periodo, muestran el progreso."
+      ],
+      [
+        "Exportar",
+        "Exportar estadísticas como imagen o PDF está en todos los planes. La exportación CSV está incluida en Pro."
+      ],
+      [
+        "Compartir datos",
+        "Comparte los registros del equipo y los partidos con otro usuario de Vollog mediante un archivo. Enviar requiere Pro; recibir es gratis."
+      ],
+      [
+        "8 temas",
+        "Elige la combinación de colores entre 8 temas, como {themes}."
+      ]
+    ]
+  }
+}

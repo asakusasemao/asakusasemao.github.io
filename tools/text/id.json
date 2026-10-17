@@ -1,0 +1,151 @@
+{
+  "lang": "Bahasa Indonesia",
+  "site": {
+    "home": "Beranda",
+    "privacy": "Kebijakan Privasi",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "Kontak",
+    "language": "Bahasa",
+    "icons": "Ikon: {lucide} (Lisensi ISC)",
+    "iconAlt": "Ikon {name}",
+    "released": "Sudah tersedia di {p}",
+    "coming": "Segera hadir di {p}",
+    "releasedShort": "Tersedia di {p}",
+    "comingShort": "{p}: segera hadir",
+    "soon": "Segera hadir"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "Saya membuat<br>aplikasi ponsel.",
+    "desc": "Pengembang independen yang membuat aplikasi iOS dan Android.",
+    "game": "Game",
+    "tool": "Catatan & statistik",
+    "vollogCard": "Aplikasi bola voli untuk mengelola pemain, mencatat pertandingan, dan merekap statistik",
+    "vollogTerms": "Ketentuan Penggunaan Vollog"
+  },
+  "game": {
+    "unique": "Hanya di game ini",
+    "features": "Cara bermain",
+    "badges": [
+      "Gratis dimainkan",
+      "Tanpa daftar akun",
+      "Mode potret & lanskap",
+      "Tersedia dalam 22 bahasa"
+    ],
+    "ads": "Iklan dan pembelian dalam aplikasi",
+    "adsBody": "Iklan muncul di bagian atas layar. Beli “{removeAds}” sekali, dan iklan tidak akan muncul lagi. Dengan “{support}”, kamu akan mendapat film pendek sebagai ucapan terima kasih. Untuk harga, silakan cek di toko aplikasi.",
+    "adsNote": "Dukungan bukan janji untuk memenuhi permintaan atau menambah fitur. Kesan dan saranmu di ulasan toko aplikasi akan sangat menyemangati."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "Bola voli satu lawan satu di tengah badai. Jaga reli dan adu taktik dengan petir",
+      "unique": [
+        [
+          "Jaga bola, lalu smash",
+          "Di bola voli, bola tidak boleh menyentuh tanah. Lompat di atas net yang tinggi dan hantam bola dengan smash."
+        ],
+        [
+          "Serunya reli panjang",
+          "Reli terus berlanjut, jadi pemula pun langsung bisa merasakan pertandingan voli sungguhan. Makin lama reli, makin dekat hitungan petir."
+        ],
+        [
+          "Adu taktik dengan petir",
+          "Petir bernilai 2 poin. Perhatikan hitungannya, atur lama bola melayang dengan lob, passing, dan smash, lalu pastikan bola ada di atas lapangan lawan saat angka 0."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "Bulu tangkis satu lawan satu di tengah badai. Kok terbawa angin, lawan dipaksa maju-mundur",
+      "unique": [
+        [
+          "Jatuhkan pelan, tukikkan tajam",
+          "Dropshot yang jatuh pelan di depan net, lob tinggi ke belakang, dan smash yang tajam. Paksa lawan maju-mundur dan buat dia berlari."
+        ],
+        [
+          "Kok terbawa angin",
+          "Kok yang ringan ikut terbawa angin. Makin tinggi lob, makin jauh kok melayang."
+        ],
+        [
+          "Smash",
+          "Kok yang datang tinggi bisa kamu hantam dari atas sambil melompat."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "Tenis satu lawan satu di tengah badai. Paling cepat di seri ini: tembus sudut lapangan",
+      "unique": [
+        [
+          "Adu kecepatan",
+          "Di tengah badai pun, bola melesat tajam dan cepat. Bola tinggi bisa kamu smash dengan pukulan keras."
+        ],
+        [
+          "Menang lewat penempatan",
+          "Arahkan bola ke kiri dan kanan, dan tembus ke tempat yang tak terjangkau lawan."
+        ],
+        [
+          "Pantulan dan servis",
+          "Biarkan bola memantul sekali, lalu kembalikan. Servis dengan melempar bola ke atas, dalam tiga cara: cepat, biasa, atau pelan."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "Pickleball satu lawan satu di tengah badai. Kitchen dan side-out: aturan pickleball asli",
+      "unique": [
+        [
+          "Aturan pickleball asli",
+          "Sistem side-out: hanya sisi yang servis yang bisa mencetak poin. Kitchen di depan net, tempat kamu tidak boleh memukul voli. Dan aturan dua pantulan: servis dan pengembaliannya harus memantul dulu."
+        ],
+        [
+          "Adu taktik di depan net",
+          "Jatuhkan dink pelan ke kitchen lawan, lalu hantam bola yang melambung dengan drive."
+        ],
+        [
+          "Dari kembang api ke laut badai",
+          "Dimulai di pelabuhan yang tenang pada malam hari dengan kembang api, lalu badai datang tiba-tiba di tengah pertandingan. Arena lainnya: dek kapal pesiar di tengah laut yang bergelora."
+        ]
+      ]
+    }
+  },
+  "vollog": {
+    "terms": "Ketentuan Penggunaan",
+    "features": "Fitur utama",
+    "stats": "Data yang bisa dicatat",
+    "plans": "Paket",
+    "listSep": ", ",
+    "badges": [
+      "Gratis digunakan",
+      "Bisa offline",
+      "Tanpa daftar akun",
+      "iOS & Android",
+      "Tersedia dalam 21 bahasa"
+    ],
+    "statsNote": "Anda bisa memilih untuk setiap pertandingan apakah {reception} dicatat. Tim yang tidak memakainya bisa mencatat tanpa menampilkan kolom tersebut.",
+    "cards": [
+      [
+        "Profil pemain",
+        "Daftarkan nomor punggung, nama, dan posisi. Catatan pertandingan tiap pemain juga bisa dikelola."
+      ],
+      [
+        "Catatan pertandingan & set",
+        "Mendukung “{realtime}” saat pertandingan dan “{summary}” setelahnya. Catat skor set dan data tiap pemain."
+      ],
+      [
+        "Rekap data",
+        "Lihat rekap per pemain. Pantau perkembangan dengan grafik tren untuk seluruh waktu atau periode tertentu."
+      ],
+      [
+        "Ekspor",
+        "Ekspor statistik sebagai gambar atau PDF tersedia di semua paket. Ekspor CSV tersedia di paket Pro."
+      ],
+      [
+        "Berbagi data",
+        "Bagikan catatan tim dan pertandingan ke pengguna Vollog lain lewat file. Mengirim butuh paket Pro, menerima gratis."
+      ],
+      [
+        "8 tema",
+        "Pilih warna tampilan dari 8 tema, seperti {themes}."
+      ]
+    ]
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "lang": "Türkçe",
+  "site": {
+    "home": "Ana sayfa",
+    "privacy": "Gizlilik Politikası",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "İletişim",
+    "language": "Dil",
+    "icons": "Simgeler: {lucide} (ISC Lisansı)",
+    "iconAlt": "{name} simgesi",
+    "released": "{p} için çıktı",
+    "coming": "Yakında {p} için",
+    "releasedShort": "{p} için çıktı",
+    "comingShort": "{p}: yakında",
+    "soon": "Yakında"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "Akıllı telefon<br>uygulamaları yapıyorum.",
+    "desc": "iOS ve Android için uygulama yapan bağımsız bir geliştirici.",
+    "game": "Oyun",
+    "tool": "Maç kaydı ve istatistik",
+    "vollogCard": "Oyuncuları yönetmek, maçları kaydetmek ve istatistik toplamak için voleybol uygulaması",
+    "vollogTerms": "Vollog Kullanım Koşulları"
+  },
+  "game": {
+    "unique": "Sadece bu oyunda",
+    "features": "Nasıl oynanır",
+    "badges": [
+      "Ücretsiz",
+      "Hesap gerekmez",
+      "Dikey veya yatay",
+      "22 dil desteği"
+    ],
+    "ads": "Reklamlar ve uygulama içi satın alımlar",
+    "adsBody": "Ekranın üstünde reklamlar çıkar. “{removeAds}” seçeneğini bir kez satın al, reklamlar sonsuza dek kaybolsun. “{support}” ile teşekkür olarak kısa bir film izlersin. Fiyatlar için uygulama mağazana bak.",
+    "adsNote": "Destek, istekleri karşılama ya da özellik ekleme sözü değildir. Mağazada bırakacağın yorumlar ve fikirler bize çok güç verir."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "Fırtınada bire bir voleybol. Ralliyi sürdür, yıldırımla kapış",
+      "unique": [
+        [
+          "Topu tut, sonra smaç",
+          "Voleybolda top yere değmemeli. Yüksek filenin üstüne zıpla ve smaçı vur."
+        ],
+        [
+          "Uzun rallilerin keyfi",
+          "Ralliler uzun sürer, bu yüzden ilk kez oynayanlar bile hemen gerçek bir voleybol maçına girer. Ralli uzadıkça yıldırımın geri sayımı yaklaşır."
+        ],
+        [
+          "Yıldırımla kapışma",
+          "Yıldırım 2 sayı değerinde. Geri sayımı izle; aşırtma, manşet ve smaçla topun havada kalma süresini ayarla, 0 olduğunda top rakibin sahasının üstünde olsun."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "Fırtınada bire bir badminton. Top rüzgârla savrulur, rakibi öne ve arkaya koştur",
+      "unique": [
+        [
+          "Fileye yumuşak, aşağı sert",
+          "Filenin hemen arkasına yumuşakça düşen kısa top, arka çizgiye uzanan yüksek top ve sert bir smaç. Rakibi öne ve arkaya koştur."
+        ],
+        [
+          "Rüzgârda bir top",
+          "Hafif badminton topu rüzgârla savrulur. Yüksek top ne kadar yüksekse o kadar uzağa sürüklenir."
+        ],
+        [
+          "Smaç",
+          "Top yüksek geldiğinde zıpla ve yukarıdan aşağı vur."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "Fırtınada bire bir tenis. Serinin en hızlısı: çizgileri hedefle",
+      "unique": [
+        [
+          "Hız yarışı",
+          "Fırtınada bile top sert ve hızlı uçar. Yüksek topa sert vuruş yaparsan smaç olur."
+        ],
+        [
+          "Yerleştirmeyle kazan",
+          "Sola ve sağa vur, topu rakibin yetişemeyeceği yere gönder."
+        ],
+        [
+          "Sekme ve servis",
+          "Topun bir kez sekmesini bekle, sonra geri vur. Serviste topu havaya atarsın; üç şekilde: hızlı, normal ya da yumuşak."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "Fırtınada bire bir pickleball. Mutfak ve servis değişimi: gerçek kurallar",
+      "unique": [
+        [
+          "Gerçek pickleball kuralları",
+          "Servis değişimi: sadece servis atan taraf sayı alabilir. Filenin önündeki mutfak, orada vole vuramazsın. Ve iki sekme kuralı: servis ve karşılığı önce yere sekmeli."
+        ],
+        [
+          "File önü düelloları",
+          "Rakibin mutfağına yumuşak bir dink bırak, yükselen topu drive ile cezalandır."
+        ],
+        [
+          "Havai fişeklerden fırtınalı denize",
+          "Gece, havai fişeklerin atıldığı sakin bir limanda başlar; ta ki maçın ortasında fırtına aniden gelene kadar. Diğer mekân: azgın denizdeki bir yolcu gemisinin güvertesi."
+        ]
+      ]
+    }
+  },
+  "vollog": {
+    "terms": "Kullanım Koşulları",
+    "features": "Başlıca özellikler",
+    "stats": "Kaydedebileceğiniz veriler",
+    "plans": "Planlar",
+    "listSep": ", ",
+    "badges": [
+      "Ücretsiz",
+      "Çevrimdışı çalışır",
+      "Hesap gerekmez",
+      "iOS ve Android",
+      "21 dil desteği"
+    ],
+    "statsNote": "Her maç için {reception} kaydedilip kaydedilmeyeceğini seçersiniz. Bunu kullanmayan takımlar bu alanlar olmadan kayıt yapabilir.",
+    "cards": [
+      [
+        "Oyuncu profilleri",
+        "Forma numarası, isim ve pozisyonu kaydedin. Her oyuncunun maç kayıtlarını da yönetebilirsiniz."
+      ],
+      [
+        "Maç ve set kaydı",
+        "Maç sırasında “{realtime}” ya da maçtan sonra “{summary}” ile kaydedin. Set skorları ve bireysel istatistikler saklanır."
+      ],
+      [
+        "İstatistikler",
+        "Oyuncu bazında özetler. Tüm zamanlar ya da seçilen dönem için gelişim grafikleri ilerlemeyi gösterir."
+      ],
+      [
+        "Dışa aktarma",
+        "İstatistikleri görsel veya PDF olarak dışa aktarma tüm planlarda var. CSV dışa aktarma Pro’ya dahildir."
+      ],
+      [
+        "Veri paylaşımı",
+        "Takım ve maç kayıtlarını dosya ile başka bir Vollog kullanıcısıyla paylaşın. Göndermek için Pro gerekir, almak ücretsizdir."
+      ],
+      [
+        "8 tema",
+        "{themes} gibi 8 tema arasından renk düzenini seçin."
+      ]
+    ]
+  }
+}

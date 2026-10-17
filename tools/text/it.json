@@ -1,0 +1,151 @@
+{
+  "lang": "Italiano",
+  "site": {
+    "home": "Home",
+    "privacy": "Informativa sulla privacy",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "Contatti",
+    "language": "Lingua",
+    "icons": "Icone: {lucide} (licenza ISC)",
+    "iconAlt": "Icona di {name}",
+    "released": "Disponibile su {p}",
+    "coming": "Presto su {p}",
+    "releasedShort": "Disponibile su {p}",
+    "comingShort": "{p}: in arrivo",
+    "soon": "In arrivo"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "Creo app<br>per smartphone.",
+    "desc": "App per iOS e Android, sviluppate in modo indipendente.",
+    "game": "Gioco",
+    "tool": "Referti e statistiche",
+    "vollogCard": "App di pallavolo per gestire i giocatori, registrare le partite e raccogliere le statistiche",
+    "vollogTerms": "Termini d’uso di Vollog"
+  },
+  "game": {
+    "unique": "Solo in questo gioco",
+    "features": "Come si gioca",
+    "badges": [
+      "Gratis",
+      "Nessun account",
+      "In verticale o in orizzontale",
+      "Disponibile in 22 lingue"
+    ],
+    "ads": "Pubblicità e acquisti in-app",
+    "adsBody": "In alto sullo schermo compaiono delle pubblicità. Acquista una volta “{removeAds}” e spariscono per sempre. Con “{support}” ti ringraziamo con un breve filmato. Per i prezzi, controlla il tuo store.",
+    "adsNote": "Il sostegno non è una promessa di soddisfare richieste o di aggiungere funzioni. Le tue impressioni e idee in una recensione sullo store sono di grande incoraggiamento."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "Pallavolo uno contro uno nella tempesta. Tieni vivo lo scambio e sfida il fulmine",
+      "unique": [
+        [
+          "Tienila su, poi schiaccia",
+          "Nella pallavolo la palla non deve mai toccare terra. Salta sopra la rete alta e piazza una schiacciata."
+        ],
+        [
+          "Il bello degli scambi lunghi",
+          "Gli scambi durano a lungo, così anche chi gioca per la prima volta si ritrova subito in una vera partita di pallavolo. Più durano, più si avvicina il conto alla rovescia del fulmine."
+        ],
+        [
+          "Sfida al fulmine",
+          "Un fulmine vale 2 punti. Tieni d’occhio il conto, alterna pallonetto, bagher e schiacciata per decidere quanto resta in aria la palla, e falla trovare sopra il campo avversario allo 0."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "Badminton uno contro uno nella tempesta. Il volano vola col vento: fai correre l’avversario avanti e indietro",
+      "unique": [
+        [
+          "Morbido sotto rete, secco verso il basso",
+          "Un drop che cade morbido oltre la rete, un clear alto in fondo al campo, uno smash secco. Fai correre l’avversario avanti e indietro."
+        ],
+        [
+          "Un volano nel vento",
+          "Il volano, leggerissimo, si lascia portare dal vento. Più il clear è alto, più va alla deriva."
+        ],
+        [
+          "Smash",
+          "Quando il volano arriva alto, salta e schiaccialo verso il basso."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "Tennis uno contro uno nella tempesta. Il più veloce della serie: cerca le righe",
+      "unique": [
+        [
+          "Pura velocità",
+          "Anche nella tempesta la palla vola forte e veloce. Una palla alta colpita con un colpo potente diventa uno smash."
+        ],
+        [
+          "Vinci con il piazzamento",
+          "Alterna destra e sinistra e manda la palla dove l’avversario non arriva."
+        ],
+        [
+          "Rimbalzo e servizio",
+          "Lascia rimbalzare la palla una volta, poi rimandala. Al servizio lanci la palla in aria, in tre modi: veloce, normale o morbido."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "Pickleball uno contro uno nella tempesta. Cucina e cambio di servizio: le vere regole",
+      "unique": [
+        [
+          "Vere regole del pickleball",
+          "Cambio di servizio: fa punto solo chi serve. La cucina davanti alla rete, dove non puoi colpire al volo. E la regola del doppio rimbalzo: il servizio e la risposta devono prima rimbalzare."
+        ],
+        [
+          "Duelli sotto rete",
+          "Lascia cadere un dink morbido nella cucina avversaria e punisci con un drive la palla che si alza."
+        ],
+        [
+          "Dai fuochi d’artificio al mare in tempesta",
+          "Si comincia in un porto tranquillo di notte, tra i fuochi d’artificio, finché a metà partita arriva all’improvviso la tempesta. L’altra ambientazione: il ponte di una nave da crociera su un mare in burrasca."
+        ]
+      ]
+    }
+  },
+  "vollog": {
+    "terms": "Termini d’uso",
+    "features": "Funzioni principali",
+    "stats": "Dati che puoi registrare",
+    "plans": "Piani",
+    "listSep": ", ",
+    "badges": [
+      "Gratis",
+      "Funziona offline",
+      "Nessun account",
+      "iOS e Android",
+      "Disponibile in 21 lingue"
+    ],
+    "statsNote": "Per ogni partita scegli se registrare la {reception}. Le squadre che non la usano possono registrare senza quei campi.",
+    "cards": [
+      [
+        "Profili dei giocatori",
+        "Inserisci numero di maglia, nome e ruolo. Puoi gestire anche i dati partita di ogni giocatore."
+      ],
+      [
+        "Partite e set",
+        "Registra durante la partita con “{realtime}” o dopo con “{summary}”. Salva il punteggio di ogni set e le statistiche individuali."
+      ],
+      [
+        "Statistiche",
+        "Riepiloghi per giocatore. I grafici dell’andamento, su tutto lo storico o su un periodo scelto, mostrano i progressi."
+      ],
+      [
+        "Esportazione",
+        "L’esportazione delle statistiche in immagine o PDF è inclusa in tutti i piani. L’esportazione CSV è inclusa in Pro."
+      ],
+      [
+        "Condivisione dati",
+        "Condividi i dati di squadra e partite con un altro utente Vollog tramite file. L’invio richiede Pro, la ricezione è gratuita."
+      ],
+      [
+        "8 temi",
+        "Scegli i colori fra 8 temi, come {themes}."
+      ]
+    ]
+  }
+}

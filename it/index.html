@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!-- tools/build.mjs が作ったページ。直すときは tools/ の文言かスクリプトを直して、npm run build -->
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var LOCALES = ["id","ms","cs","de","en","es","fil","fr","it","pl","pt","sr","vi","tr","ru","uk","hi","th","ja","zh-Hans","zh-Hant","ko"], HERE = "it", PATH = "";
+      function candidates(tag) {
+        try {
+          var l = new Intl.Locale(tag).maximize();
+          return [tag, l.language + '-' + l.script + '-' + l.region, l.language + '-' + l.script, l.language + '-' + l.region, l.language];
+        } catch (e) {
+          return [tag];
+        }
+      }
+      function match(tags) {
+        for (var i = 0; i < tags.length; i++) {
+          var c = candidates(tags[i]);
+          for (var j = 0; j < c.length; j++) {
+            for (var k = 0; k < LOCALES.length; k++) if (LOCALES[k].toLowerCase() === String(c[j]).toLowerCase()) return LOCALES[k];
+          }
+        }
+        return null;
+      }
+      var want = null, asked = new URLSearchParams(location.search).get('lang');
+      if (asked) {
+        want = match([asked]) || "en";
+        try { localStorage.setItem('site-lang', want); } catch (e) {}
+      } else if (HERE === 'ja') {
+        try { want = localStorage.getItem('site-lang'); } catch (e) {}
+        if (LOCALES.indexOf(want) < 0) want = match(navigator.languages || [navigator.language || 'ja']) || "en";
+      }
+      if (want && want !== HERE) {
+        location.replace((want === 'ja' ? '/' : '/' + want + '/') + PATH);
+        return;
+      }
+      // このページの言語を覚える（利用規約などから / へ戻ったとき、最後に見ていた言語に戻すため）。
+      // 覚えている言語がこのページにないとき（Vollog のページを開いたマレー語の人）は、上書きしない
+      try {
+        var saved = localStorage.getItem('site-lang');
+        if (!saved || LOCALES.indexOf(saved) >= 0) localStorage.setItem('site-lang', HERE);
+      } catch (e) {}
+    })();
+  </script>
+  <title>AsakusaSemao</title>
+  <meta name="description" content="App per iOS e Android, sviluppate in modo indipendente." />
+  <link rel="canonical" href="https://asakusasemao.com/it/" />
+  <link rel="alternate" hreflang="id" href="https://asakusasemao.com/id/" />
+  <link rel="alternate" hreflang="ms" href="https://asakusasemao.com/ms/" />
+  <link rel="alternate" hreflang="cs" href="https://asakusasemao.com/cs/" />
+  <link rel="alternate" hreflang="de" href="https://asakusasemao.com/de/" />
+  <link rel="alternate" hreflang="en" href="https://asakusasemao.com/en/" />
+  <link rel="alternate" hreflang="es" href="https://asakusasemao.com/es/" />
+  <link rel="alternate" hreflang="fil" href="https://asakusasemao.com/fil/" />
+  <link rel="alternate" hreflang="fr" href="https://asakusasemao.com/fr/" />
+  <link rel="alternate" hreflang="it" href="https://asakusasemao.com/it/" />
+  <link rel="alternate" hreflang="pl" href="https://asakusasemao.com/pl/" />
+  <link rel="alternate" hreflang="pt" href="https://asakusasemao.com/pt/" />
+  <link rel="alternate" hreflang="sr" href="https://asakusasemao.com/sr/" />
+  <link rel="alternate" hreflang="vi" href="https://asakusasemao.com/vi/" />
+  <link rel="alternate" hreflang="tr" href="https://asakusasemao.com/tr/" />
+  <link rel="alternate" hreflang="ru" href="https://asakusasemao.com/ru/" />
+  <link rel="alternate" hreflang="uk" href="https://asakusasemao.com/uk/" />
+  <link rel="alternate" hreflang="hi" href="https://asakusasemao.com/hi/" />
+  <link rel="alternate" hreflang="th" href="https://asakusasemao.com/th/" />
+  <link rel="alternate" hreflang="ja" href="https://asakusasemao.com/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://asakusasemao.com/zh-Hans/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://asakusasemao.com/zh-Hant/" />
+  <link rel="alternate" hreflang="ko" href="https://asakusasemao.com/ko/" />
+  <link rel="alternate" hreflang="x-default" href="https://asakusasemao.com/" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body class="home">
+
+  <header class="site-header">
+    <a class="brand" href="/it/">AsakusaSemao</a>
+
+  </header>
+
+  <main>
+    <details class="lang-picker">
+      <summary aria-label="Lingua"><!-- Lucide: globe --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span lang="it">Italiano</span></summary>
+      <ul>
+          <li><a href="/id/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ms/" hreflang="ms" lang="ms" data-lang="ms">Bahasa Melayu</a></li>
+          <li><a href="/cs/" hreflang="cs" lang="cs" data-lang="cs">Čeština</a></li>
+          <li><a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="/en/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a href="/fil/" hreflang="fil" lang="fil" data-lang="fil">Filipino</a></li>
+          <li><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="/it/" hreflang="it" lang="it" data-lang="it" aria-current="page">Italiano</a></li>
+          <li><a href="/pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li>
+          <li><a href="/pt/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li>
+          <li><a href="/sr/" hreflang="sr" lang="sr" data-lang="sr">Srpski</a></li>
+          <li><a href="/vi/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li>
+          <li><a href="/tr/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          <li><a href="/ru/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li>
+          <li><a href="/uk/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li>
+          <li><a href="/hi/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li>
+          <li><a href="/th/" hreflang="th" lang="th" data-lang="th">ไทย</a></li>
+          <li><a href="/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          <li><a href="/zh-Hans/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li>
+          <li><a href="/zh-Hant/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li>
+          <li><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+      </ul>
+    </details>
+
+    <div class="home-hero">
+      <!-- 飾り。雷・雲・ボール・星 -->
+      <div class="deco" aria-hidden="true">
+        <svg class="deco-bolt" viewBox="0 0 24 24"><path d="M14 1 3 13h7L7 23 21 9h-7z"/></svg>
+        <svg class="deco-cloud" viewBox="0 0 32 20"><path d="M8 19a6 6 0 0 1-.9-11.93A8.5 8.5 0 0 1 23.4 6.1 6.5 6.5 0 0 1 24.5 19z"/></svg>
+        <svg class="deco-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5"/><path d="M12 1.5c3.5 3 5 6.5 4.6 10.9M3.2 17.7c4.4.9 8.2-.2 11.2-3.3M2.2 9.3c3.2-2.5 6.9-3.3 10.8-2.3" fill="none"/></svg>
+        <svg class="deco-star" viewBox="0 0 24 24"><path d="m12 1.5 3.1 6.7 7.4.9-5.4 5.1 1.4 7.3L12 17.9l-6.5 3.6 1.4-7.3L1.5 9.1l7.4-.9z"/></svg>
+      </div>
+      <h1>Creo app<br>per smartphone.</h1>
+      <p class="desc">App per iOS e Android, sviluppate in modo indipendente.</p>
+    </div>
+
+    <div class="apps">
+      <a class="app-card" data-app="storm-volley" href="/it/apps/storm-volley/">
+        <div class="app-card-top">
+          <img src="/assets/images/storm-volley-icon.png" alt="Icona di Pallavolo nella tempesta" />
+        </div>
+        <div class="app-card-text">
+          <span class="app-tag game">Gioco</span>
+          <h2>Pallavolo nella tempesta</h2>
+          <p>Pallavolo uno contro uno nella tempesta. Tieni vivo lo scambio e sfida il fulmine</p>
+          <span class="app-status live">Disponibile su iOS</span>
+        </div>
+        <span class="app-card-arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="app-card" data-app="storm-badminton" href="/it/apps/storm-badminton/">
+        <div class="app-card-top">
+          <img src="/assets/images/storm-badminton-icon.png" alt="Icona di Badminton nella tempesta" />
+        </div>
+        <div class="app-card-text">
+          <span class="app-tag game">Gioco</span>
+          <h2>Badminton nella tempesta</h2>
+          <p>Badminton uno contro uno nella tempesta. Il volano vola col vento: fai correre l’avversario avanti e indietro</p>
+          <span class="app-status">Presto su iOS / Android</span>
+        </div>
+        <span class="app-card-arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="app-card" data-app="storm-tennis" href="/it/apps/storm-tennis/">
+        <div class="app-card-top">
+          <img src="/assets/images/storm-tennis-icon.png" alt="Icona di Tennis nella tempesta" />
+        </div>
+        <div class="app-card-text">
+          <span class="app-tag game">Gioco</span>
+          <h2>Tennis nella tempesta</h2>
+          <p>Tennis uno contro uno nella tempesta. Il più veloce della serie: cerca le righe</p>
+          <span class="app-status">Presto su iOS / Android</span>
+        </div>
+        <span class="app-card-arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="app-card" data-app="storm-pickleball" href="/it/apps/storm-pickleball/">
+        <div class="app-card-top">
+          <img src="/assets/images/storm-pickleball-icon.png" alt="Icona di Pickleball nella tempesta" />
+        </div>
+        <div class="app-card-text">
+          <span class="app-tag game">Gioco</span>
+          <h2>Pickleball nella tempesta</h2>
+          <p>Pickleball uno contro uno nella tempesta. Cucina e cambio di servizio: le vere regole</p>
+          <span class="app-status">Presto su iOS / Android</span>
+        </div>
+        <span class="app-card-arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="app-card" data-app="vollog" href="/it/apps/vollog/">
+        <div class="app-card-top">
+          <img src="/assets/images/vollog-icon.png" alt="Icona di Vollog: Statistiche Pallavolo" />
+        </div>
+        <div class="app-card-text">
+          <span class="app-tag">Referti e statistiche</span>
+          <h2>Vollog: Statistiche Pallavolo</h2>
+          <p>App di pallavolo per gestire i giocatori, registrare le partite e raccogliere le statistiche</p>
+          <span class="app-status live">Disponibile su iOS / Android</span>
+        </div>
+        <span class="app-card-arrow" aria-hidden="true">›</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/apps/privacy.html">Informativa sulla privacy</a>
+      <a href="/apps/vollog/terms.html">Termini d’uso di Vollog</a>
+    </div>
+    <p>© 2026 AsakusaSemao. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.lang-picker a[data-lang]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        try { localStorage.setItem('site-lang', a.dataset.lang); } catch (e) {}
+      });
+    });
+  </script>
+</body>
+</html>

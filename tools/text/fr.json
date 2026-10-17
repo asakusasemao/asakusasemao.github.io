@@ -1,0 +1,151 @@
+{
+  "lang": "Français",
+  "site": {
+    "home": "Accueil",
+    "privacy": "Politique de confidentialité",
+    "tokushoho": "",
+    "tokushohoLong": "",
+    "contact": "Contact",
+    "language": "Langue",
+    "icons": "Icônes : {lucide} (licence ISC)",
+    "iconAlt": "Icône de {name}",
+    "released": "Disponible sur {p}",
+    "coming": "Bientôt sur {p}",
+    "releasedShort": "Disponible sur {p}",
+    "comingShort": "{p} : bientôt",
+    "soon": "Bientôt"
+  },
+  "home": {
+    "title": "AsakusaSemao",
+    "h1": "Je crée des<br>applis mobiles.",
+    "desc": "Des applis pour iOS et Android, développées de façon indépendante.",
+    "game": "Jeu",
+    "tool": "Feuilles de match et stats",
+    "vollogCard": "Appli de volley pour gérer les joueurs, noter les matchs et compiler les statistiques",
+    "vollogTerms": "Conditions d’utilisation de Vollog"
+  },
+  "game": {
+    "unique": "Seulement dans ce jeu",
+    "features": "Comment on joue",
+    "badges": [
+      "Gratuit",
+      "Sans compte",
+      "Portrait ou paysage",
+      "Disponible en 22 langues"
+    ],
+    "ads": "Publicités et achats intégrés",
+    "adsBody": "Des publicités s’affichent en haut de l’écran. Achète une fois « {removeAds} », et elles disparaissent pour de bon. Avec « {support} », tu reçois un petit film en guise de remerciement. Pour les prix, consulte ta boutique d’applis.",
+    "adsNote": "Le soutien n’engage pas à répondre aux demandes ni à ajouter des fonctionnalités. Tes impressions et idées dans un avis sur la boutique nous encouragent beaucoup."
+  },
+  "apps": {
+    "storm-volley": {
+      "card": "Du volley en un contre un sous l’orage. Fais durer l’échange et joue avec la foudre",
+      "unique": [
+        [
+          "Garder le ballon en l’air, puis smasher",
+          "Au volley, le ballon ne doit jamais toucher le sol. Saute au-dessus du filet, très haut, et envoie un smash."
+        ],
+        [
+          "Le plaisir des longs échanges",
+          "Les échanges durent, alors même les débutants jouent tout de suite un vrai match de volley. Plus ils durent, plus le compte de la foudre approche."
+        ],
+        [
+          "Jouer avec la foudre",
+          "La foudre vaut 2 points. Surveille le compte, alterne lob, manchette et smash pour régler le temps de vol du ballon, et fais en sorte qu’il soit au-dessus du camp adverse à 0."
+        ]
+      ]
+    },
+    "storm-badminton": {
+      "card": "Du badminton en un contre un sous l’orage. Le volant file au vent, fais courir l’adversaire d’avant en arrière",
+      "unique": [
+        [
+          "Amortir en douceur, smasher sec",
+          "Un amorti qui tombe doucement derrière le filet, un dégagement haut au fond du terrain, un smash sec. Fais courir l’adversaire d’avant en arrière."
+        ],
+        [
+          "Un volant dans le vent",
+          "Le volant, si léger, se laisse porter par le vent. Plus le dégagement est haut, plus il dérive."
+        ],
+        [
+          "Smash",
+          "Quand le volant arrive haut, saute et frappe-le vers le bas."
+        ]
+      ]
+    },
+    "storm-tennis": {
+      "card": "Du tennis en un contre un sous l’orage. Le plus rapide de la série : vise les lignes",
+      "unique": [
+        [
+          "Tout en vitesse",
+          "Même sous l’orage, la balle file vite et fort. Une balle haute frappée en puissance devient un smash."
+        ],
+        [
+          "Gagner par le placement",
+          "Joue à gauche, à droite, et envoie la balle là où l’adversaire ne peut pas aller."
+        ],
+        [
+          "Rebond et service",
+          "Laisse la balle rebondir une fois, puis renvoie-la. Au service, tu lances la balle en l’air, de trois façons : rapide, normal ou en douceur."
+        ]
+      ]
+    },
+    "storm-pickleball": {
+      "card": "Du pickleball en un contre un sous l’orage. Cuisine et changement de service : les vraies règles",
+      "unique": [
+        [
+          "Les vraies règles du pickleball",
+          "Changement de service : seul le camp au service peut marquer. La cuisine devant le filet, où tu n’as pas le droit de volleyer. Et la règle du double rebond : le service et son retour doivent d’abord rebondir."
+        ],
+        [
+          "Duels au filet",
+          "Glisse un dink tout en douceur dans la cuisine adverse, puis punis d’un drive la balle qui remonte."
+        ],
+        [
+          "Du feu d’artifice à la mer déchaînée",
+          "Tout commence dans un port calme, la nuit, sous un feu d’artifice, jusqu’à ce que l’orage éclate en plein match. L’autre lieu : le pont d’un paquebot sur une mer déchaînée."
+        ]
+      ]
+    }
+  },
+  "vollog": {
+    "terms": "Conditions d’utilisation",
+    "features": "Fonctions principales",
+    "stats": "Ce que vous pouvez enregistrer",
+    "plans": "Formules",
+    "listSep": ", ",
+    "badges": [
+      "Gratuit",
+      "Fonctionne hors ligne",
+      "Sans compte",
+      "iOS et Android",
+      "Disponible en 21 langues"
+    ],
+    "statsNote": "Pour chaque match, vous choisissez d’enregistrer ou non la {reception}. Les équipes qui ne la suivent pas enregistrent sans ces champs.",
+    "cards": [
+      [
+        "Profils des joueurs",
+        "Enregistrez numéro de maillot, nom et poste. Vous gérez aussi les fiches de match de chaque joueur."
+      ],
+      [
+        "Matchs et sets",
+        "Saisissez pendant le match en mode « {realtime} » ou après en mode « {summary} ». Le score de chaque set et les stats individuelles sont enregistrés."
+      ],
+      [
+        "Statistiques",
+        "Bilans par joueur. Les courbes d’évolution, sur toute la période ou sur une période choisie, montrent la progression."
+      ],
+      [
+        "Export",
+        "L’export des stats en image ou en PDF est inclus dans toutes les formules. L’export CSV est inclus dans Pro."
+      ],
+      [
+        "Partage de données",
+        "Partagez les données d’équipe et de match avec un autre utilisateur de Vollog par fichier. L’envoi nécessite Pro ; la réception est gratuite."
+      ],
+      [
+        "8 thèmes",
+        "Choisissez les couleurs parmi 8 thèmes, dont {themes}."
+      ]
+    ]
+  }
+}
