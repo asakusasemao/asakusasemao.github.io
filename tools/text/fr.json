@@ -19,10 +19,11 @@
     "title": "AsakusaSemao",
     "h1": "Je crée des<br>applis mobiles.",
     "desc": "Des applis pour iOS et Android, développées de façon indépendante.",
-    "game": "Jeu",
     "tool": "Feuilles de match et stats",
     "vollogCard": "Appli de volley pour gérer les joueurs, noter les matchs et compiler les statistiques",
-    "vollogTerms": "Conditions d’utilisation de Vollog"
+    "vollogTerms": "Conditions d’utilisation de Vollog",
+    "series": "La série Sous l’orage",
+    "seriesLead": "Toujours en un contre un, toujours sous l’orage. Il suffit de toucher et de glisser, et le vent, le brouillard et la foudre redoublent au fil du match."
   },
   "game": {
     "unique": "Seulement dans ce jeu",
@@ -39,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Du volley en un contre un sous l’orage. Fais durer l’échange et joue avec la foudre",
+      "card": "Fais durer l’échange et joue avec la foudre",
       "unique": [
         [
           "Garder le ballon en l’air, puis smasher",
@@ -56,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Du badminton en un contre un sous l’orage. Le volant file au vent, fais courir l’adversaire d’avant en arrière",
+      "card": "Le volant file au vent, fais courir l’adversaire d’avant en arrière",
       "unique": [
         [
           "Amortir en douceur, smasher sec",
@@ -73,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Du tennis en un contre un sous l’orage. Le plus rapide de la série : vise les lignes",
+      "card": "Le plus rapide de la série : vise les lignes",
       "unique": [
         [
           "Tout en vitesse",
@@ -90,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Du pickleball en un contre un sous l’orage. Cuisine et changement de service : les vraies règles",
+      "card": "Cuisine et changement de service : les vraies règles",
       "unique": [
         [
           "Les vraies règles du pickleball",

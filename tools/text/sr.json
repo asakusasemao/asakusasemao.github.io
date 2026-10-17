@@ -19,10 +19,11 @@
     "title": "AsakusaSemao",
     "h1": "Pravim<br>aplikacije za telefon.",
     "desc": "Nezavisan razvoj aplikacija za iOS i Android.",
-    "game": "Igra",
     "tool": "Zapisnik i statistika",
     "vollogCard": "Odbojkaška aplikacija za vođenje igrača, zapisnik utakmica i statistiku",
-    "vollogTerms": "Uslovi korišćenja aplikacije Vollog"
+    "vollogTerms": "Uslovi korišćenja aplikacije Vollog",
+    "series": "Serijal U oluji",
+    "seriesLead": "Uvek jedan na jedan, uvek u oluji. Samo dodir i prevlačenje, a vetar, magla i munje su sve jači kako meč odmiče."
   },
   "game": {
     "unique": "Samo u ovoj igri",
@@ -39,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Odbojka jedan na jedan u oluji. Održi akciju i nadmudri munju",
+      "card": "Održi akciju i nadmudri munju",
       "unique": [
         [
           "Održi loptu, pa smeč",
@@ -56,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Badminton jedan na jedan u oluji. Vetar nosi lopticu, a ti teraš protivnika napred i nazad",
+      "card": "Vetar nosi lopticu, a ti teraš protivnika napred i nazad",
       "unique": [
         [
           "Nežno uz mrežu, oštro nadole",
@@ -73,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Tenis jedan na jedan u oluji. Najbrži u seriji: gađaj linije",
+      "card": "Najbrži u seriji: gađaj linije",
       "unique": [
         [
           "Čista brzina",
@@ -90,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Pickleball jedan na jedan u oluji. Kuhinja i promena servisa: prava pravila",
+      "card": "Kuhinja i promena servisa: prava pravila",
       "unique": [
         [
           "Prava pravila pickleballa",

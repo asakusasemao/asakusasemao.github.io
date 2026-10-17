@@ -19,10 +19,11 @@
     "title": "AsakusaSemao",
     "h1": "Creo app<br>per smartphone.",
     "desc": "App per iOS e Android, sviluppate in modo indipendente.",
-    "game": "Gioco",
     "tool": "Referti e statistiche",
     "vollogCard": "App di pallavolo per gestire i giocatori, registrare le partite e raccogliere le statistiche",
-    "vollogTerms": "Termini d’uso di Vollog"
+    "vollogTerms": "Termini d’uso di Vollog",
+    "series": "La serie Nella tempesta",
+    "seriesLead": "Sempre uno contro uno, sempre nella tempesta. Bastano tocchi e swipe, e vento, nebbia e fulmini si scatenano man mano che la partita va avanti."
   },
   "game": {
     "unique": "Solo in questo gioco",
@@ -39,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Pallavolo uno contro uno nella tempesta. Tieni vivo lo scambio e sfida il fulmine",
+      "card": "Tieni vivo lo scambio e sfida il fulmine",
       "unique": [
         [
           "Tienila su, poi schiaccia",
@@ -56,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Badminton uno contro uno nella tempesta. Il volano vola col vento: fai correre l’avversario avanti e indietro",
+      "card": "Il volano vola col vento: fai correre l’avversario avanti e indietro",
       "unique": [
         [
           "Morbido sotto rete, secco verso il basso",
@@ -73,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Tennis uno contro uno nella tempesta. Il più veloce della serie: cerca le righe",
+      "card": "Il più veloce della serie: cerca le righe",
       "unique": [
         [
           "Pura velocità",
@@ -90,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Pickleball uno contro uno nella tempesta. Cucina e cambio di servizio: le vere regole",
+      "card": "Cucina e cambio di servizio: le vere regole",
       "unique": [
         [
           "Vere regole del pickleball",

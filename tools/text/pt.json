@@ -19,10 +19,11 @@
     "title": "AsakusaSemao",
     "h1": "Eu crio apps<br>para celular.",
     "desc": "Apps para iOS e Android, desenvolvidos de forma independente.",
-    "game": "Jogo",
     "tool": "Súmulas e estatísticas",
     "vollogCard": "App de vôlei para gerenciar jogadores, registrar partidas e reunir estatísticas",
-    "vollogTerms": "Termos de Uso do Vollog"
+    "vollogTerms": "Termos de Uso do Vollog",
+    "series": "A série Na Tempestade",
+    "seriesLead": "Sempre um contra um, sempre na tempestade. Só toques e deslizes, e o vento, a neblina e os raios ficam mais fortes conforme a partida avança."
   },
   "game": {
     "unique": "Só neste jogo",
@@ -39,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Vôlei um contra um na tempestade. Mantenha o rali vivo e jogue contra o raio",
+      "card": "Mantenha o rali vivo e jogue contra o raio",
       "unique": [
         [
           "Mantenha no ar e corte",
@@ -56,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Badminton um contra um na tempestade. A peteca vai com o vento: faça o rival correr para a frente e para trás",
+      "card": "A peteca vai com o vento: faça o rival correr para a frente e para trás",
       "unique": [
         [
           "Suave na rede, forte para baixo",
@@ -73,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Tênis um contra um na tempestade. O mais rápido da série: mire nas linhas",
+      "card": "O mais rápido da série: mire nas linhas",
       "unique": [
         [
           "Pura velocidade",
@@ -90,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Pickleball um contra um na tempestade. Cozinha e side-out: regras de verdade",
+      "card": "Cozinha e side-out: regras de verdade",
       "unique": [
         [
           "Regras de pickleball de verdade",

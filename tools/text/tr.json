@@ -19,10 +19,11 @@
     "title": "AsakusaSemao",
     "h1": "Akıllı telefon<br>uygulamaları yapıyorum.",
     "desc": "iOS ve Android için uygulama yapan bağımsız bir geliştirici.",
-    "game": "Oyun",
     "tool": "Maç kaydı ve istatistik",
     "vollogCard": "Oyuncuları yönetmek, maçları kaydetmek ve istatistik toplamak için voleybol uygulaması",
-    "vollogTerms": "Vollog Kullanım Koşulları"
+    "vollogTerms": "Vollog Kullanım Koşulları",
+    "series": "Fırtına serisi",
+    "seriesLead": "Hepsi bire bir, hepsi fırtınada. Sadece dokun ve kaydır; maç ilerledikçe rüzgâr, sis ve yıldırım şiddetlenir."
   },
   "game": {
     "unique": "Sadece bu oyunda",
@@ -39,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Fırtınada bire bir voleybol. Ralliyi sürdür, yıldırımla kapış",
+      "card": "Ralliyi sürdür, yıldırımla kapış",
       "unique": [
         [
           "Topu tut, sonra smaç",
@@ -56,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Fırtınada bire bir badminton. Top rüzgârla savrulur, rakibi öne ve arkaya koştur",
+      "card": "Top rüzgârla savrulur, rakibi öne ve arkaya koştur",
       "unique": [
         [
           "Fileye yumuşak, aşağı sert",
@@ -73,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Fırtınada bire bir tenis. Serinin en hızlısı: çizgileri hedefle",
+      "card": "Serinin en hızlısı: çizgileri hedefle",
       "unique": [
         [
           "Hız yarışı",
@@ -90,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Fırtınada bire bir pickleball. Mutfak ve servis değişimi: gerçek kurallar",
+      "card": "Mutfak ve servis değişimi: gerçek kurallar",
       "unique": [
         [
           "Gerçek pickleball kuralları",

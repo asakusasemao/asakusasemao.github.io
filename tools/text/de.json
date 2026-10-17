@@ -19,10 +19,11 @@
     "title": "AsakusaSemao",
     "h1": "Ich mache<br>Smartphone-Apps.",
     "desc": "Apps für iOS und Android, unabhängig entwickelt.",
-    "game": "Spiel",
     "tool": "Statistik & Spielberichte",
     "vollogCard": "Volleyball-App für Spielerverwaltung, Spielberichte und Statistiken",
-    "vollogTerms": "Nutzungsbedingungen von Vollog"
+    "vollogTerms": "Nutzungsbedingungen von Vollog",
+    "series": "Die Sturm-Reihe",
+    "seriesLead": "Immer eins gegen eins, immer im Sturm. Nur Tippen und Wischen – und je weiter das Match läuft, desto wilder werden Wind, Nebel und Blitze."
   },
   "game": {
     "unique": "Nur in diesem Spiel",
@@ -39,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Volleyball eins gegen eins im Sturm. Halte den Ballwechsel am Leben und spiel gegen den Blitz",
+      "card": "Halte den Ballwechsel am Leben und spiel gegen den Blitz",
       "unique": [
         [
           "Ball halten, dann schmettern",
@@ -56,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Badminton eins gegen eins im Sturm. Der Federball treibt im Wind, du jagst den Gegner vor und zurück",
+      "card": "Der Federball treibt im Wind, du jagst den Gegner vor und zurück",
       "unique": [
         [
           "Sanft fallen lassen, scharf schmettern",
@@ -73,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Tennis eins gegen eins im Sturm. Das Schnellste der Reihe: Schlag die Bälle auf die Linien",
+      "card": "Das Schnellste der Reihe: Schlag die Bälle auf die Linien",
       "unique": [
         [
           "Tempo pur",
@@ -90,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Pickleball eins gegen eins im Sturm. Küche und Side-Out: echte Pickleball-Regeln",
+      "card": "Küche und Side-Out: echte Pickleball-Regeln",
       "unique": [
         [
           "Echte Pickleball-Regeln",

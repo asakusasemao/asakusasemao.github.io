@@ -19,10 +19,11 @@
     "title": "AsakusaSemao",
     "h1": "Tvořím<br>mobilní aplikace.",
     "desc": "Aplikace pro iOS a Android, vyvíjené nezávisle.",
-    "game": "Hra",
     "tool": "Záznamy a statistiky",
     "vollogCard": "Volejbalová aplikace pro správu hráčů, záznam zápasů a statistiky",
-    "vollogTerms": "Podmínky používání Vollog"
+    "vollogTerms": "Podmínky používání Vollog",
+    "series": "Série V bouři",
+    "seriesLead": "Vždy jeden na jednoho, vždy v bouři. Stačí ťukat a táhnout. Čím déle zápas trvá, tím divočejší je vítr, mlha i blesky."
   },
   "game": {
     "unique": "Jen v této hře",
@@ -39,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Volejbal jeden na jednoho v bouři. Udrž výměnu a přechytrač blesk",
+      "card": "Udrž výměnu a přechytrač blesk",
       "unique": [
         [
           "Udrž míč, pak smeč",
@@ -56,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Badminton jeden na jednoho v bouři. Košíček nese vítr, soupeře honíš dopředu a dozadu",
+      "card": "Košíček nese vítr, soupeře honíš dopředu a dozadu",
       "unique": [
         [
           "Jemně pustit, ostře zatlačit",
@@ -73,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Tenis jeden na jednoho v bouři. Nejrychlejší z celé série: trefuj se do čar",
+      "card": "Nejrychlejší z celé série: trefuj se do čar",
       "unique": [
         [
           "Souboj rychlosti",
@@ -90,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Pickleball jeden na jednoho v bouři. Kuchyně i ztráta podání: opravdová pravidla",
+      "card": "Kuchyně i ztráta podání: opravdová pravidla",
       "unique": [
         [
           "Opravdová pravidla pickleballu",

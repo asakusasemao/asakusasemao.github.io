@@ -19,10 +19,11 @@
     "title": "AsakusaSemao",
     "h1": "Hago apps<br>para móviles.",
     "desc": "Apps para iOS y Android, desarrolladas de forma independiente.",
-    "game": "Juego",
     "tool": "Registro y estadísticas",
     "vollogCard": "App de voleibol para gestionar jugadores, registrar partidos y sacar estadísticas",
-    "vollogTerms": "Términos de uso de Vollog"
+    "vollogTerms": "Términos de uso de Vollog",
+    "series": "La serie En la tormenta",
+    "seriesLead": "Siempre uno contra uno, siempre en plena tormenta. Solo toques y deslizamientos, y el viento, la niebla y los rayos se desatan a medida que avanza el partido."
   },
   "game": {
     "unique": "Solo en este juego",
@@ -39,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Voleibol uno contra uno en plena tormenta. Mantén vivo el punto y juega contra el rayo",
+      "card": "Mantén vivo el punto y juega contra el rayo",
       "unique": [
         [
           "Mantenla arriba y remata",
@@ -56,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Bádminton uno contra uno en plena tormenta. El volante vuela con el viento: mueve al rival adelante y atrás",
+      "card": "El volante vuela con el viento: mueve al rival adelante y atrás",
       "unique": [
         [
           "Suave junto a la red, fuerte hacia abajo",
@@ -73,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Tenis uno contra uno en plena tormenta. El más rápido de la serie: busca las líneas",
+      "card": "El más rápido de la serie: busca las líneas",
       "unique": [
         [
           "Pura velocidad",
@@ -90,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Pickleball uno contra uno en plena tormenta. Cocina y cambio de saque: reglas reales",
+      "card": "Cocina y cambio de saque: reglas reales",
       "unique": [
         [
           "Reglas reales del pickleball",

@@ -19,10 +19,11 @@
     "title": "AsakusaSemao",
     "h1": "Tworzę<br>aplikacje mobilne.",
     "desc": "Aplikacje na iOS i Androida tworzone niezależnie.",
-    "game": "Gra",
     "tool": "Zapis meczów i statystyki",
     "vollogCard": "Aplikacja siatkarska do zarządzania zawodnikami, zapisu meczów i zbierania statystyk",
-    "vollogTerms": "Warunki korzystania z Vollog"
+    "vollogTerms": "Warunki korzystania z Vollog",
+    "series": "Seria W burzy",
+    "seriesLead": "Zawsze jeden na jednego, zawsze w burzy. Wystarczy stukać i przesuwać, a wiatr, mgła i pioruny przybierają na sile w miarę trwania meczu."
   },
   "game": {
     "unique": "Tylko w tej grze",
@@ -39,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Siatkówka jeden na jednego w czasie burzy. Podtrzymuj akcję i graj z piorunem",
+      "card": "Podtrzymuj akcję i graj z piorunem",
       "unique": [
         [
           "Utrzymaj piłkę, potem atakuj",
@@ -56,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Badminton jeden na jednego w czasie burzy. Lotka leci z wiatrem, rywal biega do przodu i do tyłu",
+      "card": "Lotka leci z wiatrem, rywal biega do przodu i do tyłu",
       "unique": [
         [
           "Miękko przy siatce, ostro w dół",
@@ -73,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Tenis jeden na jednego w czasie burzy. Najszybszy w serii: celuj w linie",
+      "card": "Najszybszy w serii: celuj w linie",
       "unique": [
         [
           "Czysta szybkość",
@@ -90,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Pickleball jeden na jednego w czasie burzy. Kuchnia i zmiana serwisu: prawdziwe zasady",
+      "card": "Kuchnia i zmiana serwisu: prawdziwe zasady",
       "unique": [
         [
           "Prawdziwe zasady pickleballa",

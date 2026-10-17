@@ -19,10 +19,11 @@
     "title": "AsakusaSemao",
     "h1": "Gumagawa ako ng<br>mga app sa phone.",
     "desc": "Isang independent developer na gumagawa ng mga app para sa iOS at Android.",
-    "game": "Laro",
     "tool": "Record at stats",
     "vollogCard": "Volleyball app para sa pag-manage ng players, pag-record ng laban, at pag-compute ng stats",
-    "vollogTerms": "Mga Tuntunin ng Paggamit ng Vollog"
+    "vollogTerms": "Mga Tuntunin ng Paggamit ng Vollog",
+    "series": "Ang Unos series",
+    "seriesLead": "Lahat ay one-on-one, lahat sa gitna ng unos. Tap at swipe lang, at lalong lumalakas ang hangin, hamog, at kidlat habang tumatagal ang laro."
   },
   "game": {
     "unique": "Dito lang sa larong ito",
@@ -39,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "One-on-one na volleyball sa gitna ng unos. Panatilihin ang rally at makipagtagisan sa kidlat",
+      "card": "Panatilihin ang rally at makipagtagisan sa kidlat",
       "unique": [
         [
           "Panatilihin, saka i-spike",
@@ -56,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "One-on-one na badminton sa gitna ng unos. Tinatangay ng hangin ang shuttlecock: paabante at paatras ang kalaban",
+      "card": "Tinatangay ng hangin ang shuttlecock: paabante at paatras ang kalaban",
       "unique": [
         [
           "Malambot na drop, matalim na smash",
@@ -73,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "One-on-one na tennis sa gitna ng unos. Pinakamabilis sa serye: tamaan ang mga linya",
+      "card": "Pinakamabilis sa serye: tamaan ang mga linya",
       "unique": [
         [
           "Labanan ng bilis",
@@ -90,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "One-on-one na pickleball sa gitna ng unos. Kitchen at side-out: totoong rules ng pickleball",
+      "card": "Kitchen at side-out: totoong rules ng pickleball",
       "unique": [
         [
           "Totoong rules ng pickleball",

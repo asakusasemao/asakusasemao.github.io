@@ -244,13 +244,12 @@ function storeButtons(app, t) {
 
 function home(locale) {
   const t = TEXT[locale]
-  const cards = APPS.map((app) => {
+  const card = (app) => {
     const storm = app.storm ? STORE[app.id][locale] : null
     // Vollog に合う言語がなければ（マレー語）、英語のページへつなぐ
     const vollogLocale = VOLLOG_APP.locales.includes(locale) ? locale : FALLBACK
     const name = storm ? storm.name : VOLLOG[vollogLocale].name
     const line = storm ? t.apps[app.id].card : t.home.vollogCard
-    const tag = app.storm ? `<span class="app-tag game">${escape(t.home.game)}</span>` : `<span class="app-tag">${escape(t.home.tool)}</span>`
     const st = status(app, t.site)
     const url = href(app.storm ? locale : vollogLocale, `apps/${app.id}/`)
     return `      <a class="app-card" data-app="${app.id}" href="${url}">
@@ -258,14 +257,14 @@ function home(locale) {
           <img src="/assets/images/${app.id}-icon.png" alt="${fill(t.site.iconAlt, { name })}" />
         </div>
         <div class="app-card-text">
-          ${tag}
-          <h2>${escape(name)}</h2>
+          <h3>${escape(name)}</h3>
           <p>${escape(line)}</p>
           <span class="app-status${st.live ? ' live' : ''}">${st.text}</span>
         </div>
         <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>`
-  }).join('\n')
+  }
+  const cards = (apps) => apps.map(card).join('\n')
 
   const main = `  <main>
     ${picker(locale, '')}
@@ -282,9 +281,21 @@ function home(locale) {
       <p class="desc">${escape(t.home.desc)}</p>
     </div>
 
-    <div class="apps">
-${cards}
-    </div>
+    <!-- 嵐のシリーズは、共通のところを見出しの下に1回だけ書いて、カードには違いだけを書く -->
+    <section class="app-group">
+      <h2>${escape(t.home.series)}</h2>
+      <p class="app-group-lead">${escape(t.home.seriesLead)}</p>
+      <div class="apps">
+${cards(APPS.filter((a) => a.storm))}
+      </div>
+    </section>
+
+    <section class="app-group">
+      <h2>${escape(t.home.tool)}</h2>
+      <div class="apps">
+${cards(APPS.filter((a) => !a.storm))}
+      </div>
+    </section>
   </main>`
 
   const footer = [[t.site.privacy, '/apps/privacy.html'], [t.home.vollogTerms, '/apps/vollog/terms.html']]
