@@ -22,7 +22,7 @@
     "tool": "Record at stats",
     "vollogCard": "Volleyball app para sa pag-manage ng players, pag-record ng laban, at pag-compute ng stats",
     "vollogTerms": "Mga Tuntunin ng Paggamit ng Vollog",
-    "series": "Ang Unos series",
+    "series": "Sports Games sa Unos",
     "seriesLead": "Lahat ay one-on-one, lahat sa gitna ng unos. Tap at swipe lang, at lalong lumalakas ang hangin, hamog, at kidlat habang tumatagal ang laro."
   },
   "game": {
@@ -40,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Panatilihin ang rally at makipagtagisan sa kidlat",
+      "card": "Mahahabang rally. Panatilihin ang bola sa ere, saka tapusin sa spike!",
       "unique": [
         [
           "Panatilihin, saka i-spike",
@@ -57,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Tinatangay ng hangin ang shuttlecock: paabante at paatras ang kalaban",
+      "card": "Ihulog nang mahina, saka ipadala nang malalim. Pagod na ang kalaban, hindi na niya maaabot!",
       "unique": [
         [
           "Malambot na drop, matalim na smash",
@@ -74,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Pinakamabilis sa serye: tamaan ang mga linya",
+      "card": "Pinakamabibilis na palo sa serye. Tamaan ang target mong sulok sa isang iglap!",
       "unique": [
         [
           "Labanan ng bilis",
@@ -91,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Kitchen at side-out: totoong rules ng pickleball",
+      "card": "May lugar na bawal tamaan ang bola!? Kakaibang rules na nakaka-hook, lalo na kung bago ka rito.",
       "unique": [
         [
           "Totoong rules ng pickleball",

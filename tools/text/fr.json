@@ -22,7 +22,7 @@
     "tool": "Feuilles de match et stats",
     "vollogCard": "Appli de volley pour gérer les joueurs, noter les matchs et compiler les statistiques",
     "vollogTerms": "Conditions d’utilisation de Vollog",
-    "series": "La série Sous l’orage",
+    "series": "Jeux de sport sous l’orage",
     "seriesLead": "Toujours en un contre un, toujours sous l’orage. Il suffit de toucher et de glisser, et le vent, le brouillard et la foudre redoublent au fil du match."
   },
   "game": {
@@ -40,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Fais durer l’échange et joue avec la foudre",
+      "card": "De longs échanges. Fais durer, puis conclus d’un smash !",
       "unique": [
         [
           "Garder le ballon en l’air, puis smasher",
@@ -57,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Le volant file au vent, fais courir l’adversaire d’avant en arrière",
+      "card": "Une amortie, puis un dégagement au fond. L’adversaire court partout… et n’y arrive plus !",
       "unique": [
         [
           "Amortir en douceur, smasher sec",
@@ -74,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Le plus rapide de la série : vise les lignes",
+      "card": "Les frappes les plus rapides de la série. Vise un coin et transperce-le en un éclair !",
       "unique": [
         [
           "Tout en vitesse",
@@ -91,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Cuisine et changement de service : les vraies règles",
+      "card": "Il y a une zone où l’on n’a pas le droit de frapper !? Des règles étonnantes qui rendent accro, surtout si tu ne connais pas ce sport.",
       "unique": [
         [
           "Les vraies règles du pickleball",

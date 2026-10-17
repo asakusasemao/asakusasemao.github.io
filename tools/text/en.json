@@ -22,7 +22,7 @@
     "tool": "Stats & scoring",
     "vollogCard": "Manage players, record matches, and track stats for volleyball",
     "vollogTerms": "Vollog Terms of Use",
-    "series": "The Storm series",
+    "series": "Storm Sports Games",
     "seriesLead": "All one-on-one, all in a storm. Just taps and swipes, and the wind, fog, and lightning grow wilder as the match goes on."
   },
   "game": {
@@ -40,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Keep the rally alive and race the lightning",
+      "card": "Long rallies. Keep the ball alive, then finish it with a spike!",
       "unique": [
         [
           "Keep it up, then spike it",
@@ -57,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Ride the wind and work your opponent front to back",
+      "card": "Drop it short, send it deep. Run your opponent ragged until they can't reach it!",
       "unique": [
         [
           "Float it short, drive it down",
@@ -74,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "The fastest of the series: paint the lines",
+      "card": "The fastest shots in the series. Paint the line you're aiming for in a flash!",
       "unique": [
         [
           "Pure speed",
@@ -91,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Kitchen, side-out scoring: real pickleball rules",
+      "card": "There's a zone where you can't hit the ball!? Quirky rules that hook you, especially if you're new to the game.",
       "unique": [
         [
           "Real pickleball rules",

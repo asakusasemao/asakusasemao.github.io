@@ -22,7 +22,7 @@
     "tool": "Registro y estadísticas",
     "vollogCard": "App de voleibol para gestionar jugadores, registrar partidos y sacar estadísticas",
     "vollogTerms": "Términos de uso de Vollog",
-    "series": "La serie En la tormenta",
+    "series": "Juegos deportivos en la tormenta",
     "seriesLead": "Siempre uno contra uno, siempre en plena tormenta. Solo toques y deslizamientos, y el viento, la niebla y los rayos se desatan a medida que avanza el partido."
   },
   "game": {
@@ -40,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Mantén vivo el punto y juega contra el rayo",
+      "card": "Puntos largos. ¡Mantén la pelota viva y cierra con un remate!",
       "unique": [
         [
           "Mantenla arriba y remata",
@@ -57,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "El volante vuela con el viento: mueve al rival adelante y atrás",
+      "card": "Déjala caer suave y mándala al fondo. ¡El rival corre de un lado a otro y ya no llega!",
       "unique": [
         [
           "Suave junto a la red, fuerte hacia abajo",
@@ -74,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "El más rápido de la serie: busca las líneas",
+      "card": "Los golpes más rápidos de la serie. ¡Clava la pelota donde apuntas en un instante!",
       "unique": [
         [
           "Pura velocidad",
@@ -91,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Cocina y cambio de saque: reglas reales",
+      "card": "¿¡Hay una zona donde no puedes golpear!? Reglas curiosas que enganchan, sobre todo si no conoces el deporte.",
       "unique": [
         [
           "Reglas reales del pickleball",

@@ -22,7 +22,7 @@
     "tool": "Statistik & Spielberichte",
     "vollogCard": "Volleyball-App für Spielerverwaltung, Spielberichte und Statistiken",
     "vollogTerms": "Nutzungsbedingungen von Vollog",
-    "series": "Die Sturm-Reihe",
+    "series": "Sportspiele im Sturm",
     "seriesLead": "Immer eins gegen eins, immer im Sturm. Nur Tippen und Wischen – und je weiter das Match läuft, desto wilder werden Wind, Nebel und Blitze."
   },
   "game": {
@@ -40,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Halte den Ballwechsel am Leben und spiel gegen den Blitz",
+      "card": "Lange Ballwechsel. Halte den Ball im Spiel – und dann der Schmetterball zum Punkt!",
       "unique": [
         [
           "Ball halten, dann schmettern",
@@ -57,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Der Federball treibt im Wind, du jagst den Gegner vor und zurück",
+      "card": "Kurz ans Netz, dann tief nach hinten. Der Gegner rennt hin und her – und kommt nicht mehr ran!",
       "unique": [
         [
           "Sanft fallen lassen, scharf schmettern",
@@ -74,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Das Schnellste der Reihe: Schlag die Bälle auf die Linien",
+      "card": "Die schnellsten Schläge der Reihe. Triff die anvisierte Ecke im Bruchteil einer Sekunde!",
       "unique": [
         [
           "Tempo pur",
@@ -91,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Küche und Side-Out: echte Pickleball-Regeln",
+      "card": "Es gibt eine Zone, in der du nicht schlagen darfst!? Ungewöhnliche Regeln, die süchtig machen – gerade wenn du das Spiel nicht kennst.",
       "unique": [
         [
           "Echte Pickleball-Regeln",

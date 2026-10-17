@@ -22,7 +22,7 @@
     "tool": "Rekod & statistik",
     "vollogCard": "Aplikasi bola tampar untuk mengurus pemain, merekod perlawanan dan mengumpul statistik",
     "vollogTerms": "Terma Penggunaan Vollog",
-    "series": "Siri Ribut",
+    "series": "Permainan Sukan dalam Ribut",
     "seriesLead": "Semuanya satu lawan satu dalam ribut. Hanya ketik dan leret, dan angin, kabus serta kilat makin ganas apabila perlawanan berlanjutan."
   },
   "game": {
@@ -40,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Teruskan rali dan berlumba dengan kilat",
+      "card": "Rali yang panjang. Teruskan bola, kemudian tamatkan dengan rejaman!",
       "unique": [
         [
           "Sambung, kemudian rejam",
@@ -57,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Bulu tangkis dibawa angin, lawan diasak depan dan belakang",
+      "card": "Jatuhkan perlahan, hantar jauh ke belakang. Lawan berlari ke sana ke mari hingga tidak sempat mencapainya!",
       "unique": [
         [
           "Jatuhkan perlahan, rejam tajam",
@@ -74,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Paling pantas dalam siri ini: tembusi sudut gelanggang",
+      "card": "Pukulan terpantas dalam siri ini. Tembusi sudut sasaran dalam sekelip mata!",
       "unique": [
         [
           "Adu kepantasan",
@@ -91,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Kitchen dan side-out: peraturan pickleball sebenar",
+      "card": "Ada kawasan yang tidak boleh dipukul!? Peraturan unik yang buat anda ketagih, lebih-lebih lagi jika belum pernah bermain.",
       "unique": [
         [
           "Peraturan pickleball sebenar",

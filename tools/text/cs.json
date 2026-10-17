@@ -22,7 +22,7 @@
     "tool": "Záznamy a statistiky",
     "vollogCard": "Volejbalová aplikace pro správu hráčů, záznam zápasů a statistiky",
     "vollogTerms": "Podmínky používání Vollog",
-    "series": "Série V bouři",
+    "series": "Sportovní hry v bouři",
     "seriesLead": "Vždy jeden na jednoho, vždy v bouři. Stačí ťukat a táhnout. Čím déle zápas trvá, tím divočejší je vítr, mlha i blesky."
   },
   "game": {
@@ -40,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Udrž výměnu a přechytrač blesk",
+      "card": "Dlouhé výměny. Udrž míč ve hře a nakonec to zakonči smečí!",
       "unique": [
         [
           "Udrž míč, pak smeč",
@@ -57,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Košíček nese vítr, soupeře honíš dopředu a dozadu",
+      "card": "Jemně k síti, pak hluboko dozadu. Soupeř běhá sem a tam, až to nedoběhne!",
       "unique": [
         [
           "Jemně pustit, ostře zatlačit",
@@ -74,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Nejrychlejší z celé série: trefuj se do čar",
+      "card": "Nejrychlejší údery z celé série. Trefíš vybraný roh v mžiku!",
       "unique": [
         [
           "Souboj rychlosti",
@@ -91,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Kuchyně i ztráta podání: opravdová pravidla",
+      "card": "Na kurtu je místo, kde nesmíš odpálit!? Neobvyklá pravidla, která tě chytnou, hlavně když hru neznáš.",
       "unique": [
         [
           "Opravdová pravidla pickleballu",

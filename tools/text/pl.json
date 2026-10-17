@@ -22,7 +22,7 @@
     "tool": "Zapis meczów i statystyki",
     "vollogCard": "Aplikacja siatkarska do zarządzania zawodnikami, zapisu meczów i zbierania statystyk",
     "vollogTerms": "Warunki korzystania z Vollog",
-    "series": "Seria W burzy",
+    "series": "Gry sportowe w burzy",
     "seriesLead": "Zawsze jeden na jednego, zawsze w burzy. Wystarczy stukać i przesuwać, a wiatr, mgła i pioruny przybierają na sile w miarę trwania meczu."
   },
   "game": {
@@ -40,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Podtrzymuj akcję i graj z piorunem",
+      "card": "Długie wymiany. Podtrzymuj grę, a na koniec skończ zbiciem!",
       "unique": [
         [
           "Utrzymaj piłkę, potem atakuj",
@@ -57,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Lotka leci z wiatrem, rywal biega do przodu i do tyłu",
+      "card": "Krótko przy siatce, potem głęboko do tyłu. Rywal biega w tę i z powrotem – i już nie sięga!",
       "unique": [
         [
           "Miękko przy siatce, ostro w dół",
@@ -74,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Najszybszy w serii: celuj w linie",
+      "card": "Najszybsze uderzenia w serii. Traf w wybrany róg w mgnieniu oka!",
       "unique": [
         [
           "Czysta szybkość",
@@ -91,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Kuchnia i zmiana serwisu: prawdziwe zasady",
+      "card": "Jest strefa, w której nie wolno uderzać!? Nietypowe zasady, które wciągają – zwłaszcza jeśli nie znasz tej gry.",
       "unique": [
         [
           "Prawdziwe zasady pickleballa",

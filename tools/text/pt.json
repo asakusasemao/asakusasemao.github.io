@@ -22,7 +22,7 @@
     "tool": "Súmulas e estatísticas",
     "vollogCard": "App de vôlei para gerenciar jogadores, registrar partidas e reunir estatísticas",
     "vollogTerms": "Termos de Uso do Vollog",
-    "series": "A série Na Tempestade",
+    "series": "Jogos de esporte na tempestade",
     "seriesLead": "Sempre um contra um, sempre na tempestade. Só toques e deslizes, e o vento, a neblina e os raios ficam mais fortes conforme a partida avança."
   },
   "game": {
@@ -40,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Mantenha o rali vivo e jogue contra o raio",
+      "card": "Ralis longos. Mantenha a bola no ar e feche com uma cortada!",
       "unique": [
         [
           "Mantenha no ar e corte",
@@ -57,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "A peteca vai com o vento: faça o rival correr para a frente e para trás",
+      "card": "Uma deixadinha curta, depois lá no fundo. O rival corre de um lado para o outro e não alcança mais!",
       "unique": [
         [
           "Suave na rede, forte para baixo",
@@ -74,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "O mais rápido da série: mire nas linhas",
+      "card": "Os golpes mais rápidos da série. Acerte o canto que você mirou num piscar de olhos!",
       "unique": [
         [
           "Pura velocidade",
@@ -91,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Cozinha e side-out: regras de verdade",
+      "card": "Tem uma área onde não se pode bater na bola!? Regras curiosas que viciam, ainda mais se você não conhece o esporte.",
       "unique": [
         [
           "Regras de pickleball de verdade",

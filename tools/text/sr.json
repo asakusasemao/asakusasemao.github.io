@@ -22,7 +22,7 @@
     "tool": "Zapisnik i statistika",
     "vollogCard": "Odbojkaška aplikacija za vođenje igrača, zapisnik utakmica i statistiku",
     "vollogTerms": "Uslovi korišćenja aplikacije Vollog",
-    "series": "Serijal U oluji",
+    "series": "Sportske igre u oluji",
     "seriesLead": "Uvek jedan na jedan, uvek u oluji. Samo dodir i prevlačenje, a vetar, magla i munje su sve jači kako meč odmiče."
   },
   "game": {
@@ -40,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Održi akciju i nadmudri munju",
+      "card": "Duge akcije. Održi loptu u igri, pa završi smečom!",
       "unique": [
         [
           "Održi loptu, pa smeč",
@@ -57,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Vetar nosi lopticu, a ti teraš protivnika napred i nazad",
+      "card": "Kratko uz mrežu, pa duboko pozadi. Protivnik juri tamo-amo i više ne stiže!",
       "unique": [
         [
           "Nežno uz mrežu, oštro nadole",
@@ -74,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Najbrži u seriji: gađaj linije",
+      "card": "Najbrži udarci u seriji. Pogodi ugao koji gađaš za tren oka!",
       "unique": [
         [
           "Čista brzina",
@@ -91,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Kuhinja i promena servisa: prava pravila",
+      "card": "Postoji zona u kojoj ne smeš da udariš lopticu!? Neobična pravila koja te navuku, pogotovo ako ne znaš ovaj sport.",
       "unique": [
         [
           "Prava pravila pickleballa",

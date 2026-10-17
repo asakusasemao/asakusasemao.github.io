@@ -387,10 +387,18 @@ html[lang="en"] .lang-btn[data-lang="en"] {
 }
 
 .app-card-text p {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
+  text-wrap: pretty;
   line-height: 1.65;
   margin-bottom: 16px;
+}
+
+/* 日本語のカードの一言は、句読点とスペースのところでだけ折り返す（「決め／る！」のような折り返しを防ぐ）。
+   幅に入りきらない区切りだけは、どこでも折り返す */
+.app-card-text p:lang(ja) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 .app-status {

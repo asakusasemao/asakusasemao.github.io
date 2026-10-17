@@ -22,7 +22,7 @@
     "tool": "Catatan & statistik",
     "vollogCard": "Aplikasi bola voli untuk mengelola pemain, mencatat pertandingan, dan merekap statistik",
     "vollogTerms": "Ketentuan Penggunaan Vollog",
-    "series": "Seri Badai",
+    "series": "Game Olahraga Badai",
     "seriesLead": "Semuanya satu lawan satu di tengah badai. Cukup ketuk dan geser, dan angin, kabut, serta petir makin ganas seiring pertandingan berjalan."
   },
   "game": {
@@ -40,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Jaga reli dan adu taktik dengan petir",
+      "card": "Reli panjang. Jaga bola tetap hidup, lalu akhiri dengan smes!",
       "unique": [
         [
           "Jaga bola, lalu smash",
@@ -57,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Kok terbawa angin, lawan dipaksa maju-mundur",
+      "card": "Jatuhkan pelan, lalu lambungkan jauh. Lawan lari ke sana kemari sampai tak terjangkau!",
       "unique": [
         [
           "Jatuhkan pelan, tukikkan tajam",
@@ -74,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Paling cepat di seri ini: tembus sudut lapangan",
+      "card": "Pukulan tercepat di seri ini. Tembus sudut incaranmu dalam sekejap!",
       "unique": [
         [
           "Adu kecepatan",
@@ -91,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Kitchen dan side-out: aturan pickleball asli",
+      "card": "Ada area yang tidak boleh dipukul!? Aturan unik yang bikin ketagihan, apalagi kalau belum pernah main.",
       "unique": [
         [
           "Aturan pickleball asli",

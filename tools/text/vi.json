@@ -22,7 +22,7 @@
     "tool": "Ghi chép & thống kê",
     "vollogCard": "Ứng dụng bóng chuyền để quản lý cầu thủ, ghi lại trận đấu và tổng hợp thống kê",
     "vollogTerms": "Điều khoản sử dụng Vollog",
-    "series": "Loạt game Giữa bão",
+    "series": "Game thể thao giữa bão",
     "seriesLead": "Tất cả đều là một đấu một giữa bão. Chỉ cần chạm và vuốt, trận càng về sau thì gió, sương mù và sét càng dữ dội."
   },
   "game": {
@@ -40,7 +40,7 @@
   },
   "apps": {
     "storm-volley": {
-      "card": "Giữ pha bóng thật lâu và đấu trí với sét",
+      "card": "Những pha bóng kéo dài. Giữ bóng thật lâu, rồi kết thúc bằng một cú đập!",
       "unique": [
         [
           "Giữ bóng, rồi đập",
@@ -57,7 +57,7 @@
       ]
     },
     "storm-badminton": {
-      "card": "Cầu bay theo gió, đẩy đối thủ lên xuống liên tục",
+      "card": "Bỏ nhỏ sát lưới, rồi đánh sâu về cuối sân. Đối thủ chạy khắp nơi mà vẫn không với tới!",
       "unique": [
         [
           "Bỏ nhỏ nhẹ nhàng, đập cầu sắc gọn",
@@ -74,7 +74,7 @@
       ]
     },
     "storm-tennis": {
-      "card": "Nhanh nhất cả loạt game: nhắm vào các đường biên",
+      "card": "Cú đánh nhanh nhất cả loạt game. Xuyên thủng góc sân bạn nhắm chỉ trong chớp mắt!",
       "unique": [
         [
           "Đọ tốc độ",
@@ -91,7 +91,7 @@
       ]
     },
     "storm-pickleball": {
-      "card": "Bếp và đổi giao bóng: luật pickleball thật",
+      "card": "Có khu vực không được đánh bóng!? Luật chơi lạ khiến bạn mê, nhất là khi chưa biết môn này.",
       "unique": [
         [
           "Luật pickleball thật",
