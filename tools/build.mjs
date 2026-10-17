@@ -14,6 +14,8 @@ const VOLLOG_APP = APPS.find((a) => a.id === 'vollog')
 const VOLLOG = json('tools/data/vollog.json')
 const LICENSE = readFileSync(join(root, 'tools/lucide-license.html'), 'utf8').trimEnd()
 const SITE = 'https://asakusasemao.com'
+/** お問い合わせ。紹介ページはストアのサポートURLなので、フッターに必ず出す（App Store の審査で、連絡先が要る） */
+const CONTACT = 'mailto:asakusasemao@gmail.com'
 /** 言語を選んだ覚え。日本語のページで、ブラウザの言語より先に見る */
 const KEY = 'site-lang'
 
@@ -431,17 +433,12 @@ ${cards}
       <h2>${escape(notice.title)}</h2>
       <p class="section-note">${notice.lines.map(escape).join('<br>')}</p>
     </section>
-
-    <section class="callout">
-      <h2>${escape(t.site.contact)}</h2>
-      <p class="section-note"><a href="mailto:asakusasemao@gmail.com">asakusasemao@gmail.com</a></p>
-    </section>
   </main>`
 
   const privacy = `/apps/${app.id}/privacy.html`
   const nav = [[t.site.privacy, privacy]]
   if (locale === 'ja') nav.push([t.site.tokushoho, '/apps/tokushoho.html'])
-  const footer = [[t.site.home, href(locale)], [t.site.privacy, privacy]]
+  const footer = [[t.site.home, href(locale)], [t.site.privacy, privacy], [t.site.contact, CONTACT]]
   if (locale === 'ja') footer.push([t.site.tokushohoLong, '/apps/tokushoho.html'])
 
   return page({
@@ -554,18 +551,13 @@ ${rows}
         </tbody>
       </table>
     </section>
-
-    <section class="callout">
-      <h2>${escape(t.site.contact)}</h2>
-      <p class="section-note"><a href="mailto:asakusasemao@gmail.com">asakusasemao@gmail.com</a></p>
-    </section>
   </main>`
 
   const privacy = '/apps/vollog/privacy.html'
   const terms = '/apps/vollog/terms.html'
   const nav = [[t.site.privacy, privacy], [v.terms, terms]]
   if (locale === 'ja') nav.push([t.site.tokushoho, '/apps/tokushoho.html'])
-  const footer = [[t.site.home, href(locale)], [t.site.privacy, privacy], [v.terms, terms]]
+  const footer = [[t.site.home, href(locale)], [t.site.privacy, privacy], [v.terms, terms], [t.site.contact, CONTACT]]
   if (locale === 'ja') footer.push([t.site.tokushohoLong, '/apps/tokushoho.html'])
 
   return page({
