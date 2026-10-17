@@ -908,3 +908,138 @@ section h2 {
 
 /* サイトの名前は、どの言語でも同じ書体で出す */
 .brand { font-family: "Dela Gothic One", var(--font-body); }
+
+/* ---------- Vollog の紹介ページ ---------- */
+
+/*
+  コーチやマネージャーが使う記録の道具なので、ゲームのページの遊んだ見た目（傾き・太い枠・斜めの縞・丸い書体）をやめて、落ち着かせる。
+  tools/build.mjs が紹介ページの <body> にだけ class="tool" を付ける（プライバシーポリシー・規約は今までの見た目のまま）
+*/
+
+.tool {
+  --bg: #f4f5f8;
+  --muted: #555a6e;
+  --border: #dcdfe6;
+  --tint: #fff1ee;
+
+  --line: 1px solid var(--border);
+  --shadow: 0 1px 2px rgba(29, 26, 58, 0.06);
+  --shadow-lg: 0 1px 3px rgba(29, 26, 58, 0.06), 0 8px 24px rgba(29, 26, 58, 0.06);
+  --radius: 14px;
+
+  background-image: none;
+}
+
+/* 丸ゴシックをやめて、端末のゴシック体。中国語・韓国語などは上の :lang の書体のまま */
+.tool:not(:lang(zh-Hans), :lang(zh-Hant), :lang(ko), :lang(vi), :lang(th), :lang(hi)) {
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", Meiryo, "Noto Sans JP", sans-serif;
+}
+.tool { --font-display: var(--font-body); }
+
+/* 傾きと弾む動きをやめる */
+.tool .brand,
+.tool .brand:hover,
+.tool .lang-picker summary:hover,
+.tool .app-icon,
+.tool .app-icon:hover,
+.tool .feature-card .feature-icon,
+.tool .feature-card:hover .feature-icon,
+.tool .stat-chip,
+.tool .callout h2 {
+  transform: none;
+}
+.tool .brand { box-shadow: none; }
+.tool .hero,
+.tool section { animation: fadeIn 0.4s ease both; }
+.tool .lang-picker[open] summary { box-shadow: none; }
+
+.tool .hero {
+  border-radius: 18px;
+  box-shadow: inset 0 6px 0 var(--accent), var(--shadow-lg);
+  background: var(--card);
+}
+
+.tool .app-icon { border-radius: 22px; }
+
+.tool .hero-text h1 {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-shadow: none;
+}
+.tool .hero-text h1 span {
+  font-weight: 700;
+  color: var(--muted);
+}
+.tool .hero-text p { font-weight: 500; }
+
+.tool .badge.accent {
+  border: 0;
+  background: var(--bg);
+}
+
+.tool .store-btn {
+  border-color: var(--ink);
+  border-radius: 10px;
+  box-shadow: none;
+}
+.tool .store-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+.tool .store-btn:active { transform: none; box-shadow: none; }
+
+/* 見出しは蛍光ペンの線ではなく、左の短い線 */
+.tool section h2 {
+  display: block;
+  font-size: 21px;
+  font-weight: 800;
+  padding: 0 0 0 14px;
+  background: none;
+  border-left: 4px solid var(--accent);
+}
+
+.tool .feature-card:hover,
+.tool .feature-card:nth-child(even):hover {
+  transform: none;
+  box-shadow: var(--shadow-lg);
+}
+.tool .feature-card .feature-icon {
+  border: 0;
+  border-radius: 12px;
+  background: var(--tint);
+}
+.tool .feature-card h3 { font-weight: 700; }
+
+.tool .stat-chip {
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.tool .plan-table { box-shadow: var(--shadow); }
+.tool .plan-table th,
+.tool .plan-table td { border-bottom: var(--line); }
+.tool .plan-table thead th { border-bottom: var(--line); }
+.tool .plan-table th:last-child,
+.tool .plan-table td:last-child {
+  background: var(--tint);
+  border-left: var(--line);
+}
+.tool .plan-table thead th:last-child { background: var(--accent); }
+.tool .plan-table .cross { color: rgba(29, 26, 58, 0.3); }
+.tool .plan-label-free,
+.tool .plan-label-pro { font-weight: 800; }
+
+/* お知らせの箱は、見出しを枠の中に入れる */
+.tool .callout { padding: 22px 24px; }
+.tool .callout h2 {
+  position: static;
+  display: block;
+  font-size: 15px;
+  padding: 0;
+  margin-bottom: 8px;
+  background: none;
+  border: 0;
+  border-radius: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; }
+}

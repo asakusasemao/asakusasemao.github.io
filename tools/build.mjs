@@ -563,7 +563,8 @@ ${rows}
     locales: app.locales,
     title: `${d.name} - ${d.subtitle}`,
     description: d.lead.join(' ').replaceAll('\n', ' '),
-    bodyAttr: 'data-app="vollog"',
+    // tool: 記録の道具なので、ゲームのページより落ち着いた見た目にする（site.css の「Vollog の紹介ページ」）
+    bodyAttr: 'class="tool" data-app="vollog"',
     header: `    <nav class="header-links">\n${nav.map(([label, url]) => `      <a href="${url}">${escape(label)}</a>`).join('\n')}\n    </nav>`,
     main,
     footer: `${links(footer)}
