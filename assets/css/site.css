@@ -518,6 +518,14 @@ html[lang="en"] .lang-btn[data-lang="en"] {
   gap: 14px;
 }
 
+.store-note {
+  grid-column: 1 / -1;
+  margin-top: -8px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
 .store-btn {
   display: inline-flex;
   align-items: center;

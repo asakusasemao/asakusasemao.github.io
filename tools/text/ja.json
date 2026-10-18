@@ -13,7 +13,9 @@
     "coming": "{p} 版準備中",
     "releasedShort": "{p} 公開中",
     "comingShort": "{p} 準備中",
-    "soon": "準備中"
+    "soon": "準備中",
+    "releasedChecking": "{p} 版公開中（ストアの表示を確認中）",
+    "checkingNote": "App Store で検索しても出てこないことがあり、いま原因を確認しています。上のボタンからストアのページを開けます。"
   },
   "home": {
     "title": "AsakusaSemao",

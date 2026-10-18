@@ -13,7 +13,9 @@
     "coming": "Yakında {p} için",
     "releasedShort": "{p} için çıktı",
     "comingShort": "{p}: yakında",
-    "soon": "Yakında"
+    "soon": "Yakında",
+    "releasedChecking": "{p} için çıktı (mağaza sayfası kontrol ediliyor)",
+    "checkingNote": "Uygulama henüz App Store aramasında çıkmayabilir; nedenini araştırıyoruz. Mağaza sayfasını yukarıdaki düğmeyle açabilirsin."
   },
   "home": {
     "title": "AsakusaSemao",

@@ -13,7 +13,9 @@
     "coming": "Coming soon to {p}",
     "releasedShort": "Out now on {p}",
     "comingShort": "{p}: coming soon",
-    "soon": "Coming soon"
+    "soon": "Coming soon",
+    "releasedChecking": "Out now on {p} (checking the store listing)",
+    "checkingNote": "It may not show up in App Store search yet, and we're looking into why. You can open its store page with the button above."
   },
   "home": {
     "title": "AsakusaSemao",

@@ -13,7 +13,9 @@
     "coming": "Akan datang ke {p}",
     "releasedShort": "Kini di {p}",
     "comingShort": "{p}: akan datang",
-    "soon": "Akan datang"
+    "soon": "Akan datang",
+    "releasedChecking": "Kini di {p} (paparan di kedai sedang disemak)",
+    "checkingNote": "Aplikasi ini mungkin belum muncul dalam carian App Store, dan kami sedang menyemak puncanya. Halaman kedainya boleh dibuka melalui butang di atas."
   },
   "home": {
     "title": "AsakusaSemao",

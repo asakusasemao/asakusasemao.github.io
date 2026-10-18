@@ -13,7 +13,9 @@
     "coming": "{p} 版即将推出",
     "releasedShort": "{p} 已上线",
     "comingShort": "{p} 即将推出",
-    "soon": "即将推出"
+    "soon": "即将推出",
+    "releasedChecking": "{p} 版已上线（正在确认商店显示）",
+    "checkingNote": "在 App Store 中可能暂时搜索不到，我们正在查找原因。可以通过上方的按钮打开商店页面。"
   },
   "home": {
     "title": "AsakusaSemao",

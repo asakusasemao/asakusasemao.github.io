@@ -13,7 +13,9 @@
     "coming": "Sắp có trên {p}",
     "releasedShort": "Đã có trên {p}",
     "comingShort": "{p}: sắp ra mắt",
-    "soon": "Sắp ra mắt"
+    "soon": "Sắp ra mắt",
+    "releasedChecking": "Đã có trên {p} (đang kiểm tra trang trên cửa hàng)",
+    "checkingNote": "Ứng dụng có thể chưa hiện khi tìm trên App Store, chúng tôi đang kiểm tra nguyên nhân. Bạn có thể mở trang cửa hàng bằng nút ở trên."
   },
   "home": {
     "title": "AsakusaSemao",

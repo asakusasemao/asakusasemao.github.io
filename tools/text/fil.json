@@ -13,7 +13,9 @@
     "coming": "Malapit na sa {p}",
     "releasedShort": "Available na sa {p}",
     "comingShort": "{p}: malapit na",
-    "soon": "Malapit na"
+    "soon": "Malapit na",
+    "releasedChecking": "Available na sa {p} (sinusuri ang listing sa store)",
+    "checkingNote": "Baka hindi pa ito lumalabas sa search ng App Store, at inaalam namin kung bakit. Mabubuksan ang page nito sa store gamit ang button sa itaas."
   },
   "home": {
     "title": "AsakusaSemao",

@@ -13,7 +13,9 @@
     "coming": "Uskoro na {p}",
     "releasedShort": "Već na {p}",
     "comingShort": "{p}: uskoro",
-    "soon": "Uskoro"
+    "soon": "Uskoro",
+    "releasedChecking": "Već na {p} (proveravamo prikaz u prodavnici)",
+    "checkingNote": "Aplikacija se možda još ne prikazuje u pretrazi App Store-a i proveravamo zašto. Stranicu u prodavnici možeš otvoriti dugmetom iznad."
   },
   "home": {
     "title": "AsakusaSemao",

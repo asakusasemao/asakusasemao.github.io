@@ -11,6 +11,7 @@ export const FALLBACK = 'en'
 /**
  * アプリ。並びはトップページのカードの順。
  * storm は嵐のシリーズ（紹介ページを言語ごとに作る）。ios / android は公開していればストアの URL、準備中なら null。
+ * iosChecking は、公開したのに App Store の検索に出てこないとき true にする（カードと紹介ページに「確認中」と出す）。直ったら外す。
  * icons は、紹介ページの「どんなゲーム」の節ごとの絵記号（ストアの説明文の ■ の順。ご注意は除く）。null の節は出さない
  * （ピックルボールの舞台は「このゲームならでは」に書いたので外す）
  */
@@ -35,7 +36,9 @@ export const APPS = [
     id: 'storm-tennis',
     storm: true,
     en: 'Storm Tennis',
-    ios: null,
+    ios: 'https://apps.apple.com/app/storm-tennis/id6822641591',
+    // 2026-10 に公開したが、App Store の検索に出てこない。原因を確認中
+    iosChecking: true,
     android: null,
     icons: ['pointer', 'zap', 'school', 'book', 'shirt', 'share', 'sliders'],
   },

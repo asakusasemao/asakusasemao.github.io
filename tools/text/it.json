@@ -13,7 +13,9 @@
     "coming": "Presto su {p}",
     "releasedShort": "Disponibile su {p}",
     "comingShort": "{p}: in arrivo",
-    "soon": "In arrivo"
+    "soon": "In arrivo",
+    "releasedChecking": "Disponibile su {p} (verifica della scheda in corso)",
+    "checkingNote": "Potrebbe non comparire ancora nella ricerca dell'App Store: stiamo verificando il motivo. Puoi aprire la sua pagina sullo store con il pulsante qui sopra."
   },
   "home": {
     "title": "AsakusaSemao",

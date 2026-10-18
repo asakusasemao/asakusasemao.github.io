@@ -13,7 +13,9 @@
     "coming": "Wkrótce na {p}",
     "releasedShort": "Już na {p}",
     "comingShort": "{p}: wkrótce",
-    "soon": "Wkrótce"
+    "soon": "Wkrótce",
+    "releasedChecking": "Już na {p} (sprawdzamy widoczność w sklepie)",
+    "checkingNote": "Aplikacja może jeszcze nie pojawiać się w wyszukiwarce App Store – sprawdzamy dlaczego. Stronę w sklepie otworzysz przyciskiem powyżej."
   },
   "home": {
     "title": "AsakusaSemao",

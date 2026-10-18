@@ -13,7 +13,9 @@
     "coming": "Brzy na {p}",
     "releasedShort": "Už na {p}",
     "comingShort": "{p}: brzy",
-    "soon": "Již brzy"
+    "soon": "Již brzy",
+    "releasedChecking": "Už na {p} (ověřujeme zobrazení v obchodě)",
+    "checkingNote": "Aplikace se zatím nemusí zobrazovat ve vyhledávání v App Storu a zjišťujeme proč. Stránku v obchodě otevřete tlačítkem výše."
   },
   "home": {
     "title": "AsakusaSemao",
