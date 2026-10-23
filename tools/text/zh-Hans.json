@@ -13,9 +13,7 @@
     "coming": "{p} 版即将推出",
     "releasedShort": "{p} 已上线",
     "comingShort": "{p} 即将推出",
-    "soon": "即将推出",
-    "releasedChecking": "{p} 版已上线（正在确认商店显示）",
-    "checkingNote": "在 App Store 中可能暂时搜索不到，我们正在查找原因。可以通过上方的按钮打开商店页面。"
+    "soon": "即将推出"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -93,6 +91,7 @@
       ]
     },
     "storm-pickleball": {
+      "storeNote": "目前 App Store 上的版本仅支持日语和英语，图标也还是旧的。支持全部 22 种语言并使用新图标的更新正在审核中。",
       "card": "居然有不能击球的区域！？越不了解越上瘾的奇特规则。",
       "unique": [
         [

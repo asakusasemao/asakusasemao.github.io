@@ -13,9 +13,7 @@
     "coming": "Sắp có trên {p}",
     "releasedShort": "Đã có trên {p}",
     "comingShort": "{p}: sắp ra mắt",
-    "soon": "Sắp ra mắt",
-    "releasedChecking": "Đã có trên {p} (đang kiểm tra trang trên cửa hàng)",
-    "checkingNote": "Ứng dụng có thể chưa hiện khi tìm trên App Store, chúng tôi đang kiểm tra nguyên nhân. Bạn có thể mở trang cửa hàng bằng nút ở trên."
+    "soon": "Sắp ra mắt"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -93,6 +91,7 @@
       ]
     },
     "storm-pickleball": {
+      "storeNote": "Phiên bản hiện có trên App Store chỉ hỗ trợ tiếng Nhật và tiếng Anh, và vẫn dùng biểu tượng cũ. Bản cập nhật có đủ 22 ngôn ngữ và biểu tượng mới đang được xét duyệt.",
       "card": "Có khu vực mà bạn không được đánh bóng!? Luật chơi lạ khiến bạn mê, nhất là khi chưa biết môn này.",
       "unique": [
         [

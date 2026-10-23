@@ -13,9 +13,7 @@
     "coming": "Yakında {p} için",
     "releasedShort": "{p} için çıktı",
     "comingShort": "{p}: yakında",
-    "soon": "Yakında",
-    "releasedChecking": "{p} için çıktı (mağaza sayfası kontrol ediliyor)",
-    "checkingNote": "Uygulama henüz App Store aramasında çıkmayabilir; nedenini araştırıyoruz. Mağaza sayfasını yukarıdaki düğmeyle açabilirsin."
+    "soon": "Yakında"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -93,6 +91,7 @@
       ]
     },
     "storm-pickleball": {
+      "storeNote": "App Store'daki mevcut sürüm yalnızca Japonca ve İngilizce destekliyor ve hâlâ eski simgeyi kullanıyor. 22 dili ve yeni simgeyi içeren güncelleme inceleniyor.",
       "card": "Topa vuramayacağın bir alan var!? Oyunu bilmeyenleri en çok saran, alışılmadık kurallar.",
       "unique": [
         [

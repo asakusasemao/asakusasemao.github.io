@@ -13,9 +13,7 @@
     "coming": "Uskoro na {p}",
     "releasedShort": "Već na {p}",
     "comingShort": "{p}: uskoro",
-    "soon": "Uskoro",
-    "releasedChecking": "Već na {p} (proveravamo prikaz u prodavnici)",
-    "checkingNote": "Aplikacija se možda još ne prikazuje u pretrazi App Store-a i proveravamo zašto. Stranicu u prodavnici možeš otvoriti dugmetom iznad."
+    "soon": "Uskoro"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -93,6 +91,7 @@
       ]
     },
     "storm-pickleball": {
+      "storeNote": "Verzija koja je sada na App Store-u podržava samo japanski i engleski i ima staru ikonicu. Ažuriranje sa svih 22 jezika i novom ikonicom je na pregledu.",
       "card": "Postoji zona u kojoj ne smeš da udariš lopticu!? Neobična pravila koja te navuku, pogotovo ako ne znaš ovaj sport.",
       "unique": [
         [

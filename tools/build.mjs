@@ -201,7 +201,7 @@ function platforms(app) {
 function status(app, s) {
   const { live, soon } = platforms(app)
   return live.length
-    ? { live: true, text: fill(app.iosChecking ? s.releasedChecking : s.released, { p: live.join(' / ') }) }
+    ? { live: true, text: fill(s.released, { p: live.join(' / ') }) }
     : { live: false, text: fill(s.coming, { p: soon.join(' / ') }) }
 }
 
@@ -407,7 +407,7 @@ function stormPage(app, locale) {
       <div class="store-buttons">
         ${apple}
         ${google}
-      </div>${app.iosChecking ? `\n      <p class="store-note">${escape(t.site.checkingNote)}</p>` : ''}
+      </div>${own.storeNote ? `\n      <p class="store-note">${escape(own.storeNote)}</p>` : ''}
     </div>
 
     <section>
@@ -518,7 +518,7 @@ function vollogPage(locale) {
       <div class="store-buttons">
         ${apple}
         ${google}
-      </div>${app.iosChecking ? `\n      <p class="store-note">${escape(t.site.checkingNote)}</p>` : ''}
+      </div>
     </div>
 
     <section>

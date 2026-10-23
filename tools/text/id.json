@@ -13,9 +13,7 @@
     "coming": "Segera hadir di {p}",
     "releasedShort": "Tersedia di {p}",
     "comingShort": "{p}: segera hadir",
-    "soon": "Segera hadir",
-    "releasedChecking": "Sudah tersedia di {p} (tampilan di toko sedang dicek)",
-    "checkingNote": "Aplikasi ini mungkin belum muncul di pencarian App Store, dan kami sedang mencari penyebabnya. Halaman tokonya bisa dibuka lewat tombol di atas."
+    "soon": "Segera hadir"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -93,6 +91,7 @@
       ]
     },
     "storm-pickleball": {
+      "storeNote": "Versi yang ada di App Store saat ini baru mendukung bahasa Jepang dan Inggris, dan ikonnya masih yang lama. Pembaruan dengan 22 bahasa dan ikon baru sedang ditinjau.",
       "card": "Ada area tempat kamu tidak boleh memukul bola!? Aturan unik yang bikin ketagihan, apalagi kalau belum pernah main.",
       "unique": [
         [

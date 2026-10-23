@@ -13,9 +13,7 @@
     "coming": "Pronto en {p}",
     "releasedShort": "Ya en {p}",
     "comingShort": "{p}: muy pronto",
-    "soon": "Muy pronto",
-    "releasedChecking": "Ya en {p} (revisando la ficha de la tienda)",
-    "checkingNote": "Puede que aún no aparezca al buscarla en el App Store; estamos revisando por qué. Puedes abrir su página en la tienda con el botón de arriba."
+    "soon": "Muy pronto"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -93,6 +91,7 @@
       ]
     },
     "storm-pickleball": {
+      "storeNote": "La versión que hay ahora en el App Store solo está en japonés e inglés y aún tiene el icono antiguo. Una actualización con los 22 idiomas y el icono nuevo está en revisión.",
       "card": "¿¡Hay una zona donde no puedes golpear!? Reglas curiosas que enganchan, sobre todo si no conoces el deporte.",
       "unique": [
         [

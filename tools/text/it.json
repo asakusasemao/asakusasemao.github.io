@@ -13,9 +13,7 @@
     "coming": "Presto su {p}",
     "releasedShort": "Disponibile su {p}",
     "comingShort": "{p}: in arrivo",
-    "soon": "In arrivo",
-    "releasedChecking": "Disponibile su {p} (verifica della scheda in corso)",
-    "checkingNote": "Potrebbe non comparire ancora nella ricerca dell'App Store: stiamo verificando il motivo. Puoi aprire la sua pagina sullo store con il pulsante qui sopra."
+    "soon": "In arrivo"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -93,6 +91,7 @@
       ]
     },
     "storm-pickleball": {
+      "storeNote": "La versione ora sull'App Store è solo in giapponese e inglese e ha ancora la vecchia icona. Un aggiornamento con tutte le 22 lingue e la nuova icona è in revisione.",
       "card": "C’è una zona dove non puoi colpire!? Regole curiose che creano dipendenza, soprattutto se non conosci questo sport.",
       "unique": [
         [

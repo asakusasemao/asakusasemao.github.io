@@ -13,9 +13,7 @@
     "coming": "Coming soon to {p}",
     "releasedShort": "Out now on {p}",
     "comingShort": "{p}: coming soon",
-    "soon": "Coming soon",
-    "releasedChecking": "Out now on {p} (checking the store listing)",
-    "checkingNote": "It may not show up in App Store search yet, and we're looking into why. You can open its store page with the button above."
+    "soon": "Coming soon"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -93,6 +91,7 @@
       ]
     },
     "storm-pickleball": {
+      "storeNote": "The version currently on the App Store supports Japanese and English only, and still has the old icon. An update with all 22 languages and the new icon is in review.",
       "card": "There's a zone where you can't hit the ball!? Quirky rules that hook you, especially if you're new to the game.",
       "unique": [
         [

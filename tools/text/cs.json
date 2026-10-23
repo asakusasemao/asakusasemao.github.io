@@ -13,9 +13,7 @@
     "coming": "Brzy na {p}",
     "releasedShort": "Už na {p}",
     "comingShort": "{p}: brzy",
-    "soon": "Již brzy",
-    "releasedChecking": "Už na {p} (ověřujeme zobrazení v obchodě)",
-    "checkingNote": "Aplikace se zatím nemusí zobrazovat ve vyhledávání v App Storu a zjišťujeme proč. Stránku v obchodě otevřete tlačítkem výše."
+    "soon": "Již brzy"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -93,6 +91,7 @@
       ]
     },
     "storm-pickleball": {
+      "storeNote": "Verze, která je teď v App Storu, umí jen japonsky a anglicky a má ještě starou ikonu. Aktualizace se všemi 22 jazyky a novou ikonou čeká na schválení.",
       "card": "Na kurtu je místo, kde nesmíš odpálit!? Neobvyklá pravidla, která tě chytnou, hlavně když hru neznáš.",
       "unique": [
         [
