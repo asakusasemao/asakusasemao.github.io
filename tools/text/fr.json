@@ -114,7 +114,7 @@
     "asakusa-circuit": {
       "tagline": "Un jeu de course directement dans le navigateur",
       "card": "Un jeu de course automobile. Foncez dans une vieille ville, sur la côte et à la campagne. Sans installation !",
-      "intro": "Un jeu de course qui démarre dès l'ouverture du navigateur. Quatre voitures très différentes, une vieille ville façon Asakusa, une côte et une ferme, face à vos rivaux.",
+      "intro": "Un jeu de course qui démarre dès l'ouverture du navigateur. Quatre voitures très différentes, une vieille ville, une côte et une ferme, face à vos rivaux.",
       "open": "Jouer dans le navigateur",
       "badges": [
         "Sans installation",
