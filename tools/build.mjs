@@ -143,7 +143,7 @@ const PICKER_SCRIPT = `<script>
 
 // ---------- ページの枠 ----------
 
-function page({ locale, path, title, description, bodyAttr, header, main, footer, license = false, locales = LOCALES }) {
+function page({ locale, path, title, description, bodyAttr, header, main, footer, license = false, locales = LOCALES, font = '' }) {
   const alternates = locales.map((l) => `<link rel="alternate" hreflang="${l}" href="${SITE}${href(l, path)}" />`)
   alternates.push(`<link rel="alternate" hreflang="x-default" href="${SITE}${href('ja', path)}" />`)
   return `<!DOCTYPE html>
@@ -162,7 +162,7 @@ ${description ? `  <meta name="description" content="${escape(description)}" />\
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900${font}&display=swap" />
   <link rel="stylesheet" href="/assets/css/site.css" />
 </head>
 <body ${bodyAttr}>
@@ -545,7 +545,8 @@ ${cards}
     path,
     title: `${app.name} - ${own.tagline}`,
     description: own.intro,
-    bodyAttr: `data-app="${app.id}"`,
+    bodyAttr: `${app.theme ? `class="${app.theme}" ` : ''}data-app="${app.id}"`,
+    font: app.font ?? '',
     header: `    <nav class="header-links">\n      <a href="/apps/privacy.html">${escape(t.site.privacy)}</a>\n    </nav>`,
     main,
     footer: `${links(footer)}

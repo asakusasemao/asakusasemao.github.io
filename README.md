@@ -21,7 +21,7 @@ npm run build    # 言語ごとのページを作り直す
 
 ## ブラウザで使うアプリ
 
-ゲームに限らず、ブラウザで使うアプリは `tools/config.mjs` の `APPS` に `web: true` で足します。紹介ページとトップの「ブラウザで使えるアプリ」に出ます。文言は `tools/text/<言語>.json` の `apps.<id>`、アイコンは `assets/images/<id>-icon.png`。
+ゲームに限らず、ブラウザで使うアプリは `tools/config.mjs` の `APPS` に `web: true` で足します。紹介ページとトップの「ブラウザで使えるアプリ」に出ます。文言は `tools/text/<言語>.json` の `apps.<id>`、アイコンは `assets/images/<id>-icon.png`。紹介ページの見た目を変えるときは、`theme` に `<body>` の class（Asakusa Circuit は `race`）、`font` に足す Google Fonts の指定を書き、`assets/css/site.css` にその class の見た目を足します。
 
 本体は `/web/<id>/` に置きます。元のソースはここに入れません（このリポジトリは公開です）。ブラウザで動くものなので、置いたファイル自体は誰でも取得できます。
 

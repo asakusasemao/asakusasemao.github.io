@@ -14,6 +14,7 @@ export const FALLBACK = 'en'
  * icons は、紹介ページの「どんなゲーム」の節ごとの絵記号（ストアの説明文の ■ の順。ご注意は除く）。null の節は出さない
  * （ピックルボールの舞台は「このゲームならでは」に書いたので外す）
  * web はブラウザで使うアプリ（ゲームに限らない）。url は本体の場所で、紹介ページのボタンから開く。文言は tools/text の apps.<id>
+ * theme は紹介ページの <body> に付ける class（見た目は site.css）。font はそのページで足す Google Fonts の指定
  */
 export const APPS = [
   {
@@ -54,6 +55,8 @@ export const APPS = [
     web: true,
     name: 'Asakusa Circuit',
     url: '/web/asakusa-circuit/',
+    theme: 'race',
+    font: '&family=Barlow+Condensed:ital,wght@1,800',
     icons: ['globe', 'pointer'],
   },
   {
