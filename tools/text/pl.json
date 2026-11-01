@@ -13,17 +13,19 @@
     "coming": "Wkrótce na {p}",
     "releasedShort": "Już na {p}",
     "comingShort": "{p}: wkrótce",
-    "soon": "Wkrótce"
+    "soon": "Wkrótce",
+    "webReleased": "Już w przeglądarce"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "Tworzę<br>aplikacje mobilne.",
-    "desc": "Aplikacje na iOS i Androida tworzone niezależnie.",
+    "h1": "Tworzę<br>aplikacje.",
+    "desc": "Aplikacje na telefony i do przeglądarek, tworzone niezależnie.",
     "tool": "Zapis meczów i statystyki",
     "vollogCard": "Aplikacja siatkarska do zarządzania zawodnikami, zapisu meczów i zbierania statystyk",
     "vollogTerms": "Warunki korzystania z Vollog",
     "series": "Gry sportowe w burzy",
-    "seriesLead": "Zawsze jeden na jednego, zawsze w burzy. Wystarczy stukać i przesuwać, a wiatr, mgła i pioruny przybierają na sile w miarę trwania meczu."
+    "seriesLead": "Zawsze jeden na jednego, zawsze w burzy. Wystarczy stukać i przesuwać, a wiatr, mgła i pioruny przybierają na sile w miarę trwania meczu.",
+    "web": "Aplikacje do przeglądarki"
   },
   "game": {
     "unique": "Tylko w tej grze",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "Wersja dostępna teraz w App Store ma jeszcze starą ikonę. Aktualizacja z nową ikoną czeka na zatwierdzenie.",
       "card": "Długie wymiany. Podtrzymuj grę, a na koniec skończ zbiciem!",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "Od fajerwerków po wzburzone morze",
           "Wszystko zaczyna się w spokojnym porcie nocą, przy fajerwerkach, aż w połowie meczu nagle nadciąga burza. Drugie miejsce: pokład wycieczkowca na wzburzonym morzu."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "Gra wyścigowa wprost w przeglądarce",
+      "card": "Ścigaj się przez stare miasto, wybrzeże i wieś. Bez instalacji!",
+      "intro": "Gra wyścigowa, która startuje od razu po otwarciu przeglądarki. Cztery bardzo różne auta, stare miasto w stylu Asakusy, wybrzeże i farma oraz rywale na torze.",
+      "open": "Graj w przeglądarce",
+      "badges": [
+        "Bez instalacji",
+        "Telefon i PC"
+      ],
+      "unique": [
+        [
+          "Tory pełne zwierząt",
+          "Delfiny i mewy nad morzem, krowy i owce na farmie, ryby skaczące w miejskiej rzece."
+        ],
+        [
+          "Cztery różne auta",
+          "Od lekkiego kompaktu, przez supersamochód z napędem na cztery koła, po ślizgającego się klasyka."
+        ],
+        [
+          "Prawdziwe wrażenia z jazdy",
+          "Symulujemy przyczepność opon i przenoszenie masy, a wspomagania można włączać i wyłączać."
+        ]
+      ],
+      "features": [
+        [
+          "Trzy tory",
+          "Wybierz fikcyjne stare miasto z lampionami, wybrzeże o zachodzie słońca lub zielone wzgórza."
+        ],
+        [
+          "Graj na tym, co masz",
+          "Dotyk w telefonie; klawiatura lub pad na PC."
         ]
       ]
     }

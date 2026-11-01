@@ -13,17 +13,19 @@
     "coming": "Segera hadir di {p}",
     "releasedShort": "Tersedia di {p}",
     "comingShort": "{p}: segera hadir",
-    "soon": "Segera hadir"
+    "soon": "Segera hadir",
+    "webReleased": "Sudah tersedia di browser"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "Saya membuat<br>aplikasi ponsel.",
-    "desc": "Pengembang independen yang membuat aplikasi iOS dan Android.",
+    "h1": "Saya membuat<br>aplikasi.",
+    "desc": "Pengembang independen yang membuat aplikasi untuk ponsel dan browser.",
     "tool": "Catatan & statistik",
     "vollogCard": "Aplikasi bola voli untuk mengelola pemain, mencatat pertandingan, dan merekap statistik",
     "vollogTerms": "Ketentuan Penggunaan Vollog",
     "series": "Game Olahraga Badai",
-    "seriesLead": "Semuanya satu lawan satu di tengah badai. Cukup ketuk dan geser, dan angin, kabut, serta petir makin ganas seiring pertandingan berjalan."
+    "seriesLead": "Semuanya satu lawan satu di tengah badai. Cukup ketuk dan geser, dan angin, kabut, serta petir makin ganas seiring pertandingan berjalan.",
+    "web": "Aplikasi untuk browser"
   },
   "game": {
     "unique": "Hanya di game ini",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "Versi yang ada di App Store saat ini ikonnya masih yang lama. Pembaruan dengan ikon baru sedang ditinjau.",
       "card": "Reli panjang. Jaga bola tetap hidup, lalu akhiri dengan smes!",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "Dari kembang api ke laut badai",
           "Dimulai di pelabuhan yang tenang pada malam hari dengan kembang api, lalu badai datang tiba-tiba di tengah pertandingan. Arena lainnya: dek kapal pesiar di tengah laut yang bergelora."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "Game balap yang langsung dimainkan di browser",
+      "card": "Balapan melewati kota tua, pesisir, dan peternakan. Tanpa perlu instal!",
+      "intro": "Game balap yang langsung dimulai begitu browser dibuka. Kendarai empat mobil berbeda di kota tua bergaya Asakusa, pesisir, dan peternakan, melawan para rival.",
+      "open": "Main di browser",
+      "badges": [
+        "Tanpa instal",
+        "Ponsel dan PC"
+      ],
+      "unique": [
+        [
+          "Lintasan penuh hewan",
+          "Lumba-lumba dan camar di laut, sapi dan domba di peternakan, ikan melompat di sungai kota."
+        ],
+        [
+          "Empat mobil berbeda",
+          "Dari mobil kompak ringan hingga supercar penggerak semua roda dan mobil klasik yang mudah selip."
+        ],
+        [
+          "Rasa berkendara yang nyata",
+          "Cengkeraman ban dan perpindahan bobot disimulasikan, dan bantuan mengemudi bisa diatur."
+        ]
+      ],
+      "features": [
+        [
+          "Tiga lintasan",
+          "Pilih kota tua fiktif berhias lampion, pesisir saat senja, atau perbukitan peternakan."
+        ],
+        [
+          "Main dengan yang Anda punya",
+          "Sentuh di ponsel; keyboard atau gamepad di PC."
         ]
       ]
     }

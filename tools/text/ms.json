@@ -13,17 +13,19 @@
     "coming": "Akan datang ke {p}",
     "releasedShort": "Kini di {p}",
     "comingShort": "{p}: akan datang",
-    "soon": "Akan datang"
+    "soon": "Akan datang",
+    "webReleased": "Kini di pelayar"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "Saya membina<br>aplikasi telefon.",
-    "desc": "Pembangun bebas yang membina aplikasi iOS dan Android.",
+    "h1": "Saya membina<br>aplikasi.",
+    "desc": "Pembangun bebas yang membina aplikasi untuk telefon dan pelayar.",
     "tool": "Rekod & statistik",
     "vollogCard": "Aplikasi bola tampar untuk mengurus pemain, merekod perlawanan dan mengumpul statistik",
     "vollogTerms": "Terma Penggunaan Vollog",
     "series": "Permainan Sukan dalam Ribut",
-    "seriesLead": "Semuanya satu lawan satu dalam ribut. Hanya ketik dan leret, dan angin, kabus serta kilat makin ganas apabila perlawanan berlanjutan."
+    "seriesLead": "Semuanya satu lawan satu dalam ribut. Hanya ketik dan leret, dan angin, kabus serta kilat makin ganas apabila perlawanan berlanjutan.",
+    "web": "Aplikasi untuk pelayar"
   },
   "game": {
     "unique": "Hanya dalam permainan ini",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "Versi yang kini di App Store masih menggunakan ikon lama. Kemas kini dengan ikon baharu sedang disemak.",
       "card": "Rali yang panjang. Teruskan bola, kemudian tamatkan dengan rejaman!",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "Dari bunga api ke laut bergelora",
           "Bermula di pelabuhan yang tenang pada waktu malam dengan bunga api, kemudian ribut tiba-tiba melanda di tengah perlawanan. Lokasi satu lagi: dek kapal persiaran di laut yang bergelora."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "Permainan lumba yang terus dimainkan di pelayar",
+      "card": "Berlumba melalui bandar lama, pantai dan ladang. Tak perlu pasang!",
+      "intro": "Permainan lumba yang bermula sebaik pelayar dibuka. Pandu empat kereta berbeza di bandar lama gaya Asakusa, pantai dan ladang, menentang para pesaing.",
+      "open": "Main di pelayar",
+      "badges": [
+        "Tak perlu pasang",
+        "Telefon dan PC"
+      ],
+      "unique": [
+        [
+          "Litar penuh haiwan",
+          "Lumba-lumba dan camar di laut, lembu dan biri-biri di ladang, ikan melompat di sungai bandar."
+        ],
+        [
+          "Empat kereta berbeza",
+          "Daripada kereta kompak ringan hingga superkar pacuan semua roda dan kereta klasik yang mudah tergelincir."
+        ],
+        [
+          "Rasa pemanduan sebenar",
+          "Cengkaman tayar dan perpindahan berat disimulasikan, dan bantuan pemanduan boleh dilaraskan."
+        ]
+      ],
+      "features": [
+        [
+          "Tiga litar",
+          "Pilih bandar lama rekaan berhias tanglung, pantai waktu senja atau bukit ladang."
+        ],
+        [
+          "Main dengan apa yang ada",
+          "Sentuh pada telefon; papan kekunci atau gamepad pada PC."
         ]
       ]
     }

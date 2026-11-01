@@ -42,6 +42,7 @@
 [data-app="storm-tennis"]    { --accent: var(--mint); }
 [data-app="storm-pickleball"] { --accent: var(--lilac); }
 [data-app="vollog"]          { --accent: var(--coral); }
+[data-app="asakusa-circuit"] { --accent: var(--coral); }
 
 body {
   font-family: var(--font-body);
@@ -560,6 +561,10 @@ html[lang="en"] .lang-btn[data-lang="en"] {
   font-size: 10px;
   font-weight: 700;
   opacity: 0.8;
+}
+
+.store-btn-web svg {
+  fill: currentColor;
 }
 
 .store-btn-soon,

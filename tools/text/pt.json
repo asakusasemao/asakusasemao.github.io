@@ -13,17 +13,19 @@
     "coming": "Em breve no {p}",
     "releasedShort": "Já no {p}",
     "comingShort": "{p}: em breve",
-    "soon": "Em breve"
+    "soon": "Em breve",
+    "webReleased": "Já no navegador"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "Eu crio apps<br>para celular.",
-    "desc": "Apps para iOS e Android, desenvolvidos de forma independente.",
+    "h1": "Eu crio<br>apps.",
+    "desc": "Apps para celular e navegador, desenvolvidos de forma independente.",
     "tool": "Súmulas e estatísticas",
     "vollogCard": "App de vôlei para gerenciar jogadores, registrar partidas e reunir estatísticas",
     "vollogTerms": "Termos de Uso do Vollog",
     "series": "Jogos de esporte na tempestade",
-    "seriesLead": "Sempre um contra um, sempre na tempestade. Só toques e deslizes, e o vento, a neblina e os raios ficam mais fortes conforme a partida avança."
+    "seriesLead": "Sempre um contra um, sempre na tempestade. Só toques e deslizes, e o vento, a neblina e os raios ficam mais fortes conforme a partida avança.",
+    "web": "Apps para o navegador"
   },
   "game": {
     "unique": "Só neste jogo",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "A versão que está na App Store agora ainda usa o ícone antigo. Uma atualização com o ícone novo está em análise.",
       "card": "Ralis longos. Mantenha a bola no ar e feche com uma cortada!",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "Dos fogos de artifício ao mar revolto",
           "Tudo começa num porto tranquilo à noite, com fogos de artifício, até que a tempestade chega de repente no meio da partida. O outro cenário: o convés de um cruzeiro num mar revolto."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "Um jogo de corrida direto no navegador",
+      "card": "Corra por uma cidade antiga, pela costa e pelo campo. Sem instalar nada!",
+      "intro": "Um jogo de corrida que começa assim que você abre o navegador. Pilote quatro carros bem diferentes em uma cidade antiga no estilo de Asakusa, na costa e em uma fazenda, contra os rivais.",
+      "open": "Jogar no navegador",
+      "badges": [
+        "Sem instalação",
+        "Celular e PC"
+      ],
+      "unique": [
+        [
+          "Circuitos cheios de animais",
+          "Golfinhos e gaivotas no mar, vacas e ovelhas na fazenda, peixes saltando no rio da cidade."
+        ],
+        [
+          "Quatro carros diferentes",
+          "De um compacto leve a um superesportivo com tração integral e um clássico escorregadio."
+        ],
+        [
+          "Sensação real de direção",
+          "A aderência e a transferência de peso são simuladas, e as ajudas podem ser ligadas ou desligadas."
+        ]
+      ],
+      "features": [
+        [
+          "Três circuitos",
+          "Escolha uma cidade antiga fictícia com lanternas, a costa ao pôr do sol ou colinas verdes."
+        ],
+        [
+          "Jogue com o que tiver",
+          "Toque no celular; teclado ou controle no PC."
         ]
       ]
     }

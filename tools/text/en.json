@@ -13,17 +13,19 @@
     "coming": "Coming soon to {p}",
     "releasedShort": "Out now on {p}",
     "comingShort": "{p}: coming soon",
-    "soon": "Coming soon"
+    "soon": "Coming soon",
+    "webReleased": "Out now in your browser"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "I make<br>smartphone apps.",
-    "desc": "An independent developer making apps for iOS and Android.",
+    "h1": "I make<br>apps.",
+    "desc": "An independent developer making apps for phones and web browsers.",
     "tool": "Stats & scoring",
     "vollogCard": "Manage players, record matches, and track stats for volleyball",
     "vollogTerms": "Vollog Terms of Use",
     "series": "Storm Sports Games",
-    "seriesLead": "All one-on-one, all in a storm. Just taps and swipes, and the wind, fog, and lightning grow wilder as the match goes on."
+    "seriesLead": "All one-on-one, all in a storm. Just taps and swipes, and the wind, fog, and lightning grow wilder as the match goes on.",
+    "web": "Apps for your browser"
   },
   "game": {
     "unique": "Only in this game",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "The version currently on the App Store still has the old icon. An update with the new icon is in review.",
       "card": "Long rallies. Keep the ball alive, then finish it with a spike!",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "From fireworks to a stormy sea",
           "Start in a calm harbor at night, with fireworks overhead, until a storm suddenly rolls in mid-game. The other venue: the deck of a cruise ship on a raging sea."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "A racing game you can play right in your browser",
+      "card": "Race through an old town, along the coast and across farmland. No install needed!",
+      "intro": "A racing game that starts as soon as you open your browser. Take four very different cars around an Asakusa-style old town, a coast and a farm, against a field of rivals.",
+      "open": "Play in your browser",
+      "badges": [
+        "No install needed",
+        "Phone and PC"
+      ],
+      "unique": [
+        [
+          "Courses full of animals",
+          "Dolphins and gulls by the sea, cows and sheep on the farm, fish jumping in the town's river. Enjoy the scenery as you race."
+        ],
+        [
+          "Four distinct cars",
+          "From a light compact to an all-wheel-drive supercar and a slippery classic. Each looks and drives differently."
+        ],
+        [
+          "A real feel for the road",
+          "Tire grip and weight transfer are simulated, and you can turn the driving aids on or off."
+        ]
+      ],
+      "features": [
+        [
+          "Three courses",
+          "Choose a fictional lantern-lit old town, a sunset coast, or green farm hills."
+        ],
+        [
+          "Play with what you have",
+          "Touch on a phone; keyboard or gamepad on a PC."
         ]
       ]
     }

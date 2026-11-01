@@ -56,6 +56,7 @@ const ICONS = {
   swap: '<path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/>',
   palette:
     '<circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>',
+  play: '<polygon points="6 3 20 12 6 21 6 3"/>',
   globe: '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
 }
 const icon = (name) => `<!-- Lucide: ${name} --><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`
@@ -199,6 +200,7 @@ function platforms(app) {
 
 /** トップのカードに出す状態。公開しているものがあれば、それを出す */
 function status(app, s) {
+  if (app.web) return { live: true, text: escape(s.webReleased) }
   const { live, soon } = platforms(app)
   return live.length
     ? { live: true, text: fill(s.released, { p: live.join(' / ') }) }
@@ -250,10 +252,10 @@ function home(locale) {
     const storm = app.storm ? STORE[app.id][locale] : null
     // Vollog に合う言語がなければ（マレー語）、英語のページへつなぐ
     const vollogLocale = VOLLOG_APP.locales.includes(locale) ? locale : FALLBACK
-    const name = storm ? storm.name : VOLLOG[vollogLocale].name
-    const line = storm ? t.apps[app.id].card : t.home.vollogCard
+    const name = app.web ? app.name : storm ? storm.name : VOLLOG[vollogLocale].name
+    const line = app.web || storm ? t.apps[app.id].card : t.home.vollogCard
     const st = status(app, t.site)
-    const url = href(app.storm ? locale : vollogLocale, `apps/${app.id}/`)
+    const url = href(app.storm || app.web ? locale : vollogLocale, `apps/${app.id}/`)
     return `      <a class="app-card" data-app="${app.id}" href="${url}">
         <div class="app-card-top">
           <img src="/assets/images/${app.id}-icon.png" alt="${fill(t.site.iconAlt, { name })}" />
@@ -293,9 +295,16 @@ ${cards(APPS.filter((a) => a.storm))}
     </section>
 
     <section class="app-group">
+      <h2>${escape(t.home.web)}</h2>
+      <div class="apps">
+${cards(APPS.filter((a) => a.web))}
+      </div>
+    </section>
+
+    <section class="app-group">
       <h2>${escape(t.home.tool)}</h2>
       <div class="apps">
-${cards(APPS.filter((a) => !a.storm))}
+${cards(APPS.filter((a) => !a.storm && !a.web))}
       </div>
     </section>
   </main>`
@@ -461,6 +470,91 @@ ${cards}
   })
 }
 
+// ---------- ブラウザで使うアプリの紹介ページ ----------
+
+function webAppPage(app, locale) {
+  const t = TEXT[locale]
+  const own = t.apps[app.id]
+  const path = `apps/${app.id}/`
+  const badges = [t.game.badges[0], t.game.badges[1], ...own.badges, t.game.badges[3]]
+    .map((b) => `<span class="badge accent">${escape(b)}</span>`)
+  const unique = own.unique
+    .map(
+      ([title, body], i) => `        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">${i + 1}</div>
+          <h3>${escape(title)}</h3>
+          <p>${escape(body)}</p>
+        </div>`,
+    )
+    .join('\n')
+  const cards = own.features
+    .map(
+      ([title, body], i) => `        <div class="feature-card">
+          <div class="feature-icon">
+            ${icon(app.icons[i])}
+          </div>
+          <h3>${escape(title)}</h3>
+          <p>${escape(body)}</p>
+        </div>`,
+    )
+    .join('\n')
+
+  const main = `  <main>
+    ${picker(locale, path)}
+
+    <div class="hero">
+      <img class="app-icon" src="/assets/images/${app.id}-icon.png" alt="${fill(t.site.iconAlt, { name: app.name })}" />
+      <div class="hero-text">
+        <h1>
+          <span>${escape(own.tagline)}</span>
+          ${escape(app.name)}
+        </h1>
+        <p>${escape(own.intro)}</p>
+        <div class="badge-row">
+          ${badges.join('\n          ')}
+        </div>
+      </div>
+      <div class="store-buttons">
+        <a class="store-btn store-btn-web" href="${app.url}?lang=${locale}">
+          ${icon('play')}
+          <span class="store-btn-label">${escape(own.open)}</span>
+        </a>
+      </div>
+    </div>
+
+    <section>
+      <h2>${escape(t.game.unique)}</h2>
+      <div class="feature-grid">
+${unique}
+      </div>
+    </section>
+
+    <section>
+      <h2>${escape(t.game.features)}</h2>
+      <div class="feature-grid">
+${cards}
+      </div>
+    </section>
+  </main>`
+
+  const footer = [[t.site.home, href(locale)], [t.site.privacy, '/apps/privacy.html'], [t.site.contact, CONTACT]]
+  if (locale === 'ja') footer.push([t.site.tokushohoLong, '/apps/tokushoho.html'])
+
+  return page({
+    locale,
+    path,
+    title: `${app.name} - ${own.tagline}`,
+    description: own.intro,
+    bodyAttr: `data-app="${app.id}"`,
+    header: `    <nav class="header-links">\n      <a href="/apps/privacy.html">${escape(t.site.privacy)}</a>\n    </nav>`,
+    main,
+    footer: `${links(footer)}
+    <p>© 2026 AsakusaSemao. All rights reserved.</p>
+    <p>${fill(t.site.icons).replace('{lucide}', '<a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a>')}</p>`,
+    license: true,
+  })
+}
+
 // ---------- Vollog の紹介ページ ----------
 
 const VOLLOG_ICONS = ['users', 'clipboard', 'chart', 'export', 'swap', 'palette']
@@ -589,6 +683,7 @@ for (const locale of LOCALES) {
   const base = locale === 'ja' ? '' : `${locale}/`
   write(`${base}index.html`, home(locale))
   for (const app of APPS.filter((a) => a.storm)) write(`${base}apps/${app.id}/index.html`, stormPage(app, locale))
+  for (const app of APPS.filter((a) => a.web)) write(`${base}apps/${app.id}/index.html`, webAppPage(app, locale))
   if (VOLLOG_APP.locales.includes(locale)) write(`${base}apps/vollog/index.html`, vollogPage(locale))
 }
 console.log(`${LOCALES.length} 言語（Vollog は ${VOLLOG_APP.locales.length} 言語）`)

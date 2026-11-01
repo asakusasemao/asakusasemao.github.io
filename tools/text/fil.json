@@ -13,17 +13,19 @@
     "coming": "Malapit na sa {p}",
     "releasedShort": "Available na sa {p}",
     "comingShort": "{p}: malapit na",
-    "soon": "Malapit na"
+    "soon": "Malapit na",
+    "webReleased": "Available na sa browser"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "Gumagawa ako ng<br>mga app sa phone.",
-    "desc": "Isang independent developer na gumagawa ng mga app para sa iOS at Android.",
+    "h1": "Gumagawa ako ng<br>mga app.",
+    "desc": "Isang independent developer na gumagawa ng mga app para sa phone at browser.",
     "tool": "Record at stats",
     "vollogCard": "Volleyball app para sa pag-manage ng players, pag-record ng laban, at pag-compute ng stats",
     "vollogTerms": "Mga Tuntunin ng Paggamit ng Vollog",
     "series": "Sports Games sa Unos",
-    "seriesLead": "Lahat ay one-on-one, lahat sa gitna ng unos. Tap at swipe lang, at lalong lumalakas ang hangin, hamog, at kidlat habang tumatagal ang laro."
+    "seriesLead": "Lahat ay one-on-one, lahat sa gitna ng unos. Tap at swipe lang, at lalong lumalakas ang hangin, hamog, at kidlat habang tumatagal ang laro.",
+    "web": "Mga app para sa browser"
   },
   "game": {
     "unique": "Dito lang sa larong ito",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "Luma pa ang icon ng bersyong nasa App Store ngayon. Nire-review pa ang update na may bagong icon.",
       "card": "Mahahabang rally. Panatilihin ang bola sa ere, saka tapusin sa spike!",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "Mula paputok hanggang maalong dagat",
           "Nagsisimula sa tahimik na pantalan sa gabi na may paputok, hanggang biglang dumating ang unos sa gitna ng laban. Ang isa pang lugar: ang deck ng cruise ship sa gitna ng maalong dagat."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "Larong karera na nilalaro mismo sa browser",
+      "card": "Makipagkarera sa lumang bayan, baybayin, at bukid. Walang kailangang i-install!",
+      "intro": "Larong karera na nagsisimula agad pagbukas ng browser. Magmaneho ng apat na magkakaibang kotse sa lumang bayang estilong Asakusa, baybayin, at bukid laban sa mga karibal.",
+      "open": "Maglaro sa browser",
+      "badges": [
+        "Walang install",
+        "Phone at PC"
+      ],
+      "unique": [
+        [
+          "Mga kursong puno ng hayop",
+          "Mga dolphin at gull sa dagat, baka at tupa sa bukid, tumatalong isda sa ilog ng bayan."
+        ],
+        [
+          "Apat na kakaibang kotse",
+          "Mula sa magaang compact hanggang all-wheel drive na supercar at madulas na klasikong kotse."
+        ],
+        [
+          "Tunay na pakiramdam",
+          "Sinisimulate ang kapit ng gulong at paglipat ng bigat, at maaaring i-on o i-off ang mga tulong."
+        ]
+      ],
+      "features": [
+        [
+          "Tatlong kurso",
+          "Pumili ng kathang-isip na lumang bayan na may parol, baybayin sa dapithapon, o berdeng burol."
+        ],
+        [
+          "Laruin sa kung anong meron ka",
+          "Touch sa phone; keyboard o gamepad sa PC."
         ]
       ]
     }

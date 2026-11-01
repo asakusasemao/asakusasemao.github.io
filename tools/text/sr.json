@@ -13,17 +13,19 @@
     "coming": "Uskoro na {p}",
     "releasedShort": "Već na {p}",
     "comingShort": "{p}: uskoro",
-    "soon": "Uskoro"
+    "soon": "Uskoro",
+    "webReleased": "Već u pregledaču"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "Pravim<br>aplikacije za telefon.",
-    "desc": "Nezavisan razvoj aplikacija za iOS i Android.",
+    "h1": "Pravim<br>aplikacije.",
+    "desc": "Nezavisan razvoj aplikacija za telefone i veb-pregledače.",
     "tool": "Zapisnik i statistika",
     "vollogCard": "Odbojkaška aplikacija za vođenje igrača, zapisnik utakmica i statistiku",
     "vollogTerms": "Uslovi korišćenja aplikacije Vollog",
     "series": "Sportske igre u oluji",
-    "seriesLead": "Uvek jedan na jedan, uvek u oluji. Samo dodir i prevlačenje, a vetar, magla i munje su sve jači kako meč odmiče."
+    "seriesLead": "Uvek jedan na jedan, uvek u oluji. Samo dodir i prevlačenje, a vetar, magla i munje su sve jači kako meč odmiče.",
+    "web": "Aplikacije za pregledač"
   },
   "game": {
     "unique": "Samo u ovoj igri",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "Verzija koja je sada na App Store-u ima staru ikonicu. Ažuriranje sa novom ikonicom je na pregledu.",
       "card": "Duge akcije. Održi loptu u igri, pa završi smečom!",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "Od vatrometa do uzburkanog mora",
           "Sve počinje u mirnoj luci noću, uz vatromet, dok usred meča iznenada ne stigne oluja. Drugo mesto: paluba kruzera na uzburkanom moru."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "Trkačka igra koja se igra u pregledaču",
+      "card": "Trkaj se kroz stari grad, uz obalu i preko sela. Bez instalacije!",
+      "intro": "Trkačka igra koja počinje čim otvoriš pregledač. Četiri veoma različita auta, stari grad u stilu Asakuse, obala i farma, protiv rivala.",
+      "open": "Igraj u pregledaču",
+      "badges": [
+        "Bez instalacije",
+        "Telefon i PC"
+      ],
+      "unique": [
+        [
+          "Staze pune životinja",
+          "Delfini i galebovi na moru, krave i ovce na farmi, ribe koje iskaču u gradskoj reci."
+        ],
+        [
+          "Četiri različita auta",
+          "Od laganog kompakta do superautomobila sa pogonom na sve točkove i klasika koji lako proklizava."
+        ],
+        [
+          "Pravi osećaj vožnje",
+          "Simulirani su prianjanje guma i prenos težine, a pomoć u vožnji možeš da uključiš ili isključiš."
+        ]
+      ],
+      "features": [
+        [
+          "Tri staze",
+          "Izaberi izmišljeni stari grad sa lampionima, obalu u sumrak ili zelena brda."
+        ],
+        [
+          "Igraj na čemu želiš",
+          "Dodir na telefonu; tastatura ili gejmped na računaru."
         ]
       ]
     }

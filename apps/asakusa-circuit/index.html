@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<!-- tools/build.mjs が作ったページ。直すときは tools/ の文言かスクリプトを直して、npm run build -->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var LOCALES = ["id","ms","cs","de","en","es","fil","fr","it","pl","pt","sr","vi","tr","ru","uk","hi","th","ja","zh-Hans","zh-Hant","ko"], HERE = "ja", PATH = "apps/asakusa-circuit/";
+      function candidates(tag) {
+        try {
+          var l = new Intl.Locale(tag).maximize();
+          return [tag, l.language + '-' + l.script + '-' + l.region, l.language + '-' + l.script, l.language + '-' + l.region, l.language];
+        } catch (e) {
+          return [tag];
+        }
+      }
+      function match(tags) {
+        for (var i = 0; i < tags.length; i++) {
+          var c = candidates(tags[i]);
+          for (var j = 0; j < c.length; j++) {
+            for (var k = 0; k < LOCALES.length; k++) if (LOCALES[k].toLowerCase() === String(c[j]).toLowerCase()) return LOCALES[k];
+          }
+        }
+        return null;
+      }
+      var want = null, asked = new URLSearchParams(location.search).get('lang');
+      if (asked) {
+        want = match([asked]) || "en";
+        try { localStorage.setItem('site-lang', want); } catch (e) {}
+      } else if (HERE === 'ja') {
+        try { want = localStorage.getItem('site-lang'); } catch (e) {}
+        if (LOCALES.indexOf(want) < 0) want = match(navigator.languages || [navigator.language || 'ja']) || "en";
+      }
+      if (want && want !== HERE) {
+        location.replace((want === 'ja' ? '/' : '/' + want + '/') + PATH);
+        return;
+      }
+      // このページの言語を覚える（利用規約などから / へ戻ったとき、最後に見ていた言語に戻すため）。
+      // 覚えている言語がこのページにないとき（Vollog のページを開いたマレー語の人）は、上書きしない
+      try {
+        var saved = localStorage.getItem('site-lang');
+        if (!saved || LOCALES.indexOf(saved) >= 0) localStorage.setItem('site-lang', HERE);
+      } catch (e) {}
+    })();
+  </script>
+  <title>Asakusa Circuit - ブラウザですぐ遊べるレースゲーム</title>
+  <meta name="description" content="ブラウザを開くだけで走り出せるレースゲームです。浅草風の下町、海岸、牧場の3コースを、性格の違う4台の車で走り、ライバルたちと競います。" />
+  <link rel="canonical" href="https://asakusasemao.com/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="id" href="https://asakusasemao.com/id/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="ms" href="https://asakusasemao.com/ms/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="cs" href="https://asakusasemao.com/cs/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="de" href="https://asakusasemao.com/de/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="en" href="https://asakusasemao.com/en/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="es" href="https://asakusasemao.com/es/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="fil" href="https://asakusasemao.com/fil/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="fr" href="https://asakusasemao.com/fr/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="it" href="https://asakusasemao.com/it/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="pl" href="https://asakusasemao.com/pl/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="pt" href="https://asakusasemao.com/pt/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="sr" href="https://asakusasemao.com/sr/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="vi" href="https://asakusasemao.com/vi/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="tr" href="https://asakusasemao.com/tr/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="ru" href="https://asakusasemao.com/ru/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="uk" href="https://asakusasemao.com/uk/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="hi" href="https://asakusasemao.com/hi/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="th" href="https://asakusasemao.com/th/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="ja" href="https://asakusasemao.com/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://asakusasemao.com/zh-Hans/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://asakusasemao.com/zh-Hant/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="ko" href="https://asakusasemao.com/ko/apps/asakusa-circuit/" />
+  <link rel="alternate" hreflang="x-default" href="https://asakusasemao.com/apps/asakusa-circuit/" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body data-app="asakusa-circuit">
+
+  <header class="site-header">
+    <a class="brand" href="/">AsakusaSemao</a>
+    <nav class="header-links">
+      <a href="/apps/privacy.html">プライバシーポリシー</a>
+    </nav>
+  </header>
+
+  <main>
+    <details class="lang-picker">
+      <summary aria-label="言語"><!-- Lucide: globe --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span lang="ja">日本語</span></summary>
+      <ul>
+          <li><a href="/id/apps/asakusa-circuit/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ms/apps/asakusa-circuit/" hreflang="ms" lang="ms" data-lang="ms">Bahasa Melayu</a></li>
+          <li><a href="/cs/apps/asakusa-circuit/" hreflang="cs" lang="cs" data-lang="cs">Čeština</a></li>
+          <li><a href="/de/apps/asakusa-circuit/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="/en/apps/asakusa-circuit/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/es/apps/asakusa-circuit/" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a href="/fil/apps/asakusa-circuit/" hreflang="fil" lang="fil" data-lang="fil">Filipino</a></li>
+          <li><a href="/fr/apps/asakusa-circuit/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="/it/apps/asakusa-circuit/" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="/pl/apps/asakusa-circuit/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li>
+          <li><a href="/pt/apps/asakusa-circuit/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li>
+          <li><a href="/sr/apps/asakusa-circuit/" hreflang="sr" lang="sr" data-lang="sr">Srpski</a></li>
+          <li><a href="/vi/apps/asakusa-circuit/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li>
+          <li><a href="/tr/apps/asakusa-circuit/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          <li><a href="/ru/apps/asakusa-circuit/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li>
+          <li><a href="/uk/apps/asakusa-circuit/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li>
+          <li><a href="/hi/apps/asakusa-circuit/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li>
+          <li><a href="/th/apps/asakusa-circuit/" hreflang="th" lang="th" data-lang="th">ไทย</a></li>
+          <li><a href="/apps/asakusa-circuit/" hreflang="ja" lang="ja" data-lang="ja" aria-current="page">日本語</a></li>
+          <li><a href="/zh-Hans/apps/asakusa-circuit/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li>
+          <li><a href="/zh-Hant/apps/asakusa-circuit/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li>
+          <li><a href="/ko/apps/asakusa-circuit/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+      </ul>
+    </details>
+
+    <div class="hero">
+      <img class="app-icon" src="/assets/images/asakusa-circuit-icon.png" alt="Asakusa Circuitのアイコン" />
+      <div class="hero-text">
+        <h1>
+          <span>ブラウザですぐ遊べるレースゲーム</span>
+          Asakusa Circuit
+        </h1>
+        <p>ブラウザを開くだけで走り出せるレースゲームです。浅草風の下町、海岸、牧場の3コースを、性格の違う4台の車で走り、ライバルたちと競います。</p>
+        <div class="badge-row">
+          <span class="badge accent">無料で遊べる</span>
+          <span class="badge accent">アカウント登録不要</span>
+          <span class="badge accent">インストール不要</span>
+          <span class="badge accent">スマホ・PC対応</span>
+          <span class="badge accent">22の言語に対応</span>
+        </div>
+      </div>
+      <div class="store-buttons">
+        <a class="store-btn store-btn-web" href="/web/asakusa-circuit/?lang=ja">
+          <!-- Lucide: play --><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <span class="store-btn-label">ブラウザで遊ぶ</span>
+        </a>
+      </div>
+    </div>
+
+    <section>
+      <h2>このゲームならでは</h2>
+      <div class="feature-grid">
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">1</div>
+          <h3>動物たちのいるコース</h3>
+          <p>海にはイルカとカモメ、牧場には牛と羊、下町の川には跳ねる魚。走りながら景色も楽しめます。</p>
+        </div>
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">2</div>
+          <h3>個性の違う4台の車</h3>
+          <p>軽いコンパクトから四輪駆動のスーパーカー、滑りやすいクラシックカーまで。性能も見た目も違います。</p>
+        </div>
+        <div class="feature-card unique-card">
+          <div class="feature-icon unique-number" aria-hidden="true">3</div>
+          <h3>走りの手応え</h3>
+          <p>タイヤのグリップや荷重の移動まで計算しています。運転補助は好みで切り替えられます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>どんなゲーム</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: globe --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          <h3>3つのコース</h3>
+          <p>提灯の並ぶ架空の下町、夕日の海岸、緑の丘を走る牧場から選べます。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: pointer --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+          </div>
+          <h3>手元のもので操作</h3>
+          <p>スマホはタッチ、PCはキーボードやゲームパッドで遊べます。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--
+    このページの絵記号（「Lucide: ...」と書いてある SVG）は、Lucide（https://lucide.dev）のもの。
+    ライセンスは、著作権表示と許諾の文を写しに残すことを求めるので、ここに置く。絵記号を足しても、この文はそのままでよい。
+
+    ISC License
+
+    Copyright (c) 2026 Lucide Icons and Contributors
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+    ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+    Lucide の絵記号の一部は Feather（https://feathericons.com）がもとで、そちらは次のライセンス。
+
+    The MIT License (MIT) (for the icons derived from the Feather project)
+
+    Copyright (c) 2013-present Cole Bemis
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+  -->
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/">トップ</a>
+      <a href="/apps/privacy.html">プライバシーポリシー</a>
+      <a href="mailto:asakusasemao@gmail.com">お問い合わせ</a>
+      <a href="/apps/tokushoho.html">特定商取引法に基づく表記</a>
+    </div>
+    <p>© 2026 AsakusaSemao. All rights reserved.</p>
+    <p>アイコン: <a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a>（ISC License）</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.lang-picker a[data-lang]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        try { localStorage.setItem('site-lang', a.dataset.lang); } catch (e) {}
+      });
+    });
+  </script>
+</body>
+</html>

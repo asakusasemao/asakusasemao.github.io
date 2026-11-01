@@ -13,17 +13,19 @@
     "coming": "Bald für {p}",
     "releasedShort": "Jetzt für {p}",
     "comingShort": "{p}: bald verfügbar",
-    "soon": "Bald verfügbar"
+    "soon": "Bald verfügbar",
+    "webReleased": "Jetzt im Browser"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "Ich mache<br>Smartphone-Apps.",
-    "desc": "Apps für iOS und Android, unabhängig entwickelt.",
+    "h1": "Ich mache<br>Apps.",
+    "desc": "Apps für Smartphones und Webbrowser, unabhängig entwickelt.",
     "tool": "Statistik & Spielberichte",
     "vollogCard": "Volleyball-App für Spielerverwaltung, Spielberichte und Statistiken",
     "vollogTerms": "Nutzungsbedingungen von Vollog",
     "series": "Sportspiele im Sturm",
-    "seriesLead": "Immer eins gegen eins, immer im Sturm. Nur Tippen und Wischen – und je weiter das Match läuft, desto wilder werden Wind, Nebel und Blitze."
+    "seriesLead": "Immer eins gegen eins, immer im Sturm. Nur Tippen und Wischen – und je weiter das Match läuft, desto wilder werden Wind, Nebel und Blitze.",
+    "web": "Apps für den Browser"
   },
   "game": {
     "unique": "Nur in diesem Spiel",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "Die aktuelle Version im App Store hat noch das alte Icon. Ein Update mit dem neuen Icon wird gerade geprüft.",
       "card": "Lange Ballwechsel. Halte den Ball im Spiel – und dann der Schmetterball zum Punkt!",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "Vom Feuerwerk aufs stürmische Meer",
           "Es beginnt in einem ruhigen Hafen bei Nacht mit Feuerwerk, bis mitten im Spiel plötzlich ein Sturm aufzieht. Der zweite Schauplatz: das Deck eines Kreuzfahrtschiffs auf tosender See."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "Ein Rennspiel, das direkt im Browser läuft",
+      "card": "Rennen durch die Altstadt, an der Küste und übers Land. Ganz ohne Installation!",
+      "intro": "Ein Rennspiel, das sofort im Browser startet. Fahre vier sehr unterschiedliche Autos durch eine Altstadt im Asakusa-Stil, an der Küste und auf dem Land gegen deine Rivalen.",
+      "open": "Im Browser spielen",
+      "badges": [
+        "Ohne Installation",
+        "Smartphone und PC"
+      ],
+      "unique": [
+        [
+          "Strecken voller Tiere",
+          "Delfine und Möwen am Meer, Kühe und Schafe auf dem Land, springende Fische im Fluss der Stadt."
+        ],
+        [
+          "Vier verschiedene Autos",
+          "Vom leichten Kompaktwagen über den Supersportwagen mit Allrad bis zum rutschigen Klassiker."
+        ],
+        [
+          "Echtes Fahrgefühl",
+          "Reifengrip und Gewichtsverlagerung werden simuliert, die Fahrhilfen sind schaltbar."
+        ]
+      ],
+      "features": [
+        [
+          "Drei Strecken",
+          "Wähle eine erfundene Altstadt mit Laternen, die Küste bei Sonnenuntergang oder grüne Hügel."
+        ],
+        [
+          "Spiele, womit du willst",
+          "Touch auf dem Smartphone, Tastatur oder Gamepad am PC."
         ]
       ]
     }

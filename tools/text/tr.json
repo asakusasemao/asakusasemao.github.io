@@ -13,17 +13,19 @@
     "coming": "Yakında {p} için",
     "releasedShort": "{p} için çıktı",
     "comingShort": "{p}: yakında",
-    "soon": "Yakında"
+    "soon": "Yakında",
+    "webReleased": "Tarayıcıda çıktı"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "Akıllı telefon<br>uygulamaları yapıyorum.",
-    "desc": "iOS ve Android için uygulama yapan bağımsız bir geliştirici.",
+    "h1": "Uygulamalar<br>yapıyorum.",
+    "desc": "Telefon ve web tarayıcıları için uygulama yapan bağımsız bir geliştirici.",
     "tool": "Maç kaydı ve istatistik",
     "vollogCard": "Oyuncuları yönetmek, maçları kaydetmek ve istatistik toplamak için voleybol uygulaması",
     "vollogTerms": "Vollog Kullanım Koşulları",
     "series": "Fırtınada Spor Oyunları",
-    "seriesLead": "Hepsi bire bir, hepsi fırtınada. Sadece dokun ve kaydır; maç ilerledikçe rüzgâr, sis ve yıldırım şiddetlenir."
+    "seriesLead": "Hepsi bire bir, hepsi fırtınada. Sadece dokun ve kaydır; maç ilerledikçe rüzgâr, sis ve yıldırım şiddetlenir.",
+    "web": "Tarayıcı uygulamaları"
   },
   "game": {
     "unique": "Sadece bu oyunda",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "App Store'daki mevcut sürüm hâlâ eski simgeyi kullanıyor. Yeni simgeyi içeren güncelleme inceleniyor.",
       "card": "Uzun ralliler. Topu düşürmeden taşı, sonunda smaçla bitir!",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "Havai fişeklerden fırtınalı denize",
           "Gece, havai fişeklerin atıldığı sakin bir limanda başlar; ta ki maçın ortasında fırtına aniden gelene kadar. Diğer mekân: azgın denizdeki bir yolcu gemisinin güvertesi."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "Doğrudan tarayıcıda oynanan bir yarış oyunu",
+      "card": "Eski şehirde, sahilde ve çiftlikte yarışın. Kurulum gerekmez!",
+      "intro": "Tarayıcıyı açar açmaz başlayan bir yarış oyunu. Birbirinden çok farklı dört arabayla Asakusa tarzı eski şehirde, sahilde ve çiftlikte rakiplerinizle yarışın.",
+      "open": "Tarayıcıda oyna",
+      "badges": [
+        "Kurulum gerekmez",
+        "Telefon ve PC"
+      ],
+      "unique": [
+        [
+          "Hayvanlarla dolu pistler",
+          "Denizde yunuslar ve martılar, çiftlikte inekler ve koyunlar, şehrin nehrinde sıçrayan balıklar."
+        ],
+        [
+          "Dört farklı araba",
+          "Hafif bir kompakttan dört çeker süper arabaya ve kolay kayan bir klasiğe kadar."
+        ],
+        [
+          "Gerçek sürüş hissi",
+          "Lastik tutuşu ve ağırlık aktarımı simüle edilir, sürüş yardımları açılıp kapatılabilir."
+        ]
+      ],
+      "features": [
+        [
+          "Üç pist",
+          "Fenerlerle dolu hayali bir eski şehir, gün batımında sahil ya da yeşil tepeler seçin."
+        ],
+        [
+          "Elinizdekiyle oynayın",
+          "Telefonda dokunmatik; PC'de klavye veya oyun kumandası."
         ]
       ]
     }

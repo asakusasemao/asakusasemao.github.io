@@ -13,17 +13,19 @@
     "coming": "Pronto en {p}",
     "releasedShort": "Ya en {p}",
     "comingShort": "{p}: muy pronto",
-    "soon": "Muy pronto"
+    "soon": "Muy pronto",
+    "webReleased": "Ya en tu navegador"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "Hago apps<br>para móviles.",
-    "desc": "Apps para iOS y Android, desarrolladas de forma independiente.",
+    "h1": "Hago<br>apps.",
+    "desc": "Apps para móviles y navegadores, desarrolladas de forma independiente.",
     "tool": "Registro y estadísticas",
     "vollogCard": "App de voleibol para gestionar jugadores, registrar partidos y sacar estadísticas",
     "vollogTerms": "Términos de uso de Vollog",
     "series": "Juegos deportivos en la tormenta",
-    "seriesLead": "Siempre uno contra uno, siempre en plena tormenta. Solo toques y deslizamientos, y el viento, la niebla y los rayos se desatan a medida que avanza el partido."
+    "seriesLead": "Siempre uno contra uno, siempre en plena tormenta. Solo toques y deslizamientos, y el viento, la niebla y los rayos se desatan a medida que avanza el partido.",
+    "web": "Apps para el navegador"
   },
   "game": {
     "unique": "Solo en este juego",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "La versión que hay ahora en el App Store aún tiene el icono antiguo. Una actualización con el icono nuevo está en revisión.",
       "card": "Puntos largos. ¡Mantén la pelota viva y cierra con un remate!",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "De los fuegos artificiales al mar en tormenta",
           "Empieza en un puerto tranquilo de noche, con fuegos artificiales, hasta que de pronto llega la tormenta a mitad del partido. El otro escenario: la cubierta de un crucero en un mar embravecido."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "Un juego de carreras directamente en el navegador",
+      "card": "Corre por un casco antiguo, la costa y el campo. ¡Sin instalar nada!",
+      "intro": "Un juego de carreras que empieza al abrir el navegador. Lleva cuatro coches muy distintos por un casco antiguo al estilo de Asakusa, la costa y una granja, contra tus rivales.",
+      "open": "Jugar en el navegador",
+      "badges": [
+        "Sin instalación",
+        "Móvil y PC"
+      ],
+      "unique": [
+        [
+          "Circuitos llenos de animales",
+          "Delfines y gaviotas en el mar, vacas y ovejas en la granja, peces que saltan en el río del pueblo."
+        ],
+        [
+          "Cuatro coches distintos",
+          "Desde un compacto ligero hasta un superdeportivo de tracción total y un clásico resbaladizo."
+        ],
+        [
+          "Sensación real al volante",
+          "Se simulan el agarre y la transferencia de peso, y puedes activar o quitar las ayudas."
+        ]
+      ],
+      "features": [
+        [
+          "Tres circuitos",
+          "Elige un casco antiguo ficticio con farolillos, la costa al atardecer o colinas verdes."
+        ],
+        [
+          "Juega con lo que tengas",
+          "Táctil en el móvil; teclado o mando en el PC."
         ]
       ]
     }

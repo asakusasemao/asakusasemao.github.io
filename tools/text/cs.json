@@ -13,17 +13,19 @@
     "coming": "Brzy na {p}",
     "releasedShort": "Už na {p}",
     "comingShort": "{p}: brzy",
-    "soon": "Již brzy"
+    "soon": "Již brzy",
+    "webReleased": "Už v prohlížeči"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "Tvořím<br>mobilní aplikace.",
-    "desc": "Aplikace pro iOS a Android, vyvíjené nezávisle.",
+    "h1": "Tvořím<br>aplikace.",
+    "desc": "Aplikace pro telefony a webové prohlížeče, vyvíjené nezávisle.",
     "tool": "Záznamy a statistiky",
     "vollogCard": "Volejbalová aplikace pro správu hráčů, záznam zápasů a statistiky",
     "vollogTerms": "Podmínky používání Vollog",
     "series": "Sportovní hry v bouři",
-    "seriesLead": "Vždy jeden na jednoho, vždy v bouři. Stačí ťukat a táhnout. Čím déle zápas trvá, tím divočejší je vítr, mlha i blesky."
+    "seriesLead": "Vždy jeden na jednoho, vždy v bouři. Stačí ťukat a táhnout. Čím déle zápas trvá, tím divočejší je vítr, mlha i blesky.",
+    "web": "Aplikace do prohlížeče"
   },
   "game": {
     "unique": "Jen v této hře",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "Verze, která je teď v App Storu, má ještě starou ikonu. Aktualizace s novou ikonou čeká na schválení.",
       "card": "Dlouhé výměny. Udrž míč ve hře a nakonec to zakonči smečí!",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "Od ohňostroje po rozbouřené moře",
           "Začíná se v klidném nočním přístavu s ohňostrojem, dokud uprostřed zápasu náhle nepřijde bouřka. Druhé prostředí: paluba výletní lodi na rozbouřeném moři."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "Závodní hra, kterou hrajete přímo v prohlížeči",
+      "card": "Závoďte starým městem, po pobřeží i přes statek. Bez instalace!",
+      "intro": "Závodní hra, která začne hned po otevření prohlížeče. Čtyři odlišná auta, staré město ve stylu Asakusy, pobřeží a statek a soupeři na trati.",
+      "open": "Hrát v prohlížeči",
+      "badges": [
+        "Bez instalace",
+        "Telefon i PC"
+      ],
+      "unique": [
+        [
+          "Tratě plné zvířat",
+          "Delfíni a racci u moře, krávy a ovce na statku, ryby skákající v řece ve městě."
+        ],
+        [
+          "Čtyři odlišná auta",
+          "Od lehkého kompaktu přes superauto s pohonem všech kol po klouzavou klasiku."
+        ],
+        [
+          "Skutečný pocit z jízdy",
+          "Simuluje se přilnavost pneumatik i přenos hmotnosti a asistenty lze zapnout či vypnout."
+        ]
+      ],
+      "features": [
+        [
+          "Tři tratě",
+          "Vyberte si smyšlené staré město s lampiony, pobřeží při západu slunce nebo zelené kopce."
+        ],
+        [
+          "Hrajte na čem chcete",
+          "Dotykem na telefonu, klávesnicí nebo gamepadem na PC."
         ]
       ]
     }

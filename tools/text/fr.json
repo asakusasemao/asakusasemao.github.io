@@ -13,17 +13,19 @@
     "coming": "Bientôt sur {p}",
     "releasedShort": "Disponible sur {p}",
     "comingShort": "{p} : bientôt",
-    "soon": "Bientôt"
+    "soon": "Bientôt",
+    "webReleased": "Disponible dans le navigateur"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "Je crée des<br>applis mobiles.",
-    "desc": "Des applis pour iOS et Android, développées de façon indépendante.",
+    "h1": "Je crée<br>des applis.",
+    "desc": "Des applis pour téléphones et navigateurs, développées de façon indépendante.",
     "tool": "Feuilles de match et stats",
     "vollogCard": "Appli de volley pour gérer les joueurs, noter les matchs et compiler les statistiques",
     "vollogTerms": "Conditions d’utilisation de Vollog",
     "series": "Jeux de sport sous l’orage",
-    "seriesLead": "Toujours en un contre un, toujours sous l’orage. Il suffit de toucher et de glisser, et le vent, le brouillard et la foudre redoublent au fil du match."
+    "seriesLead": "Toujours en un contre un, toujours sous l’orage. Il suffit de toucher et de glisser, et le vent, le brouillard et la foudre redoublent au fil du match.",
+    "web": "Applis pour navigateur"
   },
   "game": {
     "unique": "Seulement dans ce jeu",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "La version actuellement sur l'App Store a encore l'ancienne icône. Une mise à jour avec la nouvelle icône est en cours de validation.",
       "card": "De longs échanges. Fais durer, puis conclus d’un smash !",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "Du feu d’artifice à la mer déchaînée",
           "Tout commence dans un port calme, la nuit, sous un feu d’artifice, jusqu’à ce que l’orage éclate en plein match. L’autre lieu : le pont d’un paquebot sur une mer déchaînée."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "Un jeu de course directement dans le navigateur",
+      "card": "Foncez dans une vieille ville, sur la côte et à la campagne. Sans installation !",
+      "intro": "Un jeu de course qui démarre dès l'ouverture du navigateur. Quatre voitures très différentes, une vieille ville façon Asakusa, une côte et une ferme, face à vos rivaux.",
+      "open": "Jouer dans le navigateur",
+      "badges": [
+        "Sans installation",
+        "Téléphone et PC"
+      ],
+      "unique": [
+        [
+          "Des circuits pleins d'animaux",
+          "Dauphins et mouettes en mer, vaches et moutons à la ferme, poissons qui sautent dans la rivière de la ville."
+        ],
+        [
+          "Quatre voitures distinctes",
+          "De la compacte légère à la supercar à quatre roues motrices, en passant par une classique glissante."
+        ],
+        [
+          "De vraies sensations",
+          "L'adhérence et les transferts de masse sont simulés, et les aides se règlent à votre goût."
+        ]
+      ],
+      "features": [
+        [
+          "Trois circuits",
+          "Choisissez une vieille ville imaginaire aux lanternes, une côte au couchant ou des collines vertes."
+        ],
+        [
+          "Jouez avec ce que vous avez",
+          "Tactile sur téléphone ; clavier ou manette sur PC."
         ]
       ]
     }

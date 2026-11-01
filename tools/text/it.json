@@ -13,17 +13,19 @@
     "coming": "Presto su {p}",
     "releasedShort": "Disponibile su {p}",
     "comingShort": "{p}: in arrivo",
-    "soon": "In arrivo"
+    "soon": "In arrivo",
+    "webReleased": "Disponibile nel browser"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "Creo app<br>per smartphone.",
-    "desc": "App per iOS e Android, sviluppate in modo indipendente.",
+    "h1": "Creo<br>app.",
+    "desc": "App per smartphone e browser, sviluppate in modo indipendente.",
     "tool": "Referti e statistiche",
     "vollogCard": "App di pallavolo per gestire i giocatori, registrare le partite e raccogliere le statistiche",
     "vollogTerms": "Termini d’uso di Vollog",
     "series": "Giochi sportivi nella tempesta",
-    "seriesLead": "Sempre uno contro uno, sempre nella tempesta. Bastano tocchi e swipe, e vento, nebbia e fulmini si scatenano man mano che la partita va avanti."
+    "seriesLead": "Sempre uno contro uno, sempre nella tempesta. Bastano tocchi e swipe, e vento, nebbia e fulmini si scatenano man mano che la partita va avanti.",
+    "web": "App per il browser"
   },
   "game": {
     "unique": "Solo in questo gioco",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "La versione ora sull'App Store ha ancora la vecchia icona. Un aggiornamento con la nuova icona è in revisione.",
       "card": "Scambi lunghissimi. Tieni viva la palla e chiudi con una schiacciata!",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "Dai fuochi d’artificio al mare in tempesta",
           "Si comincia in un porto tranquillo di notte, tra i fuochi d’artificio, finché a metà partita arriva all’improvviso la tempesta. L’altra ambientazione: il ponte di una nave da crociera su un mare in burrasca."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "Un gioco di corse che si gioca nel browser",
+      "card": "Corri tra una città vecchia, la costa e la campagna. Senza installare nulla!",
+      "intro": "Un gioco di corse che parte appena apri il browser. Guida quattro auto molto diverse in una città vecchia in stile Asakusa, sulla costa e in una fattoria, contro i rivali.",
+      "open": "Gioca nel browser",
+      "badges": [
+        "Nessuna installazione",
+        "Smartphone e PC"
+      ],
+      "unique": [
+        [
+          "Circuiti pieni di animali",
+          "Delfini e gabbiani al mare, mucche e pecore in fattoria, pesci che saltano nel fiume della città."
+        ],
+        [
+          "Quattro auto diverse",
+          "Dalla compatta leggera alla supercar a trazione integrale, fino a una classica scivolosa."
+        ],
+        [
+          "Vere sensazioni di guida",
+          "Aderenza e trasferimenti di carico sono simulati, e gli aiuti alla guida si possono regolare."
+        ]
+      ],
+      "features": [
+        [
+          "Tre circuiti",
+          "Scegli una città vecchia immaginaria con lanterne, la costa al tramonto o verdi colline."
+        ],
+        [
+          "Gioca con ciò che hai",
+          "Touch sullo smartphone; tastiera o gamepad su PC."
         ]
       ]
     }

@@ -13,6 +13,7 @@ export const FALLBACK = 'en'
  * storm は嵐のシリーズ（紹介ページを言語ごとに作る）。ios / android は公開していればストアの URL、準備中なら null。
  * icons は、紹介ページの「どんなゲーム」の節ごとの絵記号（ストアの説明文の ■ の順。ご注意は除く）。null の節は出さない
  * （ピックルボールの舞台は「このゲームならでは」に書いたので外す）
+ * web はブラウザで使うアプリ（ゲームに限らない）。url は本体の場所で、紹介ページのボタンから開く。文言は tools/text の apps.<id>
  */
 export const APPS = [
   {
@@ -46,6 +47,14 @@ export const APPS = [
     ios: 'https://apps.apple.com/app/storm-pickleball/id6823134733',
     android: null,
     icons: ['pointer', 'zap', null, 'book', 'shirt', 'share', 'sliders'],
+  },
+  {
+    id: 'asakusa-circuit',
+    storm: false,
+    web: true,
+    name: 'Asakusa Circuit',
+    url: '/web/asakusa-circuit/',
+    icons: ['globe', 'pointer'],
   },
   {
     id: 'vollog',

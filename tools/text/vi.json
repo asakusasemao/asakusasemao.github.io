@@ -13,17 +13,19 @@
     "coming": "Sắp có trên {p}",
     "releasedShort": "Đã có trên {p}",
     "comingShort": "{p}: sắp ra mắt",
-    "soon": "Sắp ra mắt"
+    "soon": "Sắp ra mắt",
+    "webReleased": "Đã có trên trình duyệt"
   },
   "home": {
     "title": "AsakusaSemao",
-    "h1": "Tôi làm<br>ứng dụng điện thoại.",
-    "desc": "Nhà phát triển độc lập làm ứng dụng cho iOS và Android.",
+    "h1": "Tôi làm<br>ứng dụng.",
+    "desc": "Nhà phát triển độc lập làm ứng dụng cho điện thoại và trình duyệt.",
     "tool": "Ghi chép & thống kê",
     "vollogCard": "Ứng dụng bóng chuyền để quản lý cầu thủ, ghi lại trận đấu và tổng hợp thống kê",
     "vollogTerms": "Điều khoản sử dụng Vollog",
     "series": "Game thể thao giữa bão",
-    "seriesLead": "Tất cả đều là một đấu một giữa bão. Chỉ cần chạm và vuốt, trận càng về sau thì gió, sương mù và sét càng dữ dội."
+    "seriesLead": "Tất cả đều là một đấu một giữa bão. Chỉ cần chạm và vuốt, trận càng về sau thì gió, sương mù và sét càng dữ dội.",
+    "web": "Ứng dụng trên trình duyệt"
   },
   "game": {
     "unique": "Chỉ có trong trò chơi này",
@@ -40,6 +42,7 @@
   },
   "apps": {
     "storm-volley": {
+      "storeNote": "Phiên bản hiện có trên App Store vẫn dùng biểu tượng cũ. Bản cập nhật có biểu tượng mới đang được xét duyệt.",
       "card": "Những pha bóng kéo dài. Giữ bóng thật lâu, rồi kết thúc bằng một cú đập!",
       "unique": [
         [
@@ -105,6 +108,40 @@
         [
           "Từ pháo hoa đến biển bão",
           "Bắt đầu ở một bến cảng yên bình về đêm với pháo hoa, cho đến khi cơn bão bất ngờ ập đến giữa trận. Địa điểm còn lại: boong một con tàu du lịch giữa biển động dữ dội."
+        ]
+      ]
+    },
+    "asakusa-circuit": {
+      "tagline": "Trò chơi đua xe chơi ngay trên trình duyệt",
+      "card": "Đua qua phố cổ, bờ biển và nông trại. Không cần cài đặt!",
+      "intro": "Trò chơi đua xe bắt đầu ngay khi mở trình duyệt. Lái bốn chiếc xe rất khác nhau qua phố cổ phong cách Asakusa, bờ biển và nông trại, cùng các đối thủ.",
+      "open": "Chơi trên trình duyệt",
+      "badges": [
+        "Không cần cài đặt",
+        "Điện thoại và PC"
+      ],
+      "unique": [
+        [
+          "Đường đua đầy động vật",
+          "Cá heo và mòng biển ngoài biển, bò và cừu ở nông trại, cá nhảy trên sông trong phố."
+        ],
+        [
+          "Bốn chiếc xe khác biệt",
+          "Từ xe nhỏ nhẹ đến siêu xe dẫn động bốn bánh và xe cổ điển dễ trượt."
+        ],
+        [
+          "Cảm giác lái thật",
+          "Độ bám của lốp và sự dịch chuyển trọng lượng được mô phỏng, có thể bật tắt hỗ trợ lái."
+        ]
+      ],
+      "features": [
+        [
+          "Ba đường đua",
+          "Chọn phố cổ hư cấu rực đèn lồng, bờ biển lúc hoàng hôn hoặc đồi xanh."
+        ],
+        [
+          "Chơi bằng thứ bạn có",
+          "Cảm ứng trên điện thoại; bàn phím hoặc tay cầm trên PC."
         ]
       ]
     }
