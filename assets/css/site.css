@@ -307,6 +307,27 @@ html[lang="en"] .lang-btn[data-lang="en"] {
   margin-bottom: 24px;
 }
 
+/*
+  まとまりの中の小見出し（ゲームの中の嵐のシリーズ）。破線の枠で囲んで、そのあとに続く単発のゲームと分ける。
+  枠の内側の余白ぶん外へ広げて、カードの幅を枠の外のカードとそろえる
+*/
+.app-subgroup {
+  margin: 0 -20px 32px;
+  padding: 20px 20px 28px;
+  border: 2.5px dashed var(--ink);
+  border-radius: 28px;
+}
+.app-subgroup h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(18px, 3vw, 22px);
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+@media (max-width: 600px) {
+  .app-subgroup { margin: 0 0 28px; padding: 16px 14px 22px; border-radius: 22px; }
+}
+
 /* 列の数は、どのまとまりでも同じ（Vollog 1枚だけでも、シリーズのカードと同じ幅） */
 .apps {
   display: grid;
@@ -380,7 +401,7 @@ html[lang="en"] .lang-btn[data-lang="en"] {
   padding: 58px 20px 22px;
 }
 
-.app-card-text h3 {
+.app-card-text :is(h3, h4) {
   font-size: 20px;
   font-weight: 900;
   line-height: 1.35;

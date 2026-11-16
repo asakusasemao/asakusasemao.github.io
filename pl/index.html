@@ -127,17 +127,22 @@
       <p class="desc">Aplikacje na telefony i do przeglądarek, tworzone niezależnie.</p>
     </div>
 
-    <!-- 嵐のシリーズは、共通のところを見出しの下に1回だけ書いて、カードには違いだけを書く -->
+    <!--
+      まとまりは「何のアプリか」で分ける（ゲーム／ツール）。iOS・ブラウザなど使える場所はカードの札に出す。
+      嵐のシリーズはゲームの中の小見出しにして、共通のところを小見出しの下に1回だけ書き、カードには違いだけを書く
+    -->
     <section class="app-group">
-      <h2>Gry sportowe w burzy</h2>
-      <p class="app-group-lead">Zawsze jeden na jednego, zawsze w burzy. Wystarczy stukać i przesuwać, a wiatr, mgła i pioruny przybierają na sile w miarę trwania meczu.</p>
-      <div class="apps">
+      <h2>Gry</h2>
+      <div class="app-subgroup">
+        <h3>Gry sportowe w burzy</h3>
+        <p class="app-group-lead">Zawsze jeden na jednego, zawsze w burzy. Wystarczy stukać i przesuwać, a wiatr, mgła i pioruny przybierają na sile w miarę trwania meczu.</p>
+        <div class="apps">
       <a class="app-card" data-app="storm-volley" href="/pl/apps/storm-volley/">
         <div class="app-card-top">
           <img src="/assets/images/storm-volley-icon.png" alt="Ikona gry Siatkówka w burzy" />
         </div>
         <div class="app-card-text">
-          <h3>Siatkówka w burzy</h3>
+          <h4>Siatkówka w burzy</h4>
           <p>Długie wymiany. Podtrzymuj grę, a na koniec skończ zbiciem!</p>
           <span class="app-status live">Już na iOS</span>
         </div>
@@ -148,7 +153,7 @@
           <img src="/assets/images/storm-badminton-icon.png" alt="Ikona gry Badminton w burzy" />
         </div>
         <div class="app-card-text">
-          <h3>Badminton w burzy</h3>
+          <h4>Badminton w burzy</h4>
           <p>Krótko przy siatce, potem głęboko do tyłu. Rywal biega w tę i z powrotem – i już nie sięga!</p>
           <span class="app-status live">Już na iOS</span>
         </div>
@@ -159,7 +164,7 @@
           <img src="/assets/images/storm-tennis-icon.png" alt="Ikona gry Tenis w burzy" />
         </div>
         <div class="app-card-text">
-          <h3>Tenis w burzy</h3>
+          <h4>Tenis w burzy</h4>
           <p>Najszybsze uderzenia w serii. Traf w wybrany róg w mgnieniu oka!</p>
           <span class="app-status live">Już na iOS</span>
         </div>
@@ -170,34 +175,14 @@
           <img src="/assets/images/storm-pickleball-icon.png" alt="Ikona gry Pickleball w burzy" />
         </div>
         <div class="app-card-text">
-          <h3>Pickleball w burzy</h3>
+          <h4>Pickleball w burzy</h4>
           <p>Jest strefa, w której nie wolno uderzać!? Nietypowe zasady, które wciągają – zwłaszcza jeśli nie znasz tej gry.</p>
           <span class="app-status live">Już na iOS</span>
         </div>
         <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>
-      </div>
-    </section>
-
-    <section class="app-group">
-      <h2>Gry</h2>
-      <div class="apps">
-      <a class="app-card" data-app="lookalike-cats" href="/pl/apps/lookalike-cats/">
-        <div class="app-card-top">
-          <img src="/assets/images/lookalike-cats-icon.png" alt="Ikona gry Kocie sobowtóry" />
         </div>
-        <div class="app-card-text">
-          <h3>Kocie sobowtóry</h3>
-          <p>Znajdź dwa koty o identycznym umaszczeniu. Przechodź z kota na kota w marszu!</p>
-          <span class="app-status">Wkrótce na iOS / Przeglądarka</span>
-        </div>
-        <span class="app-card-arrow" aria-hidden="true">›</span>
-      </a>
       </div>
-    </section>
-
-    <section class="app-group">
-      <h2>Aplikacje do przeglądarki</h2>
       <div class="apps">
       <a class="app-card" data-app="asakusa-circuit" href="/pl/apps/asakusa-circuit/">
         <div class="app-card-top">
@@ -207,6 +192,17 @@
           <h3>Asakusa Circuit</h3>
           <p>Samochodowa gra wyścigowa. Ścigaj się przez stare miasto, wybrzeże i wieś. Bez instalacji!</p>
           <span class="app-status live">Już w przeglądarce</span>
+        </div>
+        <span class="app-card-arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="app-card" data-app="lookalike-cats" href="/pl/apps/lookalike-cats/">
+        <div class="app-card-top">
+          <img src="/assets/images/lookalike-cats-icon.png" alt="Ikona gry Kocie sobowtóry" />
+        </div>
+        <div class="app-card-text">
+          <h3>Kocie sobowtóry</h3>
+          <p>Znajdź dwa koty o identycznym umaszczeniu. Przechodź z kota na kota w marszu!</p>
+          <span class="app-status">Wkrótce na iOS / Przeglądarka</span>
         </div>
         <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>

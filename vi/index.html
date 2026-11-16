@@ -127,17 +127,22 @@
       <p class="desc">Nhà phát triển độc lập làm ứng dụng cho điện thoại và trình duyệt.</p>
     </div>
 
-    <!-- 嵐のシリーズは、共通のところを見出しの下に1回だけ書いて、カードには違いだけを書く -->
+    <!--
+      まとまりは「何のアプリか」で分ける（ゲーム／ツール）。iOS・ブラウザなど使える場所はカードの札に出す。
+      嵐のシリーズはゲームの中の小見出しにして、共通のところを小見出しの下に1回だけ書き、カードには違いだけを書く
+    -->
     <section class="app-group">
-      <h2>Game thể thao giữa bão</h2>
-      <p class="app-group-lead">Tất cả đều là một đấu một giữa bão. Chỉ cần chạm và vuốt, trận càng về sau thì gió, sương mù và sét càng dữ dội.</p>
-      <div class="apps">
+      <h2>Trò chơi</h2>
+      <div class="app-subgroup">
+        <h3>Game thể thao giữa bão</h3>
+        <p class="app-group-lead">Tất cả đều là một đấu một giữa bão. Chỉ cần chạm và vuốt, trận càng về sau thì gió, sương mù và sét càng dữ dội.</p>
+        <div class="apps">
       <a class="app-card" data-app="storm-volley" href="/vi/apps/storm-volley/">
         <div class="app-card-top">
           <img src="/assets/images/storm-volley-icon.png" alt="Biểu tượng Bóng chuyền giữa bão" />
         </div>
         <div class="app-card-text">
-          <h3>Bóng chuyền giữa bão</h3>
+          <h4>Bóng chuyền giữa bão</h4>
           <p>Những pha bóng kéo dài. Giữ bóng thật lâu, rồi kết thúc bằng một cú đập!</p>
           <span class="app-status live">Đã có trên iOS</span>
         </div>
@@ -148,7 +153,7 @@
           <img src="/assets/images/storm-badminton-icon.png" alt="Biểu tượng Cầu lông giữa bão" />
         </div>
         <div class="app-card-text">
-          <h3>Cầu lông giữa bão</h3>
+          <h4>Cầu lông giữa bão</h4>
           <p>Bỏ nhỏ sát lưới, rồi đánh sâu về cuối sân. Đối thủ chạy khắp nơi mà vẫn không với tới!</p>
           <span class="app-status live">Đã có trên iOS</span>
         </div>
@@ -159,7 +164,7 @@
           <img src="/assets/images/storm-tennis-icon.png" alt="Biểu tượng Quần vợt giữa bão" />
         </div>
         <div class="app-card-text">
-          <h3>Quần vợt giữa bão</h3>
+          <h4>Quần vợt giữa bão</h4>
           <p>Cú đánh nhanh nhất cả loạt game. Xuyên thủng góc sân bạn nhắm chỉ trong chớp mắt!</p>
           <span class="app-status live">Đã có trên iOS</span>
         </div>
@@ -170,34 +175,14 @@
           <img src="/assets/images/storm-pickleball-icon.png" alt="Biểu tượng Pickleball giữa bão" />
         </div>
         <div class="app-card-text">
-          <h3>Pickleball giữa bão</h3>
+          <h4>Pickleball giữa bão</h4>
           <p>Có khu vực mà bạn không được đánh bóng!? Luật chơi lạ khiến bạn mê, nhất là khi chưa biết môn này.</p>
           <span class="app-status live">Đã có trên iOS</span>
         </div>
         <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>
-      </div>
-    </section>
-
-    <section class="app-group">
-      <h2>Trò chơi</h2>
-      <div class="apps">
-      <a class="app-card" data-app="lookalike-cats" href="/vi/apps/lookalike-cats/">
-        <div class="app-card-top">
-          <img src="/assets/images/lookalike-cats-icon.png" alt="Biểu tượng Tìm mèo sinh đôi" />
         </div>
-        <div class="app-card-text">
-          <h3>Tìm mèo sinh đôi</h3>
-          <p>Tìm hai chú mèo có bộ lông giống hệt nhau. Đổi từ mèo này sang mèo khác khi dạo bước!</p>
-          <span class="app-status">Sắp có trên iOS / Trình duyệt</span>
-        </div>
-        <span class="app-card-arrow" aria-hidden="true">›</span>
-      </a>
       </div>
-    </section>
-
-    <section class="app-group">
-      <h2>Ứng dụng trên trình duyệt</h2>
       <div class="apps">
       <a class="app-card" data-app="asakusa-circuit" href="/vi/apps/asakusa-circuit/">
         <div class="app-card-top">
@@ -207,6 +192,17 @@
           <h3>Asakusa Circuit</h3>
           <p>Trò chơi đua xe ô tô. Lao qua phố cổ, bờ biển và nông trại. Không cần cài đặt!</p>
           <span class="app-status live">Đã có trên trình duyệt</span>
+        </div>
+        <span class="app-card-arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="app-card" data-app="lookalike-cats" href="/vi/apps/lookalike-cats/">
+        <div class="app-card-top">
+          <img src="/assets/images/lookalike-cats-icon.png" alt="Biểu tượng Tìm mèo sinh đôi" />
+        </div>
+        <div class="app-card-text">
+          <h3>Tìm mèo sinh đôi</h3>
+          <p>Tìm hai chú mèo có bộ lông giống hệt nhau. Đổi từ mèo này sang mèo khác khi dạo bước!</p>
+          <span class="app-status">Sắp có trên iOS / Trình duyệt</span>
         </div>
         <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>

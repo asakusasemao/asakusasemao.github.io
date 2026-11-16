@@ -127,17 +127,22 @@
       <p class="desc">फ़ोन और ब्राउज़र के लिए ऐप, स्वतंत्र रूप से बनाए गए।</p>
     </div>
 
-    <!-- 嵐のシリーズは、共通のところを見出しの下に1回だけ書いて、カードには違いだけを書く -->
+    <!--
+      まとまりは「何のアプリか」で分ける（ゲーム／ツール）。iOS・ブラウザなど使える場所はカードの札に出す。
+      嵐のシリーズはゲームの中の小見出しにして、共通のところを小見出しの下に1回だけ書き、カードには違いだけを書く
+    -->
     <section class="app-group">
-      <h2>तूफ़ानी स्पोर्ट्स गेम</h2>
-      <p class="app-group-lead">हर गेम में तूफ़ान के बीच एक-के-मुक़ाबले-एक मैच। बस टैप और स्वाइप करें, और मैच आगे बढ़ने के साथ हवा, कोहरा और बिजली तेज़ होते जाते हैं।</p>
-      <div class="apps">
+      <h2>गेम</h2>
+      <div class="app-subgroup">
+        <h3>तूफ़ानी स्पोर्ट्स गेम</h3>
+        <p class="app-group-lead">हर गेम में तूफ़ान के बीच एक-के-मुक़ाबले-एक मैच। बस टैप और स्वाइप करें, और मैच आगे बढ़ने के साथ हवा, कोहरा और बिजली तेज़ होते जाते हैं।</p>
+        <div class="apps">
       <a class="app-card" data-app="storm-volley" href="/hi/apps/storm-volley/">
         <div class="app-card-top">
           <img src="/assets/images/storm-volley-icon.png" alt="तूफ़ानी वॉलीबॉल का आइकन" />
         </div>
         <div class="app-card-text">
-          <h3>तूफ़ानी वॉलीबॉल</h3>
+          <h4>तूफ़ानी वॉलीबॉल</h4>
           <p>लंबी रैलियाँ। बॉल को ज़िंदा रखें, और आख़िर में स्पाइक से पॉइंट जीतें!</p>
           <span class="app-status live">iOS पर उपलब्ध</span>
         </div>
@@ -148,7 +153,7 @@
           <img src="/assets/images/storm-badminton-icon.png" alt="तूफ़ानी बैडमिंटन का आइकन" />
         </div>
         <div class="app-card-text">
-          <h3>तूफ़ानी बैडमिंटन</h3>
+          <h4>तूफ़ानी बैडमिंटन</h4>
           <p>नेट के पास हल्के से गिराएँ, फिर पीछे तक उछालें। आगे-पीछे दौड़ता विरोधी अब पहुँच ही नहीं पाता!</p>
           <span class="app-status live">iOS पर उपलब्ध</span>
         </div>
@@ -159,7 +164,7 @@
           <img src="/assets/images/storm-tennis-icon.png" alt="तूफ़ानी टेनिस का आइकन" />
         </div>
         <div class="app-card-text">
-          <h3>तूफ़ानी टेनिस</h3>
+          <h4>तूफ़ानी टेनिस</h4>
           <p>सीरीज़ के सबसे तेज़ शॉट। जिस कोने पर निशाना लगाएँ, पल भर में भेद दें!</p>
           <span class="app-status live">iOS पर उपलब्ध</span>
         </div>
@@ -170,34 +175,14 @@
           <img src="/assets/images/storm-pickleball-icon.png" alt="तूफ़ानी पिकलबॉल का आइकन" />
         </div>
         <div class="app-card-text">
-          <h3>तूफ़ानी पिकलबॉल</h3>
+          <h4>तूफ़ानी पिकलबॉल</h4>
           <p>एक जगह ऐसी है जहाँ बॉल नहीं मार सकते!? अनोखे नियम, जो न जानने वालों को सबसे ज़्यादा लुभाते हैं।</p>
           <span class="app-status live">iOS पर उपलब्ध</span>
         </div>
         <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>
-      </div>
-    </section>
-
-    <section class="app-group">
-      <h2>गेम</h2>
-      <div class="apps">
-      <a class="app-card" data-app="lookalike-cats" href="/hi/apps/lookalike-cats/">
-        <div class="app-card-top">
-          <img src="/assets/images/lookalike-cats-icon.png" alt="हमशक्ल बिल्लियाँ का आइकन" />
         </div>
-        <div class="app-card-text">
-          <h3>हमशक्ल बिल्लियाँ</h3>
-          <p>हूबहू एक जैसे पैटर्न वाली दो बिल्लियाँ ढूँढो। घूमते हुए बिल्ली से बिल्ली में बदलो!</p>
-          <span class="app-status">iOS / ब्राउज़र पर जल्द आ रहा है</span>
-        </div>
-        <span class="app-card-arrow" aria-hidden="true">›</span>
-      </a>
       </div>
-    </section>
-
-    <section class="app-group">
-      <h2>ब्राउज़र के लिए ऐप</h2>
       <div class="apps">
       <a class="app-card" data-app="asakusa-circuit" href="/hi/apps/asakusa-circuit/">
         <div class="app-card-top">
@@ -207,6 +192,17 @@
           <h3>Asakusa Circuit</h3>
           <p>कार रेसिंग गेम। पुराने शहर, तट और खेतों से होकर रेस करें। इंस्टॉल की ज़रूरत नहीं!</p>
           <span class="app-status live">ब्राउज़र पर उपलब्ध</span>
+        </div>
+        <span class="app-card-arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="app-card" data-app="lookalike-cats" href="/hi/apps/lookalike-cats/">
+        <div class="app-card-top">
+          <img src="/assets/images/lookalike-cats-icon.png" alt="हमशक्ल बिल्लियाँ का आइकन" />
+        </div>
+        <div class="app-card-text">
+          <h3>हमशक्ल बिल्लियाँ</h3>
+          <p>हूबहू एक जैसे पैटर्न वाली दो बिल्लियाँ ढूँढो। घूमते हुए बिल्ली से बिल्ली में बदलो!</p>
+          <span class="app-status">iOS / ब्राउज़र पर जल्द आ रहा है</span>
         </div>
         <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>

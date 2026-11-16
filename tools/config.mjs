@@ -52,6 +52,16 @@ export const APPS = [
     icons: ['pointer', 'zap', null, 'book', 'shirt', 'share', 'sliders'],
   },
   {
+    id: 'asakusa-circuit',
+    storm: false,
+    web: true,
+    name: 'Asakusa Circuit',
+    url: '/web/asakusa-circuit/',
+    theme: 'race',
+    font: '&family=Barlow+Condensed:ital,wght@1,800',
+    icons: ['globe', 'pointer'],
+  },
+  {
     // そっくりねこ探し。リポジトリは ../lookalike-cats。紹介ページは、ストアの説明文の節（4つ）をそのままカードにする（build.mjs の gamePage）
     id: 'lookalike-cats',
     game: true,
@@ -61,16 +71,6 @@ export const APPS = [
     android: false,
     browser: null,
     icons: ['pointer', 'palette', 'globe', 'book'],
-  },
-  {
-    id: 'asakusa-circuit',
-    storm: false,
-    web: true,
-    name: 'Asakusa Circuit',
-    url: '/web/asakusa-circuit/',
-    theme: 'race',
-    font: '&family=Barlow+Condensed:ital,wght@1,800',
-    icons: ['globe', 'pointer'],
   },
   {
     id: 'vollog',

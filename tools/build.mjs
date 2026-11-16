@@ -265,7 +265,8 @@ function storeButtons(app, t) {
 
 function home(locale) {
   const t = TEXT[locale]
-  const card = (app) => {
+  // 嵐のシリーズのカードは小見出し（h3）の下にあるので、名前を h4 にする
+  const card = (app, level = 3) => {
     const storm = app.storm ? STORE[app.id][locale] : app.game ? GAMES[app.id][locale] : null
     // Vollog に合う言語がなければ（マレー語）、英語のページへつなぐ
     const vollogLocale = VOLLOG_APP.locales.includes(locale) ? locale : FALLBACK
@@ -278,14 +279,14 @@ function home(locale) {
           <img src="/assets/images/${app.id}-icon.png" alt="${fill(t.site.iconAlt, { name })}" />
         </div>
         <div class="app-card-text">
-          <h3>${escape(name)}</h3>
+          <h${level}>${escape(name)}</h${level}>
           <p>${escape(line)}</p>
           <span class="app-status${st.live ? ' live' : ''}">${st.text}</span>
         </div>
         <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>`
   }
-  const cards = (apps) => apps.map(card).join('\n')
+  const cards = (apps, level) => apps.map((a) => card(a, level)).join('\n')
 
   const main = `  <main>
     ${picker(locale, '')}
@@ -302,26 +303,21 @@ function home(locale) {
       <p class="desc">${escape(t.home.desc)}</p>
     </div>
 
-    <!-- 嵐のシリーズは、共通のところを見出しの下に1回だけ書いて、カードには違いだけを書く -->
-    <section class="app-group">
-      <h2>${escape(t.home.series)}</h2>
-      <p class="app-group-lead">${escape(t.home.seriesLead)}</p>
-      <div class="apps">
-${cards(APPS.filter((a) => a.storm))}
-      </div>
-    </section>
-
+    <!--
+      まとまりは「何のアプリか」で分ける（ゲーム／ツール）。iOS・ブラウザなど使える場所はカードの札に出す。
+      嵐のシリーズはゲームの中の小見出しにして、共通のところを小見出しの下に1回だけ書き、カードには違いだけを書く
+    -->
     <section class="app-group">
       <h2>${escape(t.home.games)}</h2>
-      <div class="apps">
-${cards(APPS.filter((a) => a.game))}
+      <div class="app-subgroup">
+        <h3>${escape(t.home.series)}</h3>
+        <p class="app-group-lead">${escape(t.home.seriesLead)}</p>
+        <div class="apps">
+${cards(APPS.filter((a) => a.storm), 4)}
+        </div>
       </div>
-    </section>
-
-    <section class="app-group">
-      <h2>${escape(t.home.web)}</h2>
       <div class="apps">
-${cards(APPS.filter((a) => a.web))}
+${cards(APPS.filter((a) => a.game || a.web))}
       </div>
     </section>
 

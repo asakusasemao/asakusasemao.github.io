@@ -127,17 +127,22 @@
       <p class="desc">แอปสำหรับโทรศัพท์และเบราว์เซอร์ที่พัฒนาแบบอิสระ</p>
     </div>
 
-    <!-- 嵐のシリーズは、共通のところを見出しの下に1回だけ書いて、カードには違いだけを書く -->
+    <!--
+      まとまりは「何のアプリか」で分ける（ゲーム／ツール）。iOS・ブラウザなど使える場所はカードの札に出す。
+      嵐のシリーズはゲームの中の小見出しにして、共通のところを小見出しの下に1回だけ書き、カードには違いだけを書く
+    -->
     <section class="app-group">
-      <h2>เกมกีฬากลางพายุ</h2>
-      <p class="app-group-lead">ทุกเกมเป็นการแข่งตัวต่อตัวกลางพายุ แค่แตะและปัด ยิ่งแข่งไปนาน ลม หมอก และฟ้าผ่าก็ยิ่งรุนแรงขึ้น</p>
-      <div class="apps">
+      <h2>เกม</h2>
+      <div class="app-subgroup">
+        <h3>เกมกีฬากลางพายุ</h3>
+        <p class="app-group-lead">ทุกเกมเป็นการแข่งตัวต่อตัวกลางพายุ แค่แตะและปัด ยิ่งแข่งไปนาน ลม หมอก และฟ้าผ่าก็ยิ่งรุนแรงขึ้น</p>
+        <div class="apps">
       <a class="app-card" data-app="storm-volley" href="/th/apps/storm-volley/">
         <div class="app-card-top">
           <img src="/assets/images/storm-volley-icon.png" alt="ไอคอนของ วอลเลย์บอลกลางพายุ" />
         </div>
         <div class="app-card-text">
-          <h3>วอลเลย์บอลกลางพายุ</h3>
+          <h4>วอลเลย์บอลกลางพายุ</h4>
           <p>แรลลี่ยาวต่อเนื่อง ประคองบอลไว้ แล้วปิดท้ายด้วยลูกตบ!</p>
           <span class="app-status live">มีให้เล่นบน iOS แล้ว</span>
         </div>
@@ -148,7 +153,7 @@
           <img src="/assets/images/storm-badminton-icon.png" alt="ไอคอนของ แบดมินตันกลางพายุ" />
         </div>
         <div class="app-card-text">
-          <h3>แบดมินตันกลางพายุ</h3>
+          <h4>แบดมินตันกลางพายุ</h4>
           <p>หยอดเบาๆ หน้าเน็ต แล้วโยกลึกไปท้ายคอร์ต คู่แข่งวิ่งวุ่นจนตามไม่ทัน!</p>
           <span class="app-status live">มีให้เล่นบน iOS แล้ว</span>
         </div>
@@ -159,7 +164,7 @@
           <img src="/assets/images/storm-tennis-icon.png" alt="ไอคอนของ เทนนิสกลางพายุ" />
         </div>
         <div class="app-card-text">
-          <h3>เทนนิสกลางพายุ</h3>
+          <h4>เทนนิสกลางพายุ</h4>
           <p>ลูกเร็วที่สุดในซีรีส์ เล็งมุมไหน ก็พุ่งทะลุได้ในพริบตา!</p>
           <span class="app-status live">มีให้เล่นบน iOS แล้ว</span>
         </div>
@@ -170,34 +175,14 @@
           <img src="/assets/images/storm-pickleball-icon.png" alt="ไอคอนของ พิกเคิลบอลกลางพายุ" />
         </div>
         <div class="app-card-text">
-          <h3>พิกเคิลบอลกลางพายุ</h3>
+          <h4>พิกเคิลบอลกลางพายุ</h4>
           <p>มีโซนที่ห้ามตีลูกด้วย!? กติกาแปลกๆ ที่ยิ่งไม่รู้จัก ยิ่งติดใจ</p>
           <span class="app-status live">มีให้เล่นบน iOS แล้ว</span>
         </div>
         <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>
-      </div>
-    </section>
-
-    <section class="app-group">
-      <h2>เกม</h2>
-      <div class="apps">
-      <a class="app-card" data-app="lookalike-cats" href="/th/apps/lookalike-cats/">
-        <div class="app-card-top">
-          <img src="/assets/images/lookalike-cats-icon.png" alt="ไอคอนของ ตามหาแมวฝาแฝด" />
         </div>
-        <div class="app-card-text">
-          <h3>ตามหาแมวฝาแฝด</h3>
-          <p>ตามหาแมวสองตัวที่ลายเหมือนกันเป๊ะ สลับจากแมวตัวหนึ่งไปอีกตัวระหว่างเดิน!</p>
-          <span class="app-status">เร็วๆ นี้บน iOS / เบราว์เซอร์</span>
-        </div>
-        <span class="app-card-arrow" aria-hidden="true">›</span>
-      </a>
       </div>
-    </section>
-
-    <section class="app-group">
-      <h2>แอปสำหรับเบราว์เซอร์</h2>
       <div class="apps">
       <a class="app-card" data-app="asakusa-circuit" href="/th/apps/asakusa-circuit/">
         <div class="app-card-top">
@@ -207,6 +192,17 @@
           <h3>Asakusa Circuit</h3>
           <p>เกมแข่งรถ ซิ่งผ่านเมืองเก่า ชายฝั่ง และฟาร์ม ไม่ต้องติดตั้ง!</p>
           <span class="app-status live">เล่นบนเบราว์เซอร์ได้แล้ว</span>
+        </div>
+        <span class="app-card-arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="app-card" data-app="lookalike-cats" href="/th/apps/lookalike-cats/">
+        <div class="app-card-top">
+          <img src="/assets/images/lookalike-cats-icon.png" alt="ไอคอนของ ตามหาแมวฝาแฝด" />
+        </div>
+        <div class="app-card-text">
+          <h3>ตามหาแมวฝาแฝด</h3>
+          <p>ตามหาแมวสองตัวที่ลายเหมือนกันเป๊ะ สลับจากแมวตัวหนึ่งไปอีกตัวระหว่างเดิน!</p>
+          <span class="app-status">เร็วๆ นี้บน iOS / เบราว์เซอร์</span>
         </div>
         <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>

@@ -127,17 +127,22 @@
       <p class="desc">Isang independent developer na gumagawa ng mga app para sa phone at browser.</p>
     </div>
 
-    <!-- 嵐のシリーズは、共通のところを見出しの下に1回だけ書いて、カードには違いだけを書く -->
+    <!--
+      まとまりは「何のアプリか」で分ける（ゲーム／ツール）。iOS・ブラウザなど使える場所はカードの札に出す。
+      嵐のシリーズはゲームの中の小見出しにして、共通のところを小見出しの下に1回だけ書き、カードには違いだけを書く
+    -->
     <section class="app-group">
-      <h2>Sports Games sa Unos</h2>
-      <p class="app-group-lead">Lahat ay one-on-one, lahat sa gitna ng unos. Tap at swipe lang, at lalong lumalakas ang hangin, hamog, at kidlat habang tumatagal ang laro.</p>
-      <div class="apps">
+      <h2>Mga laro</h2>
+      <div class="app-subgroup">
+        <h3>Sports Games sa Unos</h3>
+        <p class="app-group-lead">Lahat ay one-on-one, lahat sa gitna ng unos. Tap at swipe lang, at lalong lumalakas ang hangin, hamog, at kidlat habang tumatagal ang laro.</p>
+        <div class="apps">
       <a class="app-card" data-app="storm-volley" href="/fil/apps/storm-volley/">
         <div class="app-card-top">
           <img src="/assets/images/storm-volley-icon.png" alt="Icon ng Volleyball sa Unos" />
         </div>
         <div class="app-card-text">
-          <h3>Volleyball sa Unos</h3>
+          <h4>Volleyball sa Unos</h4>
           <p>Mahahabang rally. Panatilihin ang bola sa ere, saka tapusin sa spike!</p>
           <span class="app-status live">Available na sa iOS</span>
         </div>
@@ -148,7 +153,7 @@
           <img src="/assets/images/storm-badminton-icon.png" alt="Icon ng Badminton sa Unos" />
         </div>
         <div class="app-card-text">
-          <h3>Badminton sa Unos</h3>
+          <h4>Badminton sa Unos</h4>
           <p>Ihulog nang mahina, saka ipadala nang malalim. Pagod na ang kalaban, hindi na niya maaabot!</p>
           <span class="app-status live">Available na sa iOS</span>
         </div>
@@ -159,7 +164,7 @@
           <img src="/assets/images/storm-tennis-icon.png" alt="Icon ng Tennis sa Unos" />
         </div>
         <div class="app-card-text">
-          <h3>Tennis sa Unos</h3>
+          <h4>Tennis sa Unos</h4>
           <p>Pinakamabibilis na palo sa serye. Tamaan ang target mong sulok sa isang iglap!</p>
           <span class="app-status live">Available na sa iOS</span>
         </div>
@@ -170,34 +175,14 @@
           <img src="/assets/images/storm-pickleball-icon.png" alt="Icon ng Pickleball sa Unos" />
         </div>
         <div class="app-card-text">
-          <h3>Pickleball sa Unos</h3>
+          <h4>Pickleball sa Unos</h4>
           <p>May lugar kung saan bawal kang pumalo ng bola!? Kakaibang rules na nakaka-hook, lalo na kung bago ka rito.</p>
           <span class="app-status live">Available na sa iOS</span>
         </div>
         <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>
-      </div>
-    </section>
-
-    <section class="app-group">
-      <h2>Mga laro</h2>
-      <div class="apps">
-      <a class="app-card" data-app="lookalike-cats" href="/fil/apps/lookalike-cats/">
-        <div class="app-card-top">
-          <img src="/assets/images/lookalike-cats-icon.png" alt="Icon ng Hanapin ang Kambal na Pusa" />
         </div>
-        <div class="app-card-text">
-          <h3>Hanapin ang Kambal na Pusa</h3>
-          <p>Hanapin ang dalawang pusang magkaparehong-magkapareho ang balahibo. Lumipat mula pusa papunta sa pusa habang naglalakad!</p>
-          <span class="app-status">Malapit na sa iOS / Browser</span>
-        </div>
-        <span class="app-card-arrow" aria-hidden="true">›</span>
-      </a>
       </div>
-    </section>
-
-    <section class="app-group">
-      <h2>Mga app para sa browser</h2>
       <div class="apps">
       <a class="app-card" data-app="asakusa-circuit" href="/fil/apps/asakusa-circuit/">
         <div class="app-card-top">
@@ -207,6 +192,17 @@
           <h3>Asakusa Circuit</h3>
           <p>Larong karera ng kotse. Humarurot sa lumang bayan, baybayin, at bukid. Walang kailangang i-install!</p>
           <span class="app-status live">Available na sa browser</span>
+        </div>
+        <span class="app-card-arrow" aria-hidden="true">›</span>
+      </a>
+      <a class="app-card" data-app="lookalike-cats" href="/fil/apps/lookalike-cats/">
+        <div class="app-card-top">
+          <img src="/assets/images/lookalike-cats-icon.png" alt="Icon ng Hanapin ang Kambal na Pusa" />
+        </div>
+        <div class="app-card-text">
+          <h3>Hanapin ang Kambal na Pusa</h3>
+          <p>Hanapin ang dalawang pusang magkaparehong-magkapareho ang balahibo. Lumipat mula pusa papunta sa pusa habang naglalakad!</p>
+          <span class="app-status">Malapit na sa iOS / Browser</span>
         </div>
         <span class="app-card-arrow" aria-hidden="true">›</span>
       </a>
