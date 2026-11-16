@@ -2,6 +2,7 @@
 // 日本語はサイトの頭（/index.html・/apps/<アプリ>/index.html）、ほかの言語は /<言語>/ の下に書く。
 // 文言は tools/text/<言語>.json（サイトの文）と tools/data/<アプリ>.json（ストアの説明文。npm run import で取りこむ）。
 // 出来上がったページは手で直さない（次の build で消える）
+import { createHash } from 'node:crypto'
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { APPS, FALLBACK, LOCALES } from './config.mjs'
@@ -15,6 +16,8 @@ const GAMES = Object.fromEntries(APPS.filter((a) => a.game).map((a) => [a.id, js
 const VOLLOG_APP = APPS.find((a) => a.id === 'vollog')
 const VOLLOG = json('tools/data/vollog.json')
 const LICENSE = readFileSync(join(root, 'tools/lucide-license.html'), 'utf8').trimEnd()
+/** site.css の中身から作る短い印。CSS を直すたびに URL が変わるので、ブラウザに残った古い CSS が使われない */
+const CSS_VERSION = createHash('sha256').update(readFileSync(join(root, 'assets/css/site.css'))).digest('hex').slice(0, 8)
 const SITE = 'https://asakusasemao.com'
 /** お問い合わせ。紹介ページはストアのサポートURLなので、フッターに必ず出す（App Store の審査で、連絡先が要る） */
 const CONTACT = 'mailto:asakusasemao@gmail.com'
@@ -165,7 +168,7 @@ ${description ? `  <meta name="description" content="${escape(description)}" />\
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900${font}&display=swap" />
-  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="/assets/css/site.css?v=${CSS_VERSION}" />
 </head>
 <body ${bodyAttr}>
 

@@ -324,6 +324,12 @@ html[lang="en"] .lang-btn[data-lang="en"] {
   line-height: 1.35;
   margin-bottom: 8px;
 }
+/* 枠の中では幅の上限を外す（日本語は1行に収まる）。折り返すときは、言葉の途中で切らない */
+.app-subgroup .app-group-lead {
+  max-width: none;
+  word-break: auto-phrase;
+  text-wrap: pretty;
+}
 @media (max-width: 600px) {
   .app-subgroup { margin: 0 0 28px; padding: 16px 14px 22px; border-radius: 22px; }
 }
