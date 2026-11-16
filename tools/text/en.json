@@ -14,7 +14,8 @@
     "releasedShort": "Out now on {p}",
     "comingShort": "{p}: coming soon",
     "soon": "Coming soon",
-    "webReleased": "Out now in your browser"
+    "webReleased": "Out now in your browser",
+    "browser": "Browser"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Vollog Terms of Use",
     "series": "Storm Sports Games",
     "seriesLead": "All one-on-one, all in a storm. Just taps and swipes, and the wind, fog, and lightning grow wilder as the match goes on.",
-    "web": "Apps for your browser"
+    "web": "Apps for your browser",
+    "games": "Games"
   },
   "game": {
     "unique": "Only in this game",
@@ -144,6 +146,10 @@
           "Touch on a phone; keyboard or gamepad on a PC."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Find the two cats with the exact same pattern. Switch from cat to cat as you walk!",
+      "ads": "A short ad is shown only when you use a hint. Buy \"{noAds}\" once to use hints without ads. Please check each store for the price."
     }
   },
   "vollog": {

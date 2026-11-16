@@ -14,7 +14,8 @@
     "releasedShort": "Kini di {p}",
     "comingShort": "{p}: akan datang",
     "soon": "Akan datang",
-    "webReleased": "Kini di pelayar"
+    "webReleased": "Kini di pelayar",
+    "browser": "Pelayar"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Terma Penggunaan Vollog",
     "series": "Permainan Sukan dalam Ribut",
     "seriesLead": "Semuanya satu lawan satu dalam ribut. Hanya ketik dan leret, dan angin, kabus serta kilat makin ganas apabila perlawanan berlanjutan.",
-    "web": "Aplikasi untuk pelayar"
+    "web": "Aplikasi untuk pelayar",
+    "games": "Permainan"
   },
   "game": {
     "unique": "Hanya dalam permainan ini",
@@ -144,6 +146,10 @@
           "Sentuh pada telefon; papan kekunci atau gamepad pada PC."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Cari dua kucing yang coraknya sama sebiji. Tukar dari kucing ke kucing sambil berjalan!",
+      "ads": "Iklan pendek hanya dipaparkan apabila anda menggunakan petunjuk. Beli \"{noAds}\" sekali untuk menggunakan petunjuk tanpa iklan. Semak harga di setiap kedai."
     }
   }
 }

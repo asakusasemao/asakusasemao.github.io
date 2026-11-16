@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!-- tools/build.mjs が作ったページ。直すときは tools/ の文言かスクリプトを直して、npm run build -->
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var LOCALES = ["id","ms","cs","de","en","es","fil","fr","it","pl","pt","sr","vi","tr","ru","uk","hi","th","ja","zh-Hans","zh-Hant","ko"], HERE = "vi", PATH = "apps/lookalike-cats/";
+      function candidates(tag) {
+        try {
+          var l = new Intl.Locale(tag).maximize();
+          return [tag, l.language + '-' + l.script + '-' + l.region, l.language + '-' + l.script, l.language + '-' + l.region, l.language];
+        } catch (e) {
+          return [tag];
+        }
+      }
+      function match(tags) {
+        for (var i = 0; i < tags.length; i++) {
+          var c = candidates(tags[i]);
+          for (var j = 0; j < c.length; j++) {
+            for (var k = 0; k < LOCALES.length; k++) if (LOCALES[k].toLowerCase() === String(c[j]).toLowerCase()) return LOCALES[k];
+          }
+        }
+        return null;
+      }
+      var want = null, asked = new URLSearchParams(location.search).get('lang');
+      if (asked) {
+        want = match([asked]) || "en";
+        try { localStorage.setItem('site-lang', want); } catch (e) {}
+      } else if (HERE === 'ja') {
+        try { want = localStorage.getItem('site-lang'); } catch (e) {}
+        if (LOCALES.indexOf(want) < 0) want = match(navigator.languages || [navigator.language || 'ja']) || "en";
+      }
+      if (want && want !== HERE) {
+        location.replace((want === 'ja' ? '/' : '/' + want + '/') + PATH);
+        return;
+      }
+      // このページの言語を覚える（利用規約などから / へ戻ったとき、最後に見ていた言語に戻すため）。
+      // 覚えている言語がこのページにないとき（Vollog のページを開いたマレー語の人）は、上書きしない
+      try {
+        var saved = localStorage.getItem('site-lang');
+        if (!saved || LOCALES.indexOf(saved) >= 0) localStorage.setItem('site-lang', HERE);
+      } catch (e) {}
+    })();
+  </script>
+  <title>Tìm mèo sinh đôi (Lookalike Cats) - Tìm hai chú mèo giống hệt nhau</title>
+  <meta name="description" content="Mèo ở khắp nơi: trong vườn, ở lễ hội, bên bờ biển. Chỉ có hai chú có bộ lông giống hệt nhau. Đổi từ mèo này sang mèo khác khi dạo bước, và tìm ra cặp đôi." />
+  <link rel="canonical" href="https://asakusasemao.com/vi/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="id" href="https://asakusasemao.com/id/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="ms" href="https://asakusasemao.com/ms/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="cs" href="https://asakusasemao.com/cs/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="de" href="https://asakusasemao.com/de/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="en" href="https://asakusasemao.com/en/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="es" href="https://asakusasemao.com/es/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="fil" href="https://asakusasemao.com/fil/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="fr" href="https://asakusasemao.com/fr/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="it" href="https://asakusasemao.com/it/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="pl" href="https://asakusasemao.com/pl/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="pt" href="https://asakusasemao.com/pt/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="sr" href="https://asakusasemao.com/sr/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="vi" href="https://asakusasemao.com/vi/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="tr" href="https://asakusasemao.com/tr/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="ru" href="https://asakusasemao.com/ru/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="uk" href="https://asakusasemao.com/uk/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="hi" href="https://asakusasemao.com/hi/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="th" href="https://asakusasemao.com/th/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="ja" href="https://asakusasemao.com/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://asakusasemao.com/zh-Hans/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://asakusasemao.com/zh-Hant/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="ko" href="https://asakusasemao.com/ko/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="x-default" href="https://asakusasemao.com/apps/lookalike-cats/" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body data-app="lookalike-cats">
+
+  <header class="site-header">
+    <a class="brand" href="/vi/">AsakusaSemao</a>
+    <nav class="header-links">
+      <a href="/apps/lookalike-cats/privacy.html">Chính sách quyền riêng tư</a>
+    </nav>
+  </header>
+
+  <main>
+    <details class="lang-picker">
+      <summary aria-label="Ngôn ngữ"><!-- Lucide: globe --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span lang="vi">Tiếng Việt</span></summary>
+      <ul>
+          <li><a href="/id/apps/lookalike-cats/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ms/apps/lookalike-cats/" hreflang="ms" lang="ms" data-lang="ms">Bahasa Melayu</a></li>
+          <li><a href="/cs/apps/lookalike-cats/" hreflang="cs" lang="cs" data-lang="cs">Čeština</a></li>
+          <li><a href="/de/apps/lookalike-cats/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="/en/apps/lookalike-cats/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/es/apps/lookalike-cats/" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a href="/fil/apps/lookalike-cats/" hreflang="fil" lang="fil" data-lang="fil">Filipino</a></li>
+          <li><a href="/fr/apps/lookalike-cats/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="/it/apps/lookalike-cats/" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="/pl/apps/lookalike-cats/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li>
+          <li><a href="/pt/apps/lookalike-cats/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li>
+          <li><a href="/sr/apps/lookalike-cats/" hreflang="sr" lang="sr" data-lang="sr">Srpski</a></li>
+          <li><a href="/vi/apps/lookalike-cats/" hreflang="vi" lang="vi" data-lang="vi" aria-current="page">Tiếng Việt</a></li>
+          <li><a href="/tr/apps/lookalike-cats/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          <li><a href="/ru/apps/lookalike-cats/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li>
+          <li><a href="/uk/apps/lookalike-cats/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li>
+          <li><a href="/hi/apps/lookalike-cats/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li>
+          <li><a href="/th/apps/lookalike-cats/" hreflang="th" lang="th" data-lang="th">ไทย</a></li>
+          <li><a href="/apps/lookalike-cats/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          <li><a href="/zh-Hans/apps/lookalike-cats/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">简体中文</a></li>
+          <li><a href="/zh-Hant/apps/lookalike-cats/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li>
+          <li><a href="/ko/apps/lookalike-cats/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+      </ul>
+    </details>
+
+    <div class="hero">
+      <img class="app-icon" src="/assets/images/lookalike-cats-icon.png" alt="Biểu tượng Tìm mèo sinh đôi" />
+      <div class="hero-text">
+        <h1>
+          <span>Tìm hai chú mèo giống hệt nhau</span>
+          Tìm mèo sinh đôi
+        </h1>
+        <p>Mèo ở khắp nơi: trong vườn, ở lễ hội, bên bờ biển.<br>Chỉ có hai chú có bộ lông giống hệt nhau.<br>Đổi từ mèo này sang mèo khác khi dạo bước, và tìm ra cặp đôi.</p>
+        <div class="badge-row">
+          <span class="badge accent">Chơi miễn phí</span>
+          <span class="badge accent">Không cần tài khoản</span>
+          <span class="badge accent">Hỗ trợ 22 ngôn ngữ</span>
+          <span class="badge">iOS: sắp ra mắt</span>
+          <span class="badge">Trình duyệt: sắp ra mắt</span>
+        </div>
+      </div>
+      <div class="store-buttons">
+        <span class="store-btn store-btn-soon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span class="store-btn-label">
+            <small>Sắp ra mắt</small>
+            App Store
+          </span>
+        </span>
+        <span class="store-btn store-btn-web store-btn-soon">
+          <!-- Lucide: play --><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <span class="store-btn-label">
+            <small>Sắp ra mắt</small>
+            Trình duyệt
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <section>
+      <h2>Cách chơi</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: pointer --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+          </div>
+          <h3>Tìm kiếm trong vai một chú mèo</h3>
+          <p>Bạn cũng là một chú mèo. Vuốt ở góc dưới bên trái để đi, và kéo ở chỗ khác để nhìn quanh.</p><p>Chạm vào mèo có bộ lông khác để đổi sang chú mèo đó. Chạm ở gần chú mèo giống hệt bạn, hai chú sẽ cuộn tròn ngủ bên nhau.</p><p>Thời gian và số lần đổi được ghi lại.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: palette --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          </div>
+          <h3>Cẩn thận mèo na ná</h3>
+          <p>Màu nền, vằn, màu mắt, độ dài đuôi. Có những chú chỉ khác nhau đúng một chi tiết.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: globe --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          <h3>Ba địa điểm</h3>
+          <ul><li><b>Khu vườn làng quê</b>: ngôi nhà có hiên, ao nước, rừng tre. Bạn có thể vào cả trong nhà.</li><li><b>Lễ hội đền</b>: hàng quán dọc lối đi và ngôi đền trên đỉnh bậc đá. Buổi chiều tối, đèn lồng sáng lên.</li><li><b>Nhà ga ven biển</b>: một nhà ga nhỏ, bãi cát và cầu tàu có ngọn hải đăng.</li></ul><p>Mỗi lượt chơi diễn ra vào buổi sáng, buổi trưa hoặc chiều tối. Mèo tam thể, mèo đồi mồi và mèo colorpoint chỉ xuất hiện ở địa điểm của riêng chúng.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: book --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>Bộ sưu tập</h3>
+          <p>Bộ lông của những chú mèo bạn đã hóa thân sẽ được thêm vào bộ sưu tập. Tổng cộng 432 kiểu.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: lightbulb --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+          </div>
+          <h3>Gợi ý</h3>
+          <p>Bí rồi? Dùng gợi ý. Một trong hai chú mèo thỉnh thoảng kêu meo, hoặc bắt đầu nhảy múa (chọn trong Cài đặt).</p><p>Gợi ý dùng được sau khi xem một quảng cáo ngắn. Mua &quot;Không quảng cáo&quot; (mua một lần) để dùng gợi ý mà không có quảng cáo.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: share --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+          </div>
+          <h3>Ngoài ra</h3>
+          <ul><li>Chia sẻ ảnh cặp mèo bạn tìm thấy</li><li>Hỗ trợ 22 ngôn ngữ</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="callout">
+      <h2>Quảng cáo và mua hàng trong ứng dụng</h2>
+      <p class="section-note">Quảng cáo ngắn chỉ hiện khi bạn dùng gợi ý. Mua &quot;Không quảng cáo&quot; một lần để dùng gợi ý mà không có quảng cáo. Vui lòng xem giá trên từng cửa hàng.</p>
+    </section>
+  </main>
+
+  <!--
+    このページの絵記号（「Lucide: ...」と書いてある SVG）は、Lucide（https://lucide.dev）のもの。
+    ライセンスは、著作権表示と許諾の文を写しに残すことを求めるので、ここに置く。絵記号を足しても、この文はそのままでよい。
+
+    ISC License
+
+    Copyright (c) 2026 Lucide Icons and Contributors
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+    ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+    Lucide の絵記号の一部は Feather（https://feathericons.com）がもとで、そちらは次のライセンス。
+
+    The MIT License (MIT) (for the icons derived from the Feather project)
+
+    Copyright (c) 2013-present Cole Bemis
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+  -->
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/vi/">Trang chủ</a>
+      <a href="/apps/lookalike-cats/privacy.html">Chính sách quyền riêng tư</a>
+      <a href="mailto:asakusasemao@gmail.com">Liên hệ</a>
+    </div>
+    <p>© 2026 AsakusaSemao. All rights reserved.</p>
+    <p>Biểu tượng: <a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a> (Giấy phép ISC)</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.lang-picker a[data-lang]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        try { localStorage.setItem('site-lang', a.dataset.lang); } catch (e) {}
+      });
+    });
+  </script>
+</body>
+</html>

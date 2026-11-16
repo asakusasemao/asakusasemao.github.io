@@ -14,7 +14,8 @@
     "releasedShort": "Už na {p}",
     "comingShort": "{p}: brzy",
     "soon": "Již brzy",
-    "webReleased": "Už v prohlížeči"
+    "webReleased": "Už v prohlížeči",
+    "browser": "Prohlížeč"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Podmínky používání Vollog",
     "series": "Sportovní hry v bouři",
     "seriesLead": "Vždy jeden na jednoho, vždy v bouři. Stačí ťukat a táhnout. Čím déle zápas trvá, tím divočejší je vítr, mlha i blesky.",
-    "web": "Aplikace do prohlížeče"
+    "web": "Aplikace do prohlížeče",
+    "games": "Hry"
   },
   "game": {
     "unique": "Jen v této hře",
@@ -144,6 +146,10 @@
           "Dotykem na telefonu, klávesnicí nebo gamepadem na PC."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Najdi dvě kočky s úplně stejnou srstí. Při chůzi se vyměňuj z kočky na kočku!",
+      "ads": "Krátká reklama se zobrazí jen při použití nápovědy. Kup jednou „{noAds}“ a nápovědy používej bez reklam. Cenu najdeš v příslušném obchodě."
     }
   },
   "vollog": {

@@ -14,7 +14,8 @@
     "releasedShort": "Đã có trên {p}",
     "comingShort": "{p}: sắp ra mắt",
     "soon": "Sắp ra mắt",
-    "webReleased": "Đã có trên trình duyệt"
+    "webReleased": "Đã có trên trình duyệt",
+    "browser": "Trình duyệt"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Điều khoản sử dụng Vollog",
     "series": "Game thể thao giữa bão",
     "seriesLead": "Tất cả đều là một đấu một giữa bão. Chỉ cần chạm và vuốt, trận càng về sau thì gió, sương mù và sét càng dữ dội.",
-    "web": "Ứng dụng trên trình duyệt"
+    "web": "Ứng dụng trên trình duyệt",
+    "games": "Trò chơi"
   },
   "game": {
     "unique": "Chỉ có trong trò chơi này",
@@ -144,6 +146,10 @@
           "Cảm ứng trên điện thoại; bàn phím hoặc tay cầm trên PC."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Tìm hai chú mèo có bộ lông giống hệt nhau. Đổi từ mèo này sang mèo khác khi dạo bước!",
+      "ads": "Quảng cáo ngắn chỉ hiện khi bạn dùng gợi ý. Mua \"{noAds}\" một lần để dùng gợi ý mà không có quảng cáo. Vui lòng xem giá trên từng cửa hàng."
     }
   },
   "vollog": {

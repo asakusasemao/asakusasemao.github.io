@@ -14,7 +14,8 @@
     "releasedShort": "Jetzt für {p}",
     "comingShort": "{p}: bald verfügbar",
     "soon": "Bald verfügbar",
-    "webReleased": "Jetzt im Browser"
+    "webReleased": "Jetzt im Browser",
+    "browser": "Browser"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Nutzungsbedingungen von Vollog",
     "series": "Sportspiele im Sturm",
     "seriesLead": "Immer eins gegen eins, immer im Sturm. Nur Tippen und Wischen – und je weiter das Match läuft, desto wilder werden Wind, Nebel und Blitze.",
-    "web": "Apps für den Browser"
+    "web": "Apps für den Browser",
+    "games": "Spiele"
   },
   "game": {
     "unique": "Nur in diesem Spiel",
@@ -144,6 +146,10 @@
           "Touch auf dem Smartphone, Tastatur oder Gamepad am PC."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Finde die zwei Katzen mit genau gleichem Muster. Wechsle beim Gehen von Katze zu Katze!",
+      "ads": "Eine kurze Werbung kommt nur, wenn du einen Tipp nutzt. Kaufe einmal „{noAds}“, um Tipps ohne Werbung zu nutzen. Den Preis findest du im jeweiligen Store."
     }
   },
   "vollog": {

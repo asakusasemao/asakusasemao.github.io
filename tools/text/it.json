@@ -14,7 +14,8 @@
     "releasedShort": "Disponibile su {p}",
     "comingShort": "{p}: in arrivo",
     "soon": "In arrivo",
-    "webReleased": "Disponibile nel browser"
+    "webReleased": "Disponibile nel browser",
+    "browser": "Browser"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Termini d’uso di Vollog",
     "series": "Giochi sportivi nella tempesta",
     "seriesLead": "Sempre uno contro uno, sempre nella tempesta. Bastano tocchi e swipe, e vento, nebbia e fulmini si scatenano man mano che la partita va avanti.",
-    "web": "App per il browser"
+    "web": "App per il browser",
+    "games": "Giochi"
   },
   "game": {
     "unique": "Solo in questo gioco",
@@ -144,6 +146,10 @@
           "Touch sullo smartphone; tastiera o gamepad su PC."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Trova i due gatti con lo stesso identico manto. Passa da un gatto all’altro mentre cammini!",
+      "ads": "Una breve pubblicità appare solo quando usi un aiuto. Acquista «{noAds}» una volta per usare gli aiuti senza pubblicità. Controlla il prezzo in ciascuno store."
     }
   },
   "vollog": {

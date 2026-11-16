@@ -14,7 +14,8 @@
     "releasedShort": "{p} için çıktı",
     "comingShort": "{p}: yakında",
     "soon": "Yakında",
-    "webReleased": "Tarayıcıda çıktı"
+    "webReleased": "Tarayıcıda çıktı",
+    "browser": "Tarayıcı"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Vollog Kullanım Koşulları",
     "series": "Fırtınada Spor Oyunları",
     "seriesLead": "Hepsi bire bir, hepsi fırtınada. Sadece dokun ve kaydır; maç ilerledikçe rüzgâr, sis ve yıldırım şiddetlenir.",
-    "web": "Tarayıcı uygulamaları"
+    "web": "Tarayıcı uygulamaları",
+    "games": "Oyunlar"
   },
   "game": {
     "unique": "Sadece bu oyunda",
@@ -144,6 +146,10 @@
           "Telefonda dokunmatik; PC'de klavye veya oyun kumandası."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Deseni birebir aynı iki kediyi bul. Yürürken kediden kediye geç!",
+      "ads": "Kısa bir reklam yalnızca ipucu kullandığında çıkar. \"{noAds}\"ı bir kez satın alarak ipuçlarını reklamsız kullan. Fiyatı her mağazada kontrol et."
     }
   },
   "vollog": {

@@ -14,7 +14,8 @@
     "releasedShort": "Available na sa {p}",
     "comingShort": "{p}: malapit na",
     "soon": "Malapit na",
-    "webReleased": "Available na sa browser"
+    "webReleased": "Available na sa browser",
+    "browser": "Browser"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Mga Tuntunin ng Paggamit ng Vollog",
     "series": "Sports Games sa Unos",
     "seriesLead": "Lahat ay one-on-one, lahat sa gitna ng unos. Tap at swipe lang, at lalong lumalakas ang hangin, hamog, at kidlat habang tumatagal ang laro.",
-    "web": "Mga app para sa browser"
+    "web": "Mga app para sa browser",
+    "games": "Mga laro"
   },
   "game": {
     "unique": "Dito lang sa larong ito",
@@ -144,6 +146,10 @@
           "Touch sa phone; keyboard o gamepad sa PC."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Hanapin ang dalawang pusang magkaparehong-magkapareho ang balahibo. Lumipat mula pusa papunta sa pusa habang naglalakad!",
+      "ads": "May maikling ad lang kapag gumamit ka ng hint. Bilhin nang isang beses ang \"{noAds}\" para gumamit ng hint nang walang ad. Tingnan ang presyo sa bawat store."
     }
   },
   "vollog": {

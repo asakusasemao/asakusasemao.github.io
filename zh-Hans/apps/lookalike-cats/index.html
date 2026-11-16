@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!-- tools/build.mjs が作ったページ。直すときは tools/ の文言かスクリプトを直して、npm run build -->
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      var LOCALES = ["id","ms","cs","de","en","es","fil","fr","it","pl","pt","sr","vi","tr","ru","uk","hi","th","ja","zh-Hans","zh-Hant","ko"], HERE = "zh-Hans", PATH = "apps/lookalike-cats/";
+      function candidates(tag) {
+        try {
+          var l = new Intl.Locale(tag).maximize();
+          return [tag, l.language + '-' + l.script + '-' + l.region, l.language + '-' + l.script, l.language + '-' + l.region, l.language];
+        } catch (e) {
+          return [tag];
+        }
+      }
+      function match(tags) {
+        for (var i = 0; i < tags.length; i++) {
+          var c = candidates(tags[i]);
+          for (var j = 0; j < c.length; j++) {
+            for (var k = 0; k < LOCALES.length; k++) if (LOCALES[k].toLowerCase() === String(c[j]).toLowerCase()) return LOCALES[k];
+          }
+        }
+        return null;
+      }
+      var want = null, asked = new URLSearchParams(location.search).get('lang');
+      if (asked) {
+        want = match([asked]) || "en";
+        try { localStorage.setItem('site-lang', want); } catch (e) {}
+      } else if (HERE === 'ja') {
+        try { want = localStorage.getItem('site-lang'); } catch (e) {}
+        if (LOCALES.indexOf(want) < 0) want = match(navigator.languages || [navigator.language || 'ja']) || "en";
+      }
+      if (want && want !== HERE) {
+        location.replace((want === 'ja' ? '/' : '/' + want + '/') + PATH);
+        return;
+      }
+      // このページの言語を覚える（利用規約などから / へ戻ったとき、最後に見ていた言語に戻すため）。
+      // 覚えている言語がこのページにないとき（Vollog のページを開いたマレー語の人）は、上書きしない
+      try {
+        var saved = localStorage.getItem('site-lang');
+        if (!saved || LOCALES.indexOf(saved) >= 0) localStorage.setItem('site-lang', HERE);
+      } catch (e) {}
+    })();
+  </script>
+  <title>找同款猫咪 (Lookalike Cats) - 找出花色一模一样的两只猫</title>
+  <meta name="description" content="庭院里、夏日祭上、海边，到处都是猫咪。 其中只有两只花色一模一样。 一边走一边从这只猫换到那只猫，找出这一对吧。" />
+  <link rel="canonical" href="https://asakusasemao.com/zh-Hans/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="id" href="https://asakusasemao.com/id/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="ms" href="https://asakusasemao.com/ms/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="cs" href="https://asakusasemao.com/cs/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="de" href="https://asakusasemao.com/de/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="en" href="https://asakusasemao.com/en/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="es" href="https://asakusasemao.com/es/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="fil" href="https://asakusasemao.com/fil/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="fr" href="https://asakusasemao.com/fr/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="it" href="https://asakusasemao.com/it/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="pl" href="https://asakusasemao.com/pl/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="pt" href="https://asakusasemao.com/pt/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="sr" href="https://asakusasemao.com/sr/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="vi" href="https://asakusasemao.com/vi/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="tr" href="https://asakusasemao.com/tr/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="ru" href="https://asakusasemao.com/ru/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="uk" href="https://asakusasemao.com/uk/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="hi" href="https://asakusasemao.com/hi/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="th" href="https://asakusasemao.com/th/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="ja" href="https://asakusasemao.com/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://asakusasemao.com/zh-Hans/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://asakusasemao.com/zh-Hant/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="ko" href="https://asakusasemao.com/ko/apps/lookalike-cats/" />
+  <link rel="alternate" hreflang="x-default" href="https://asakusasemao.com/apps/lookalike-cats/" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+</head>
+<body data-app="lookalike-cats">
+
+  <header class="site-header">
+    <a class="brand" href="/zh-Hans/">AsakusaSemao</a>
+    <nav class="header-links">
+      <a href="/apps/lookalike-cats/privacy.html">隐私政策</a>
+    </nav>
+  </header>
+
+  <main>
+    <details class="lang-picker">
+      <summary aria-label="语言"><!-- Lucide: globe --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg><span lang="zh-Hans">简体中文</span></summary>
+      <ul>
+          <li><a href="/id/apps/lookalike-cats/" hreflang="id" lang="id" data-lang="id">Bahasa Indonesia</a></li>
+          <li><a href="/ms/apps/lookalike-cats/" hreflang="ms" lang="ms" data-lang="ms">Bahasa Melayu</a></li>
+          <li><a href="/cs/apps/lookalike-cats/" hreflang="cs" lang="cs" data-lang="cs">Čeština</a></li>
+          <li><a href="/de/apps/lookalike-cats/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li>
+          <li><a href="/en/apps/lookalike-cats/" hreflang="en" lang="en" data-lang="en">English</a></li>
+          <li><a href="/es/apps/lookalike-cats/" hreflang="es" lang="es" data-lang="es">Español</a></li>
+          <li><a href="/fil/apps/lookalike-cats/" hreflang="fil" lang="fil" data-lang="fil">Filipino</a></li>
+          <li><a href="/fr/apps/lookalike-cats/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li>
+          <li><a href="/it/apps/lookalike-cats/" hreflang="it" lang="it" data-lang="it">Italiano</a></li>
+          <li><a href="/pl/apps/lookalike-cats/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li>
+          <li><a href="/pt/apps/lookalike-cats/" hreflang="pt" lang="pt" data-lang="pt">Português</a></li>
+          <li><a href="/sr/apps/lookalike-cats/" hreflang="sr" lang="sr" data-lang="sr">Srpski</a></li>
+          <li><a href="/vi/apps/lookalike-cats/" hreflang="vi" lang="vi" data-lang="vi">Tiếng Việt</a></li>
+          <li><a href="/tr/apps/lookalike-cats/" hreflang="tr" lang="tr" data-lang="tr">Türkçe</a></li>
+          <li><a href="/ru/apps/lookalike-cats/" hreflang="ru" lang="ru" data-lang="ru">Русский</a></li>
+          <li><a href="/uk/apps/lookalike-cats/" hreflang="uk" lang="uk" data-lang="uk">Українська</a></li>
+          <li><a href="/hi/apps/lookalike-cats/" hreflang="hi" lang="hi" data-lang="hi">हिन्दी</a></li>
+          <li><a href="/th/apps/lookalike-cats/" hreflang="th" lang="th" data-lang="th">ไทย</a></li>
+          <li><a href="/apps/lookalike-cats/" hreflang="ja" lang="ja" data-lang="ja">日本語</a></li>
+          <li><a href="/zh-Hans/apps/lookalike-cats/" hreflang="zh-Hans" lang="zh-Hans" data-lang="zh-Hans" aria-current="page">简体中文</a></li>
+          <li><a href="/zh-Hant/apps/lookalike-cats/" hreflang="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">繁體中文</a></li>
+          <li><a href="/ko/apps/lookalike-cats/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li>
+      </ul>
+    </details>
+
+    <div class="hero">
+      <img class="app-icon" src="/assets/images/lookalike-cats-icon.png" alt="找同款猫咪的图标" />
+      <div class="hero-text">
+        <h1>
+          <span>找出花色一模一样的两只猫</span>
+          找同款猫咪
+        </h1>
+        <p>庭院里、夏日祭上、海边，到处都是猫咪。<br>其中只有两只花色一模一样。<br>一边走一边从这只猫换到那只猫，找出这一对吧。</p>
+        <div class="badge-row">
+          <span class="badge accent">免费游玩</span>
+          <span class="badge accent">无需注册账号</span>
+          <span class="badge accent">支持 22 种语言</span>
+          <span class="badge">iOS 即将推出</span>
+          <span class="badge">浏览器 即将推出</span>
+        </div>
+      </div>
+      <div class="store-buttons">
+        <span class="store-btn store-btn-soon">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span class="store-btn-label">
+            <small>即将推出</small>
+            App Store
+          </span>
+        </span>
+        <span class="store-btn store-btn-web store-btn-soon">
+          <!-- Lucide: play --><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+          <span class="store-btn-label">
+            <small>即将推出</small>
+            浏览器
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <section>
+      <h2>游戏玩法</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: pointer --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+          </div>
+          <h3>变成猫去寻找</h3>
+          <p>你也是其中一只猫。在画面左下角滑动来行走，在其他地方拖动来环顾四周。</p><p>点一下花色不同的猫，就会换成那只猫。靠近和你花色相同的猫再点一下，两只猫就会依偎着睡着。</p><p>会记录用时和换猫的次数。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: palette --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          </div>
+          <h3>小心长得很像的猫</h3>
+          <p>底色、斑纹、眼睛颜色、尾巴长短。有的猫只差一个地方。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: globe --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          <h3>三个地点</h3>
+          <ul><li><b>乡间庭院</b>：带檐廊的房子、池塘、竹林。也可以走进屋里。</li><li><b>神社夏日祭</b>：参道两旁的小摊，石阶上方的拜殿。傍晚会亮起灯笼。</li><li><b>海边车站</b>：无人小站、沙滩，以及伸向海里的防波堤和灯塔。</li></ul><p>每局的时间是早晨、中午或傍晚。三花、玳瑁和重点色的猫只会出现在各自的地点。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: book --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>图鉴</h3>
+          <p>你换成过的猫的花色会收进图鉴。共有 432 种。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: lightbulb --><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+          </div>
+          <h3>提示</h3>
+          <p>找不到时就用提示。两只中的一只会不时喵喵叫，或者原地跳起舞来（可在设置中选择）。</p><p>看一段短广告即可使用提示。购买&quot;去除广告&quot;（一次性购买）后，无需看广告即可使用。</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <!-- Lucide: share --><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+          </div>
+          <h3>其他</h3>
+          <ul><li>可以把找到的两只猫做成图片分享</li><li>支持 22 种语言</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="callout">
+      <h2>广告与应用内购买</h2>
+      <p class="section-note">只有使用提示时才会显示短广告。购买一次「去除广告」，即可不看广告使用提示。价格请以各商店的显示为准。</p>
+    </section>
+  </main>
+
+  <!--
+    このページの絵記号（「Lucide: ...」と書いてある SVG）は、Lucide（https://lucide.dev）のもの。
+    ライセンスは、著作権表示と許諾の文を写しに残すことを求めるので、ここに置く。絵記号を足しても、この文はそのままでよい。
+
+    ISC License
+
+    Copyright (c) 2026 Lucide Icons and Contributors
+
+    Permission to use, copy, modify, and/or distribute this software for any
+    purpose with or without fee is hereby granted, provided that the above
+    copyright notice and this permission notice appear in all copies.
+
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+    WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+    MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+    ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+    WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+    ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+    OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+    Lucide の絵記号の一部は Feather（https://feathericons.com）がもとで、そちらは次のライセンス。
+
+    The MIT License (MIT) (for the icons derived from the Feather project)
+
+    Copyright (c) 2013-present Cole Bemis
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+  -->
+
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="/zh-Hans/">首页</a>
+      <a href="/apps/lookalike-cats/privacy.html">隐私政策</a>
+      <a href="mailto:asakusasemao@gmail.com">联系方式</a>
+    </div>
+    <p>© 2026 AsakusaSemao. All rights reserved.</p>
+    <p>图标：<a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a>（ISC 许可证）</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.lang-picker a[data-lang]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        try { localStorage.setItem('site-lang', a.dataset.lang); } catch (e) {}
+      });
+    });
+  </script>
+</body>
+</html>

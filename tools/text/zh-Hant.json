@@ -14,7 +14,8 @@
     "releasedShort": "{p} 已上架",
     "comingShort": "{p} 即將推出",
     "soon": "即將推出",
-    "webReleased": "瀏覽器版已上架"
+    "webReleased": "瀏覽器版已上架",
+    "browser": "瀏覽器"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Vollog 使用條款",
     "series": "暴風雨運動遊戲",
     "seriesLead": "每一款都是暴風雨中的一對一對決。只需輕點和滑動，比賽越往後，風、霧和雷電就越猛烈。",
-    "web": "瀏覽器 App"
+    "web": "瀏覽器 App",
+    "games": "遊戲"
   },
   "game": {
     "unique": "這款遊戲的獨特之處",
@@ -144,6 +146,10 @@
           "手機用觸控，電腦用鍵盤或手把。"
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "從許多貓咪中找出花色一模一樣的兩隻。一邊走一邊換貓吧！",
+      "ads": "只有使用提示時才會顯示短廣告。購買一次「{noAds}」，即可不看廣告使用提示。價格請以各商店的顯示為準。"
     }
   },
   "vollog": {

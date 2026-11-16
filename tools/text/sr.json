@@ -14,7 +14,8 @@
     "releasedShort": "Već na {p}",
     "comingShort": "{p}: uskoro",
     "soon": "Uskoro",
-    "webReleased": "Već u pregledaču"
+    "webReleased": "Već u pregledaču",
+    "browser": "Pregledač"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Uslovi korišćenja aplikacije Vollog",
     "series": "Sportske igre u oluji",
     "seriesLead": "Uvek jedan na jedan, uvek u oluji. Samo dodir i prevlačenje, a vetar, magla i munje su sve jači kako meč odmiče.",
-    "web": "Aplikacije za pregledač"
+    "web": "Aplikacije za pregledač",
+    "games": "Igre"
   },
   "game": {
     "unique": "Samo u ovoj igri",
@@ -144,6 +146,10 @@
           "Dodir na telefonu; tastatura ili gejmped na računaru."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Pronađi dve mačke s potpuno istim krznom. Menjaj se iz mačke u mačku dok hodaš!",
+      "ads": "Kratka reklama se prikazuje samo kad koristiš pomoć. Kupi jednom „{noAds}” da koristiš pomoć bez reklama. Cenu proveri u prodavnici."
     }
   },
   "vollog": {

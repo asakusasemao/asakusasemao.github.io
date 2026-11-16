@@ -14,7 +14,8 @@
     "releasedShort": "Disponible sur {p}",
     "comingShort": "{p} : bientôt",
     "soon": "Bientôt",
-    "webReleased": "Disponible dans le navigateur"
+    "webReleased": "Disponible dans le navigateur",
+    "browser": "Navigateur"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Conditions d’utilisation de Vollog",
     "series": "Jeux de sport sous l’orage",
     "seriesLead": "Toujours en un contre un, toujours sous l’orage. Il suffit de toucher et de glisser, et le vent, le brouillard et la foudre redoublent au fil du match.",
-    "web": "Applis pour navigateur"
+    "web": "Applis pour navigateur",
+    "games": "Jeux"
   },
   "game": {
     "unique": "Seulement dans ce jeu",
@@ -144,6 +146,10 @@
           "Tactile sur téléphone ; clavier ou manette sur PC."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Trouve les deux chats au pelage identique. Change de chat en chat en te promenant !",
+      "ads": "Une courte pub s’affiche seulement quand tu utilises un indice. Achète « {noAds} » une fois pour utiliser les indices sans pub. Consulte le prix dans chaque store."
     }
   },
   "vollog": {

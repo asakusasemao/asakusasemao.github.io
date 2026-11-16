@@ -14,7 +14,8 @@
     "releasedShort": "Ya en {p}",
     "comingShort": "{p}: muy pronto",
     "soon": "Muy pronto",
-    "webReleased": "Ya en tu navegador"
+    "webReleased": "Ya en tu navegador",
+    "browser": "Navegador"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Términos de uso de Vollog",
     "series": "Juegos deportivos en la tormenta",
     "seriesLead": "Siempre uno contra uno, siempre en plena tormenta. Solo toques y deslizamientos, y el viento, la niebla y los rayos se desatan a medida que avanza el partido.",
-    "web": "Apps para el navegador"
+    "web": "Apps para el navegador",
+    "games": "Juegos"
   },
   "game": {
     "unique": "Solo en este juego",
@@ -144,6 +146,10 @@
           "Táctil en el móvil; teclado o mando en el PC."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Encuentra los dos gatos con el mismo pelaje exacto. ¡Cambia de gato en gato mientras caminas!",
+      "ads": "Solo se muestra un anuncio corto al usar una pista. Compra «{noAds}» una vez para usar las pistas sin anuncios. Consulta el precio en cada tienda."
     }
   },
   "vollog": {

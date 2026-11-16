@@ -14,7 +14,8 @@
     "releasedShort": "Tersedia di {p}",
     "comingShort": "{p}: segera hadir",
     "soon": "Segera hadir",
-    "webReleased": "Sudah tersedia di browser"
+    "webReleased": "Sudah tersedia di browser",
+    "browser": "Browser"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Ketentuan Penggunaan Vollog",
     "series": "Game Olahraga Badai",
     "seriesLead": "Semuanya satu lawan satu di tengah badai. Cukup ketuk dan geser, dan angin, kabut, serta petir makin ganas seiring pertandingan berjalan.",
-    "web": "Aplikasi untuk browser"
+    "web": "Aplikasi untuk browser",
+    "games": "Game"
   },
   "game": {
     "unique": "Hanya di game ini",
@@ -144,6 +146,10 @@
           "Sentuh di ponsel; keyboard atau gamepad di PC."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Temukan dua kucing yang coraknya persis sama. Ganti dari kucing ke kucing sambil berjalan!",
+      "ads": "Iklan singkat hanya muncul saat kamu memakai petunjuk. Beli \"{noAds}\" sekali untuk memakai petunjuk tanpa iklan. Cek harganya di masing-masing toko."
     }
   },
   "vollog": {

@@ -10,6 +10,8 @@ const root = new URL('..', import.meta.url).pathname
 const json = (path) => JSON.parse(readFileSync(join(root, path), 'utf8'))
 const TEXT = Object.fromEntries(LOCALES.map((l) => [l, json(`tools/text/${l}.json`)]))
 const STORE = Object.fromEntries(APPS.filter((a) => a.storm).map((a) => [a.id, json(`tools/data/${a.id}.json`)]))
+/** 嵐のシリーズでないゲーム（そっくりねこ探しなど）。紹介ページはストアの説明文の節をそのままカードにする */
+const GAMES = Object.fromEntries(APPS.filter((a) => a.game).map((a) => [a.id, json(`tools/data/${a.id}.json`)]))
 const VOLLOG_APP = APPS.find((a) => a.id === 'vollog')
 const VOLLOG = json('tools/data/vollog.json')
 const LICENSE = readFileSync(join(root, 'tools/lucide-license.html'), 'utf8').trimEnd()
@@ -57,6 +59,8 @@ const ICONS = {
   palette:
     '<circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>',
   play: '<polygon points="6 3 20 12 6 21 6 3"/>',
+  lightbulb:
+    '<path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/>',
   globe: '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
 }
 const icon = (name) => `<!-- Lucide: ${name} --><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[name]}</svg>`
@@ -190,18 +194,20 @@ const links = (items) =>
 // ---------- アプリの状態 ----------
 
 /** 公開しているストア（ios / android）と、準備中のストアを分ける */
-function platforms(app) {
+function platforms(app, site) {
+  // false は出さない（作る予定がない）。browser は書いたアプリだけ出す
   const all = [
     ['iOS', app.ios],
     ['Android', app.android],
-  ]
+    ...('browser' in app ? [[site.browser, app.browser]] : []),
+  ].filter(([, url]) => url !== false)
   return { live: all.filter(([, url]) => url).map(([p]) => p), soon: all.filter(([, url]) => !url).map(([p]) => p) }
 }
 
 /** トップのカードに出す状態。公開しているものがあれば、それを出す */
 function status(app, s) {
   if (app.web) return { live: true, text: escape(s.webReleased) }
-  const { live, soon } = platforms(app)
+  const { live, soon } = platforms(app, s)
   return live.length
     ? { live: true, text: fill(s.released, { p: live.join(' / ') }) }
     : { live: false, text: fill(s.coming, { p: soon.join(' / ') }) }
@@ -226,7 +232,9 @@ function storeButtons(app, t) {
             App Store
           </span>
         </span>`
-  const google = app.android
+  const google = app.android === false
+    ? ''
+    : app.android
     ? `<a class="store-btn store-btn-google" href="${app.android}" target="_blank" rel="noopener noreferrer">
           ${PLAY}
           <span class="store-btn-label">
@@ -241,7 +249,18 @@ function storeButtons(app, t) {
             Google Play
           </span>
         </span>`
-  return { apple, google }
+  // ブラウザ版の準備中（公開したら、ここをボタンにする）
+  const browser =
+    'browser' in app && !app.browser
+      ? `<span class="store-btn store-btn-web store-btn-soon">
+          ${icon('play')}
+          <span class="store-btn-label">
+            <small>${escape(t.site.soon)}</small>
+            ${escape(t.site.browser)}
+          </span>
+        </span>`
+      : ''
+  return { apple, google, browser }
 }
 
 // ---------- トップページ ----------
@@ -249,13 +268,13 @@ function storeButtons(app, t) {
 function home(locale) {
   const t = TEXT[locale]
   const card = (app) => {
-    const storm = app.storm ? STORE[app.id][locale] : null
+    const storm = app.storm ? STORE[app.id][locale] : app.game ? GAMES[app.id][locale] : null
     // Vollog に合う言語がなければ（マレー語）、英語のページへつなぐ
     const vollogLocale = VOLLOG_APP.locales.includes(locale) ? locale : FALLBACK
     const name = app.web ? app.name : storm ? storm.name : VOLLOG[vollogLocale].name
     const line = app.web || storm ? t.apps[app.id].card : t.home.vollogCard
     const st = status(app, t.site)
-    const url = href(app.storm || app.web ? locale : vollogLocale, `apps/${app.id}/`)
+    const url = href(app.storm || app.game || app.web ? locale : vollogLocale, `apps/${app.id}/`)
     return `      <a class="app-card" data-app="${app.id}" href="${url}">
         <div class="app-card-top">
           <img src="/assets/images/${app.id}-icon.png" alt="${fill(t.site.iconAlt, { name })}" />
@@ -295,6 +314,13 @@ ${cards(APPS.filter((a) => a.storm))}
     </section>
 
     <section class="app-group">
+      <h2>${escape(t.home.games)}</h2>
+      <div class="apps">
+${cards(APPS.filter((a) => a.game))}
+      </div>
+    </section>
+
+    <section class="app-group">
       <h2>${escape(t.home.web)}</h2>
       <div class="apps">
 ${cards(APPS.filter((a) => a.web))}
@@ -304,7 +330,7 @@ ${cards(APPS.filter((a) => a.web))}
     <section class="app-group">
       <h2>${escape(t.home.tool)}</h2>
       <div class="apps">
-${cards(APPS.filter((a) => !a.storm && !a.web))}
+${cards(APPS.filter((a) => !a.storm && !a.game && !a.web))}
       </div>
     </section>
   </main>`
@@ -369,13 +395,14 @@ function stormPage(app, locale) {
   if (features.length !== app.icons.filter(Boolean).length || parts.length !== app.icons.length + 1)
     throw new Error(`${app.id} ${locale}: ストアの説明文の節の数が合わない`)
   const path = `apps/${app.id}/`
-  const { live, soon } = platforms(app)
+  const { live, soon } = platforms(app, t.site)
 
   const badges = [...t.game.badges.map((b) => `<span class="badge accent">${escape(b)}</span>`)]
   for (const p of live) badges.push(`<span class="badge accent">${fill(t.site.releasedShort, { p })}</span>`)
   for (const p of soon) badges.push(`<span class="badge">${fill(t.site.comingShort, { p })}</span>`)
 
-  const { apple, google } = storeButtons(app, t)
+  const { apple, google, browser } = storeButtons(app, t)
+  const buttons = [apple, google, browser].filter(Boolean).join('\n        ')
 
   const unique = own.unique
     .map(
@@ -414,8 +441,7 @@ function stormPage(app, locale) {
         </div>
       </div>
       <div class="store-buttons">
-        ${apple}
-        ${google}
+        ${buttons}
       </div>${own.storeNote ? `\n      <p class="store-note">${escape(own.storeNote)}</p>` : ''}
     </div>
 
@@ -441,6 +467,99 @@ ${cards}
     <section class="callout">
       <h2>${escape(notice.title)}</h2>
       <p class="section-note">${notice.lines.map(escape).join('<br>')}</p>
+    </section>
+  </main>`
+
+  const privacy = `/apps/${app.id}/privacy.html`
+  const nav = [[t.site.privacy, privacy]]
+  if (locale === 'ja') nav.push([t.site.tokushoho, '/apps/tokushoho.html'])
+  const footer = [[t.site.home, href(locale)], [t.site.privacy, privacy], [t.site.contact, CONTACT]]
+  if (locale === 'ja') footer.push([t.site.tokushohoLong, '/apps/tokushoho.html'])
+
+  return page({
+    locale,
+    path,
+    title:
+      locale === 'en'
+        ? `${store.name} - ${store.tagline}`
+        : locale === 'ja'
+          ? `${store.name}（${app.en}）- ${store.tagline}`
+          : `${store.name} (${app.en}) - ${store.tagline}`,
+    description: intro.map((p) => p.join(' ')).join(' '),
+    bodyAttr: `data-app="${app.id}"`,
+    header: `    <nav class="header-links">\n${nav.map(([label, url]) => `      <a href="${url}">${escape(label)}</a>`).join('\n')}\n    </nav>`,
+    main,
+    footer: `${links(footer)}
+    <p>© 2026 AsakusaSemao. All rights reserved.</p>
+    <p>${fill(t.site.icons).replace('{lucide}', '<a href="https://lucide.dev/license" target="_blank" rel="noopener" style="color: inherit;">Lucide</a>')}</p>`,
+    license: true,
+  })
+}
+
+// ---------- 嵐のシリーズでないゲームの紹介ページ ----------
+
+/**
+ * ストアの説明文の ■ の節を、すべて「どんなゲーム」のカードにする（嵐のシリーズの「ご注意」の節はない）。
+ * 広告と課金の説明は、サイトの文言（tools/text の apps.<id>.ads）
+ */
+function gamePage(app, locale) {
+  const t = TEXT[locale]
+  const store = GAMES[app.id][locale]
+  const own = t.apps[app.id]
+  const { intro, sections: parts } = sections(store.description)
+  if (parts.length !== app.icons.length) throw new Error(`${app.id} ${locale}: ストアの説明文の節の数が合わない`)
+  const path = `apps/${app.id}/`
+  const { live, soon } = platforms(app, t.site)
+
+  // 嵐のシリーズの札のうち、どのゲームにも言えるもの（無料・アカウント不要・22言語）
+  const badges = [t.game.badges[0], t.game.badges[1], t.game.badges[3]].map((b) => `<span class="badge accent">${escape(b)}</span>`)
+  for (const p of live) badges.push(`<span class="badge accent">${fill(t.site.releasedShort, { p })}</span>`)
+  for (const p of soon) badges.push(`<span class="badge">${fill(t.site.comingShort, { p })}</span>`)
+
+  const { apple, google, browser } = storeButtons(app, t)
+  const buttons = [apple, google, browser].filter(Boolean).join('\n        ')
+  const cards = parts
+    .map(
+      (s, i) => `        <div class="feature-card">
+          <div class="feature-icon">
+            ${icon(app.icons[i])}
+          </div>
+          <h3>${escape(s.title)}</h3>
+          ${lines(s.lines)}
+        </div>`,
+    )
+    .join('\n')
+
+  const main = `  <main>
+    ${picker(locale, path)}
+
+    <div class="hero">
+      <img class="app-icon" src="/assets/images/${app.id}-icon.png" alt="${fill(t.site.iconAlt, { name: store.name })}" />
+      <div class="hero-text">
+        <h1>
+          <span>${escape(store.tagline)}</span>
+          ${escape(store.name)}
+        </h1>
+        ${intro.map((p) => `<p>${p.map(escape).join('<br>')}</p>`).join('\n        ')}
+        <div class="badge-row">
+          ${badges.join('\n          ')}
+        </div>
+      </div>
+      <div class="store-buttons">
+        ${buttons}
+      </div>${own.storeNote ? `\n      <p class="store-note">${escape(own.storeNote)}</p>` : ''}
+    </div>
+
+    <section>
+      <h2>${escape(t.game.features)}</h2>
+      <div class="feature-grid">
+${cards}
+      </div>
+    </section>
+
+    <section class="callout">
+      <h2>${escape(t.game.ads)}</h2>
+      <p class="section-note">${fill(own.ads, { noAds: store.noAds })}</p>
     </section>
   </main>`
 
@@ -684,6 +803,7 @@ for (const locale of LOCALES) {
   const base = locale === 'ja' ? '' : `${locale}/`
   write(`${base}index.html`, home(locale))
   for (const app of APPS.filter((a) => a.storm)) write(`${base}apps/${app.id}/index.html`, stormPage(app, locale))
+  for (const app of APPS.filter((a) => a.game)) write(`${base}apps/${app.id}/index.html`, gamePage(app, locale))
   for (const app of APPS.filter((a) => a.web)) write(`${base}apps/${app.id}/index.html`, webAppPage(app, locale))
   if (VOLLOG_APP.locales.includes(locale)) write(`${base}apps/vollog/index.html`, vollogPage(locale))
 }

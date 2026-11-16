@@ -14,7 +14,8 @@
     "releasedShort": "Já no {p}",
     "comingShort": "{p}: em breve",
     "soon": "Em breve",
-    "webReleased": "Já no navegador"
+    "webReleased": "Já no navegador",
+    "browser": "Navegador"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Termos de Uso do Vollog",
     "series": "Jogos de esporte na tempestade",
     "seriesLead": "Sempre um contra um, sempre na tempestade. Só toques e deslizes, e o vento, a neblina e os raios ficam mais fortes conforme a partida avança.",
-    "web": "Apps para o navegador"
+    "web": "Apps para o navegador",
+    "games": "Jogos"
   },
   "game": {
     "unique": "Só neste jogo",
@@ -144,6 +146,10 @@
           "Toque no celular; teclado ou controle no PC."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Encontre os dois gatos com a mesma pelagem exata. Troque de gato em gato enquanto anda!",
+      "ads": "Um anúncio curto aparece só quando você usa uma dica. Compre \"{noAds}\" uma vez para usar as dicas sem anúncios. Confira o preço em cada loja."
     }
   },
   "vollog": {

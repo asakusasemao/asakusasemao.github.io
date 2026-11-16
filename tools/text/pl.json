@@ -14,7 +14,8 @@
     "releasedShort": "Już na {p}",
     "comingShort": "{p}: wkrótce",
     "soon": "Wkrótce",
-    "webReleased": "Już w przeglądarce"
+    "webReleased": "Już w przeglądarce",
+    "browser": "Przeglądarka"
   },
   "home": {
     "title": "AsakusaSemao",
@@ -25,7 +26,8 @@
     "vollogTerms": "Warunki korzystania z Vollog",
     "series": "Gry sportowe w burzy",
     "seriesLead": "Zawsze jeden na jednego, zawsze w burzy. Wystarczy stukać i przesuwać, a wiatr, mgła i pioruny przybierają na sile w miarę trwania meczu.",
-    "web": "Aplikacje do przeglądarki"
+    "web": "Aplikacje do przeglądarki",
+    "games": "Gry"
   },
   "game": {
     "unique": "Tylko w tej grze",
@@ -144,6 +146,10 @@
           "Dotyk w telefonie; klawiatura lub pad na PC."
         ]
       ]
+    },
+    "lookalike-cats": {
+      "card": "Znajdź dwa koty o identycznym umaszczeniu. Przechodź z kota na kota w marszu!",
+      "ads": "Krótka reklama pojawia się tylko przy użyciu podpowiedzi. Kup raz „{noAds}”, by używać podpowiedzi bez reklam. Cenę sprawdzisz w danym sklepie."
     }
   },
   "vollog": {

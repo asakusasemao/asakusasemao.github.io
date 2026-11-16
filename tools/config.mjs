@@ -10,9 +10,11 @@ export const FALLBACK = 'en'
 
 /**
  * アプリ。並びはトップページのカードの順。
- * storm は嵐のシリーズ（紹介ページを言語ごとに作る）。ios / android は公開していればストアの URL、準備中なら null。
+ * storm は嵐のシリーズ（紹介ページを言語ごとに作る）。ios / android は公開していればストアの URL、準備中なら null、出さないなら false。
+ * browser はブラウザ版（書いたアプリだけ出す。公開していれば URL、準備中なら null）。
  * icons は、紹介ページの「どんなゲーム」の節ごとの絵記号（ストアの説明文の ■ の順。ご注意は除く）。null の節は出さない
  * （ピックルボールの舞台は「このゲームならでは」に書いたので外す）
+ * game は嵐のシリーズでないゲーム（repo はとなりのリポジトリの名前）。紹介ページは build.mjs の gamePage
  * web はブラウザで使うアプリ（ゲームに限らない）。url は本体の場所で、紹介ページのボタンから開く。文言は tools/text の apps.<id>
  * theme は紹介ページの <body> に付ける class（見た目は site.css）。font はそのページで足す Google Fonts の指定
  */
@@ -48,6 +50,17 @@ export const APPS = [
     ios: 'https://apps.apple.com/app/storm-pickleball/id6823134733',
     android: null,
     icons: ['pointer', 'zap', null, 'book', 'shirt', 'share', 'sliders'],
+  },
+  {
+    // そっくりねこ探し。リポジトリは ../same-cat。紹介ページは、ストアの説明文の節（6つ）をそのままカードにする（build.mjs の gamePage）
+    id: 'lookalike-cats',
+    game: true,
+    repo: 'same-cat',
+    en: 'Lookalike Cats',
+    ios: null,
+    android: false,
+    browser: null,
+    icons: ['pointer', 'palette', 'globe', 'book', 'lightbulb', 'share'],
   },
   {
     id: 'asakusa-circuit',

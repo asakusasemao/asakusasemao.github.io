@@ -44,6 +44,30 @@ for (const app of APPS.filter((a) => a.storm)) {
   console.log(`${app.id}: ${LOCALES.length} 言語`)
 }
 
+// ---------- 嵐のシリーズでないゲーム（そっくりねこ探し） ----------
+// 名前・サブタイトル・説明文はストアの文言（store/metadata/）、「広告なし」の名前はアプリの文言（src/i18n/locales/<言語>.ts）から取る
+for (const app of APPS.filter((a) => a.game)) {
+  const repo = join(work, app.repo)
+  if (!existsSync(repo)) throw new Error(`${repo} がない`)
+  const out = {}
+  for (const locale of LOCALES) {
+    const source = read(join(repo, 'src/i18n/locales', `${locale}.ts`))
+    const play = PLAY.includes(locale)
+    const dir = play ? join(repo, 'store/metadata/play', locale) : join(repo, 'store/metadata/ios', IOS[locale] ?? locale)
+    const noAds = source.match(/'settings\.noAds': (['"])((?:\\.|(?!\1).)*)\1/)
+    if (!noAds) throw new Error(`${app.id} ${locale}: settings.noAds がない`)
+    out[locale] = {
+      name: read(join(dir, play ? 'title.txt' : 'name.txt')),
+      tagline: read(join(dir, play ? 'short_description.txt' : 'subtitle.txt')),
+      description: read(join(dir, play ? 'full_description.txt' : 'description.txt')),
+      // 「広告なし（買い切り）」の括弧は外す（文の中で「広告なし」を一度買うと、と書くため）
+      noAds: noAds[2].replace(/\\(.)/g, '$1').replace(/\s*[（(].*?[)）]\s*$/, ''),
+    }
+  }
+  writeFileSync(join(root, 'tools/data', `${app.id}.json`), JSON.stringify(out, null, 2) + '\n')
+  console.log(`${app.id}: ${LOCALES.length} 言語`)
+}
+
 // ---------- Vollog ----------
 /** 語と語の間に空白を入れない言語。区分の名前のすぐ後ろで切ってよい */
 const UNSPACED = ['ja', 'zh-Hans', 'zh-Hant']
