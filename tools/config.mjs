@@ -24,7 +24,7 @@ export const APPS = [
     storm: true,
     en: 'Storm Volleyball',
     ios: 'https://apps.apple.com/app/storm-volleyball/id6820509743',
-    android: null,
+    android: false,
     icons: ['pointer', 'zap', 'school', 'shirt', 'share', 'sliders'],
   },
   {
@@ -32,7 +32,7 @@ export const APPS = [
     storm: true,
     en: 'Storm Badminton',
     ios: 'https://apps.apple.com/app/storm-badminton/id6821341320',
-    android: null,
+    android: false,
     icons: ['pointer', 'zap', 'school', 'shirt', 'share', 'sliders'],
   },
   {
@@ -40,7 +40,7 @@ export const APPS = [
     storm: true,
     en: 'Storm Tennis',
     ios: 'https://apps.apple.com/app/storm-tennis/id6822641591',
-    android: null,
+    android: false,
     icons: ['pointer', 'zap', 'school', 'book', 'shirt', 'share', 'sliders'],
   },
   {
@@ -48,7 +48,7 @@ export const APPS = [
     storm: true,
     en: 'Storm Pickleball',
     ios: 'https://apps.apple.com/app/storm-pickleball/id6823134733',
-    android: null,
+    android: false,
     icons: ['pointer', 'zap', null, 'book', 'shirt', 'share', 'sliders'],
   },
   {
