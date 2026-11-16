@@ -52,15 +52,15 @@ export const APPS = [
     icons: ['pointer', 'zap', null, 'book', 'shirt', 'share', 'sliders'],
   },
   {
-    // そっくりねこ探し。リポジトリは ../same-cat。紹介ページは、ストアの説明文の節（6つ）をそのままカードにする（build.mjs の gamePage）
+    // そっくりねこ探し。リポジトリは ../lookalike-cats。紹介ページは、ストアの説明文の節（4つ）をそのままカードにする（build.mjs の gamePage）
     id: 'lookalike-cats',
     game: true,
-    repo: 'same-cat',
+    repo: 'lookalike-cats',
     en: 'Lookalike Cats',
     ios: null,
     android: false,
     browser: null,
-    icons: ['pointer', 'palette', 'globe', 'book', 'lightbulb', 'share'],
+    icons: ['pointer', 'palette', 'globe', 'book'],
   },
   {
     id: 'asakusa-circuit',
